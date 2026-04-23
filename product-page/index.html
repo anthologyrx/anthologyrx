@@ -1,0 +1,2172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLP-1 Performance Protocol — AnthologyRX</title>
+  <meta name="description" content="Clinician-prescribed GLP-1 protocol for performance-focused individuals. 48hr provider review. From $199/mo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Epilogue:ital,wght@0,300..800;1,300..500&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   ANTHOLOGY RX — PRODUCT PAGE TEMPLATE
+   Reuse: GLP-1 / Peptides / TRT / NAD+ / Supplements
+   Brand: #1E1E1E bg / #E8DCC8 sand / #B28A2A brass gold
+   Fonts: Unbounded (display) · Epilogue (body)
+============================================================ */
+
+/* ── STANDARD LOGO — CANONICAL, NEVER MODIFY ────────────── */
+.logo-main {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-weight: 400;
+  color: #E8DCC8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.logo-rx {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
+  font-weight: 700;
+  color: #B28A2A;
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -0.4em;
+  margin-left: 0.1em;
+}
+
+/* ── RESET ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: #1E1E1E;
+  color: #E8DCC8;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font-family: inherit; }
+
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --bg:           #1E1E1E;
+  --bg-card:      #262422;
+  --bg-deep:      #181614;
+  --rule:         #373430;
+  --sand:         #E8DCC8;
+  --sand-dim:     #9C9082;
+  --gold:         #B28A2A;
+  --gold-hover:   #C99B35;
+  --gold-glow:    rgba(178,138,42,0.18);
+  --font-disp:    'Unbounded', sans-serif;
+  --font-body:    'Epilogue', sans-serif;
+  --nav-h:        72px;
+  --r:            2px;
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+  --t:            0.25s var(--ease);
+  --section-pad:  100px 0;
+  --max-w:        1200px;
+}
+
+/* ── PLACEHOLDER VISUAL INDICATOR (dev only) ────────────── */
+/* Toggle: set window.__SHOW_PLACEHOLDERS = false to disable */
+[data-placeholder] { outline: 1px dashed rgba(178,138,42,0.3); }
+
+/* ── CONTAINERS ──────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.container--text {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+@media (max-width: 768px) {
+  .container, .container--text { padding: 0 20px; }
+}
+
+/* ── GLOBAL TYPE ─────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--sand);
+}
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 900; letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.6rem); }
+h3 { font-size: 1rem; font-weight: 700; }
+p { color: var(--sand-dim); }
+
+.label {
+  display: inline-block;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.section-pad { padding: var(--section-pad); border-bottom: 1px solid var(--rule); }
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all var(--t);
+  white-space: nowrap;
+  border: none;
+}
+.btn--gold {
+  background: var(--gold);
+  color: #1E1E1E;
+}
+.btn--gold:hover {
+  background: var(--gold-hover);
+  color: #1E1E1E;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px var(--gold-glow);
+}
+.btn--lg { padding: 17px 36px; font-size: 0.65rem; }
+.btn--xl { padding: 20px 48px; font-size: 0.7rem; }
+.btn--full { width: 100%; }
+
+.text-link {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+  transition: color var(--t);
+}
+.text-link--arrow::after { content: ' →'; }
+.text-link:hover { color: var(--gold); }
+
+/* ── FIXED TOP STACK ──────────────────────────────────────── */
+.top-stack {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  position: static;
+  height: var(--nav-h);
+  flex-shrink: 0;
+}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.nav {
+  height: 100%;
+  background: rgba(30,30,30,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+  transition: background var(--t), box-shadow var(--t);
+}
+.nav.scrolled {
+  background: rgba(22,20,18,0.97);
+  box-shadow: 0 2px 40px rgba(0,0,0,0.45);
+}
+.nav__inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+.nav__links a {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.nav__links a:hover { color: var(--sand); }
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.nav__login {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.nav__login:hover { color: var(--sand); }
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--sand);
+  transition: all var(--t);
+}
+.nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav__mobile-menu {
+  display: none;
+  position: absolute;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--rule);
+  padding: 24px 48px;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav__mobile-menu.open { display: flex; }
+.nav__mobile-menu a {
+  font-family: var(--font-disp);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+@media (max-width: 900px) {
+  .nav__links, .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .nav__mobile-menu { padding: 24px 20px; }
+}
+
+/* ── ANNOUNCEMENT BAR ────────────────────────────────────── */
+.announce-bar {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 48px;
+  flex-shrink: 0;
+  position: relative;
+}
+.announce-bar.hidden { display: none; }
+.announce-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.announce-bar__text {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+}
+.announce-bar__cta {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  transition: opacity var(--t);
+}
+.announce-bar__cta:hover { opacity: 0.75; color: var(--bg); }
+.announce-bar__close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--bg);
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.6;
+  padding: 4px 8px;
+  transition: opacity var(--t);
+}
+.announce-bar__close:hover { opacity: 1; }
+@media (max-width: 768px) {
+  .announce-bar { padding: 10px 40px 10px 16px; }
+  .announce-bar__text { font-size: 0.52rem; }
+}
+
+/* ── BREADCRUMB ──────────────────────────────────────────── */
+.breadcrumb {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+}
+.breadcrumb__inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+}
+.breadcrumb__link {
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.breadcrumb__link:hover { color: var(--gold); }
+.breadcrumb__sep {
+  color: var(--gold);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+.breadcrumb__current { color: var(--sand); }
+
+/* ── PRODUCT HERO ────────────────────────────────────────── */
+.product-hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  padding: 80px 0;
+}
+.product-hero__inner {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left column */
+.product-hero__left {}
+.product-hero__category {
+  display: inline-block;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.product-hero__h1 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+}
+.product-hero__positioning {
+  font-size: 1rem;
+  line-height: 1.72;
+  color: var(--sand-dim);
+  margin-bottom: 24px;
+  max-width: 460px;
+}
+.product-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.trust-chip {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+.product-hero__price-block {
+  margin-bottom: 28px;
+}
+.product-hero__price-main {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.product-hero__price-amount {
+  font-family: var(--font-disp);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 900;
+  color: var(--sand);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.product-hero__price-period {
+  font-family: var(--font-disp);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--sand-dim);
+}
+.product-hero__price-anchor {
+  font-size: 0.82rem;
+  color: var(--sand-dim);
+}
+.product-hero__price-anchor s {
+  text-decoration: line-through;
+  opacity: 0.5;
+  margin-left: 4px;
+}
+.product-hero__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.product-hero__no-contract {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  opacity: 0.7;
+}
+
+/* Right column */
+.product-hero__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-hero__image-wrap {
+  aspect-ratio: 4 / 5;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.product-hero__image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(178,138,42,0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+.img-placeholder-label {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  font-style: italic;
+  opacity: 0.5;
+}
+.product-hero__quick-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.quick-stat {
+  flex: 1;
+  min-width: 80px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 2px solid var(--gold);
+  border-radius: var(--r);
+  padding: 12px 14px;
+  text-align: center;
+}
+.quick-stat__value {
+  font-family: var(--font-disp);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+.quick-stat__label {
+  font-family: var(--font-disp);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .product-hero__inner { grid-template-columns: 1fr 1fr; gap: 48px; }
+}
+@media (max-width: 768px) {
+  .product-hero { padding: 48px 0; }
+  .product-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .product-hero__right { order: -1; }
+  .product-hero__image-wrap { aspect-ratio: 16 / 9; }
+}
+
+/* ── OUTCOME STRIP ───────────────────────────────────────── */
+.outcome-strip {
+  background: var(--gold);
+  padding: 0;
+}
+.outcome-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.outcome-stat {
+  padding: 32px 28px;
+  border-right: 1px solid rgba(0,0,0,0.12);
+  text-align: center;
+}
+.outcome-stat:last-child { border-right: none; }
+.outcome-stat__number {
+  display: block;
+  font-family: var(--font-disp);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--bg);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.outcome-stat__label {
+  font-size: 0.72rem;
+  color: rgba(30,30,30,0.65);
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  .outcome-strip__grid { grid-template-columns: repeat(2, 1fr); }
+  .outcome-stat { border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .outcome-stat:nth-child(2) { border-right: none; }
+  .outcome-stat:nth-child(3), .outcome-stat:nth-child(4) { border-bottom: none; }
+  .outcome-stat:nth-child(4) { border-right: none; }
+}
+
+/* ── WHAT'S INCLUDED ─────────────────────────────────────── */
+.included {
+  background: var(--bg);
+}
+.included__inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: start;
+}
+.included__header { margin-bottom: 28px; }
+.included__headline { margin-top: 8px; max-width: 440px; }
+.included__copy {
+  font-size: 0.95rem;
+  line-height: 1.82;
+  color: var(--sand-dim);
+  margin-bottom: 18px;
+}
+.includes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 36px 32px;
+}
+.includes-list__title {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.includes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--sand-dim);
+  line-height: 1.55;
+}
+.includes-list li::before {
+  content: '✓';
+  font-family: var(--font-disp);
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 0.7rem;
+}
+@media (max-width: 1100px) {
+  .included__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ── HOW IT WORKS ────────────────────────────────────────── */
+.how-works { background: var(--bg-deep); }
+.how-works__header { text-align: center; max-width: 500px; margin: 0 auto 64px; }
+.how-works__headline { margin-top: 8px; }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--rule);
+}
+.step {
+  background: var(--bg);
+  padding: 40px 28px;
+  transition: background var(--t);
+}
+.step:hover { background: var(--bg-card); }
+.step__number {
+  font-family: var(--font-disp);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.35;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+.step__title {
+  font-size: 0.9rem;
+  color: var(--sand);
+  margin-bottom: 10px;
+}
+.step__desc { font-size: 0.84rem; }
+@media (max-width: 900px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .steps { grid-template-columns: 1fr; }
+  .step { padding: 28px 20px; }
+}
+
+/* ── WHO IT'S FOR ────────────────────────────────────────── */
+.who-for { background: var(--bg); }
+.who-for__reframe {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 72px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.who-for__reframe-headline {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--sand);
+}
+.who-for__reframe-headline em {
+  font-style: normal;
+  color: var(--gold);
+}
+.who-for__body {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: start;
+}
+.who-for__avatars {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.avatar-item { padding-left: 24px; border-left: 2px solid var(--rule); transition: border-color var(--t); }
+.avatar-item:hover { border-left-color: var(--gold); }
+.avatar-item__title {
+  font-size: 0.9rem;
+  color: var(--sand);
+  margin-bottom: 8px;
+}
+.avatar-item__desc { font-size: 0.88rem; }
+.exclusion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 36px 32px;
+}
+.exclusion-card__title {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.exclusion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.exclusion-list li {
+  font-size: 0.84rem;
+  color: var(--sand-dim);
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+}
+.exclusion-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--rule);
+}
+.exclusion-card__reassurance {
+  font-size: 0.78rem;
+  font-style: italic;
+  opacity: 0.6;
+}
+@media (max-width: 1024px) {
+  .who-for__body { grid-template-columns: 1fr; }
+}
+
+/* ── CLINICAL FOUNDATION ─────────────────────────────────── */
+.clinical { background: var(--bg); }
+.clinical__header { max-width: 640px; margin-bottom: 56px; }
+.clinical__headline { margin-top: 8px; }
+.clinical__body {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: start;
+}
+.clinical__copy {
+  font-size: 0.95rem;
+  line-height: 1.82;
+}
+.clinical__copy strong { color: var(--sand); font-weight: 600; }
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.credential-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 24px 20px;
+  transition: border-color var(--t);
+}
+.credential-badge:hover { border-color: var(--gold); }
+.credential-badge__icon {
+  width: 28px; height: 28px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.credential-badge__title {
+  font-size: 0.82rem;
+  color: var(--sand);
+  font-weight: 700;
+}
+.credential-badge__sub {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+@media (max-width: 1100px) {
+  .clinical__body { grid-template-columns: 1fr; gap: 48px; }
+  .credential-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .credential-grid { grid-template-columns: 1fr; }
+}
+
+/* ── MOMENTUM BREAK ──────────────────────────────────────── */
+.momentum-break {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.momentum-break__image-wrap {
+  position: absolute;
+  inset: 0;
+}
+.momentum-break__image {
+  width: 100%;
+  height: 100%;
+  background: #181614;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.momentum-break__img-label {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(232,220,200,0.2);
+  font-style: italic;
+}
+.momentum-break__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30,30,30,0.92) 0%,
+    rgba(30,30,30,0.65) 60%,
+    rgba(30,30,30,0.82) 100%
+  );
+}
+.momentum-break__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 80px 48px;
+}
+.momentum-break__inner { max-width: 620px; }
+.momentum-break__eyebrow { margin-bottom: 20px; }
+.momentum-break__headline {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  color: var(--sand);
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .momentum-break { min-height: 380px; }
+  .momentum-break__content { padding: 60px 20px; }
+  .momentum-break__inner { max-width: 100%; }
+}
+
+/* ── PRICING ─────────────────────────────────────────────── */
+.pricing { background: var(--bg-deep); }
+.pricing__header { text-align: center; max-width: 500px; margin: 0 auto 56px; }
+.pricing__headline { margin-top: 8px; }
+.pricing__anchor-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 14px 28px;
+  margin: 0 auto 56px;
+  font-family: var(--font-disp);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  max-width: 700px;
+}
+.pricing__anchor-bar s { text-decoration: line-through; opacity: 0.5; }
+.pricing__anchor-bar strong { color: var(--gold); font-weight: 700; }
+.pricing__anchor-bar__divider { color: var(--rule); font-size: 0.8rem; }
+.pricing__body {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: start;
+  max-width: 940px;
+  margin: 0 auto;
+}
+.pricing__protocol-name {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.pricing__amount {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+.pricing__dollar {
+  font-family: var(--font-disp);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: var(--sand);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.pricing__period {
+  font-family: var(--font-disp);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--sand-dim);
+}
+.pricing__includes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pricing__includes li {
+  font-size: 0.88rem;
+  color: var(--sand-dim);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.55;
+}
+.pricing__includes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+}
+.pricing__cta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pricing__cta-headline {
+  font-size: 1.1rem;
+  color: var(--sand);
+  line-height: 1.3;
+}
+.pricing__cta-sub {
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+.pricing__no-contract {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .pricing__body { grid-template-columns: 1fr; gap: 40px; }
+  .pricing__anchor-bar { gap: 10px; text-align: center; }
+  .pricing__anchor-bar__divider { display: none; }
+}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq { background: var(--bg); }
+.faq__header { text-align: center; margin-bottom: 56px; }
+.faq__headline { margin-top: 8px; }
+.faq__list { border-top: 1px solid var(--rule); }
+.faq-item { border-bottom: 1px solid var(--rule); }
+.faq-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-disp);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--sand);
+  transition: color var(--t);
+}
+.faq-item__trigger:hover { color: var(--gold); }
+.faq-item__icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform var(--t);
+}
+.faq-item.open .faq-item__icon { transform: rotate(45deg); }
+.faq-item__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease);
+}
+.faq-item.open .faq-item__body { grid-template-rows: 1fr; }
+.faq-item__body-inner { overflow: hidden; }
+.faq-item__answer {
+  padding-bottom: 24px;
+  font-size: 0.9rem;
+  line-height: 1.78;
+}
+
+/* ── RELATED PROTOCOLS ───────────────────────────────────── */
+.related { background: var(--bg-deep); }
+.related__header { text-align: center; max-width: 500px; margin: 0 auto 56px; }
+.related__headline { margin-top: 8px; }
+.related__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.related-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--t), transform var(--t);
+}
+.related-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.related-card__name {
+  font-family: var(--font-disp);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--sand);
+  line-height: 1.3;
+}
+.related-card__desc {
+  font-size: 0.84rem;
+  color: var(--sand-dim);
+  line-height: 1.6;
+  flex: 1;
+}
+.related-card__link {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color var(--t);
+  margin-top: 8px;
+}
+.related-card__link:hover { color: var(--gold-hover); }
+@media (max-width: 900px) {
+  .related__grid { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 600px) {
+  .related__grid { grid-template-columns: 1fr; }
+}
+
+/* ── FINAL CTA ───────────────────────────────────────────── */
+.final-cta {
+  background: var(--bg-deep);
+  padding: 120px 0;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+}
+.final-cta__inner { max-width: 640px; margin: 0 auto; }
+.final-cta__tagline { margin-bottom: 24px; }
+.final-cta__display {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  margin-bottom: 48px;
+}
+.final-cta__sub {
+  font-size: 0.95rem;
+  color: var(--sand-dim);
+  max-width: 420px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  text-align: center;
+}
+.final-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.footer {
+  background: var(--bg-deep);
+  padding: 64px 0 40px;
+  border-top: 1px solid var(--rule);
+}
+.footer__inner { display: flex; flex-direction: column; gap: 0; }
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer__logo {
+  font-family: var(--font-disp);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+.footer__tagline {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 10px !important;
+}
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+.footer__links a {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.footer__links a:hover { color: var(--sand); }
+.footer__divider {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 32px;
+}
+.footer__legal {
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: var(--sand-dim);
+  opacity: 0.5;
+  max-width: 900px;
+}
+@media (max-width: 768px) {
+  .footer__top { flex-direction: column; gap: 28px; }
+}
+
+/* ── MOBILE BOTTOM BAR ───────────────────────────────────── */
+.mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 950;
+  background: var(--bg-card);
+  border-top: 1px solid var(--rule);
+  padding: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.mobile-bar__text { display: flex; flex-direction: column; }
+.mobile-bar__price {
+  font-family: var(--font-disp);
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.mobile-bar__sub {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  margin-top: 2px;
+}
+.mobile-bar__dismiss {
+  background: none;
+  border: none;
+  color: var(--sand-dim);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.mobile-bar__dismiss:hover { color: var(--sand); }
+@media (max-width: 768px) {
+  .mobile-bar { display: flex; }
+  .mobile-bar.dismissed { display: none; }
+}
+
+/* ── SCROLL ANIMATIONS ───────────────────────────────────── */
+.anim-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+.anim-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-up:nth-child(1) { transition-delay: 0s; }
+.anim-up:nth-child(2) { transition-delay: 0.08s; }
+.anim-up:nth-child(3) { transition-delay: 0.16s; }
+.anim-up:nth-child(4) { transition-delay: 0.24s; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     FIXED TOP STACK: announcement bar + nav
+══════════════════════════════════════════════════ -->
+<div class="top-stack" id="topStack">
+
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-bar__inner">
+      <span class="announce-bar__text">
+        GLP-1 protocols from $199/mo &nbsp;·&nbsp; FSA/HSA may be accepted (plan-dependent) &nbsp;·&nbsp; Provider review in 48 hours
+      </span>
+      <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+    </div>
+    <button class="announce-bar__close" id="announceClose" aria-label="Dismiss">×</button>
+  </div>
+
+  <!-- ══ NAV ══════════════════════════════════════════ -->
+  <header id="siteHeader">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container nav__inner">
+
+        <!-- ═══ STANDARD LOGO — DO NOT MODIFY ═══
+             ANTHOLOGY: Unbounded 400, #E8DCC8, ls 0.08em
+             RX: Unbounded 700, #B28A2A, superscript top -0.4em
+             No icons. No SVG marks. Text only. ══════ -->
+        <a href="/" class="nav__logo" aria-label="AnthologyRX home">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="/protocols">Protocols</a></li>
+          <li><a href="/pages/how-it-works">How It Works</a></li>
+          <li><a href="/pages/science">Science</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+        <li><a href="/pages/about">About</a></li>
+        <li><a href="/blogs/journal">Journal</a></li>
+        <li><a href="/pages/pricing">Pricing</a></li>
+      </ul>
+
+        <div class="nav__actions">
+          <a href="/account" class="nav__login">Log In</a>
+          <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+        </div>
+
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <a href="/protocols">Protocols</a>
+        <a href="/pages/how-it-works">How It Works</a>
+        <a href="/pages/science">Science</a>
+        <a href="/pages/faq">FAQ</a>
+        <a href="/account" class="nav__login">Log In</a>
+        <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+      </div>
+    </nav>
+  </header>
+
+</div><!-- /.top-stack -->
+
+
+<!-- ══════════════════════════════════════════════════
+     BREADCRUMB
+══════════════════════════════════════════════════ -->
+<div class="breadcrumb">
+  <div class="container breadcrumb__inner">
+    <a href="/protocols" class="breadcrumb__link">Protocols</a>
+    <span class="breadcrumb__sep">·</span>
+    <!-- PLACEHOLDER: replace with protocol-specific name -->
+    <span class="breadcrumb__current" data-placeholder="true">GLP-1 Weight Optimization Protocol</span>
+    <!-- END PLACEHOLDER -->
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     PRODUCT HERO — 2-column layout
+══════════════════════════════════════════════════ -->
+<section class="product-hero" id="hero" aria-label="Protocol overview">
+  <div class="container product-hero__inner">
+
+    <!-- Left 60% -->
+    <div class="product-hero__left">
+
+      <!-- PLACEHOLDER: replace with protocol category label -->
+      <span class="product-hero__category" data-placeholder="true">Weight Optimization</span>
+      <!-- END PLACEHOLDER -->
+
+      <!-- PLACEHOLDER: replace with protocol name -->
+      <h1 class="product-hero__h1" data-placeholder="true">GLP-1 Performance Protocol</h1>
+      <!-- END PLACEHOLDER -->
+
+      <!-- PLACEHOLDER: replace with protocol positioning line -->
+      <p class="product-hero__positioning" data-placeholder="true">
+        Clinician-prescribed GLP-1 therapy for performance-focused individuals who demand real results — prescribed, managed, and delivered remotely.
+      </p>
+      <!-- END PLACEHOLDER -->
+
+      <div class="product-hero__trust" role="list" aria-label="Trust indicators">
+        <span class="trust-chip" role="listitem">Physicians licensed in your state</span>
+        <span class="trust-chip" role="listitem">503B Pharmacy</span>
+        <span class="trust-chip" role="listitem">FSA/HSA (plan-dependent)</span>
+      </div>
+
+      <div class="product-hero__price-block">
+        <div class="product-hero__price-main">
+          <!-- PLACEHOLDER: replace with protocol price -->
+          <span class="product-hero__price-amount" data-placeholder="true">$199</span>
+          <span class="product-hero__price-period">/month, all-inclusive</span>
+          <!-- END PLACEHOLDER -->
+        </div>
+        <!-- PLACEHOLDER: replace with competitor comparison range -->
+        <p class="product-hero__price-anchor" data-placeholder="true">
+          Comparable clinics charge<s>$400–800/mo</s>
+        </p>
+        <!-- END PLACEHOLDER -->
+      </div>
+
+      <div class="product-hero__ctas">
+        <a href="/qualify" class="btn btn--gold btn--lg btn--full">See If You Qualify →</a>
+        <a href="/qualify" class="text-link text-link--arrow">Take the Match Assessment</a>
+      </div>
+
+      <p class="product-hero__no-contract">No contracts · Cancel anytime</p>
+
+    </div>
+
+    <!-- Right 40% -->
+    <div class="product-hero__right">
+
+      <!-- PLACEHOLDER: replace with actual protocol image -->
+      <div class="product-hero__image-wrap" data-placeholder="true" role="img" aria-label="Protocol image placeholder">
+        <span class="img-placeholder-label">Protocol Image</span>
+      </div>
+      <!-- END PLACEHOLDER -->
+
+      <div class="product-hero__quick-stats">
+        <!-- PLACEHOLDER: replace with protocol-specific quick stats -->
+        <div class="quick-stat" data-placeholder="true">
+          <span class="quick-stat__value">48hr</span>
+          <span class="quick-stat__label">Review</span>
+        </div>
+        <div class="quick-stat" data-placeholder="true">
+          <span class="quick-stat__value">503B</span>
+          <span class="quick-stat__label">Pharmacy</span>
+        </div>
+        <div class="quick-stat" data-placeholder="true">
+          <span class="quick-stat__value">Remote</span>
+          <span class="quick-stat__label">Only</span>
+        </div>
+        <!-- END PLACEHOLDER -->
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     OUTCOME STRIP
+══════════════════════════════════════════════════ -->
+<section class="outcome-strip" aria-label="Outcome statistics">
+  <div class="outcome-strip__grid">
+
+    <!-- PLACEHOLDER: replace with protocol-specific stats -->
+    <div class="outcome-stat" data-placeholder="true">
+      <div class="outcome-stat__number">15–21%</div>
+      <div class="outcome-stat__label">Mean body weight reduction in SURMOUNT-1 (tirzepatide) and STEP 1 (semaglutide) clinical trials†</div>
+    </div>
+
+    <div class="outcome-stat" data-placeholder="true">
+      <div class="outcome-stat__number">48 hrs</div>
+      <div class="outcome-stat__label">Intake to prescription</div>
+    </div>
+
+    <div class="outcome-stat" data-placeholder="true">
+      <div class="outcome-stat__number">12 wks</div>
+      <div class="outcome-stat__label">To meaningful results</div>
+    </div>
+
+    <div class="outcome-stat" data-placeholder="true">
+      <div class="outcome-stat__number">$199</div>
+      <div class="outcome-stat__label">Per month, all-in</div>
+    </div>
+    <!-- END PLACEHOLDER -->
+
+  </div>
+  <p style="text-align:center;font-size:0.65rem;color:rgba(30,30,30,0.6);padding:8px 20px 12px;font-family:'Epilogue',sans-serif;">†Results from published clinical trials. Not AnthologyRX-specific data. Individual results vary significantly.</p>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     WHAT'S INCLUDED — Protocol Details
+══════════════════════════════════════════════════ -->
+<section class="included section-pad" id="included" aria-labelledby="included-heading">
+  <div class="container">
+    <div class="included__inner">
+
+      <!-- Left: copy block -->
+      <div>
+        <div class="included__header">
+          <span class="label">What's Included</span>
+          <h2 class="included__headline" id="included-heading">
+            Everything you need.<br>Nothing you don't.
+          </h2>
+        </div>
+
+        <!-- PLACEHOLDER: replace with protocol-specific body copy -->
+        <p class="included__copy" data-placeholder="true">
+          [PLACEHOLDER COPY — replace with protocol-specific introduction paragraph. Describe what this protocol addresses, the mechanism of action, and who it serves. Keep clinical, direct, performance-oriented.]
+        </p>
+        <p class="included__copy" data-placeholder="true">
+          [PLACEHOLDER COPY — replace with second paragraph. Describe the delivery and management experience: remote intake, physician review, pharmacy fulfillment, ongoing management. Emphasize the all-inclusive nature and what makes AnthologyRX different.]
+        </p>
+        <p class="included__copy" data-placeholder="true">
+          [PLACEHOLDER COPY — replace with third paragraph. Reinforce the performance positioning — this protocol is built for active people. Mention titration, dosing philosophy, or protocol design principles specific to this treatment.]
+        </p>
+        <!-- END PLACEHOLDER -->
+      </div>
+
+      <!-- Right: includes list -->
+      <div>
+        <ul class="includes-list" role="list">
+          <p class="includes-list__title">Protocol Includes</p>
+          <li>Physician-issued prescription</li>
+          <li>Licensed 503B pharmacy fulfillment, shipped to your door</li>
+          <li>Monthly provider check-in + dosing management</li>
+          <li>Direct messaging access to your care team</li>
+          <li>Titration protocol and injection guidance</li>
+          <li>FSA/HSA receipt issued automatically</li>
+          <!-- PLACEHOLDER: replace with protocol-specific item -->
+          <li data-placeholder="true">[PLACEHOLDER — add protocol-specific item, e.g. "GLP-1 compound selection (semaglutide or tirzepatide)" or "BPC-157 dosing calendar"]</li>
+          <!-- END PLACEHOLDER -->
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     HOW THIS PROTOCOL WORKS — Numbered Steps
+══════════════════════════════════════════════════ -->
+<section class="how-works section-pad" id="how-it-works" aria-labelledby="how-works-heading">
+  <div class="container">
+    <div class="how-works__header">
+      <span class="label">How It Works</span>
+      <h2 class="how-works__headline" id="how-works-heading">
+        From intake to results in four steps.
+      </h2>
+    </div>
+
+    <ol class="steps" role="list">
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">01</div>
+        <div class="step__content">
+          <h3 class="step__title">Complete Your Assessment</h3>
+          <p class="step__desc">
+            Answer a structured medical questionnaire covering health history, current medications, and goals. Takes under three minutes. No video call required.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">02</div>
+        <div class="step__content">
+          <h3 class="step__title">Provider Review</h3>
+          <p class="step__desc">
+            A board-certified physician reviews your intake within 48 hours. They evaluate candidacy, screen for contraindications, and issue your prescription if approved.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">03</div>
+        <div class="step__content">
+          <h3 class="step__title">Pharmacy Dispatch</h3>
+          <p class="step__desc">
+            Your medication ships directly from a licensed 503B compounding pharmacy. Temperature-controlled packaging. Delivered to your door on the protocol's schedule.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">04</div>
+        <div class="step__content">
+          <h3 class="step__title">Ongoing Management</h3>
+          <p class="step__desc">
+            Monthly provider check-ins, dosing adjustments based on your response, and direct messaging access to your care team. Your protocol evolves as you do.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     WHO IT'S FOR
+══════════════════════════════════════════════════ -->
+<section class="who-for section-pad" aria-labelledby="who-for-heading">
+  <div class="container">
+
+    <!-- Identity reframe headline -->
+    <div class="who-for__reframe">
+      <!-- PLACEHOLDER: replace [CATEGORY] with protocol category -->
+      <h2 class="who-for__reframe-headline" id="who-for-heading" data-placeholder="true">
+        This is not a <em>[CATEGORY]</em> program.<br>This is a <em>performance upgrade</em>.
+      </h2>
+      <!-- END PLACEHOLDER -->
+    </div>
+
+    <div class="who-for__body">
+
+      <div class="who-for__avatars">
+
+        <!-- PLACEHOLDER: replace with protocol-specific avatar cards -->
+        <div class="avatar-item" data-placeholder="true">
+          <h3 class="avatar-item__title">[Avatar Title 1 — PLACEHOLDER]</h3>
+          <p class="avatar-item__desc">
+            [PLACEHOLDER COPY — describe the first ideal patient archetype. Who are they, what's their situation, what does this protocol solve for them specifically? Keep performance-framed, not clinical.]
+          </p>
+        </div>
+
+        <div class="avatar-item" data-placeholder="true">
+          <h3 class="avatar-item__title">[Avatar Title 2 — PLACEHOLDER]</h3>
+          <p class="avatar-item__desc">
+            [PLACEHOLDER COPY — describe the second ideal patient archetype. Different life situation or motivation than avatar 1. Consider: returning athlete, executive, long-game optimizer, etc.]
+          </p>
+        </div>
+
+        <div class="avatar-item" data-placeholder="true">
+          <h3 class="avatar-item__title">[Avatar Title 3 — PLACEHOLDER]</h3>
+          <p class="avatar-item__desc">
+            [PLACEHOLDER COPY — describe the third ideal patient archetype. Could be defined by their relationship to performance, longevity, or a specific use case for this protocol.]
+          </p>
+        </div>
+        <!-- END PLACEHOLDER -->
+
+      </div>
+
+      <div class="exclusion-card">
+        <p class="exclusion-card__title">Not the right protocol if:</p>
+        <!-- PLACEHOLDER: replace with protocol-specific exclusions -->
+        <ul class="exclusion-list" role="list" data-placeholder="true">
+          <li>[PLACEHOLDER — Contraindication or exclusion criterion 1. Be medically accurate for this protocol.]</li>
+          <li>[PLACEHOLDER — Contraindication or exclusion criterion 2.]</li>
+          <li>[PLACEHOLDER — Contraindication or exclusion criterion 3.]</li>
+        </ul>
+        <!-- END PLACEHOLDER -->
+        <p class="exclusion-card__reassurance">
+          Your intake will screen for all contraindications. Every candidate is reviewed by a licensed physician before any prescription is issued.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CLINICAL FOUNDATION
+══════════════════════════════════════════════════ -->
+<section class="clinical section-pad" id="clinical" aria-labelledby="clinical-heading">
+  <div class="container">
+
+    <div class="clinical__header">
+      <span class="label">Clinical Foundation</span>
+      <!-- PLACEHOLDER: replace with protocol-specific clinical headline -->
+      <h2 class="clinical__headline" id="clinical-heading" data-placeholder="true">
+        [PLACEHOLDER — Protocol-specific clinical headline. Reference key trial data or mechanism.]
+      </h2>
+      <!-- END PLACEHOLDER -->
+    </div>
+
+    <div class="clinical__body">
+      <div>
+        <!-- PLACEHOLDER: replace with protocol-specific clinical science copy -->
+        <p class="clinical__copy" data-placeholder="true">
+          [CLINICAL COPY — REPLACE WITH PROTOCOL-SPECIFIC SCIENCE]<br><br>
+          Paragraph 1: Lead with the key clinical trial or mechanism. Bold the most compelling data point. Reference specific trial names (e.g., SURMOUNT-1 for tirzepatide, STEP 1 for semaglutide) and outcomes.<br><br>
+          Paragraph 2: Explain the mechanism of action in accessible but precise terms. How does this compound work at the cellular or hormonal level? What systems does it engage?<br><br>
+          Paragraph 3: Connect the science back to the performance user. How is the AnthologyRX protocol designed specifically for active individuals? What makes the dosing philosophy and titration approach different from generic weight-loss programs?
+        </p>
+        <!-- END PLACEHOLDER -->
+      </div>
+
+      <div class="credential-grid" role="list">
+
+        <div class="credential-badge" role="listitem">
+          <svg class="credential-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="14" cy="10" r="5"/><path d="M4 26c0-5.523 4.477-10 10-10s10 4.477 10 10"/>
+            <path d="M10 13l2.5 2.5L17 9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="credential-badge__title">Licensed Physicians</h3>
+          <p class="credential-badge__sub">Board certification verified for all network physicians</p>
+        </div>
+
+        <div class="credential-badge" role="listitem">
+          <svg class="credential-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="5" width="22" height="18" rx="2"/>
+            <path d="M8 14h12M14 9v10" stroke-linecap="round"/>
+          </svg>
+          <h3 class="credential-badge__title">503B Pharmacy</h3>
+          <p class="credential-badge__sub">Same standard as major hospital systems</p>
+        </div>
+
+        <div class="credential-badge" role="listitem">
+          <svg class="credential-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="5" y="3" width="18" height="22" rx="2"/>
+            <path d="M9 9h10M9 13h10M9 17h6" stroke-linecap="round"/>
+            <path d="M19 19l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="credential-badge__title">HIPAA Compliant</h3>
+          <p class="credential-badge__sub">End-to-end encrypted health data</p>
+        </div>
+
+        <div class="credential-badge" role="listitem">
+          <svg class="credential-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="7" width="22" height="16" rx="2"/>
+            <circle cx="14" cy="15" r="3"/>
+            <path d="M9 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+          </svg>
+          <h3 class="credential-badge__title">FSA/HSA Eligible</h3>
+          <p class="credential-badge__sub">Use pre-tax health account funds</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     EMOTIONAL BREAK — "SIX MONTHS FROM NOW"
+══════════════════════════════════════════════════ -->
+<section class="momentum-break" id="momentum-break" aria-label="Motivational callout">
+  <div class="momentum-break__image-wrap">
+    <!-- PLACEHOLDER: replace with actual editorial image -->
+    <div class="momentum-break__image" data-placeholder="true" role="img" aria-label="Editorial image placeholder">
+      <span class="momentum-break__img-label">Editorial Image — Protocol Specific</span>
+    </div>
+    <!-- END PLACEHOLDER -->
+    <div class="momentum-break__overlay"></div>
+  </div>
+  <div class="momentum-break__content container">
+    <div class="momentum-break__inner">
+      <p class="momentum-break__eyebrow label">The Decision Point</p>
+      <h2 class="momentum-break__headline">Six months from now,<br>you'll wish you started today.</h2>
+      <a href="/qualify" class="btn btn--gold btn--lg">See If You Qualify →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     PRICING
+══════════════════════════════════════════════════ -->
+<section class="pricing section-pad" id="pricing" aria-labelledby="pricing-heading">
+  <div class="container">
+
+    <div class="pricing__header">
+      <span class="label">Pricing</span>
+      <h2 class="pricing__headline" id="pricing-heading">
+        One protocol. One price. No surprises.
+      </h2>
+    </div>
+
+    <!-- Price anchor context -->
+    <!-- PLACEHOLDER: replace competitor range with protocol-specific comparison -->
+    <div class="pricing__anchor-bar" data-placeholder="true">
+      <span>Comparable clinic programs: <s>$400–$800/mo</s></span>
+      <span class="pricing__anchor-bar__divider">·</span>
+      <span>AnthologyRX: <strong>$199/mo</strong></span>
+      <span class="pricing__anchor-bar__divider">·</span>
+      <span>FSA/HSA accepted</span>
+    </div>
+    <!-- END PLACEHOLDER -->
+
+    <div class="pricing__body">
+
+      <div class="pricing__left">
+        <!-- PLACEHOLDER: replace with protocol name -->
+        <p class="pricing__protocol-name" data-placeholder="true">GLP-1 Performance Protocol</p>
+        <!-- END PLACEHOLDER -->
+
+        <div class="pricing__amount">
+          <!-- PLACEHOLDER: replace with protocol price -->
+          <span class="pricing__dollar" data-placeholder="true">$199</span>
+          <span class="pricing__period">/mo</span>
+          <!-- END PLACEHOLDER -->
+        </div>
+
+        <!-- PLACEHOLDER: replace with protocol-specific includes list -->
+        <ul class="pricing__includes" role="list" data-placeholder="true">
+          <li>Physician-issued prescription</li>
+          <li>Licensed 503B pharmacy fulfillment, delivered to your door</li>
+          <li>Monthly provider check-in + dosing management</li>
+          <li>Direct messaging access to your care team</li>
+          <li>Titration protocol and injection guidance</li>
+          <li>FSA/HSA receipt issued automatically</li>
+          <li>[PLACEHOLDER — protocol-specific item]</li>
+        </ul>
+        <!-- END PLACEHOLDER -->
+      </div>
+
+      <div class="pricing__cta-card">
+        <h3 class="pricing__cta-headline">
+          Start your protocol<br>in under three minutes.
+        </h3>
+        <p class="pricing__cta-sub">
+          Complete a short medical intake. A board-certified physician reviews your information within 48 hours. If approved, your medication ships directly from our 503B pharmacy.
+        </p>
+        <a href="/qualify" class="btn btn--gold btn--lg">See If You Qualify →</a>
+        <p class="pricing__no-contract">Billed monthly · Renews automatically until cancelled · Cancel anytime, no fees</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════════════ -->
+<section class="faq section-pad" id="faq" aria-labelledby="faq-heading">
+  <div class="container--text">
+
+    <div class="faq__header">
+      <span class="label">Common Questions</span>
+      <h2 class="faq__headline" id="faq-heading">
+        What you need to know.
+      </h2>
+    </div>
+
+    <ul class="faq__list" role="list">
+
+      <!-- Real objection questions — replace with protocol-specific objections -->
+
+      <!-- PLACEHOLDER: Real objection question 1 -->
+      <li class="faq-item" role="listitem" data-placeholder="true">
+        <button class="faq-item__trigger" aria-controls="faq-1" id="faq-trigger-1">
+          [FAQ QUESTION PLACEHOLDER — Real objection question 1. Replace with the most common objection or concern a candidate has about this specific protocol.]
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-1" role="region" aria-labelledby="faq-trigger-1">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              [FAQ ANSWER PLACEHOLDER — Address the objection directly and without hedging. Lead with the most reassuring or reframing point. Use clinical language where appropriate. Do not end with a soft sell — end with confidence.]
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-- END PLACEHOLDER -->
+
+      <!-- PLACEHOLDER: Real objection question 2 -->
+      <li class="faq-item" role="listitem" data-placeholder="true">
+        <button class="faq-item__trigger" aria-controls="faq-2" id="faq-trigger-2">
+          [FAQ QUESTION PLACEHOLDER — Real objection question 2. Replace with the second most common objection. Consider: safety, side effects, what happens when stopping, interactions.]
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-2" role="region" aria-labelledby="faq-trigger-2">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              [FAQ ANSWER PLACEHOLDER — Comprehensive, honest answer that addresses the concern and builds trust. If there are real risks, acknowledge them and explain how the protocol mitigates them.]
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-- END PLACEHOLDER -->
+
+      <!-- PLACEHOLDER: Real objection question 3 -->
+      <li class="faq-item" role="listitem" data-placeholder="true">
+        <button class="faq-item__trigger" aria-controls="faq-3" id="faq-trigger-3">
+          [FAQ QUESTION PLACEHOLDER — Real objection question 3. Replace with the third most common objection. Consider: cost justification, comparison to alternatives, efficacy expectations.]
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-3" role="region" aria-labelledby="faq-trigger-3">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              [FAQ ANSWER PLACEHOLDER — Answer that both resolves the concern and reinforces the protocol's value. Can reference clinical data, the physician management component, or the AnthologyRX philosophy.]
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-- END PLACEHOLDER -->
+
+      <!-- PLACEHOLDER: FAQ question 4 -->
+      <li class="faq-item" role="listitem" data-placeholder="true">
+        <button class="faq-item__trigger" aria-controls="faq-4" id="faq-trigger-4">
+          [FAQ QUESTION PLACEHOLDER — Question 4. Can be operational: "How do I get started?", "What's the intake process?", "How does pharmacy shipping work?"]
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-4" role="region" aria-labelledby="faq-trigger-4">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              [FAQ ANSWER PLACEHOLDER — Clear, step-by-step or direct answer. Operational questions should be answered with specifics: timelines, process, what to expect.]
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-- END PLACEHOLDER -->
+
+      <!-- PLACEHOLDER: FAQ question 5 -->
+      <li class="faq-item" role="listitem" data-placeholder="true">
+        <button class="faq-item__trigger" aria-controls="faq-5" id="faq-trigger-5">
+          [FAQ QUESTION PLACEHOLDER — Question 5. Consider: stacking with other protocols, FSA/HSA usage, cancellation, ongoing monitoring, adjustments.]
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-5" role="region" aria-labelledby="faq-trigger-5">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              [FAQ ANSWER PLACEHOLDER — Complete, confidence-building answer. For stacking/interaction questions, mention that the physician reviews all active protocols during intake.]
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-- END PLACEHOLDER -->
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     RELATED PROTOCOLS — NEW SECTION
+══════════════════════════════════════════════════ -->
+<section class="related section-pad" aria-labelledby="related-heading">
+  <div class="container">
+
+    <div class="related__header">
+      <span class="label">Also From AnthologyRX</span>
+      <h2 class="related__headline" id="related-heading">
+        Other protocols worth exploring.
+      </h2>
+    </div>
+
+    <div class="related__grid">
+
+      <!-- PLACEHOLDER: replace with actual related protocol cards -->
+      <div class="related-card" data-placeholder="true">
+        <p class="related-card__name">[Protocol Card 1 — Protocol Name Placeholder]</p>
+        <p class="related-card__desc">[PLACEHOLDER — One-line description of this protocol and what it addresses. Keep it outcome-focused.]</p>
+        <a href="#" class="related-card__link">Learn More →</a>
+      </div>
+
+      <div class="related-card" data-placeholder="true">
+        <p class="related-card__name">[Protocol Card 2 — Protocol Name Placeholder]</p>
+        <p class="related-card__desc">[PLACEHOLDER — One-line description of this protocol. Consider: TRT, Peptides, NAD+, or supplements depending on which protocols are active.]</p>
+        <a href="#" class="related-card__link">Learn More →</a>
+      </div>
+
+      <div class="related-card" data-placeholder="true">
+        <p class="related-card__name">[Protocol Card 3 — Protocol Name Placeholder]</p>
+        <p class="related-card__desc">[PLACEHOLDER — One-line description. Related protocols should complement the current page protocol — physician will review compatibility.]</p>
+        <a href="#" class="related-card__link">Learn More →</a>
+      </div>
+      <!-- END PLACEHOLDER -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════════ -->
+<section class="final-cta" aria-labelledby="final-cta-heading">
+  <div class="container">
+    <div class="final-cta__inner">
+
+      <span class="label final-cta__tagline">Performance · Longevity · Legacy</span>
+
+      <h2 class="final-cta__display" id="final-cta-heading">
+        For Those Who Never Stop.
+      </h2>
+
+      <p class="final-cta__sub">Your intake takes three minutes. Provider review within 48 hours. No waiting room. No contracts.</p>
+
+      <div class="final-cta__actions">
+        <a href="/qualify" class="btn btn--gold btn--xl">See If You Qualify →</a>
+        <a href="/qualify" class="text-link text-link--arrow">Take the Match Assessment</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+
+    <div class="footer__top">
+      <div>
+        <a href="/" class="footer__logo" aria-label="AnthologyRX home">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+        <p class="footer__tagline" style="margin-top: 0.75rem;">Performance · Longevity · Legacy</p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <ul class="footer__links" role="list">
+          <li><a href="/protocols">Protocols</a></li>
+          <li><a href="/pages/science">Science</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/privacy">Privacy</a></li>
+          <li><a href="/pages/terms">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__divider" role="separator"></div>
+
+    <p class="footer__legal">
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility and are not manufactured by Novo Nordisk or Eli Lilly. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. GLP-1 agonists may cause side effects including nausea, vomiting, diarrhea, and gastrointestinal discomfort. Rare but serious risks include pancreatitis and, in patients with a history of medullary thyroid carcinoma or MEN2, potential thyroid risk. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+    </p>
+
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════
+     MOBILE STICKY BAR
+══════════════════════════════════════════════════ -->
+<div class="mobile-bar" id="mobileBar" role="region" aria-label="Quick start bar">
+  <div class="mobile-bar__text">
+    <!-- PLACEHOLDER: replace with protocol price and name -->
+    <span class="mobile-bar__price" data-placeholder="true">$199/mo</span>
+    <span class="mobile-bar__sub" data-placeholder="true">GLP-1 Protocol</span>
+    <!-- END PLACEHOLDER -->
+  </div>
+  <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+  <button class="mobile-bar__dismiss" id="mobileBarDismiss" aria-label="Dismiss">×</button>
+</div>
+
+
+<script>
+/* ============================================================
+   ANTHOLOGY RX — PRODUCT PAGE INTERACTIONS
+   Nav scroll, hamburger, FAQ accordion, announce bar dismiss,
+   mobile bar dismiss + hero hide, scroll animations, padding sync
+============================================================ */
+
+// ── PLACEHOLDER TOGGLE ─────────────────────────────────
+// Set window.__SHOW_PLACEHOLDERS = false to hide outlines in prod
+window.__SHOW_PLACEHOLDERS = true;
+if (!window.__SHOW_PLACEHOLDERS) {
+  const style = document.createElement('style');
+  style.textContent = '[data-placeholder] { outline: none !important; }';
+  document.head.appendChild(style);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── TOP STACK: keep body padding-top = exact stack height ──
+  // ResizeObserver handles bar dismiss, text wrapping, font load, resize
+  const topStack = document.getElementById('topStack');
+  const announceBar = document.getElementById('announceBar');
+  const announceClose = document.getElementById('announceClose');
+
+  function syncBodyPad() {
+    if (topStack) {
+      document.body.style.paddingTop = topStack.offsetHeight + 'px';
+    }
+  }
+
+  if (topStack) {
+    const ro = new ResizeObserver(syncBodyPad);
+    ro.observe(topStack);
+    syncBodyPad(); // initial
+  }
+
+  // Announcement bar dismiss (in-memory only)
+  if (announceBar && announceClose) {
+    announceClose.addEventListener('click', () => {
+      announceBar.classList.add('hidden');
+      // ResizeObserver fires automatically and re-syncs padding
+    });
+  }
+
+  // ── NAV SCROLL SHADOW ────────────────────────────────
+  const nav = document.querySelector('.nav');
+  if (nav) {
+    const updateNav = () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  }
+
+  // ── HAMBURGER TOGGLE ─────────────────────────────────
+  const hamburger = document.querySelector('.nav__hamburger');
+  const mobileMenu = document.querySelector('.nav__mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ── FAQ ACCORDION ────────────────────────────────────
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-item__trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      faqItems.forEach(other => other.classList.remove('open'));
+
+      // Toggle this one
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── MOBILE BAR: dismiss + hero hide ──────────────────
+  const mobileBar = document.getElementById('mobileBar');
+  const dismissBtn = document.getElementById('mobileBarDismiss');
+
+  if (dismissBtn && mobileBar) {
+    dismissBtn.addEventListener('click', () => {
+      mobileBar.classList.add('dismissed');
+    });
+  }
+
+  // Hide mobile bar while hero is visible
+  const hero = document.getElementById('hero');
+  if (hero && mobileBar) {
+    const heroObs = new IntersectionObserver(([entry]) => {
+      if (window.innerWidth <= 768) {
+        if (entry.isIntersecting) {
+          mobileBar.style.display = 'none';
+        } else {
+          if (!mobileBar.classList.contains('dismissed')) {
+            mobileBar.style.display = '';
+          }
+        }
+      }
+    }, { threshold: 0 });
+    heroObs.observe(hero);
+  }
+
+  // ── SCROLL FADE-UP ANIMATIONS ────────────────────────
+  const animTargets = document.querySelectorAll(
+    '.outcome-stat, .step, .avatar-item, ' +
+    '.credential-badge, .faq-item, ' +
+    '.pricing__cta-card, .exclusion-card, ' +
+    '.momentum-break__inner, .pricing__anchor-bar, ' +
+    '.related-card, .quick-stat, .includes-list'
+  );
+
+  animTargets.forEach(el => el.classList.add('anim-up'));
+
+  const animObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        animObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  animTargets.forEach(el => animObs.observe(el));
+
+  // ── ACTIVE NAV LINK ──────────────────────────────────
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__links a');
+
+  const sectionObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          const isActive = link.getAttribute('href') === `#${id}`;
+          link.style.color = isActive ? 'var(--sand)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => sectionObs.observe(s));
+
+});
+</script>
+</body>
+</html>

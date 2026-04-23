@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocols &amp; Pricing — AnthologyRX</title>
+  <meta name="description" content="Compare all AnthologyRX protocols — GLP-1, Peptide, Hormone Optimization, and NAD+. Physician-prescribed, remotely managed, starting from $199/mo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Epilogue:ital,wght@0,300..800;1,300..500&display=swap" rel="stylesheet" />
+
+  <style>
+/* ============================================================
+   ANTHOLOGY RX — PRICING / PLANS PAGE
+   Brand: #1E1E1E bg / #E8DCC8 sand / #B28A2A brass gold
+   Fonts: Unbounded display · Epilogue body
+============================================================ */
+
+/* ══════════════════════════════════════════════════════════
+   STANDARD LOGO — CANONICAL, DO NOT MODIFY
+   ANTHOLOGY: Unbounded weight 400, #E8DCC8, ls 0.08em
+   RX: Unbounded weight 700, #B28A2A, superscript top -0.4em
+   Usage: <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+   No icons. No SVG marks. No alternate treatments.
+══════════════════════════════════════════════════════════ */
+.logo-main {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-weight: 400;
+  color: #E8DCC8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.logo-rx {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
+  font-weight: 700;
+  color: #B28A2A;
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -0.4em;
+  margin-left: 0.1em;
+}
+
+/* ─── RESET ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: #1E1E1E;
+  color: #E8DCC8;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font-family: inherit; }
+
+/* ─── TOKENS ────────────────────────────────────────────── */
+:root {
+  --bg:           #1E1E1E;
+  --bg-card:      #262422;
+  --bg-deep:      #181614;
+  --rule:         #373430;
+  --sand:         #E8DCC8;
+  --sand-dim:     #9C9082;
+  --gold:         #B28A2A;
+  --gold-hover:   #C99B35;
+  --gold-glow:    rgba(178,138,42,0.18);
+  --font-disp:    'Unbounded', sans-serif;
+  --font-body:    'Epilogue', sans-serif;
+  --nav-h:        72px;
+  --r:            3px;
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+  --t:            0.25s var(--ease);
+  --section-pad:  100px 0;
+  --max-w:        1200px;
+}
+
+/* ─── CONTAINERS ────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.container--text {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+@media (max-width: 768px) {
+  .container, .container--text { padding: 0 20px; }
+}
+
+/* ─── GLOBAL TYPE ────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--sand);
+}
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 900; letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.6rem); }
+h3 { font-size: 1rem; font-weight: 700; }
+
+p { color: var(--sand-dim); }
+
+.label {
+  display: inline-block;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.section-pad { padding: var(--section-pad); border-bottom: 1px solid var(--rule); }
+
+/* ─── BUTTONS ────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all var(--t);
+  white-space: nowrap;
+  border: none;
+}
+.btn--gold {
+  background: var(--gold);
+  color: #1E1E1E;
+}
+.btn--gold:hover {
+  background: var(--gold-hover);
+  color: #1E1E1E;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px var(--gold-glow);
+}
+.btn--lg { padding: 17px 36px; font-size: 0.65rem; }
+.btn--xl { padding: 20px 48px; font-size: 0.7rem; }
+
+.text-link {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+  transition: color var(--t);
+}
+.text-link--arrow::after { content: ' →'; }
+.text-link:hover { color: var(--gold); }
+
+/* ─── ANNOUNCEMENT BAR ──────────────────────────────────── */
+.announce-bar {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 48px;
+  flex-shrink: 0;
+  position: relative;
+}
+.announce-bar.hidden { display: none; }
+
+.announce-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.announce-bar__text {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+}
+
+.announce-bar__cta {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  transition: opacity var(--t);
+}
+.announce-bar__cta:hover { opacity: 0.75; color: var(--bg); }
+
+.announce-bar__close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--bg);
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.6;
+  padding: 4px 8px;
+  transition: opacity var(--t);
+}
+.announce-bar__close:hover { opacity: 1; }
+
+@media (max-width: 768px) {
+  .announce-bar { padding: 10px 40px 10px 16px; }
+  .announce-bar__text { font-size: 0.52rem; }
+}
+
+/* ─── FIXED TOP STACK ───────────────────────────────────── */
+.top-stack {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: static;
+  height: var(--nav-h);
+  flex-shrink: 0;
+}
+
+/* ─── NAV ────────────────────────────────────────────────── */
+.nav {
+  height: 100%;
+  background: rgba(30,30,30,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+  transition: background var(--t), box-shadow var(--t);
+}
+.nav.scrolled {
+  background: rgba(22,20,18,0.97);
+  box-shadow: 0 2px 40px rgba(0,0,0,0.45);
+}
+
+.nav__inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+.nav__links a {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.nav__links a:hover { color: var(--sand); }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.nav__login {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.nav__login:hover { color: var(--sand); }
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--sand);
+  transition: all var(--t);
+}
+.nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav__mobile-menu {
+  display: none;
+  position: absolute;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--rule);
+  padding: 24px 48px;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav__mobile-menu.open { display: flex; }
+.nav__mobile-menu a {
+  font-family: var(--font-disp);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+
+@media (max-width: 900px) {
+  .nav__links, .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .nav__mobile-menu { padding: 24px 20px; }
+}
+
+/* ─── PAGE HEADER ────────────────────────────────────────── */
+.page-header {
+  background: var(--bg);
+  padding: 100px 0 80px;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header__label { margin-bottom: 20px; }
+.page-header__h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+.page-header__sub {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--sand-dim);
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+.page-header__cta {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: opacity var(--t);
+}
+.page-header__cta:hover { opacity: 0.75; }
+.page-header__cta::after { content: ' →'; }
+
+/* ─── PROTOCOL GRID ──────────────────────────────────────── */
+.protocols {
+  background: var(--bg-deep);
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--rule);
+}
+.protocols__header {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 64px;
+}
+.protocols__header h2 { margin-top: 8px; }
+
+.protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .protocol-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .protocol-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── PROTOCOL CARD ──────────────────────────────────────── */
+.protocol-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid transparent;
+  border-radius: var(--r);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-color var(--t), transform var(--t), box-shadow var(--t);
+  position: relative;
+}
+.protocol-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.protocol-card__category {
+  font-family: var(--font-disp);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.protocol-card__name {
+  font-family: var(--font-disp);
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--sand);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.protocol-card__position {
+  font-size: 0.82rem;
+  color: var(--sand-dim);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.protocol-card__divider {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 24px;
+}
+
+/* Price block */
+.protocol-card__price-block {
+  margin-bottom: 24px;
+}
+.protocol-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.protocol-card__price-amt {
+  font-family: var(--font-disp);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--sand);
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+.protocol-card__price-per {
+  font-family: var(--font-disp);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--sand-dim);
+}
+.protocol-card__price-compare {
+  font-size: 0.72rem;
+  color: var(--sand-dim);
+  opacity: 0.5;
+}
+.protocol-card__price-compare s {
+  text-decoration: line-through;
+}
+
+/* TBD price placeholder */
+.protocol-card__price-tbd {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.protocol-card__tbd-box {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1.5px dashed var(--gold);
+  border-radius: var(--r);
+  padding: 10px 18px;
+  opacity: 0.7;
+}
+
+/* Outcomes list */
+.protocol-card__outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex: 1;
+}
+.protocol-card__outcome {
+  font-size: 0.84rem;
+  color: var(--sand-dim);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+.protocol-card__outcome::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* Includes list */
+.protocol-card__includes-label {
+  font-family: var(--font-disp);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  margin-bottom: 12px;
+}
+.protocol-card__includes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.protocol-card__include {
+  font-size: 0.82rem;
+  color: var(--sand-dim);
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+.protocol-card__include::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* Card CTAs */
+.protocol-card__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+.protocol-card__cta-primary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all var(--t);
+  background: var(--gold);
+  color: #1E1E1E;
+  border: none;
+}
+.protocol-card__cta-primary:hover {
+  background: var(--gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--gold-glow);
+}
+.protocol-card__cta-secondary {
+  display: block;
+  text-align: center;
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.protocol-card__cta-secondary:hover { color: var(--sand); }
+
+/* ─── COMPARISON TABLE ───────────────────────────────────── */
+.comparison {
+  background: var(--bg);
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--rule);
+}
+.comparison__header {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 56px;
+}
+.comparison__header h2 { margin-top: 8px; }
+
+.comparison__wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px 20px;
+  text-align: center;
+  border-right: 1px solid var(--rule);
+  transition: background var(--t);
+}
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+  border-right: none;
+}
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  text-align: left;
+  min-width: 160px;
+}
+
+/* Header row */
+.comparison-table thead tr {
+  background: var(--gold);
+}
+.comparison-table thead th {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg);
+  border-right-color: rgba(0,0,0,0.12);
+  padding: 18px 20px;
+}
+.comparison-table thead th:first-child {
+  color: rgba(30,30,30,0.6);
+}
+
+/* Alternating rows */
+.comparison-table tbody tr:nth-child(odd) {
+  background: var(--bg-card);
+}
+.comparison-table tbody tr:nth-child(even) {
+  background: var(--bg);
+}
+
+/* Row hover — column highlight via JS */
+.comparison-table tbody td {
+  font-size: 0.84rem;
+  color: var(--sand-dim);
+  border-bottom: 1px solid var(--rule);
+}
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Feature label (first col) */
+.comparison-table tbody td:first-child {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Check marks */
+.comparison-table .check {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* TBD cells */
+.comparison-table .tbd {
+  color: var(--sand-dim);
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 0.78rem;
+}
+
+/* Column highlight on hover */
+.comparison-table .col-highlighted {
+  background: rgba(178,138,42,0.07) !important;
+}
+
+/* ─── HOW IT WORKS ───────────────────────────────────────── */
+.how-works {
+  background: var(--bg-deep);
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--rule);
+}
+.how-works__header {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 64px;
+}
+.how-works__headline { margin-top: 8px; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--rule);
+}
+.step {
+  background: var(--bg);
+  padding: 40px 28px;
+  transition: background var(--t);
+}
+.step:hover { background: var(--bg-card); }
+
+.step__number {
+  font-family: var(--font-disp);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.35;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+.step__title {
+  font-size: 0.9rem;
+  color: var(--sand);
+  margin-bottom: 10px;
+}
+.step__desc { font-size: 0.84rem; }
+
+@media (max-width: 900px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .steps { grid-template-columns: 1fr; }
+  .step { padding: 28px 20px; }
+}
+
+/* ─── TRUST BAR ──────────────────────────────────────────── */
+.trust-bar {
+  background: var(--bg-deep);
+  padding: 60px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.trust-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--rule);
+}
+.trust-badge {
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: background var(--t);
+}
+.trust-badge:hover { background: #2A2723; }
+.trust-badge__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.trust-badge__title {
+  font-family: var(--font-disp);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--sand);
+}
+.trust-badge__sub {
+  font-size: 0.75rem;
+  color: var(--sand-dim);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .trust-bar__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .trust-bar__grid { grid-template-columns: 1fr; }
+}
+
+/* ─── FAQ ────────────────────────────────────────────────── */
+.faq { background: var(--bg); padding: var(--section-pad); border-bottom: 1px solid var(--rule); }
+.faq__header { text-align: center; margin-bottom: 56px; }
+.faq__headline { margin-top: 8px; }
+
+.faq__list {
+  border-top: 1px solid var(--rule);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-disp);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--sand);
+  transition: color var(--t);
+}
+.faq-item__trigger:hover { color: var(--gold); }
+
+.faq-item__icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform var(--t);
+}
+
+.faq-item.open .faq-item__icon { transform: rotate(45deg); }
+
+.faq-item__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease);
+}
+.faq-item.open .faq-item__body {
+  grid-template-rows: 1fr;
+}
+.faq-item__body-inner {
+  overflow: hidden;
+}
+.faq-item__answer {
+  padding-bottom: 24px;
+  font-size: 0.9rem;
+  line-height: 1.78;
+}
+
+/* ─── MATCH ASSESSMENT CTA ───────────────────────────────── */
+.match-cta {
+  background: var(--bg-deep);
+  border-top: 3px solid var(--gold);
+  padding: 100px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.match-cta__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.match-cta__h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+}
+.match-cta__sub {
+  font-size: 0.95rem;
+  color: var(--sand-dim);
+  line-height: 1.75;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+.match-cta__reassurance {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: var(--sand-dim);
+  opacity: 0.55;
+  font-style: italic;
+}
+
+/* ─── FINAL CTA ──────────────────────────────────────────── */
+.final-cta {
+  background: var(--bg-deep);
+  padding: 120px 0;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+}
+.final-cta__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.final-cta__tagline { margin-bottom: 24px; }
+.final-cta__display {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  margin-bottom: 48px;
+}
+.final-cta__sub {
+  font-size: 0.95rem;
+  color: var(--sand-dim);
+  max-width: 420px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  text-align: center;
+}
+.final-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.footer {
+  background: var(--bg-deep);
+  padding: 64px 0 40px;
+  border-top: 1px solid var(--rule);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer__logo {
+  font-family: var(--font-disp);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.footer__tagline {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 10px !important;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+.footer__links a {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.footer__links a:hover { color: var(--sand); }
+
+.footer__divider {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 32px;
+}
+
+.footer__legal {
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: var(--sand-dim);
+  opacity: 0.5;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .footer__top { flex-direction: column; gap: 28px; }
+}
+
+/* ─── MOBILE BOTTOM BAR ──────────────────────────────────── */
+.mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 950;
+  background: var(--bg-card);
+  border-top: 1px solid var(--rule);
+  padding: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.mobile-bar__text {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-bar__price {
+  font-family: var(--font-disp);
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.mobile-bar__sub {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  margin-top: 2px;
+}
+.mobile-bar__dismiss {
+  background: none;
+  border: none;
+  color: var(--sand-dim);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.mobile-bar__dismiss:hover { color: var(--sand); }
+
+@media (max-width: 768px) {
+  .mobile-bar { display: flex; }
+  .mobile-bar.dismissed { display: none; }
+}
+
+/* ─── SCROLL ANIMATIONS ──────────────────────────────────── */
+.anim-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+.anim-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-up:nth-child(1) { transition-delay: 0s; }
+.anim-up:nth-child(2) { transition-delay: 0.08s; }
+.anim-up:nth-child(3) { transition-delay: 0.16s; }
+.anim-up:nth-child(4) { transition-delay: 0.24s; }
+
+/* ─── RESPONSIVE PATCHES ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-header { padding: 72px 0 56px; }
+  .page-header__h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  .comparison-table th, .comparison-table td { padding: 12px 14px; }
+  .comparison-table tbody td:first-child { min-width: 120px; }
+  .match-cta { padding: 72px 0; }
+  .final-cta { padding: 80px 0; }
+}
+
+/* pricing anchor bar (reused on pricing page) */
+.pricing__anchor-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 14px 28px;
+  margin-bottom: 56px;
+  font-family: var(--font-disp);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pricing__anchor-bar s { text-decoration: line-through; opacity: 0.5; }
+.pricing__anchor-bar strong { color: var(--gold); font-weight: 700; }
+.pricing__anchor-bar__divider { color: var(--rule); font-size: 0.8rem; }
+@media (max-width: 600px) {
+  .pricing__anchor-bar { gap: 10px; text-align: center; }
+  .pricing__anchor-bar__divider { display: none; }
+}
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     FIXED TOP STACK: announcement bar + nav
+══════════════════════════════════════════════════ -->
+<div class="top-stack" id="topStack">
+
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-bar__inner">
+      <span class="announce-bar__text">
+        Protocols from $199/mo &nbsp;·&nbsp; FSA/HSA may be accepted (plan-dependent) &nbsp;·&nbsp; Provider review in 48 hours
+      </span>
+      <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+    </div>
+    <button class="announce-bar__close" id="announceClose" aria-label="Dismiss">×</button>
+  </div>
+
+<!-- ══════════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════════ -->
+<header id="siteHeader">
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+
+      <!-- ═══ STANDARD LOGO — DO NOT MODIFY ═══
+           ANTHOLOGY: Unbounded 400, #E8DCC8, ls 0.08em
+           RX: Unbounded 700, #B28A2A, superscript (top -0.4em)
+           No icons. No SVG marks. Text only. ══════ -->
+      <a href="/" class="nav__logo" aria-label="AnthologyRX home">
+        <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="/protocols">Protocols</a></li>
+        <li><a href="/pages/how-it-works">How It Works</a></li>
+        <li><a href="/pages/science">Science</a></li>
+        <li><a href="/pages/faq">FAQ</a></li>
+        <li><a href="/pages/about">About</a></li>
+        <li><a href="/blogs/journal">Journal</a></li>
+        <li><a href="/pages/pricing">Pricing</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="/account" class="nav__login">Log In</a>
+        <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="/protocols">Protocols</a>
+      <a href="/pages/how-it-works">How It Works</a>
+      <a href="/pages/science">Science</a>
+      <a href="/pages/faq">FAQ</a>
+      <a href="/account" class="nav__login">Log In</a>
+      <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+    </div>
+  </nav>
+</header>
+
+</div><!-- /.top-stack -->
+
+
+<!-- ══════════════════════════════════════════════════
+     1. PAGE HEADER
+══════════════════════════════════════════════════ -->
+<section class="page-header" id="page-header" aria-labelledby="page-header-h1">
+  <div class="container">
+    <span class="label page-header__label">Our Protocols</span>
+    <h1 class="page-header__h1">Find the protocol that fits your goals.</h1>
+    <p class="page-header__sub">Every AnthologyRX protocol is physician-prescribed, remotely managed, and built for people who take their performance seriously.</p>
+    <a href="/qualify" class="page-header__cta">Not sure where to start? Take the Match Assessment</a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     2. PROTOCOL COMPARISON GRID
+══════════════════════════════════════════════════ -->
+<section class="protocols section-pad" id="protocols" aria-labelledby="protocols-heading">
+  <div class="container">
+
+    <div class="protocols__header">
+      <span class="label">Compare Protocols</span>
+      <h2 id="protocols-heading">All four protocols, side by side.</h2>
+    </div>
+
+    <div class="pricing__anchor-bar">
+      <span>Comparable clinics: <s>$400–$800/mo</s></span>
+      <span class="pricing__anchor-bar__divider">·</span>
+      <span>GLP-1 from <strong>$199/mo</strong></span>
+      <span class="pricing__anchor-bar__divider">·</span>
+      <span>FSA/HSA accepted</span>
+    </div>
+
+    <div class="protocol-grid">
+
+      <!-- ── CARD 1: GLP-1 ── -->
+      <div class="protocol-card anim-up" role="article" aria-label="GLP-1 Performance Protocol">
+        <div class="protocol-card__category">Weight Optimization</div>
+        <h2 class="protocol-card__name">GLP-1 Performance Protocol</h2>
+        <p class="protocol-card__position">Clinician-prescribed semaglutide or tirzepatide for metabolic reset and body composition.</p>
+        <div class="protocol-card__divider"></div>
+
+        <div class="protocol-card__price-block">
+          <div class="protocol-card__price">
+            <span class="protocol-card__price-amt">$199</span>
+            <span class="protocol-card__price-per">/mo</span>
+          </div>
+          <p class="protocol-card__price-compare">Comparable clinics: <s>$400–800/mo</s></p>
+        </div>
+
+        <ul class="protocol-card__outcomes" role="list" aria-label="Key outcomes">
+          <li class="protocol-card__outcome">15–21% mean body weight reduction in SURMOUNT-1 (tirzepatide) and STEP 1 (semaglutide) clinical trials†</li>
+          <li class="protocol-card__outcome">Appetite regulation at the hypothalamic level</li>
+          <li class="protocol-card__outcome">Improved insulin sensitivity and metabolic markers</li>
+          <li class="protocol-card__outcome">Designed for active individuals — muscle preservation built in</li>
+        </ul>
+
+        <div class="protocol-card__divider"></div>
+        <div class="protocol-card__includes-label">What's included</div>
+        <ul class="protocol-card__includes" role="list">
+          <li class="protocol-card__include">Physician prescription + pharmacy fulfillment</li>
+          <li class="protocol-card__include">Monthly provider check-ins</li>
+          <li class="protocol-card__include">FSA/HSA eligible</li>
+        </ul>
+
+        <div class="protocol-card__ctas">
+          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="#" class="protocol-card__cta-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- ── CARD 2: PEPTIDE ── -->
+      <div class="protocol-card anim-up" role="article" aria-label="Peptide Performance Protocol">
+        <div class="protocol-card__category">Recovery &amp; Body Composition</div>
+        <h2 class="protocol-card__name">Peptide Performance Protocol</h2>
+        <p class="protocol-card__position">Prescription peptide therapy for accelerated recovery, body composition, and growth hormone optimization.</p>
+        <div class="protocol-card__divider"></div>
+
+        <div class="protocol-card__price-block">
+          <div class="protocol-card__price-tbd">
+            <span class="protocol-card__tbd-box">Pricing TBD</span>
+            <span class="protocol-card__price-per">/mo</span>
+          </div>
+          <p class="protocol-card__price-compare">Comparable clinics: <s>$400–800/mo</s></p>
+        </div>
+
+        <ul class="protocol-card__outcomes" role="list" aria-label="Key outcomes">
+          <li class="protocol-card__outcome">Accelerated tissue repair and recovery</li>
+          <li class="protocol-card__outcome">Improved body composition and lean mass</li>
+          <li class="protocol-card__outcome">Enhanced sleep quality and GH pulse optimization</li>
+          <li class="protocol-card__outcome">Reduced inflammation and joint support</li>
+        </ul>
+
+        <div class="protocol-card__divider"></div>
+        <div class="protocol-card__includes-label">What's included</div>
+        <ul class="protocol-card__includes" role="list">
+          <li class="protocol-card__include">Physician-issued peptide prescription</li>
+          <li class="protocol-card__include">Licensed compounding pharmacy fulfillment</li>
+          <li class="protocol-card__include">Monthly provider review</li>
+        </ul>
+
+        <div class="protocol-card__ctas">
+          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="#" class="protocol-card__cta-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- ── CARD 3: HORMONE ── -->
+      <div class="protocol-card anim-up" role="article" aria-label="Hormone Optimization Protocol">
+        <div class="protocol-card__category">Hormone Optimization</div>
+        <h2 class="protocol-card__name">Hormone Optimization Protocol</h2>
+        <p class="protocol-card__position">TRT and hormone optimization for men and women — prescribed, monitored, and adjusted remotely.</p>
+        <div class="protocol-card__divider"></div>
+
+        <div class="protocol-card__price-block">
+          <div class="protocol-card__price-tbd">
+            <span class="protocol-card__tbd-box">Pricing TBD</span>
+            <span class="protocol-card__price-per">/mo</span>
+          </div>
+          <p class="protocol-card__price-compare">Comparable clinics: <s>$400–800/mo</s></p>
+        </div>
+
+        <ul class="protocol-card__outcomes" role="list" aria-label="Key outcomes">
+          <li class="protocol-card__outcome">Restored testosterone and hormonal balance</li>
+          <li class="protocol-card__outcome">Improved energy, libido, and cognitive clarity</li>
+          <li class="protocol-card__outcome">Lean mass preservation and fat reduction</li>
+          <li class="protocol-card__outcome">Ongoing lab monitoring and dose optimization</li>
+        </ul>
+
+        <div class="protocol-card__divider"></div>
+        <div class="protocol-card__includes-label">What's included</div>
+        <ul class="protocol-card__includes" role="list">
+          <li class="protocol-card__include">Full hormone panel + physician review</li>
+          <li class="protocol-card__include">Prescription + pharmacy fulfillment</li>
+          <li class="protocol-card__include">Monthly check-ins + dosing adjustments</li>
+        </ul>
+
+        <div class="protocol-card__ctas">
+          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="#" class="protocol-card__cta-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- ── CARD 4: NAD+ ── -->
+      <div class="protocol-card anim-up" role="article" aria-label="NAD+ Longevity Protocol">
+        <div class="protocol-card__category">Longevity &amp; Cellular Health</div>
+        <h2 class="protocol-card__name">NAD+ Longevity Protocol</h2>
+        <p class="protocol-card__position">Injectable NAD+ therapy for cellular energy, cognitive function, and long-term performance.</p>
+        <div class="protocol-card__divider"></div>
+
+        <div class="protocol-card__price-block">
+          <div class="protocol-card__price-tbd">
+            <span class="protocol-card__tbd-box">Pricing TBD</span>
+            <span class="protocol-card__price-per">/mo</span>
+          </div>
+          <p class="protocol-card__price-compare">Comparable clinics: <s>$400–800/mo</s></p>
+        </div>
+
+        <ul class="protocol-card__outcomes" role="list" aria-label="Key outcomes">
+          <li class="protocol-card__outcome">Restored cellular energy and mitochondrial function</li>
+          <li class="protocol-card__outcome">Improved mental clarity and cognitive sharpness</li>
+          <li class="protocol-card__outcome">Anti-aging mechanisms at the NAD+/sirtuins axis</li>
+          <li class="protocol-card__outcome">Recovery and sleep quality optimization</li>
+        </ul>
+
+        <div class="protocol-card__divider"></div>
+        <div class="protocol-card__includes-label">What's included</div>
+        <ul class="protocol-card__includes" role="list">
+          <li class="protocol-card__include">Physician assessment + prescription</li>
+          <li class="protocol-card__include">503B pharmacy-grade NAD+ injectable</li>
+          <li class="protocol-card__include">Ongoing provider monitoring</li>
+        </ul>
+
+        <div class="protocol-card__ctas">
+          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="#" class="protocol-card__cta-secondary">Learn More</a>
+        </div>
+      </div>
+
+    </div><!-- /.protocol-grid -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     3. PROTOCOL COMPARISON TABLE
+══════════════════════════════════════════════════ -->
+<section class="comparison section-pad" id="comparison" aria-labelledby="comparison-heading">
+  <div class="container">
+
+    <div class="comparison__header">
+      <span class="label">Side-by-Side</span>
+      <h2 id="comparison-heading">Detailed protocol comparison.</h2>
+    </div>
+
+    <div class="comparison__wrap">
+      <table class="comparison-table" role="table" aria-label="Protocol comparison">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">GLP-1</th>
+            <th scope="col">Peptides</th>
+            <th scope="col">Hormones</th>
+            <th scope="col">NAD+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Best for</td>
+            <td>Weight loss + metabolic</td>
+            <td>Recovery + body comp</td>
+            <td>Low T + hormone imbalance</td>
+            <td>Energy + longevity</td>
+          </tr>
+          <tr>
+            <td>Starting price</td>
+            <td><strong style="color: var(--gold); font-family: var(--font-disp); font-size: 0.78rem;">$199/mo</strong></td>
+            <td class="tbd">TBD</td>
+            <td class="tbd">TBD</td>
+            <td class="tbd">TBD</td>
+          </tr>
+          <tr>
+            <td>Prescription required</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Remote intake</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Provider check-ins</td>
+            <td>Monthly</td>
+            <td>Monthly</td>
+            <td>Monthly</td>
+            <td>Monthly</td>
+          </tr>
+          <tr>
+            <td>Lab work required</td>
+            <td>No (intake only)</td>
+            <td>Yes (IGF-1 panel)</td>
+            <td>Yes (hormone panel)</td>
+            <td>No (intake only)</td>
+          </tr>
+          <tr>
+            <td>FSA/HSA eligible</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Delivery</td>
+            <td>Shipped to door</td>
+            <td>Shipped to door</td>
+            <td>Shipped to door</td>
+            <td>Shipped to door</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     4. HOW IT WORKS
+══════════════════════════════════════════════════ -->
+<section class="how-works" id="how-it-works" aria-labelledby="how-works-heading">
+  <div class="container">
+    <div class="how-works__header">
+      <span class="label">The Process</span>
+      <h2 class="how-works__headline" id="how-works-heading">
+        Same clinical rigor. Every protocol.
+      </h2>
+    </div>
+
+    <ol class="steps" role="list">
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">01</div>
+        <div class="step__content">
+          <h3 class="step__title">Complete Your Assessment</h3>
+          <p class="step__desc">
+            A structured 3-minute intake — health history, current medications, goals. No video call. No waiting room. Complete on your schedule.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">02</div>
+        <div class="step__content">
+          <h3 class="step__title">Provider Review</h3>
+          <p class="step__desc">
+            A board-certified MD reviews your intake within 48 hours. They evaluate candidacy, flag contraindications, and issue your prescription if approved.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">03</div>
+        <div class="step__content">
+          <h3 class="step__title">Pharmacy Dispatch</h3>
+          <p class="step__desc">
+            Your medication ships from a licensed 503B compounding pharmacy. Temperature-controlled packaging, delivered directly to your door.
+          </p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__number" aria-hidden="true">04</div>
+        <div class="step__content">
+          <h3 class="step__title">Ongoing Management</h3>
+          <p class="step__desc">
+            Monthly provider check-ins, dosing adjustments based on your response, and direct messaging access. Your protocol evolves as you do.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     5. TRUST BAR
+══════════════════════════════════════════════════ -->
+<section class="trust-bar" id="science" aria-label="Clinical credentials">
+  <div class="container">
+    <div class="trust-bar__grid" role="list">
+
+      <div class="trust-badge" role="listitem">
+        <svg class="trust-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="14" cy="10" r="5"/>
+          <path d="M4 26c0-5.523 4.477-10 10-10s10 4.477 10 10"/>
+          <path d="M10 13l2.5 2.5L17 9" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="trust-badge__title">Board-Certified MDs</h3>
+        <p class="trust-badge__sub">Licensed physicians in your state</p>
+      </div>
+
+      <div class="trust-badge" role="listitem">
+        <svg class="trust-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="3" y="5" width="22" height="18" rx="2"/>
+          <path d="M8 14h12M14 9v10" stroke-linecap="round"/>
+        </svg>
+        <h3 class="trust-badge__title">503B Pharmacy Standard</h3>
+        <p class="trust-badge__sub">Same standard as major hospital systems</p>
+      </div>
+
+      <div class="trust-badge" role="listitem">
+        <svg class="trust-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="5" y="3" width="18" height="22" rx="2"/>
+          <path d="M9 9h10M9 13h10M9 17h6" stroke-linecap="round"/>
+          <path d="M19 19l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="trust-badge__title">HIPAA Compliant</h3>
+        <p class="trust-badge__sub">End-to-end encrypted health data</p>
+      </div>
+
+      <div class="trust-badge" role="listitem">
+        <svg class="trust-badge__icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="3" y="7" width="22" height="16" rx="2"/>
+          <circle cx="14" cy="15" r="3"/>
+          <path d="M9 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+        </svg>
+        <h3 class="trust-badge__title">FSA/HSA Eligible</h3>
+        <p class="trust-badge__sub">Use pre-tax health account funds</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     6. FAQ
+══════════════════════════════════════════════════ -->
+<section class="faq" id="faq" aria-labelledby="faq-heading">
+  <div class="container--text">
+
+    <div class="faq__header">
+      <span class="label">Common Questions</span>
+      <h2 class="faq__headline" id="faq-heading">
+        What you need to know.
+      </h2>
+    </div>
+
+    <ul class="faq__list" role="list">
+
+      <li class="faq-item" role="listitem">
+        <button class="faq-item__trigger" aria-controls="faq-1" id="faq-trigger-1">
+          Can I be on more than one protocol at a time?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-1" role="region" aria-labelledby="faq-trigger-1">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              Yes. Protocol stacking is evaluated by your provider case by case. Many patients combine protocols — for example, GLP-1 with peptide therapy, or hormone optimization alongside NAD+. Your physician will review all active medications and supplements during intake and advise on compatibility. The goal is always optimized outcomes, not upsell.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item" role="listitem">
+        <button class="faq-item__trigger" aria-controls="faq-2" id="faq-trigger-2">
+          Are there contracts or cancellation fees?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-2" role="region" aria-labelledby="faq-trigger-2">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              No lock-in. Your subscription is billed monthly and renews automatically at the published rate until you cancel. Cancel anytime from your account — no fees, no penalties, no required notice period.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item" role="listitem">
+        <button class="faq-item__trigger" aria-controls="faq-3" id="faq-trigger-3">
+          Does insurance cover these protocols?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-3" role="region" aria-labelledby="faq-trigger-3">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              Not currently. Traditional insurance does not cover AnthologyRX protocols. However, FSA and HSA funds may be accepted depending on your plan. Many plans allow payment for physician-prescribed medications, including compounded formulations. We provide detailed receipts for reimbursement purposes. Please verify eligibility with your plan administrator before purchasing.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item" role="listitem">
+        <button class="faq-item__trigger" aria-controls="faq-4" id="faq-trigger-4">
+          How does the price compare to a traditional clinic?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-4" role="region" aria-labelledby="faq-trigger-4">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              Comparable brick-and-mortar clinic programs charge $400–800/month for similar GLP-1 protocols — before consultation fees, lab costs, or travel time. AnthologyRX eliminates the physical overhead: no waiting rooms, no repeat in-person visits, no scheduling friction. The result is physician-managed care at a fraction of the traditional cost, with the same clinical standard.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="faq-item" role="listitem">
+        <button class="faq-item__trigger" aria-controls="faq-5" id="faq-trigger-5">
+          What happens if I don't qualify?
+          <span class="faq-item__icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-item__body" id="faq-5" role="region" aria-labelledby="faq-trigger-5">
+          <div class="faq-item__body-inner">
+            <p class="faq-item__answer">
+              A licensed physician reviews every intake individually. If you are not eligible for a given protocol, you will not be charged. Your provider may recommend an alternative protocol that better fits your health profile, or advise on next steps. No charge is ever issued for a review that does not result in an approved prescription.
+            </p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     7. MATCH ASSESSMENT CTA
+══════════════════════════════════════════════════ -->
+<section class="match-cta" id="match-assessment" aria-labelledby="match-cta-heading">
+  <div class="container">
+    <div class="match-cta__inner">
+      <span class="label" style="margin-bottom: 20px;">Find Your Protocol</span>
+      <h2 class="match-cta__h2" id="match-cta-heading">Not sure which protocol is right for you?</h2>
+      <p class="match-cta__sub">The AnthologyRX Match Assessment takes 3 minutes and routes you to the protocol best matched to your goals, symptoms, and health history.</p>
+      <a href="/qualify" class="btn btn--gold btn--lg">Take the Match Assessment →</a>
+      <p class="match-cta__reassurance">Over 9 in 10 people who complete the assessment qualify for at least one protocol.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     8. FINAL CTA
+══════════════════════════════════════════════════ -->
+<section class="final-cta" aria-labelledby="final-cta-heading">
+  <div class="container">
+    <div class="final-cta__inner">
+
+      <span class="label final-cta__tagline">Performance · Longevity · Legacy</span>
+
+      <h2 class="final-cta__display" id="final-cta-heading">
+        For Those Who Never Stop.
+      </h2>
+
+      <p class="final-cta__sub">Your intake takes three minutes. Provider review within 48 hours. No waiting room. No contracts.</p>
+
+      <div class="final-cta__actions">
+        <a href="/qualify" class="btn btn--gold btn--xl">See If You Qualify →</a>
+        <a href="/qualify" class="text-link text-link--arrow">Take the Match Assessment</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     9. FOOTER
+══════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+
+    <div class="footer__top">
+      <div>
+        <a href="/" class="footer__logo" aria-label="AnthologyRX home">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+        <p class="footer__tagline" style="margin-top: 0.75rem;">Performance · Longevity · Legacy</p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <ul class="footer__links" role="list">
+          <li><a href="/protocols">Protocols</a></li>
+          <li><a href="/pages/how-it-works">How It Works</a></li>
+          <li><a href="/pages/pricing">Pricing</a></li>
+          <li><a href="/pages/science">Science</a></li>
+          <li><a href="/pages/about">About</a></li>
+          <li><a href="/blogs/journal">Journal</a></li>
+          <li><a href="/pages/press">Press</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+          <li><a href="/collections/supplements">Supplements</a></li>
+          <li><a href="/pages/privacy">Privacy</a></li>
+          <li><a href="/pages/terms">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__divider" role="separator"></div>
+
+    <p class="footer__legal">
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility and are not manufactured by Novo Nordisk or Eli Lilly. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. GLP-1 agonists may cause side effects including nausea, vomiting, diarrhea, and gastrointestinal discomfort. Rare but serious risks include pancreatitis and, in patients with a history of medullary thyroid carcinoma or MEN2, potential thyroid risk. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+    </p>
+
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════
+     10. MOBILE STICKY BAR
+══════════════════════════════════════════════════ -->
+<div class="mobile-bar" id="mobileBar" role="region" aria-label="Quick start bar">
+  <div class="mobile-bar__text">
+    <span class="mobile-bar__price">From $199/mo</span>
+    <span class="mobile-bar__sub">All protocols</span>
+  </div>
+  <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+  <button class="mobile-bar__dismiss" id="mobileBarDismiss" aria-label="Dismiss">×</button>
+</div>
+
+
+<script>
+/* ============================================================
+   ANTHOLOGY RX — PRICING PAGE
+   Interactions: nav scroll, hamburger, FAQ accordion,
+   announcement bar dismiss, mobile bar dismiss,
+   scroll animations, table column hover
+============================================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ─── TOP STACK: keep body padding-top = exact stack height ──
+  // ResizeObserver handles bar dismiss, text wrapping, font load, resize
+  // NO sessionStorage, NO localStorage — in-memory only
+  const topStack = document.getElementById('topStack');
+  const announceBar = document.getElementById('announceBar');
+  const announceClose = document.getElementById('announceClose');
+
+  function syncBodyPad() {
+    if (topStack) {
+      document.body.style.paddingTop = topStack.offsetHeight + 'px';
+    }
+  }
+
+  if (topStack) {
+    const ro = new ResizeObserver(syncBodyPad);
+    ro.observe(topStack);
+    syncBodyPad(); // initial
+  }
+
+  if (announceClose && announceBar) {
+    announceClose.addEventListener('click', () => {
+      announceBar.classList.add('hidden');
+      // ResizeObserver fires automatically and re-syncs padding
+    });
+  }
+
+  // ─── NAV SCROLL SHADOW ────────────────────────────────
+  const nav = document.querySelector('.nav');
+  const updateNav = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // ─── HAMBURGER TOGGLE ─────────────────────────────────
+  const hamburger = document.querySelector('.nav__hamburger');
+  const mobileMenu = document.querySelector('.nav__mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ─── FAQ ACCORDION ────────────────────────────────────
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-item__trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      faqItems.forEach(other => other.classList.remove('open'));
+
+      // Toggle this one
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ─── MOBILE BAR DISMISS ───────────────────────────────
+  const mobileBar = document.getElementById('mobileBar');
+  const dismissBtn = document.getElementById('mobileBarDismiss');
+
+  if (dismissBtn && mobileBar) {
+    dismissBtn.addEventListener('click', () => {
+      mobileBar.classList.add('dismissed');
+    });
+  }
+
+  // Hide mobile bar while page header is visible
+  const pageHeader = document.getElementById('page-header');
+  if (pageHeader && mobileBar) {
+    const headerObs = new IntersectionObserver(([entry]) => {
+      if (window.innerWidth <= 768) {
+        mobileBar.style.display = entry.isIntersecting ? 'none' : '';
+      }
+    }, { threshold: 0 });
+    headerObs.observe(pageHeader);
+  }
+
+  // ─── COMPARISON TABLE COLUMN HIGHLIGHT ───────────────
+  const table = document.querySelector('.comparison-table');
+  if (table) {
+    const colCount = table.querySelectorAll('thead th').length;
+
+    // Build column cell index map
+    table.querySelectorAll('td, th').forEach(cell => {
+      const colIndex = cell.cellIndex;
+      if (colIndex === 0) return; // skip feature label col
+
+      cell.addEventListener('mouseenter', () => {
+        table.querySelectorAll('td, th').forEach(c => {
+          c.classList.toggle('col-highlighted', c.cellIndex === colIndex);
+        });
+      });
+
+      cell.addEventListener('mouseleave', () => {
+        table.querySelectorAll('.col-highlighted').forEach(c => {
+          c.classList.remove('col-highlighted');
+        });
+      });
+    });
+  }
+
+  // ─── SCROLL FADE-UP ANIMATIONS ────────────────────────
+  const animTargets = document.querySelectorAll(
+    '.protocol-card, .step, .trust-badge, ' +
+    '.faq-item, .pricing__anchor-bar, .match-cta__inner'
+  );
+
+  animTargets.forEach(el => el.classList.add('anim-up'));
+
+  const animObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        animObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  animTargets.forEach(el => animObs.observe(el));
+
+  // ─── ACTIVE NAV LINK ──────────────────────────────────
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__links a');
+
+  const sectionObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          const isActive = link.getAttribute('href') === `#${id}`;
+          link.style.color = isActive ? 'var(--sand)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => sectionObs.observe(s));
+
+});
+</script>
+</body>
+</html>

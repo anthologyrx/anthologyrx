@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — AnthologyRX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Epilogue:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── RESET ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: #1E1E1E;
+  color: #E8DCC8;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ── TOKENS ────────────────────────────────────────── */
+:root {
+  --bg:         #1E1E1E;
+  --bg-card:    #262422;
+  --bg-deep:    #181614;
+  --rule:       #373430;
+  --sand:       #E8DCC8;
+  --sand-dim:   #9C9082;
+  --gold:       #B28A2A;
+  --gold-hover: #C99B35;
+  --gold-glow:  rgba(178,138,42,0.18);
+  --font-disp:  'Unbounded', sans-serif;
+  --font-body:  'Epilogue', sans-serif;
+  --nav-h:      72px;
+  --r:          3px;
+  --ease:       cubic-bezier(0.4, 0, 0.2, 1);
+  --t:          0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-w:      1200px;
+}
+
+/* ── LOGO ──────────────────────────────────────────── */
+.logo-main {
+  font-family: var(--font-disp);
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-weight: 400;
+  color: var(--sand);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.logo-rx {
+  font-family: var(--font-disp);
+  font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -0.4em;
+  margin-left: 0.1em;
+}
+
+/* ── CONTAINER ─────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+@media (max-width: 768px) { .container { padding: 0 20px; } }
+
+/* ── BUTTONS ───────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--r);
+  transition: all var(--t);
+  white-space: nowrap;
+  border: none;
+}
+.btn--gold {
+  background: var(--gold);
+  color: #1E1E1E;
+}
+.btn--gold:hover {
+  background: var(--gold-hover);
+  color: #1E1E1E;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px var(--gold-glow);
+}
+.btn--lg { padding: 17px 36px; font-size: 0.65rem; }
+.btn--xl { padding: 20px 48px; font-size: 0.7rem; }
+.btn--full { width: 100%; }
+.btn--outline {
+  background: transparent;
+  color: var(--sand);
+  border: 1px solid var(--rule);
+}
+.btn--outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.text-link {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.text-link:hover { color: var(--gold); }
+.text-link--gold { color: var(--gold); }
+.text-link--gold:hover { color: var(--gold-hover); }
+
+/* ── ANNOUNCE BAR ──────────────────────────────────── */
+.announce-bar {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 48px;
+  position: relative;
+  flex-shrink: 0;
+}
+.announce-bar.hidden { display: none; }
+.announce-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.announce-bar__text {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+}
+.announce-bar__cta {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  transition: opacity var(--t);
+}
+.announce-bar__cta:hover { opacity: 0.75; color: var(--bg); }
+.announce-bar__close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--bg);
+  font-size: 1.2rem;
+  line-height: 1;
+  opacity: 0.6;
+  padding: 4px 8px;
+  transition: opacity var(--t);
+}
+.announce-bar__close:hover { opacity: 1; }
+@media (max-width: 768px) {
+  .announce-bar { padding: 10px 40px 10px 16px; }
+  .announce-bar__text { font-size: 0.52rem; }
+}
+
+/* ── TOP STACK + HEADER ────────────────────────────── */
+.top-stack {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+header { position: static; height: var(--nav-h); flex-shrink: 0; }
+.nav {
+  height: 100%;
+  background: rgba(30,30,30,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+  transition: background var(--t), box-shadow var(--t);
+}
+.nav.scrolled {
+  background: rgba(22,20,18,0.97);
+  box-shadow: 0 2px 40px rgba(0,0,0,0.45);
+}
+.nav__inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+.nav__links a {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.nav__links a:hover { color: var(--sand); }
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.nav__login {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.nav__login:hover { color: var(--sand); }
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--sand);
+  transition: all var(--t);
+}
+.nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav__mobile-menu {
+  display: none;
+  position: absolute;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--rule);
+  padding: 24px 48px;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav__mobile-menu.open { display: flex; }
+.nav__mobile-menu a {
+  font-family: var(--font-disp);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+@media (max-width: 900px) {
+  .nav__links, .nav__actions { display: none; }
+  .nav__hamburger { display: flex; }
+  .nav__mobile-menu { padding: 24px 20px; }
+}
+
+/* ── PAGE CONTENT ──────────────────────────────────── */
+.page-section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── CART LAYOUT ───────────────────────────────────── */
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+@media (max-width: 1024px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
+
+/* ── CART SECTION HEADING ──────────────────────────── */
+.cart-heading {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+/* ── CART ITEMS ────────────────────────────────────── */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  transition: border-color var(--t);
+}
+.cart-item:hover { border-color: rgba(178,138,42,0.3); }
+
+.cart-item__img {
+  width: 64px;
+  height: 64px;
+  background: var(--bg-deep);
+  border: 1px solid var(--gold);
+  border-radius: var(--r);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-item__img-inner {
+  width: 28px;
+  height: 28px;
+  opacity: 0.18;
+}
+.cart-item__img-inner svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--gold);
+}
+
+.cart-item__info { min-width: 0; }
+.cart-item__name {
+  font-family: var(--font-disp);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--sand);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+.cart-item__variant {
+  font-size: 0.8rem;
+  color: var(--sand-dim);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.cart-item__edit {
+  font-family: var(--font-disp);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color var(--t);
+}
+.cart-item__edit:hover { color: var(--gold-hover); }
+
+.cart-item__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-deep);
+  border: none;
+  color: var(--sand-dim);
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--t), color var(--t);
+  flex-shrink: 0;
+}
+.qty-btn:hover { background: var(--rule); color: var(--sand); }
+.qty-input {
+  width: 40px;
+  height: 32px;
+  background: var(--bg-card);
+  border: none;
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  color: var(--sand);
+  font-family: var(--font-disp);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: border-color var(--t);
+}
+.qty-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+.cart-item__price {
+  font-family: var(--font-disp);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+}
+.cart-item__remove {
+  font-family: var(--font-disp);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  opacity: 0.5;
+  transition: opacity var(--t), color var(--t);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.cart-item__remove:hover { opacity: 1; color: #c0392b; }
+
+/* Placeholder item */
+.cart-item--placeholder .cart-item__price { color: var(--sand-dim); }
+
+.cart-continue {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cart-continue a {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.cart-continue a:hover { color: var(--sand); }
+
+/* ── ORDER SUMMARY ─────────────────────────────────── */
+.order-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--r);
+  padding: 36px;
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+}
+.order-summary__heading {
+  font-family: var(--font-disp);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 24px;
+}
+.order-summary__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.order-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.order-line__label {
+  font-size: 0.82rem;
+  color: var(--sand-dim);
+}
+.order-line__value {
+  font-size: 0.82rem;
+  color: var(--sand);
+  font-weight: 500;
+}
+.order-line__value--dim {
+  color: var(--sand-dim);
+  font-style: italic;
+}
+.order-divider {
+  height: 1px;
+  background: var(--rule);
+  margin: 8px 0 20px;
+}
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.order-total__label {
+  font-family: var(--font-disp);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+.order-total__amount {
+  font-family: var(--font-disp);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -0.03em;
+}
+
+.fsa-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-family: var(--font-disp);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  width: 100%;
+  justify-content: center;
+}
+
+.checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 18px 28px;
+  background: var(--gold);
+  color: #1E1E1E;
+  font-family: var(--font-disp);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: var(--r);
+  transition: all var(--t);
+  margin-bottom: 16px;
+}
+.checkout-btn:hover {
+  background: var(--gold-hover);
+  color: #1E1E1E;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px var(--gold-glow);
+}
+
+.checkout-note {
+  font-size: 0.78rem;
+  color: var(--sand-dim);
+  line-height: 1.65;
+  text-align: center;
+  margin-bottom: 24px;
+  opacity: 0.75;
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.trust-badge {
+  font-family: var(--font-disp);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  background: var(--bg-deep);
+  border: 1px solid var(--rule);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.summary-question {
+  text-align: center;
+}
+.summary-question a {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.summary-question a:hover { color: var(--gold); }
+
+/* ── EMPTY STATE ───────────────────────────────────── */
+.cart-empty {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  grid-column: 1 / -1;
+}
+.cart-empty.visible { display: flex; }
+.cart-empty__icon {
+  font-family: var(--font-disp);
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.18;
+  line-height: 1;
+  margin-bottom: 32px;
+  letter-spacing: -0.06em;
+}
+.cart-empty__title {
+  font-family: var(--font-disp);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--sand);
+  margin-bottom: 12px;
+}
+.cart-empty__sub {
+  font-size: 0.9rem;
+  color: var(--sand-dim);
+  margin-bottom: 32px;
+  max-width: 340px;
+}
+.cart-empty__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Hide cart contents when empty */
+body.cart-is-empty .cart-col,
+body.cart-is-empty .summary-col { display: none; }
+body.cart-is-empty .cart-empty { display: flex; }
+
+/* ── DEMO TOGGLE ───────────────────────────────────── */
+.demo-toggle {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.demo-toggle__label {
+  font-family: var(--font-disp);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+}
+.demo-toggle__btn {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-family: var(--font-disp);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  cursor: pointer;
+  transition: border-color var(--t), color var(--t);
+}
+.demo-toggle__btn:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 1024px) {
+  .demo-toggle { padding: 0 20px; }
+}
+
+/* ── ALSO CONSIDER ─────────────────────────────────── */
+.also-consider {
+  background: var(--bg-deep);
+  padding: 80px 0;
+  border-top: 1px solid var(--rule);
+}
+.also-consider__heading {
+  font-family: var(--font-disp);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.also-consider__title {
+  font-family: var(--font-disp);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--sand);
+  margin-bottom: 40px;
+}
+.protocol-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .protocol-cards { grid-template-columns: 1fr; }
+}
+.protocol-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid transparent;
+  border-radius: var(--r);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--t), transform var(--t);
+}
+.protocol-card:hover {
+  border-top-color: var(--gold);
+  transform: translateY(-2px);
+}
+.protocol-card__label {
+  font-family: var(--font-disp);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.protocol-card__name {
+  font-family: var(--font-disp);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--sand);
+  line-height: 1.3;
+}
+.protocol-card__desc {
+  font-size: 0.84rem;
+  color: var(--sand-dim);
+  line-height: 1.65;
+  flex: 1;
+}
+.protocol-card__link {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color var(--t);
+  margin-top: 4px;
+}
+.protocol-card__link:hover { color: var(--gold-hover); }
+
+/* ── FOOTER ────────────────────────────────────────── */
+.footer {
+  background: var(--bg-deep);
+  padding: 64px 0 40px;
+  border-top: 1px solid var(--rule);
+}
+.footer__inner { display: flex; flex-direction: column; gap: 0; }
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer__tagline {
+  font-family: var(--font-disp);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 10px;
+  display: block;
+}
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+.footer__links a {
+  font-family: var(--font-disp);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color var(--t);
+}
+.footer__links a:hover { color: var(--sand); }
+.footer__divider { height: 1px; background: var(--rule); margin-bottom: 32px; }
+.footer__legal {
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: var(--sand-dim);
+  opacity: 0.5;
+  max-width: 900px;
+}
+@media (max-width: 768px) { .footer__top { flex-direction: column; gap: 28px; } }
+
+/* ── SCROLL ANIM ───────────────────────────────────── */
+.anim-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+.anim-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ── TOP STACK ─────────────────────────────────────── -->
+<div class="top-stack" id="topStack">
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-bar__inner">
+      <span class="announce-bar__text">Protocols from $199/mo · FSA/HSA may be accepted (plan-dependent) · Provider review in 48 hours</span>
+      <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+    </div>
+    <button class="announce-bar__close" id="announceClose" aria-label="Dismiss">×</button>
+  </div>
+  <header>
+    <nav class="nav" id="mainNav">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="/" class="nav__logo">
+            <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+          </a>
+          <div class="nav__links">
+            <a href="/protocols">Protocols</a>
+            <a href="/pages/how-it-works">How It Works</a>
+            <a href="/pages/science">Science</a>
+            <a href="/pages/faq">FAQ</a>
+            <a href="/pages/about">About</a>
+            <a href="/blogs/journal">Journal</a>
+            <a href="/pages/pricing">Pricing</a>
+          </div>
+          <div class="nav__actions">
+            <a href="/account" class="nav__login">Log In</a>
+            <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+          </div>
+          <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav__mobile-menu" id="mobileMenu">
+        <a href="/protocols">Protocols</a>
+        <a href="/pages/how-it-works">How It Works</a>
+        <a href="/pages/science">Science</a>
+        <a href="/pages/faq">FAQ</a>
+        <a href="/pages/about">About</a>
+          <a href="/blogs/journal">Journal</a>
+          <a href="/pages/pricing">Pricing</a>
+          <a href="/account">Log In</a>
+        <a href="/qualify" class="btn btn--gold" style="margin-top:8px;">See If You Qualify</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- ── PAGE ──────────────────────────────────────────── -->
+<main>
+  <section class="page-section">
+
+    <!-- Demo toggle -->
+    <div class="demo-toggle">
+      <span class="demo-toggle__label">Demo:</span>
+      <button class="demo-toggle__btn" id="toggleEmpty">Toggle Empty Cart</button>
+    </div>
+
+    <!-- Cart grid -->
+    <div class="cart-grid">
+
+      <!-- EMPTY STATE (shown when cart-is-empty class on body) -->
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty__icon">—</div>
+        <h2 class="cart-empty__title">Your cart is empty.</h2>
+        <p class="cart-empty__sub">Ready to find the right protocol for you?</p>
+        <div class="cart-empty__actions">
+          <a href="/qualify" class="btn btn--gold btn--lg">Take the Match Assessment →</a>
+          <a href="/protocols" class="text-link">View Protocols</a>
+        </div>
+      </div>
+
+      <!-- LEFT: Cart Items -->
+      <div class="cart-col">
+        <p class="cart-heading">Your Order</p>
+
+        <div class="cart-items">
+
+          <!-- Item 1 -->
+          <div class="cart-item anim-up">
+            <div class="cart-item__img">
+              <div class="cart-item__img-inner">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+              </div>
+            </div>
+            <div class="cart-item__info">
+              <div class="cart-item__name">GLP-1 Performance Protocol</div>
+              <div class="cart-item__variant">Monthly Subscription · Semaglutide</div>
+              <a href="#" class="cart-item__edit">Edit</a>
+            </div>
+            <div class="cart-item__controls">
+              <div class="qty-selector">
+                <button class="qty-btn" aria-label="Decrease quantity" onclick="changeQty(this, -1)">−</button>
+                <input class="qty-input" type="number" value="1" min="1" max="99" aria-label="Quantity">
+                <button class="qty-btn" aria-label="Increase quantity" onclick="changeQty(this, 1)">+</button>
+              </div>
+              <div class="cart-item__price">$199.00<span style="font-size:0.65rem;font-weight:400;color:var(--sand-dim)">/mo</span></div>
+              <button class="cart-item__remove" onclick="removeItem(this)">× Remove</button>
+            </div>
+          </div>
+
+          <!-- Item 2 (placeholder) -->
+          <div class="cart-item cart-item--placeholder anim-up">
+            <div class="cart-item__img" style="opacity:0.4;">
+              <div class="cart-item__img-inner">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+              </div>
+            </div>
+            <div class="cart-item__info">
+              <div class="cart-item__name" style="opacity:0.5;">[Placeholder Product]</div>
+              <div class="cart-item__variant" style="opacity:0.5;">[Variant placeholder]</div>
+              <a href="#" class="cart-item__edit" style="opacity:0.4;">Edit</a>
+            </div>
+            <div class="cart-item__controls">
+              <div class="qty-selector" style="opacity:0.5;">
+                <button class="qty-btn" aria-label="Decrease quantity">−</button>
+                <input class="qty-input" type="number" value="1" min="1" max="99" aria-label="Quantity">
+                <button class="qty-btn" aria-label="Increase quantity">+</button>
+              </div>
+              <div class="cart-item__price" style="opacity:0.4;">$[--]</div>
+              <button class="cart-item__remove" style="opacity:0.3;">× Remove</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cart-continue">
+          <span style="color:var(--sand-dim);font-size:0.8rem;">←</span>
+          <a href="/protocols" class="text-link">Continue Shopping</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Order Summary -->
+      <div class="summary-col">
+        <div class="order-summary">
+          <div class="order-summary__heading">Order Summary</div>
+
+          <div class="order-summary__lines">
+            <div class="order-line">
+              <span class="order-line__label">Subtotal</span>
+              <span class="order-line__value">$199.00</span>
+            </div>
+            <div class="order-line">
+              <span class="order-line__label">Shipping</span>
+              <span class="order-line__value">Included</span>
+            </div>
+            <div class="order-line">
+              <span class="order-line__label">Tax</span>
+              <span class="order-line__value order-line__value--dim">Calculated at checkout</span>
+            </div>
+          </div>
+
+          <div class="order-divider"></div>
+
+          <div class="order-total">
+            <span class="order-total__label">Total</span>
+            <span class="order-total__amount">$199.00<span style="font-size:0.8rem;font-weight:400;color:var(--sand-dim)">/mo</span></span>
+          </div>
+
+          <div class="fsa-chip">
+            🔒 FSA/HSA funds may be accepted (plan-dependent) · Receipt provided automatically
+          </div>
+
+          <a href="/qualify" class="checkout-btn">Proceed to Intake →</a>
+
+          <p class="checkout-note">
+            You'll complete a short medical intake before your prescription is issued. A board-certified physician reviews your information within 48 hours.
+          </p>
+          <div style="background:#1E1E1E;border:1px solid #373430;border-left:3px solid #B28A2A;padding:16px;margin-top:16px;font-size:0.78rem;line-height:1.65;color:#9C9082;font-family:'Epilogue',sans-serif;">
+  <strong style="color:#E8DCC8;font-family:'Unbounded',sans-serif;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:8px;">Billing Notice</strong>
+  By proceeding, you agree that if a physician approves your protocol, your payment method will be charged $199.00 per month, recurring automatically each billing cycle until you cancel. Cancel anytime from your account dashboard. No cancellation fees.
+</div>
+
+          <div class="trust-row">
+            <span class="trust-badge">🔒 HIPAA Compliant</span>
+            <span class="trust-badge">503B Pharmacy</span>
+            <span class="trust-badge">Cancel Anytime</span>
+          </div>
+
+          <div class="summary-question">
+            <a href="/pages/contact">Have a question?</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── YOU MIGHT ALSO CONSIDER ───────────────────── -->
+  <section class="also-consider">
+    <div class="container">
+      <p class="also-consider__heading">You Might Also Consider</p>
+      <h2 class="also-consider__title">Other Protocols</h2>
+      <div class="protocol-cards">
+
+        <a href="/products/glp-1-weight-loss" class="protocol-card anim-up">
+          <span class="protocol-card__label">Protocol</span>
+          <div class="protocol-card__name">GLP-1 Performance Protocol</div>
+          <p class="protocol-card__desc">Clinician-prescribed semaglutide for metabolic reset, appetite regulation, and sustainable body composition.</p>
+          <span class="protocol-card__link">Learn More →</span>
+        </a>
+
+        <a href="/products/peptide-performance" class="protocol-card anim-up">
+          <span class="protocol-card__label">Protocol</span>
+          <div class="protocol-card__name">Peptide Performance Protocol</div>
+          <p class="protocol-card__desc">Prescription peptide therapy targeting recovery, body composition, and cellular repair for high-output individuals.</p>
+          <span class="protocol-card__link">Learn More →</span>
+        </a>
+
+        <a href="/products/hormone-optimization" class="protocol-card anim-up">
+          <span class="protocol-card__label">Protocol</span>
+          <div class="protocol-card__name">Hormone Optimization</div>
+          <p class="protocol-card__desc">TRT and hormone optimization for men and women seeking peak energy, vitality, and long-term performance.</p>
+          <span class="protocol-card__link">Learn More →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <span class="footer__logo">
+            <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+          </span>
+          <span class="footer__tagline">Performance · Longevity · Legacy</span>
+        </div>
+        <nav class="footer__links">
+        <a href="/protocols">Protocols</a>
+        <a href="/pages/how-it-works">How It Works</a>
+        <a href="/pages/pricing">Pricing</a>
+        <a href="/pages/science">Science</a>
+        <a href="/pages/about">About</a>
+        <a href="/blogs/journal">Journal</a>
+        <a href="/pages/press">Press</a>
+        <a href="/pages/faq">FAQ</a>
+        <a href="/pages/contact">Contact</a>
+        <a href="/collections/supplements">Supplements</a>
+        <a href="/pages/privacy">Privacy</a>
+        <a href="/pages/terms">Terms</a>
+      </nav>
+      </div>
+      <div class="footer__divider"></div>
+      <p class="footer__legal">
+        AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility and are not manufactured by Novo Nordisk or Eli Lilly. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. GLP-1 agonists may cause side effects including nausea, vomiting, diarrhea, and gastrointestinal discomfort. Rare but serious risks include pancreatitis and, in patients with a history of medullary thyroid carcinoma or MEN2, potential thyroid risk. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── NAV: dynamic padding + scroll state ──────────────────
+const topStack = document.getElementById('topStack');
+const body = document.body;
+const mainNav = document.getElementById('mainNav');
+
+function syncBodyPad() {
+  body.style.paddingTop = topStack.offsetHeight + 'px';
+}
+syncBodyPad();
+new ResizeObserver(syncBodyPad).observe(topStack);
+window.addEventListener('scroll', () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ── ANNOUNCE BAR dismiss (in-memory only) ─────────────────
+document.getElementById('announceClose').addEventListener('click', function() {
+  document.getElementById('announceBar').classList.add('hidden');
+  syncBodyPad();
+});
+
+// ── HAMBURGER ─────────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+// ── QUANTITY SELECTOR ─────────────────────────────────────
+function changeQty(btn, delta) {
+  const selector = btn.closest('.qty-selector');
+  const input = selector.querySelector('.qty-input');
+  const newVal = Math.max(1, Math.min(99, parseInt(input.value || 1) + delta));
+  input.value = newVal;
+}
+
+// ── REMOVE ITEM ───────────────────────────────────────────
+function removeItem(btn) {
+  const item = btn.closest('.cart-item');
+  item.style.transition = 'opacity 0.3s, transform 0.3s';
+  item.style.opacity = '0';
+  item.style.transform = 'translateX(16px)';
+  setTimeout(() => item.remove(), 300);
+}
+
+// ── EMPTY CART TOGGLE (demo) ──────────────────────────────
+const toggleBtn = document.getElementById('toggleEmpty');
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('cart-is-empty');
+  toggleBtn.textContent = body.classList.contains('cart-is-empty')
+    ? 'Show Cart Items'
+    : 'Toggle Empty Cart';
+});
+
+// ── SCROLL ANIMATIONS ─────────────────────────────────────
+const animEls = document.querySelectorAll('.anim-up');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.05, rootMargin: "200px 0px" });
+animEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

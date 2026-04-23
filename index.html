@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnthologyRX — Performance · Longevity · Legacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── ANNOUNCEMENT BAR ──────────────────────────────────────────────────── -->
+  <div class="announce-bar" id="announce-bar">
+    <p>NOW ACCEPTING NEW MEMBERS &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; FSA/HSA ELIGIBLE</p>
+    <button class="announce-close" aria-label="Dismiss announcement" onclick="this.closest('#announce-bar').style.display='none'">✕</button>
+  </div>
+
+  <!-- ── NAV ─────────────────────────────────────────────────────────────── -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+        <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="/protocols">Protocols</a></li>
+        <li><a href="/pages/pricing">Pricing</a></li>
+        <li><a href="/pages/how-it-works">How It Works</a></li>
+        <li><a href="/pages/about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/account" class="nav-login">Log In</a>
+        <a href="/qualify" class="btn-primary">Begin Assessment</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ── HERO ────────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg-rule"></div>
+    <div class="hero-carousel" aria-hidden="true">
+      <div class="hero-carousel-track" id="heroTrack">
+        <div class="hero-carousel-slide is-active"><img src="c-female-mma.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-male-sprinter.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-female-gymnast.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-male-swimmer.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-female-jiu-jitsu.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-male-boxer.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-wrestling.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-fencing.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+        <div class="hero-carousel-slide"><img src="c-rock-climber.jpg" alt="" /><div class="hero-img-overlay"></div></div>
+      </div>
+      <!-- Carousel dots -->
+      <div class="hero-carousel-dots">
+        <button class="hero-dot is-active" data-index="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+        <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+        <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
+        <button class="hero-dot" data-index="6" aria-label="Slide 7"></button>
+        <button class="hero-dot" data-index="7" aria-label="Slide 8"></button>
+        <button class="hero-dot" data-index="8" aria-label="Slide 9"></button>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">Performance Telehealth</p>
+      <h1 class="hero-headline">
+        For Those Who<br />Never Stop.
+      </h1>
+      <p class="hero-sub">
+        Clinically guided protocols for athletes, coaches, and operators
+        who treat their health as a competitive advantage.
+      </p>
+      <p class="hero-price-anchor">Protocols from <strong>$129/mo</strong> &nbsp;·&nbsp; Membership from <strong>$599/mo</strong></p>
+      <div class="hero-ctas">
+        <a href="/protocols" class="btn-primary btn-lg">Explore Protocols</a>
+        <a href="/pages/how-it-works" class="hero-text-link">See how it works <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-tags">
+        <a href="/products/glp-1-weight-loss" class="hero-tag">GLP-1</a>
+        <a href="/products/peptide-performance" class="hero-tag">Peptides</a>
+        <a href="/products/hormone-optimization" class="hero-tag">Hormone Optimization</a>
+        <a href="/products/nad-longevity" class="hero-tag">NAD+</a>
+        <a href="/products/trt" class="hero-tag">TRT</a>
+      </div>
+    </div>
+    <div class="hero-wordmark-bg" aria-hidden="true">ANTHOLOGY</div>
+  </section>
+
+  <!-- ── PROOF BAR ────────────────────────────────────────────────────────── -->
+  <div class="proof-bar">
+    <div class="proof-inner">
+      <div class="proof-item">
+        <span class="proof-num">50</span>
+        <span class="proof-label">States Licensed</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-num">48h</span>
+        <span class="proof-label">Provider Review</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-num">503B</span>
+        <span class="proof-label">Compounding Partner</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-num">100%</span>
+        <span class="proof-label">Remote. No Clinics.</span>
+      </div>
+      <div class="proof-divider proof-divider--hide-md"></div>
+      <div class="proof-item proof-item--hide-md">
+        <span class="proof-num proof-num--sm">Board-Certified</span>
+        <span class="proof-label">US Physicians</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROTOCOLS ──────────────────────────────────────────────────────── -->
+  <section class="treatments" id="treatments">
+    <!-- Cinematic photo strip with overlay copy -->
+    <div class="photo-strip">
+      <img src="s-male-cyclist.jpg" alt="" class="photo-strip-img" />
+      <img src="s-female-climber.jpg" alt="" class="photo-strip-img" />
+      <img src="s-female-weightlifter.jpg" alt="" class="photo-strip-img" />
+      <div class="photo-strip-overlay"></div>
+      <p class="photo-strip-caption">Built for the hours no one sees.</p>
+    </div>
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Protocols</span>
+        <h2 class="section-title">The complete protocol.</h2>
+        <p class="section-sub">
+          Every protocol is clinically prescribed, remotely managed, and
+          delivered to your door. No waiting rooms. No compromises.
+        </p>
+      </div>
+
+      <!-- Mobile: swipe carousel wrapper -->
+      <div class="treatments-carousel-wrap">
+        <div class="treatments-grid" id="treatments-grid">
+
+          <div class="treatment-card treatment-card--featured" id="glp1">
+            <div class="treatment-tag">Most Popular</div>
+            <div class="treatment-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M14 9v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>GLP-1 Weight Optimization</h3>
+            <p>Semaglutide and tirzepatide protocols designed to support sustainable body composition change — managed end-to-end by licensed providers.</p>
+            <div class="treatment-price">From <strong>$199</strong>/mo</div>
+            <a href="/products/glp-1-weight-loss" class="btn-gold">Explore GLP-1</a>
+          </div>
+
+          <div class="treatment-card" id="peptides">
+            <div class="treatment-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 21L14 7l7 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Prescription Peptides</h3>
+            <p>Sermorelin, tesamorelin, PT-141, and more. Targeted peptide therapy for recovery, performance, and longevity.</p>
+            <div class="treatment-price">From <strong>$149</strong>/mo</div>
+            <a href="/products/peptide-performance" class="btn-ghost-sm">Explore Peptides</a>
+          </div>
+
+          <div class="treatment-card" id="trt">
+            <div class="treatment-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Testosterone Replacement</h3>
+            <p>Fully managed TRT — labs, dosing, and ongoing optimization, delivered through our contracted provider network.</p>
+            <div class="treatment-price">From <strong>$179</strong>/mo</div>
+            <a href="/products/trt" class="btn-ghost-sm">Explore TRT</a>
+          </div>
+
+          <div class="treatment-card" id="nad">
+            <div class="treatment-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 14a9 9 0 1018 0 9 9 0 00-18 0z" stroke="currentColor" stroke-width="1.5"/><path d="M14 10v4l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>NAD+ Therapy</h3>
+            <p>A protocol designed to support cellular energy, cognitive clarity, and recovery. Subcutaneous or oral.</p>
+            <div class="treatment-price">From <strong>$149</strong>/mo</div>
+            <a href="/products/nad-longevity" class="btn-ghost-sm">Explore NAD+</a>
+          </div>
+
+          <div class="treatment-card" id="hormone">
+            <div class="treatment-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="6" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M10 14h8M14 10v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Performance Bundles</h3>
+            <p>Stack two or more protocols and save. Built for athletes who want a complete system — not a single fix.</p>
+            <div class="treatment-price">Save up to <strong>20%</strong></div>
+            <a href="/protocols" class="btn-ghost-sm">View All Protocols</a>
+          </div>
+
+          <!-- Replaced CTA card with match quiz card -->
+          <div class="treatment-card treatment-card--quiz">
+            <div class="treatment-icon treatment-icon--quiz">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4a10 10 0 100 20A10 10 0 0014 4z" stroke="currentColor" stroke-width="1.5"/><path d="M14 12a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="19" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>Not sure where to start?</h3>
+            <p>Answer 5 questions and get a protocol recommendation matched to your goals and health history.</p>
+            <div class="treatment-price quiz-time">Takes <strong>2 min</strong></div>
+            <a href="/qualify" class="btn-primary">Take the Match Quiz</a>
+          </div>
+
+        </div>
+        <!-- Mobile carousel dots -->
+        <div class="carousel-dots" aria-hidden="true">
+          <span class="dot dot--active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRICING (moved above How It Works per IA recommendation) ────────── -->
+  <section class="pricing" id="pricing">
+    <div class="section-inner">
+      <div class="section-header section-header--center">
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Your chapter, your plan.</h2>
+        <p class="section-sub">
+          À la carte protocols, performance bundles, or fully managed tiers.
+          No hidden fees. Cancel anytime.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Essentials</div>
+          <div class="pricing-best-for">Best for: starting with a single protocol</div>
+          <div class="pricing-range">$129 – $249<span>/mo</span></div>
+          <p class="pricing-price-detail">NAD+ $149 · Peptides from $149 · TRT $179 · GLP-1 $199</p>
+          <p class="pricing-desc">Single protocols, billed monthly. The entry point for building your protocol one chapter at a time.</p>
+          <ul class="pricing-features" role="list">
+            <li>One protocol of your choice</li>
+            <li>US board-certified provider review</li>
+            <li>503B pharmacy fulfillment</li>
+            <li>Monthly check-in</li>
+          </ul>
+          <a href="/qualify" class="btn-outline btn-full">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-badge">MOST CHOSEN</div>
+          <div class="pricing-tier">Performance</div>
+          <div class="pricing-best-for">Best for: stacked protocols + ongoing care</div>
+          <div class="pricing-range">$599<span>/mo</span></div>
+          <p class="pricing-desc">Two protocols, coaching access, and priority dosing refinement. Built for athletes who train like it matters.</p>
+          <ul class="pricing-features" role="list">
+            <li>2 protocols included</li>
+            <li>Coaching community access</li>
+            <li>Priority provider response</li>
+            <li>Quarterly lab review</li>
+            <li>Bundle pricing on add-ons</li>
+          </ul>
+          <a href="/qualify" class="btn-primary btn-full">Start Performance</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Legacy</div>
+          <div class="pricing-best-for">Best for: full concierge, white-glove access</div>
+          <div class="pricing-range">$1,999<span>/mo</span></div>
+          <p class="pricing-desc">Full protocol access, 1:1 coaching, and white-glove management. Your complete performance infrastructure.</p>
+          <ul class="pricing-features" role="list">
+            <li>All protocols included</li>
+            <li>Dedicated MD — direct line</li>
+            <li>1:1 coaching sessions</li>
+            <li>Monthly comprehensive lab panel</li>
+            <li>Custom protocol design</li>
+            <li>Same-day priority response</li>
+            <li>Invite-only member community</li>
+          </ul>
+          <a href="/qualify" class="btn-outline btn-full">Apply for Legacy</a>
+        </div>
+
+      </div>
+
+      <p class="pricing-note">All plans include free shipping, provider consultations, and ongoing dosage refinement. FSA/HSA eligible.</p>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ─────────────────────────────────────────────────────── -->
+  <section class="hiw" id="how-it-works">
+    <div class="section-inner">
+      <div class="section-header section-header--center">
+        <span class="section-label">Process</span>
+        <h2 class="section-title">Protocol in hand.<br />Within 48 hours.</h2>
+        <p class="section-sub hiw-sub">From your first question to pharmacy dispatch — here's exactly what happens.</p>
+      </div>
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <div class="hiw-num">01</div>
+          <h3>Complete Your Intake</h3>
+          <p>A detailed health questionnaire, reviewed by our licensed provider network. No office visit. No waiting room.</p>
+        </div>
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-step">
+          <div class="hiw-num">02</div>
+          <h3>Provider Review</h3>
+          <p>A contracted physician reviews your intake, orders labs where needed, and designs a protocol built around you. <em>Within 48 hours.</em></p>
+        </div>
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-step">
+          <div class="hiw-num">03</div>
+          <h3>Pharmacy Dispatch</h3>
+          <p>Your prescription ships from our 503B-accredited compounding partner, direct to your door.</p>
+        </div>
+        <!-- Step 4 visually separated — it's ongoing, not part of 48h clock -->
+        <div class="hiw-connector hiw-connector--then" aria-hidden="true"></div>
+        <div class="hiw-step hiw-step--ongoing">
+          <div class="hiw-ongoing-label">Then, ongoing:</div>
+          <div class="hiw-num">04</div>
+          <h3>Ongoing Optimization</h3>
+          <p>Monthly check-ins. Lab reviews. Dosage refinement. Your protocol evolves as you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ────────────────────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-inner">
+      <div class="section-header section-header--center">
+        <span class="section-label">Members</span>
+        <h2 class="section-title">What the work sounds like.</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"First time healthcare felt designed for my life, not against it. Protocol was live in 36 hours. I didn't know this was possible."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Marcus R.</span>
+            <span class="testimonial-role">47 · Founder &amp; competitive cyclist</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"I've been training for 20 years. AnthologyRX is the first protocol that actually matches how seriously I take recovery. The provider response time alone is worth it."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Derek L.</span>
+            <span class="testimonial-role">52 · Strength coach, former NFL</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The quiz pointed me to NAD+ + peptides. Three months in and my sleep quality has shifted more than anything I've tried in the last decade."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Sarah M.</span>
+            <span class="testimonial-role">41 · Triathlete &amp; executive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ────────────────────────────────────────────────────────────── -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <div class="section-header section-header--center">
+        <span class="section-label">Questions</span>
+        <h2 class="section-title">The ones worth asking.</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Is this legal? Are the medications FDA-approved?
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>AnthologyRX operates through a network of independent, state-licensed physicians. The compounded medications we facilitate are prepared by a DEA-registered, 503B-accredited pharmacy. Compounded medications are not FDA-approved as finished products — they are individually prescribed formulations, legal under federal and state telehealth regulations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Who prescribes my protocol?
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>All protocols are prescribed by US board-certified physicians through an independent contracted provider network. AnthologyRX facilitates the telehealth encounter — your physician reviews your intake, orders labs where indicated, and signs your prescription. You can message your provider directly through the member portal.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Which pharmacy fulfills my prescription?
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>We partner exclusively with a 503B-accredited outsourcing facility — the highest standard for compounded medications. 503B facilities are FDA-registered and subject to federal Current Good Manufacturing Practice (cGMP) standards, providing substantially greater oversight than traditional 503A compounding pharmacies.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can I cancel anytime?
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Yes. All plans are billed monthly with no long-term contracts. Cancel anytime from your member dashboard — no phone calls, no runaround. Your provider will be notified and manage any taper or transition protocol if clinically warranted.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            What if I have a side effect or adverse reaction?
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Message your provider directly through the portal — Performance and Legacy tier members receive same-day or priority response. For urgent medical concerns, contact emergency services. AnthologyRX is not an emergency medical service. Your provider can adjust dosing, pause, or discontinue your protocol at any time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Is my health information protected?
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>All health data is handled under full HIPAA compliance. AnthologyRX maintains a signed Business Associate Agreement (BAA) with all platform and storage partners. Your intake, lab results, and provider communications are encrypted at rest and in transit. We do not sell or share your health information.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMMUNITY ────────────────────────────────────────────────────────── -->
+  <section class="community" id="community">
+    <div class="section-inner community-inner">
+      <div class="community-text">
+        <span class="section-label">Community</span>
+        <h2 class="section-title">Performance is<br />a team sport.</h2>
+        <p>Membership includes access to a private community of athletes, coaches, and operators — people who understand the work, because they're doing it.</p>
+        <a href="/qualify" class="btn-primary">Join Free with Any Plan</a>
+      </div>
+      <div class="community-stats">
+        <div class="community-stat">
+          <span class="stat-num">10K+</span>
+          <span class="stat-label">Active Members</span>
+        </div>
+        <div class="community-stat">
+          <span class="stat-num">189K</span>
+          <span class="stat-label">on Instagram</span>
+        </div>
+        <div class="community-stat">
+          <span class="stat-num">4.9★</span>
+          <span class="stat-label">Member Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDITORIAL BREAK (closing argument — moved to end) ─────────────── -->
+  <section class="editorial">
+    <div class="editorial-img-wrap" aria-hidden="true">
+      <img src="img-gym.jpg" alt="" class="editorial-img" />
+      <div class="editorial-img-overlay"></div>
+    </div>
+    <div class="editorial-inner editorial-inner--raised">
+      <blockquote class="editorial-quote">
+        <span class="editorial-mark">"</span>
+        An anthology of lives elevated.
+      </blockquote>
+      <div class="editorial-rule"></div>
+      <p class="editorial-sub">PERFORMANCE · LONGEVITY · LEGACY</p>
+      <a href="/qualify" class="btn-primary btn-lg editorial-cta">Begin Intake — 3 min</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" aria-label="AnthologyRX">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+        <p class="footer-tagline">PERFORMANCE · LONGEVITY · LEGACY</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Protocols</h4>
+          <ul role="list">
+            <li><a href="/products/glp-1-weight-loss">GLP-1 / Weight Optimization</a></li>
+            <li><a href="/products/peptide-performance">Prescription Peptides</a></li>
+            <li><a href="/products/trt">Testosterone Replacement</a></li>
+            <li><a href="/products/nad-longevity">NAD+ Therapy</a></li>
+            <li><a href="/protocols">Performance Bundles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="/pages/about">About</a></li>
+            <li><a href="/pages/how-it-works">How It Works</a></li>
+            <li><a href="/pages/pricing">Pricing</a></li>
+            <li><a href="/pages/about">Community</a></li>
+            <li><a href="/blogs/journal">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul role="list">
+            <li><a href="/pages/faq">FAQ</a></li>
+            <li><a href="/pages/contact">Contact</a></li>
+            <li><a href="/pages/privacy">Privacy</a></li>
+            <li><a href="/pages/terms">Terms</a></li>
+            <li><a href="/pages/privacy">HIPAA Notice</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><strong>Compounded medications:</strong> Formulations are compounded by a 503B-accredited outsourcing facility and are not FDA-approved finished drug products. <strong>Telehealth scope:</strong> AnthologyRX does not replace in-person medical care and is not an emergency service. <strong>Provider independence:</strong> All prescriptions are issued by licensed healthcare providers through independent, contracted networks. AnthologyRX does not employ physicians or practice medicine.</p>
+    </div>
+  </footer>
+
+  <!-- ── STICKY BOTTOM BAR ──────────────────────────────────────────────── -->
+  <div class="sticky-bar" id="sticky-bar" aria-hidden="true">
+    <p class="sticky-bar-copy">Ready to begin your protocol?</p>
+    <a href="/qualify" class="btn-primary sticky-bar-cta">Begin Intake — 3 min</a>
+    <button class="sticky-bar-close" aria-label="Dismiss" onclick="document.getElementById('sticky-bar').classList.add('sticky-bar--dismissed')">✕</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

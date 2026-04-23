@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — AnthologyRX</title>
+  <meta name="description" content="Answers to common questions about AnthologyRX protocols, pricing, safety, delivery, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: #1E1E1E;
+      color: #E8DCC8;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 1rem;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+    button { font-family: inherit; }
+
+    /* ── TOKENS ──────────────────────────────────────────── */
+    :root {
+      --bg:           #1E1E1E;
+      --bg-card:      #262422;
+      --bg-deep:      #181614;
+      --rule:         #373430;
+      --sand:         #E8DCC8;
+      --sand-dim:     #9C9082;
+      --gold:         #B28A2A;
+      --gold-hover:   #C99B35;
+      --gold-glow:    rgba(178,138,42,0.18);
+      --font-disp:    'Unbounded', sans-serif;
+      --font-body:    'Epilogue', sans-serif;
+      --nav-h:        72px;
+      --r:            3px;
+      --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+      --t:            0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --section-pad:  100px 0;
+      --max-w:        1200px;
+    }
+
+    /* ── CANONICAL LOGO ──────────────────────────────────── */
+    .logo-main {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+      font-weight: 400;
+      color: #E8DCC8;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-rx {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
+      font-weight: 700;
+      color: #B28A2A;
+      letter-spacing: 0.06em;
+      position: relative;
+      top: -0.4em;
+      margin-left: 0.1em;
+    }
+
+    /* ── CONTAINERS ──────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    @media (max-width: 768px) { .container { padding: 0 20px; } }
+
+    /* ── TYPE ────────────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: var(--font-disp);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--sand);
+    }
+    h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 900; letter-spacing: -0.04em; }
+    h2 { font-size: clamp(1.75rem, 3vw, 2.6rem); }
+    p { color: var(--sand-dim); }
+
+    .label {
+      display: inline-block;
+      font-family: var(--font-disp);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    /* ── BUTTONS ─────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-disp);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: var(--r);
+      cursor: pointer;
+      transition: all var(--t);
+      white-space: nowrap;
+      border: none;
+    }
+    .btn--gold { background: var(--gold); color: #1E1E1E; }
+    .btn--gold:hover {
+      background: var(--gold-hover);
+      color: #1E1E1E;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px var(--gold-glow);
+    }
+    .btn--lg { padding: 17px 36px; font-size: 0.65rem; }
+
+    .text-link {
+      font-family: var(--font-disp);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: color var(--t);
+    }
+    .text-link:hover { color: var(--gold-hover); }
+
+    /* ── ANNOUNCEMENT BAR ────────────────────────────────── */
+    .announce-bar {
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 10px 48px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .announce-bar.hidden { display: none; }
+    .announce-bar__inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .announce-bar__text {
+      font-family: var(--font-disp);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bg);
+    }
+    .announce-bar__cta {
+      font-family: var(--font-disp);
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bg);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      white-space: nowrap;
+      transition: opacity var(--t);
+    }
+    .announce-bar__cta:hover { opacity: 0.75; }
+    .announce-bar__close {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--bg);
+      font-size: 1.2rem;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.6;
+      padding: 4px 8px;
+      transition: opacity var(--t);
+    }
+    .announce-bar__close:hover { opacity: 1; }
+    @media (max-width: 768px) {
+      .announce-bar { padding: 10px 40px 10px 16px; }
+      .announce-bar__text { font-size: 0.52rem; }
+    }
+
+    /* ── TOP STACK & NAV ─────────────────────────────────── */
+    .top-stack {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+    header { position: static; height: var(--nav-h); flex-shrink: 0; }
+    .nav {
+      height: 100%;
+      background: rgba(30,30,30,0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+      transition: background var(--t), box-shadow var(--t);
+    }
+    .nav.scrolled {
+      background: rgba(22,20,18,0.97);
+      box-shadow: 0 2px 40px rgba(0,0,0,0.45);
+    }
+    .nav__inner {
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav__links a {
+      font-family: var(--font-disp);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand-dim);
+      transition: color var(--t);
+    }
+    .nav__links a:hover, .nav__links a.active { color: var(--sand); }
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+    .nav__login {
+      font-family: var(--font-disp);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand-dim);
+      transition: color var(--t);
+    }
+    .nav__login:hover { color: var(--sand); }
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--sand);
+      transition: all var(--t);
+    }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .nav__mobile-menu {
+      display: none;
+      position: absolute;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--rule);
+      padding: 24px 20px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .nav__mobile-menu.open { display: flex; }
+    .nav__mobile-menu a {
+      font-family: var(--font-disp);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+    @media (max-width: 900px) {
+      .nav__links, .nav__actions { display: none; }
+      .nav__hamburger { display: flex; }
+    }
+
+    /* ── PAGE HEADER ─────────────────────────────────────── */
+    .page-header {
+      padding: 80px 0 60px;
+      text-align: center;
+      border-bottom: 1px solid var(--rule);
+    }
+    .page-header h1 { margin-bottom: 16px; }
+    .page-header__sub {
+      font-size: 1rem;
+      color: var(--sand-dim);
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    /* ── SEARCH BAR ──────────────────────────────────────── */
+    .faq-search-wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .faq-search {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      padding: 14px 48px 14px 18px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--sand);
+      outline: none;
+      transition: border-color var(--t), box-shadow var(--t);
+    }
+    .faq-search::placeholder { color: var(--sand-dim); }
+    .faq-search:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px var(--gold-glow);
+    }
+    .faq-search-icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--sand-dim);
+      pointer-events: none;
+    }
+
+    /* ── TABS ────────────────────────────────────────────── */
+    .faq-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--rule);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .faq-tabs::-webkit-scrollbar { display: none; }
+    .faq-tab {
+      font-family: var(--font-disp);
+      font-size: 0.56rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sand-dim);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 18px 18px;
+      cursor: pointer;
+      transition: color var(--t), border-color var(--t);
+      white-space: nowrap;
+      position: relative;
+      bottom: -1px;
+      flex-shrink: 0;
+    }
+    .faq-tab:hover { color: var(--sand); }
+    .faq-tab.active {
+      color: var(--sand);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── FAQ SECTION ─────────────────────────────────────── */
+    .faq-section { padding: 80px 0; }
+
+    /* ── CATEGORY GROUP HEADING ──────────────────────────── */
+    .faq-group {
+      margin-bottom: 48px;
+    }
+    .faq-group:last-child { margin-bottom: 0; }
+    .faq-group__label {
+      display: inline-block;
+      font-family: var(--font-disp);
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .faq-group__list {
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── ACCORDION ───────────────────────────────────────── */
+    .faq-item { border-bottom: 1px solid var(--rule); }
+    .faq-item__trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-disp);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--sand);
+      transition: color var(--t);
+    }
+    .faq-item__trigger:hover { color: var(--gold); }
+    .faq-item__icon {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--gold);
+      flex-shrink: 0;
+      line-height: 1;
+      transition: transform var(--t);
+    }
+    .faq-item.open .faq-item__icon { transform: rotate(45deg); }
+    .faq-item__body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s var(--ease);
+    }
+    .faq-item.open .faq-item__body { grid-template-rows: 1fr; }
+    .faq-item__body-inner { overflow: hidden; }
+    .faq-item__answer {
+      padding-bottom: 24px;
+      font-size: 0.9rem;
+      line-height: 1.78;
+      color: var(--sand-dim);
+    }
+    .faq-item__answer a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-item__answer a:hover { color: var(--gold-hover); }
+
+    /* no-results state */
+    .faq-no-results {
+      text-align: center;
+      padding: 60px 0;
+      color: var(--sand-dim);
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    /* ── BOTTOM CTA ──────────────────────────────────────── */
+    .faq-cta {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--rule);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .faq-cta__heading {
+      font-family: var(--font-disp);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: var(--sand);
+      margin-bottom: 12px;
+    }
+    .faq-cta__sub {
+      color: var(--sand-dim);
+      font-size: 0.92rem;
+      margin-bottom: 36px;
+    }
+    .faq-cta__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    .footer {
+      background: var(--bg-deep);
+      padding: 64px 0 40px;
+      border-top: 1px solid var(--rule);
+    }
+    .footer__inner { display: flex; flex-direction: column; gap: 0; }
+    .footer__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer__tagline {
+      font-family: var(--font-disp);
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 10px;
+    }
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 28px;
+    }
+    .footer__links a {
+      font-family: var(--font-disp);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sand-dim);
+      transition: color var(--t);
+    }
+    .footer__links a:hover { color: var(--sand); }
+    .footer__divider { height: 1px; background: var(--rule); margin-bottom: 32px; }
+    .footer__legal {
+      font-size: 0.7rem;
+      line-height: 1.7;
+      color: var(--sand-dim);
+      opacity: 0.5;
+      max-width: 900px;
+    }
+    @media (max-width: 768px) { .footer__top { flex-direction: column; gap: 28px; } }
+
+    /* ── SCROLL ANIM ─────────────────────────────────────── */
+    .anim-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+    }
+    .anim-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- TOP STACK: announcement + nav -->
+<div class="top-stack" id="topStack">
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-bar__inner">
+      <span class="announce-bar__text">Protocols from $199/mo · FSA/HSA may be accepted (plan-dependent) · Provider review in 48 hours</span>
+      <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+    </div>
+    <button class="announce-bar__close" id="barClose" aria-label="Dismiss">×</button>
+  </div>
+  <header>
+    <nav class="nav" id="mainNav">
+      <div class="container nav__inner">
+        <a href="/" class="nav__logo" aria-label="AnthologyRX home">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+        <div class="nav__links">
+          <a href="/protocols">Protocols</a>
+          <a href="/pages/how-it-works">How It Works</a>
+          <a href="/pages/science">Science</a>
+          <a href="/pages/faq" class="active">FAQ</a>
+            <a href="/pages/about">About</a>
+            <a href="/blogs/journal">Journal</a>
+            <a href="/pages/pricing">Pricing</a>
+          </div>
+        <div class="nav__actions">
+          <a href="/account" class="nav__login">Log In</a>
+          <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__mobile-menu" id="mobileMenu">
+        <a href="/protocols">Protocols</a>
+        <a href="/pages/how-it-works">How It Works</a>
+        <a href="/pages/science">Science</a>
+        <a href="/pages/faq">FAQ</a>
+        <a href="/pages/about">About</a>
+          <a href="/blogs/journal">Journal</a>
+          <a href="/pages/pricing">Pricing</a>
+          <a href="/account">Log In</a>
+        <a href="/qualify" class="btn btn--gold" style="text-align:center;">See If You Qualify</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <span class="label">Common Questions</span>
+    <h1>Everything you need to know.</h1>
+    <p class="page-header__sub">If it's not here, you can reach us directly.</p>
+    <div class="faq-search-wrap">
+      <input type="text" class="faq-search" id="faqSearch" placeholder="Search questions..." autocomplete="off">
+      <svg class="faq-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="container" style="padding-top:0;padding-bottom:0;">
+  <div class="faq-tabs" role="tablist" id="faqTabs">
+    <button class="faq-tab active" data-filter="all" role="tab">All</button>
+    <button class="faq-tab" data-filter="about" role="tab">About the Protocols</button>
+    <button class="faq-tab" data-filter="getting-started" role="tab">Getting Started</button>
+    <button class="faq-tab" data-filter="pricing" role="tab">Pricing &amp; Billing</button>
+    <button class="faq-tab" data-filter="medical" role="tab">Medical &amp; Safety</button>
+    <button class="faq-tab" data-filter="pharmacy" role="tab">Pharmacy &amp; Delivery</button>
+    <button class="faq-tab" data-filter="account" role="tab">Account &amp; Support</button>
+  </div>
+</div>
+
+<!-- FAQ CONTENT -->
+<section class="faq-section">
+  <div class="container">
+
+    <!-- NO RESULTS -->
+    <div class="faq-no-results" id="noResults">
+      No questions matched your search. <a href="/pages/contact" class="text-link">Ask us directly →</a>
+    </div>
+
+    <!-- GROUP: About the Protocols -->
+    <div class="faq-group" id="group-about">
+      <span class="faq-group__label">About the Protocols</span>
+      <div class="faq-group__list">
+
+        <div class="faq-item" data-category="about">
+          <button class="faq-item__trigger" aria-expanded="false">
+            What protocols does AnthologyRX offer?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              AnthologyRX currently offers four core protocols:<br><br>
+              <strong style="color:var(--sand)">GLP-1 Performance Protocol</strong> — Semaglutide or tirzepatide for metabolic optimization, body composition, and sustained weight management. From $199/mo.<br><br>
+              <strong style="color:var(--sand)">Peptide Protocols</strong> — Targeted peptide therapies including BPC-157, CJC-1295, and ipamorelin for recovery, lean mass, and performance.<br><br>
+              <strong style="color:var(--sand)">TRT / Hormone Optimization</strong> — Testosterone replacement and hormone balancing for men and women, including full lab panel monitoring.<br><br>
+              <strong style="color:var(--sand)">NAD+ Therapy</strong> — Subcutaneous NAD+ for cellular energy, cognitive function, and longevity support.<br><br>
+              <a href="/protocols">View all protocols →</a>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="about">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Can I be on more than one protocol at a time?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Yes — protocol stacking is possible and is evaluated by your provider on a case-by-case basis. Certain combinations are well-established and commonly prescribed together; others require additional clinical review before approval. Your intake responses and any required lab work will inform what's appropriate for you.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="about">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How is AnthologyRX different from a regular clinic?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              AnthologyRX is a remote, asynchronous telehealth platform. There's no waiting room, no in-person appointment required (in most states), and no navigating a referral chain. You complete an intake online, a licensed provider reviews it within 48 hours, and if you qualify, your prescription goes directly to the pharmacy.<br><br>
+              We operate to the same clinical standard as a traditional clinic — same medications, same provider credentials, same regulatory oversight. The difference is overhead: by removing the physical infrastructure, we can offer meaningfully lower cost without compromising care quality.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="about">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Are these the same medications I'd get at a traditional clinic?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              AnthologyRX medications use the same active pharmaceutical ingredients prescribed at traditional clinics. They are dispensed by a licensed 503B compounding pharmacy under cGMP standards. Compounded medications differ from branded products in that they are not FDA-approved end-products, but are produced under rigorous pharmacy quality controls.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="about">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Does AnthologyRX offer supplements?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Not yet. A curated supplement line is in development and will launch post-protocol rollout. If you'd like to be notified at launch, send your email to <a href="mailto:support@anthologyrx.com">support@anthologyrx.com</a> with the subject "Supplement Waitlist" and we'll add you to the list.
+            </div>
+          </div></div>
+        </div>
+
+      </div><!-- /.faq-group__list -->
+    </div><!-- /.faq-group -->
+
+    <!-- GROUP: Getting Started -->
+    <div class="faq-group" id="group-getting-started">
+      <span class="faq-group__label">Getting Started</span>
+      <div class="faq-group__list">
+
+        <div class="faq-item" data-category="getting-started">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How do I know which protocol is right for me?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Start with the Match Assessment — a short intake that identifies the protocol most aligned with your goals, health history, and current biomarkers. It takes about three minutes. Your results will guide you toward one or more protocols, and your provider makes the final clinical determination. <a href="/qualify">Take the Match Assessment →</a>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="getting-started">
+          <button class="faq-item__trigger" aria-expanded="false">
+            What does the intake process involve?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              The intake is a brief structured questionnaire — approximately three minutes — covering your health history, current medications, lifestyle factors, and goals. There's no video call required in most states. Your provider reviews your intake asynchronously and follows up directly if they need additional information before approving your prescription.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="getting-started">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How long from intake to first shipment?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Typically 5–10 business days from intake completion to delivery. The sequence: intake submitted → provider review within 48 hours → prescription issued → pharmacy fulfillment → 3–7 business day shipping. If your protocol requires labs, timeline extends by however long it takes to complete and receive results.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="getting-started">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Do I need to get labs before starting?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              It depends on the protocol:<br><br>
+              <strong style="color:var(--sand)">GLP-1</strong> — No prior labs required. Intake questionnaire is sufficient for most patients.<br>
+              <strong style="color:var(--sand)">TRT / Hormone Optimization</strong> — Yes. A full hormone panel is required before your provider can issue a prescription.<br>
+              <strong style="color:var(--sand)">Peptides</strong> — An IGF-1 panel is recommended, though not always required depending on the specific protocol.<br>
+              <strong style="color:var(--sand)">NAD+</strong> — Intake only. No prior labs required.<br><br>
+              Your provider will specify exactly what's needed during intake review.
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GROUP: Pricing & Billing -->
+    <div class="faq-group" id="group-pricing">
+      <span class="faq-group__label">Pricing &amp; Billing</span>
+      <div class="faq-group__list">
+
+        <div class="faq-item" data-category="pricing">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How much do the protocols cost?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              GLP-1 protocols start at $199/month. Pricing for peptide protocols, TRT/hormone optimization, and NAD+ will be published at launch. There are no hidden fees and no contracts — the monthly price is the monthly price. You can cancel anytime without penalty.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="pricing">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Does insurance cover these treatments?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Not currently. AnthologyRX does not bill insurance. FSA and HSA funds may be accepted depending on your plan. Please verify eligibility with your plan administrator before purchasing. Detailed receipts are provided automatically with each charge for reimbursement submission.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="pricing">
+          <button class="faq-item__trigger" aria-expanded="false">
+            What's included in the monthly price?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Your subscription is billed at the published monthly rate and renews automatically each billing cycle. Cancel anytime with no fees. What's included:
+              <br><br>Prescription from a licensed provider, pharmacy fulfillment and shipping, monthly provider check-in, direct messaging access to your care team, dosing adjustment support as you progress through titration, and FSA/HSA-compliant receipts. No additional provider fees, no per-message charges.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="pricing">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Can I cancel anytime?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Your protocol is billed monthly on a recurring basis. You can cancel your subscription directly from your account dashboard at any time. If you cancel mid-cycle, your current shipment is fulfilled and no further charges are issued.
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GROUP: Medical & Safety -->
+    <div class="faq-group" id="group-medical">
+      <span class="faq-group__label">Medical &amp; Safety</span>
+      <div class="faq-group__list">
+
+        <div class="faq-item" data-category="medical">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Are GLP-1 medications FDA-approved?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Semaglutide (the active compound in Ozempic and Wegovy) and tirzepatide (active compound in Mounjaro and Zepbound) are both FDA-approved drugs. The versions dispensed through AnthologyRX are compounded formulations produced by a licensed 503B compounding pharmacy operating under FDA oversight and cGMP standards — not manufactured by Novo Nordisk or Eli Lilly, but containing the same active compounds.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="medical">
+          <button class="faq-item__trigger" aria-expanded="false">
+            What are the risks of GLP-1 therapy?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              The most common side effects are gastrointestinal: nausea, vomiting, diarrhea, and constipation. These typically peak in the first several weeks and diminish as the body adjusts — slow dose titration is specifically designed to minimize their severity.<br><br>
+              More serious risks — including pancreatitis, gallbladder disease, and a theoretical association with thyroid C-cell tumors (observed in rodent studies, not confirmed in humans) — are real and are screened for during intake. Patients with a personal or family history of medullary thyroid carcinoma or MEN2 are not eligible. Your provider reviews every intake specifically to identify these contraindications.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="medical">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Is using medication to lose weight "cheating"?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              No more than using a knee brace after an injury is "cheating" at physical therapy. Metabolic dysregulation has physiological underpinnings — hormonal, genetic, and neurological — that diet and exercise alone frequently cannot override. GLP-1 agonists work by correcting a signaling deficit: your brain receives the satiety signals it's supposed to, and food noise diminishes accordingly. That's not circumventing effort. That's removing a structural obstacle to effort.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="medical">
+          <button class="faq-item__trigger" aria-expanded="false">
+            What if I have a pre-existing condition?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Your intake screens for all standard contraindications across each protocol. Your provider reviews every submission individually. Certain conditions are disqualifying for specific protocols — and in those cases, your provider may recommend an alternative approach or refer you to an appropriate in-person specialist. No prescription is issued without individual provider review.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="medical">
+          <button class="faq-item__trigger" aria-expanded="false">
+            What happens if I experience a side effect?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Contact your care team through your patient portal. Your provider will follow up — typically within 24 hours on business days — to assess severity and adjust your protocol if needed. For serious or emergent symptoms, call 911 or go to your nearest emergency room. Direct messaging with your provider is included in your subscription.
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GROUP: Pharmacy & Delivery -->
+    <div class="faq-group" id="group-pharmacy">
+      <span class="faq-group__label">Pharmacy &amp; Delivery</span>
+      <div class="faq-group__list">
+
+        <div class="faq-item" data-category="pharmacy">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Where does my medication come from?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              All medications are dispensed by a licensed 503B compounding pharmacy operating under FDA oversight and current Good Manufacturing Practice (cGMP) standards. Shipments are temperature-controlled and packaged to maintain compound integrity in transit. The pharmacy is a registered outsourcing facility — not a standard retail or 503A compounding pharmacy.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="pharmacy">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How long does shipping take?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              3–7 business days after your prescription is approved and the pharmacy processes your order. Recurring shipments are dispatched automatically each cycle — you don't need to reorder. Tracking information is provided through your account dashboard.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="pharmacy">
+          <button class="faq-item__trigger" aria-expanded="false">
+            Is the medication the same as brand-name Ozempic or Wegovy?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              The compounded semaglutide dispensed through AnthologyRX uses the same active pharmaceutical ingredient as Ozempic and Wegovy but is not manufactured by Novo Nordisk and is not an FDA-approved drug. Compounded formulations are not evaluated for bioequivalence with their branded counterparts. Your provider can explain the regulatory distinction in detail during your intake review.
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GROUP: Account & Support -->
+    <div class="faq-group" id="group-account">
+      <span class="faq-group__label">Account &amp; Support</span>
+      <div class="faq-group__list">
+
+        <div class="faq-item" data-category="account">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How do I access my patient portal?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Through your account dashboard at <a href="/account">/account</a>. The Bask Health patient portal — which manages your clinical records, provider messaging, and prescription history — is linked directly from your dashboard. You'll receive login credentials for the patient portal when your first prescription is issued.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="account">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How do I contact my provider?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              Via direct message through your Bask Health patient portal. Your provider responds within 24 hours on business days. Direct messaging is included in your monthly subscription — there are no per-message fees.
+            </div>
+          </div></div>
+        </div>
+
+        <div class="faq-item" data-category="account">
+          <button class="faq-item__trigger" aria-expanded="false">
+            How do I cancel my subscription?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__body"><div class="faq-item__body-inner">
+            <div class="faq-item__answer">
+              From your account dashboard — navigate to Settings and select "Cancel Subscription." You can also message your care team through your patient portal and they'll process the cancellation. No fees, no penalties, no required notice period.
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="faq-cta">
+  <div class="container">
+    <h2 class="faq-cta__heading">Still have questions?</h2>
+    <p class="faq-cta__sub">We're here to help. Reach out directly or get started.</p>
+    <div class="faq-cta__actions">
+      <a href="/pages/contact" class="text-link">Message our team</a>
+      <a href="/qualify" class="btn btn--gold btn--lg">See If You Qualify →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <div>
+        <a href="/" aria-label="AnthologyRX">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+        <p class="footer__tagline">Performance · Longevity · Legacy</p>
+      </div>
+      <nav class="footer__links">
+        <a href="/protocols">Protocols</a>
+        <a href="/pages/how-it-works">How It Works</a>
+        <a href="/pages/pricing">Pricing</a>
+        <a href="/pages/science">Science</a>
+        <a href="/pages/about">About</a>
+        <a href="/blogs/journal">Journal</a>
+        <a href="/pages/press">Press</a>
+        <a href="/pages/faq">FAQ</a>
+        <a href="/pages/contact">Contact</a>
+        <a href="/collections/supplements">Supplements</a>
+        <a href="/pages/privacy">Privacy</a>
+        <a href="/pages/terms">Terms</a>
+      </nav>
+    </div>
+    <div class="footer__divider"></div>
+    <p class="footer__legal">AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility and are not manufactured by Novo Nordisk or Eli Lilly. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. GLP-1 agonists may cause side effects including nausea, vomiting, diarrhea, and gastrointestinal discomfort. Rare but serious risks include pancreatitis and, in patients with a history of medullary thyroid carcinoma or MEN2, potential thyroid risk. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // ── TOP STACK HEIGHT SYNC ──────────────────────────────
+  const topStack = document.getElementById('topStack');
+  function syncBodyPad() {
+    document.body.style.paddingTop = topStack.offsetHeight + 'px';
+  }
+  syncBodyPad();
+  new ResizeObserver(syncBodyPad).observe(topStack);
+
+  // ── NAV SCROLL ─────────────────────────────────────────
+  const mainNav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // ── ANNOUNCE BAR DISMISS ────────────────────────────────
+  document.getElementById('barClose').addEventListener('click', () => {
+    document.getElementById('announceBar').classList.add('hidden');
+    syncBodyPad();
+  });
+
+  // ── HAMBURGER ───────────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // ── ACCORDION ───────────────────────────────────────────
+  document.querySelectorAll('.faq-item__trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-item__trigger').setAttribute('aria-expanded', 'false');
+      });
+      // open clicked if it was closed
+      if (!wasOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ── TAB FILTER ──────────────────────────────────────────
+  const tabs = document.querySelectorAll('.faq-tab');
+  const groups = {
+    all: ['group-about','group-getting-started','group-pricing','group-medical','group-pharmacy','group-account'],
+    about: ['group-about'],
+    'getting-started': ['group-getting-started'],
+    pricing: ['group-pricing'],
+    medical: ['group-medical'],
+    pharmacy: ['group-pharmacy'],
+    account: ['group-account'],
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      // show/hide groups
+      Object.keys(groups).forEach(key => {
+        groups[key].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.style.display = 'none';
+        });
+      });
+      (groups[filter] || groups.all).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = '';
+      });
+      // Clear search
+      document.getElementById('faqSearch').value = '';
+      document.getElementById('noResults').style.display = 'none';
+    });
+  });
+
+  // ── SEARCH ─────────────────────────────────────────────
+  const searchInput = document.getElementById('faqSearch');
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+
+    // Reset tab to all
+    tabs.forEach(t => t.classList.remove('active'));
+    document.querySelector('[data-filter="all"]').classList.add('active');
+    Object.values(groups).flat().forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = '';
+    });
+
+    if (!query) {
+      document.querySelectorAll('.faq-item').forEach(item => item.style.display = '');
+      document.querySelectorAll('.faq-group').forEach(g => g.style.display = '');
+      document.getElementById('noResults').style.display = 'none';
+      return;
+    }
+
+    let anyVisible = false;
+    document.querySelectorAll('.faq-group').forEach(group => {
+      let groupVisible = false;
+      group.querySelectorAll('.faq-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const matches = text.includes(query);
+        item.style.display = matches ? '' : 'none';
+        if (matches) groupVisible = true;
+      });
+      group.style.display = groupVisible ? '' : 'none';
+      if (groupVisible) anyVisible = true;
+    });
+
+    document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
+  });
+
+  // ── SCROLL ANIMATIONS ───────────────────────────────────
+  const animEls = document.querySelectorAll('.anim-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0 });
+  animEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
