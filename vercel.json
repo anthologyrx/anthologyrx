@@ -20,7 +20,13 @@
     { "source": "/blogs/journal",                     "destination": "/blog/index.html" },
     { "source": "/blogs/journal/:slug",               "destination": "/blog/article.html" },
     { "source": "/products/:slug",                    "destination": "/product-page/index.html" },
-    { "source": "/merch",                             "destination": "/merch/index.html" }
+    { "source": "/merch",                             "destination": "/merch/index.html" },
+    { "source": "/treatments/glp-1",                   "destination": "/treatments/glp-1/index.html" },
+    { "source": "/treatments/nad",                     "destination": "/treatments/nad/index.html" },
+    { "source": "/treatments/gonadorelin",             "destination": "/treatments/gonadorelin/index.html" },
+    { "source": "/treatments/micc",                   "destination": "/treatments/micc/index.html" },
+    { "source": "/treatments/pt-141",                 "destination": "/treatments/pt-141/index.html" },
+    { "source": "/treatments/tesamorelin",             "destination": "/treatments/tesamorelin/index.html" }
   ],
   "headers": [
     {
