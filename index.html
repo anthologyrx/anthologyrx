@@ -11,28 +11,45 @@
 </head>
 <body>
 
-  <!-- ── ANNOUNCEMENT BAR ──────────────────────────────────────────────────── -->
-  <div class="announce-bar" id="announce-bar">
-    <p>NOW ACCEPTING NEW MEMBERS &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; FSA/HSA ELIGIBLE</p>
-    <button class="announce-close" aria-label="Dismiss announcement" onclick="this.closest('#announce-bar').style.display='none'">✕</button>
-  </div>
+<!-- ── ANNOUNCE BAR ──────────────────────────────────────────────── -->
+<div class="announce-bar" id="announce-bar">
+  <p>PRESCRIPTION LONGEVITY &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; PROVIDER REVIEW IN 48 HOURS</p>
+  <a href="/qualify" style="margin-left:12px;">See if you qualify →</a>
+  <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">✕</button>
+</div>
 
-  <!-- ── NAV ─────────────────────────────────────────────────────────────── -->
-  <header class="nav-wrap">
-    <nav class="nav">
-      <a href="/" class="nav-logo" aria-label="AnthologyRX home">
-        <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
-      </a>
-      <ul class="nav-links" role="list">
-        <li><a href="/#treatments">Treatments</a></li>
-        <li><a href="/how-it-works">How It Works</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="/account" class="nav-login">Log In</a>
-        <a href="/qualify" class="btn-primary">Start Assessment</a>
-      </div>
+<!-- ── NAV ───────────────────────────────────────────────────────── -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/#treatments">Treatments</a></li>
+      <li><a href="/how-it-works">How It Works</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/account" class="nav-login">Log In</a>
+      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
+
+<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" onclick="document.getElementById('navMobile').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="/#treatments" onclick="document.getElementById('navMobile').classList.remove('open')">Treatments</a>
+  <a href="/how-it-works" onclick="document.getElementById('navMobile').classList.remove('open')">How It Works</a>
+  <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
+  <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
+  <a href="/account" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
+  <a href="/qualify" class="btn btn--gold" style="margin-top:8px;">Start Assessment</a>
+</div>
+
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
