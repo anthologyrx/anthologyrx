@@ -369,13 +369,16 @@ button { cursor: pointer; background: none; border: none; }
   margin-bottom: var(--space-6);
   max-width: 14ch;
 }
+.hero-copy-card {
+  /* No card on desktop — transparent */
+}
+
 .hero-sub {
   font-size: var(--text-lg);
   color: var(--text-muted);
   max-width: 48ch;
   line-height: 1.7;
   margin-bottom: var(--space-8);
-  position: relative;
 }
 
 
@@ -1031,6 +1034,17 @@ button { cursor: pointer; background: none; border: none; }
     min-height: auto;
     padding-top: clamp(100px, 20vw, 140px);
     padding-bottom: var(--space-16);
+  }
+  .hero-copy-card {
+    background: rgba(30, 28, 26, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 6px;
+    padding: var(--space-5) var(--space-5) var(--space-4);
+    margin-top: var(--space-4);
+  }
+  .hero-copy-card .hero-sub {
+    margin-bottom: var(--space-6);
   }
 }
 
