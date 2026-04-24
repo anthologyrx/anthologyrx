@@ -375,6 +375,23 @@ button { cursor: pointer; background: none; border: none; }
   max-width: 48ch;
   line-height: 1.7;
   margin-bottom: var(--space-8);
+  position: relative;
+}
+
+/* Mobile scrim: invisible dark wash behind sub copy for legibility */
+@media (max-width: 767px) {
+  .hero-sub {
+    padding: var(--space-3) 0;
+  }
+  .hero-sub::before {
+    content: '';
+    position: absolute;
+    inset: -12px -20px;
+    background: radial-gradient(ellipse at 40% 50%, rgba(20,18,16,0.72) 30%, transparent 80%);
+    border-radius: 4px;
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 .hero-ctas {
   display: flex;
