@@ -230,7 +230,8 @@ strong { color: var(--sand); font-weight: 600; }
   display: flex;
   gap: 40px;
   margin-top: 52px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 .hero-proof-item {
   display: flex;
@@ -533,7 +534,8 @@ strong { color: var(--sand); font-weight: 600; }
   .step-num { font-size: 3rem; opacity: 0.3; }
   .step-tag { margin-top: 0; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
-  .hero-proof { gap: 24px; }
+  .hero-proof { gap: 24px; flex-wrap: wrap; }
+  .hero-proof-item { flex: 0 0 calc(50% - 12px); }
   .hero-proof-divider { display: none; }
   .footer-inner { grid-template-columns: 1fr; gap: 40px; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
