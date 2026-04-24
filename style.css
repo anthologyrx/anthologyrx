@@ -183,7 +183,7 @@ button { cursor: pointer; background: none; border: none; }
 .btn-full, .btn--full { width: 100%; justify-content: center; }
 
 /* Mobile nav — Start Assessment button spacing */
-.nav-mobile .btn--gold { margin-top: 8px; width: 100%; justify-content: center; }
+.nav-mobile .btn--gold { margin-top: 8px; width: 100%; justify-content: center; font-size: 0.6rem; letter-spacing: 0.14em; }
 
 /* ─── Nav (canonical — matches all pages) ───────────────────────────────── */
 .nav-wrap {
