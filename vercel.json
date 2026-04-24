@@ -2,22 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/treatments",              "destination": "/treatments/index.html" },
-    { "source": "/treatments/glp-1",        "destination": "/treatments/glp-1.html" },
-    { "source": "/treatments/nad",          "destination": "/treatments/nad.html" },
-    { "source": "/treatments/micc",         "destination": "/treatments/micc.html" },
-    { "source": "/treatments/tesamorelin",  "destination": "/treatments/tesamorelin.html" },
-    { "source": "/treatments/pt-141",       "destination": "/treatments/pt-141.html" },
-    { "source": "/pages/pricing",           "destination": "/pricing-page/index.html" },
-    { "source": "/pages/how-it-works",      "destination": "/how-it-works/index.html" },
-    { "source": "/pages/about",             "destination": "/about/index.html" },
-    { "source": "/pages/science",           "destination": "/science/index.html" },
-    { "source": "/pages/faq",               "destination": "/faq/index.html" },
-    { "source": "/pages/press",             "destination": "/press/index.html" },
-    { "source": "/pages/contact",           "destination": "/contact/index.html" },
-    { "source": "/pages/privacy",           "destination": "/pages/privacy/index.html" },
-    { "source": "/pages/terms",             "destination": "/pages/terms/index.html" },
-    { "source": "/qualify",                 "destination": "/qualify/index.html" }
+    { "source": "/treatments",             "destination": "/treatments/index.html" },
+    { "source": "/treatments/glp-1",       "destination": "/treatments/glp-1.html" },
+    { "source": "/treatments/nad",         "destination": "/treatments/nad.html" },
+    { "source": "/treatments/micc",        "destination": "/treatments/micc.html" },
+    { "source": "/treatments/tesamorelin", "destination": "/treatments/tesamorelin.html" },
+    { "source": "/treatments/pt-141",      "destination": "/treatments/pt-141.html" },
+    { "source": "/qualify",                "destination": "/qualify/index.html" }
   ],
   "headers": [
     {

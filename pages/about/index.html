@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | AnthologyRX</title>
+  <meta name="description" content="AnthologyRX is a performance telehealth company offering doctor-guided injectable treatments for fat loss, energy, recovery, and body composition. No clinics. No guesswork.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    .page-hero {
+      background: var(--bg);
+      padding: clamp(5rem, 10vw, 8rem) var(--gutter) var(--space-20);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .inner { max-width: var(--content); margin: 0 auto; max-width: 760px; }
+    .page-hero__label {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-4);
+    }
+    .page-hero__heading {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-6);
+    }
+    .page-hero__sub {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Principles */
+    .principles-section {
+      background: var(--bg-surface);
+      padding: var(--space-20) var(--gutter);
+      border-top: 1px solid var(--border);
+    }
+    .principles-section .inner {
+      max-width: var(--content);
+      margin: 0 auto;
+    }
+    .principles-section__heading {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-12);
+    }
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+    }
+    .principle-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .principle-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .principle-card__title::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 2px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .principle-card__desc {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Dave Schenk */
+    .schenk-section {
+      background: var(--bg);
+      padding: var(--space-20) var(--gutter);
+      border-top: 1px solid var(--border);
+    }
+    .schenk-section .inner {
+      max-width: var(--content);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: var(--space-16);
+      align-items: center;
+    }
+    .schenk-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .schenk-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .schenk-content { display: flex; flex-direction: column; gap: var(--space-5); }
+    .schenk-heading {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .schenk-name {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .schenk-bio {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .schenk-disclosure {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--text-faint);
+      line-height: 1.5;
+    }
+    .schenk-quote {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.5;
+      border-left: 2px solid var(--gold);
+      padding-left: var(--space-6);
+      font-style: italic;
+    }
+
+    /* CTA */
+    .final-cta {
+      background: var(--bg-surface);
+      padding: var(--space-20) var(--gutter);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .final-cta .inner { max-width: 640px; margin: 0 auto; }
+    .final-cta__heading {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.02em;
+    }
+    .final-cta__sub {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: var(--space-8);
+    }
+
+    @media (max-width: 900px) {
+      .principles-grid { grid-template-columns: 1fr; }
+      .schenk-section .inner { grid-template-columns: 1fr; }
+      .schenk-image { aspect-ratio: 16/9; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav__inner">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="/treatments">Treatments</a></li>
+      <li><a href="/pages/how-it-works">How It Works</a></li>
+      <li><a href="/pages/pricing">Pricing</a></li>
+      <li><a href="/pages/about">About</a></li>
+      <li><a href="/pages/faq">FAQ</a></li>
+    </ul>
+    <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <section class="page-hero">
+    <div class="inner">
+      <p class="page-hero__label">About</p>
+      <h1 class="page-hero__heading">Built for people who take performance seriously.</h1>
+      <p class="page-hero__sub">AnthologyRX is a performance telehealth company. We offer doctor-guided injectable treatments for fat loss, energy, recovery, and body composition. No clinics. No waiting rooms. No guesswork.</p>
+    </div>
+  </section>
+
+  <section class="principles-section">
+    <div class="inner">
+      <p class="principles-section__heading">Our principles</p>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-card__title">Clinically legitimate</div>
+          <p class="principle-card__desc">Every treatment requires provider review and prescription approval. We don&rsquo;t sell supplements. We prescribe treatments.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-card__title">Compliance-first</div>
+          <p class="principle-card__desc">All compounds are fulfilled by licensed 503B or 503A compounding pharmacies. We disclose what we know. We&rsquo;re transparent about what we don&rsquo;t.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-card__title">Honest positioning</div>
+          <p class="principle-card__desc">We&rsquo;re not a wellness brand. We&rsquo;re a telehealth company. If it doesn&rsquo;t have clinical backing, we don&rsquo;t offer it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schenk-section">
+    <div class="inner">
+      <div class="schenk-image">
+        <img src="../../hero-male-shadow.jpg" alt="Dave Schenk" loading="lazy">
+      </div>
+      <div class="schenk-content">
+        <p class="schenk-heading">Spokesperson</p>
+        <h2 class="schenk-name">Dave Schenk</h2>
+        <p class="schenk-bio">Dave Schenk is a 46-year-old former Division I wrestler and Los Angeles-based performance trainer.</p>
+        <blockquote class="schenk-quote">
+          &ldquo;I&rsquo;ve been in performance my whole life. This is the most legitimate approach I&rsquo;ve seen to making these treatments accessible.&rdquo;
+        </blockquote>
+        <p class="schenk-disclosure">*Paid spokesperson for AnthologyRX. Individual results vary. Dave&rsquo;s experience is not representative of typical results.</p>
+        <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="inner">
+      <h2 class="final-cta__heading">Ready to start?</h2>
+      <p class="final-cta__sub">Complete your assessment and a provider will review your intake within 48 hours. No clinic visit required.</p>
+      <a href="/qualify" class="btn btn--gold btn--lg">Start Assessment</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/" class="nav-logo"><span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span></a>
+      <p class="footer__tagline">Provider-guided injectable treatments.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <div class="footer__col">
+        <span class="footer__heading">Treatments</span>
+        <ul role="list">
+          <li><a href="/treatments/glp-1">GLP-1</a></li>
+          <li><a href="/treatments/nad">NAD+</a></li>
+          <li><a href="/treatments/micc">MICC</a></li>
+          <li><a href="/treatments/tesamorelin">Tesamorelin</a></li>
+          <li><a href="/treatments/pt-141">PT-141</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Company</span>
+        <ul role="list">
+          <li><a href="/pages/about">About</a></li>
+          <li><a href="/pages/how-it-works">How It Works</a></li>
+          <li><a href="/pages/pricing">Pricing</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Legal</span>
+        <ul role="list">
+          <li><a href="/pages/privacy">Privacy Policy</a></li>
+          <li><a href="/pages/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__legal">
+    <p>AnthologyRX does not provide emergency medical services. Treatments require completion of an online assessment, provider review, and clinical approval. Results vary. Not all applicants will qualify. These statements have not been evaluated by the Food and Drug Administration. Treatments offered are not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p style="margin-top:0.5rem;">© 2026 AnthologyRX. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../../../main.js" defer></script>
+</body>
+</html>
