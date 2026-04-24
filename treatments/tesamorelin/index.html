@@ -784,6 +784,108 @@ strong { color: var(--sand); font-weight: 600; }
   line-height: 1.65;
 }
 
+/* ── GLP-1 STACK CALLOUT ─────────────────────────── */
+.stack-section {
+  background: #181614;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 100px 0;
+}
+.stack-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.stack-label {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.stack-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--sand);
+  margin-bottom: 20px;
+}
+.stack-body {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--sand-dim);
+  margin-bottom: 28px;
+}
+.stack-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.stack-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+.stack-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  width: 2px;
+  height: calc(100% + 8px);
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  opacity: 0.3;
+}
+.stack-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-bottom: 32px;
+}
+.stack-step-content {
+  padding-bottom: 32px;
+}
+.stack-step-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 6px;
+}
+.stack-step-desc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--sand-dim);
+}
+.stack-step-desc a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-dim);
+}
+.stack-step-desc a:hover { color: var(--gold-hover); }
+@media (max-width: 768px) {
+  .stack-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
 /* ── FAQ ────────────────────────────────────────── */
 .faq-list { margin-top: 48px; }
 .faq-item { border-bottom: 1px solid var(--rule); }
@@ -1297,6 +1399,53 @@ strong { color: var(--sand); font-weight: 600; }
     <a href="/qualify?treatment=tesamorelin" class="btn btn--gold btn--lg" style="margin-top:8px;">Start Assessment →</a>
   </div>
 </div>
+
+
+<!-- ══════════════════════════════════════════════════
+     GLP-1 STACK CALLOUT
+══════════════════════════════════════════════════ -->
+<section class="stack-section">
+  <div class="stack-inner">
+
+    <!-- LEFT: Editorial copy -->
+    <div>
+      <div class="stack-label">The Protocol Stack</div>
+      <h2 class="stack-headline">GLP-1 got you there.<br>Tesamorelin gets you the rest of the way.</h2>
+      <p class="stack-body">GLP-1s are the most clinically validated fat loss tools available. But they work systemically — total body weight. When the scale stops moving but your midsection hasn't caught up, that's a different problem. Visceral fat doesn't respond to appetite suppression. It responds to growth hormone stimulation.</p>
+      <p class="stack-body">Tesamorelin targets what GLP-1 can't reach. That's not a flaw in either treatment — it's why they work together.</p>
+      <a href="/qualify?treatment=tesamorelin" class="btn btn--gold">Start Assessment &rarr;</a>
+    </div>
+
+    <!-- RIGHT: Stack progression -->
+    <div class="stack-flow">
+
+      <div class="stack-step">
+        <div class="stack-num">01</div>
+        <div class="stack-step-content">
+          <div class="stack-step-title">GLP-1 — Systemic Weight Loss</div>
+          <div class="stack-step-desc">Semaglutide or tirzepatide drives total body weight reduction through appetite regulation and metabolic signaling. Clinical trials: 14.9–20.2% mean body weight lost. <a href="/treatments/glp-1">See GLP-1 protocols &rarr;</a></div>
+        </div>
+      </div>
+
+      <div class="stack-step">
+        <div class="stack-num">02</div>
+        <div class="stack-step-content">
+          <div class="stack-step-title">The Plateau — Visceral Fat Remains</div>
+          <div class="stack-step-desc">After 6–12 months on GLP-1, most patients hit their weight target. But deep abdominal visceral adipose tissue — the metabolically active fat around your organs — often persists. It's not about calories anymore. It's about hormone signaling.</div>
+        </div>
+      </div>
+
+      <div class="stack-step">
+        <div class="stack-num">03</div>
+        <div class="stack-step-content">
+          <div class="stack-step-title">Tesamorelin — Visceral Precision</div>
+          <div class="stack-step-desc">GHRH stimulation drives pituitary GH output, which specifically targets visceral adipose tissue. IGF-1 rises. Muscle is preserved. The body composition changes the scale couldn't finish.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- ══════════════════════════════════════════════════
