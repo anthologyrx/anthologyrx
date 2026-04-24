@@ -47,19 +47,19 @@
       <a href="/account" class="nav-login">Log In</a>
       <a href="/qualify" class="btn btn--gold">Start Assessment</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
+    <button class="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 </div>
 
 <div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
-  <button class="nav-mobile-close" onclick="document.getElementById('navMobile').classList.remove('open')" aria-label="Close menu">✕</button>
-  <a href="/#treatments" onclick="document.getElementById('navMobile').classList.remove('open')">Treatments</a>
-  <a href="/how-it-works" onclick="document.getElementById('navMobile').classList.remove('open')">How It Works</a>
-  <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
-  <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
-  <a href="/account" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
+  <button class="nav-mobile-close" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');" aria-label="Close menu">✕</button>
+  <a href="/#treatments" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">Treatments</a>
+  <a href="/how-it-works" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">How It Works</a>
+  <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">FAQ</a>
+  <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">About</a>
+  <a href="/account" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">Log In</a>
   <a href="/qualify" class="btn btn--gold" style="margin-top:8px;">Start Assessment</a>
 </div>
 

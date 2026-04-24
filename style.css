@@ -551,9 +551,8 @@ button { cursor: pointer; background: none; border: none; }
   position: relative;
   transition: border-color var(--transition), transform var(--transition);
 }
-.treatment-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+.treatment-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .treatment-card--featured {
-  border-color: var(--gold);
   background: linear-gradient(135deg, var(--bg-surface), rgba(178, 138, 42, 0.04));
 }
 .treatment-card--cta {
