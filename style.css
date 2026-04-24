@@ -205,7 +205,7 @@ button { cursor: pointer; background: none; border: none; }
 }
 .btn-gold:hover { background: var(--gold-hover); }
 
-.btn-lg { padding: 0.9rem 2rem; font-size: var(--text-base); }
+.btn-lg { padding: 18px 40px; font-size: 0.65rem; }
 .btn-full { width: 100%; justify-content: center; }
 
 /* ─── Nav (canonical — matches all pages) ───────────────────────────────── */
@@ -396,10 +396,10 @@ button { cursor: pointer; background: none; border: none; }
 }
 
 .hero-sub {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--text-muted);
   max-width: 48ch;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: var(--space-8);
 }
 
