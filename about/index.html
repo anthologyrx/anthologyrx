@@ -1,970 +1,794 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story — AnthologyRX</title>
-  <meta name="description" content="AnthologyRX exists because the system wasn't built for people like you. The brand story behind performance telehealth built for athletes, executives, and competitors.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Epilogue:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | AnthologyRX — Longevity · Vitality · Legacy</title>
+  <meta name="description" content="AnthologyRX exists because four people who take their health seriously couldn't find a telehealth company that took them seriously back. So they built one." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ============================================================
-       ANTHOLOGY RX — ABOUT / OUR STORY PAGE
-       Brand: #1E1E1E bg / #E8DCC8 sand / #B28A2A brass gold
-       Fonts: Unbounded display · Epilogue body
-    ============================================================ */
 
-    /* ─── CANONICAL LOGO ─────────────────────────────────── */
-    .logo-main {
-      font-family: 'Unbounded', sans-serif;
-      font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
-      font-weight: 400;
-      color: #E8DCC8;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .logo-rx {
-      font-family: 'Unbounded', sans-serif;
-      font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
-      font-weight: 700;
-      color: #B28A2A;
-      letter-spacing: 0.06em;
-      position: relative;
-      top: -0.4em;
-      margin-left: 0.1em;
-    }
+/* ═══════════════════════════════════════════════════
+   ANTHOLOGY RX — ABOUT PAGE
+   Brand: #1E1E1E bg · #E8DCC8 sand · #B28A2A brass gold
+   Fonts: Unbounded (display) · Epilogue (body)
+═══════════════════════════════════════════════════ */
 
-    /* ─── RESET ──────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body {
-      background: #1E1E1E;
-      color: #E8DCC8;
-      font-family: 'Epilogue', sans-serif;
-      font-size: 1rem;
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    ul, ol { list-style: none; }
-    button { font-family: inherit; cursor: pointer; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: #1E1E1E;
+  color: #E8DCC8;
+  font-family: 'Epilogue', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
 
-    /* ─── TOKENS ─────────────────────────────────────────── */
-    :root {
-      --bg:           #1E1E1E;
-      --bg-card:      #262422;
-      --bg-deep:      #181614;
-      --rule:         #373430;
-      --sand:         #E8DCC8;
-      --sand-dim:     #9C9082;
-      --gold:         #B28A2A;
-      --gold-hover:   #C99B35;
-      --gold-glow:    rgba(178,138,42,0.18);
-      --font-disp:    'Unbounded', sans-serif;
-      --font-body:    'Epilogue', sans-serif;
-      --nav-h:        72px;
-      --r:            3px;
-      --ease:         cubic-bezier(0.4, 0, 0.2, 1);
-      --t:            0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      --section-pad:  100px 0;
-      --max-w:        1200px;
-    }
+:root {
+  --bg:        #1E1E1E;
+  --bg-card:   #262422;
+  --bg-raised: #2A2724;
+  --bg-hero:   #181614;
+  --rule:      #373430;
+  --sand:      #E8DCC8;
+  --sand-dim:  #9C9082;
+  --gold:      #B28A2A;
+  --gold-h:    #C99B35;
+  --gold-glow: rgba(178,138,42,0.15);
+  --nav-h:     68px;
+  --gutter:    clamp(20px, 5vw, 64px);
+  --max:       1200px;
+  --ease:      cubic-bezier(0.4,0,0.2,1);
+}
 
-    /* ─── CONTAINERS ─────────────────────────────────────── */
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 48px; }
-    .container--text { max-width: 740px; margin: 0 auto; padding: 0 48px; }
-    @media (max-width: 768px) {
-      .container, .container--text { padding: 0 20px; }
-    }
+/* ── CONTAINERS ─────────────────────────────────── */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.wrap--text { max-width: 780px; margin: 0 auto; padding: 0 var(--gutter); }
+.wrap--narrow { max-width: 640px; margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: 100px 0; border-bottom: 1px solid var(--rule); }
+.section--dark { background: var(--bg-hero); }
+.section--card { background: var(--bg-card); }
 
-    /* ─── TYPE ───────────────────────────────────────────── */
-    h1, h2, h3, h4 {
-      font-family: var(--font-disp);
-      font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -0.025em;
-      color: var(--sand);
-    }
-    h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 900; letter-spacing: -0.04em; }
-    h2 { font-size: clamp(1.75rem, 3vw, 2.6rem); }
-    h3 { font-size: 1rem; font-weight: 700; }
-    p { color: var(--sand-dim); }
+/* ── TYPE ───────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--sand);
+}
+h1 { font-size: clamp(2rem, 4.5vw, 3.6rem); font-weight: 900; letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); }
+h3 { font-size: clamp(0.95rem, 1.5vw, 1.1rem); }
+p { color: var(--sand-dim); }
+strong { color: var(--sand); font-weight: 600; }
 
-    .label {
-      display: inline-block;
-      font-family: var(--font-disp);
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
+.eyebrow {
+  display: inline-block;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
 
-    .section-pad { padding: var(--section-pad); border-bottom: 1px solid var(--rule); }
+/* ── BUTTONS ────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  border: none;
+  white-space: nowrap;
+}
+.btn--gold { background: var(--gold); color: #1E1E1E; }
+.btn--gold:hover { background: var(--gold-h); transform: translateY(-1px); box-shadow: 0 8px 28px var(--gold-glow); }
+.btn--outline { background: transparent; color: var(--sand); border: 1px solid var(--rule); }
+.btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn--lg { padding: 18px 40px; font-size: 0.65rem; }
+.btn--xl { padding: 22px 52px; font-size: 0.7rem; }
 
-    /* ─── BUTTONS ─────────────────────────────────────────── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-disp);
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 14px 28px;
-      border-radius: var(--r);
-      cursor: pointer;
-      transition: all var(--t);
-      white-space: nowrap;
-      border: none;
-    }
-    .btn--gold { background: var(--gold); color: #1E1E1E; }
-    .btn--gold:hover {
-      background: var(--gold-hover);
-      color: #1E1E1E;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 28px var(--gold-glow);
-    }
-    .btn--lg { padding: 17px 36px; font-size: 0.65rem; }
-    .btn--xl { padding: 20px 48px; font-size: 0.7rem; }
-    .text-link {
-      font-family: var(--font-disp);
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--sand);
-      transition: color var(--t);
-    }
-    .text-link--arrow::after { content: ' →'; }
-    .text-link:hover { color: var(--gold); }
+.text-link {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color 0.2s;
+}
+.text-link:hover { color: var(--gold); }
+.text-link--arrow::after { content: ' →'; }
 
-    /* ─── FIXED TOP STACK ────────────────────────────────── */
-    .top-stack {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-    }
+/* ── LOGO ───────────────────────────────────────── */
+.logo-main {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-weight: 400;
+  color: #E8DCC8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.logo-rx {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
+  font-weight: 700;
+  color: #B28A2A;
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -0.4em;
+  margin-left: 0.1em;
+}
 
-    /* ─── ANNOUNCEMENT BAR ───────────────────────────────── */
-    .announce-bar {
-      background: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      padding: 10px 48px;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .announce-bar.hidden { display: none; }
-    .announce-bar__inner {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .announce-bar__text {
-      font-family: var(--font-disp);
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--bg);
-    }
-    .announce-bar__cta {
-      font-family: var(--font-disp);
-      font-size: 0.58rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--bg);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      white-space: nowrap;
-      transition: opacity var(--t);
-    }
-    .announce-bar__cta:hover { opacity: 0.75; }
-    .announce-bar__close {
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: var(--bg);
-      font-size: 1.2rem;
-      cursor: pointer;
-      line-height: 1;
-      opacity: 0.6;
-      padding: 4px 8px;
-      transition: opacity var(--t);
-    }
-    .announce-bar__close:hover { opacity: 1; }
-    @media (max-width: 768px) {
-      .announce-bar { padding: 10px 40px 10px 16px; }
-      .announce-bar__text { font-size: 0.52rem; }
-    }
+/* ── ANNOUNCE BAR ───────────────────────────────── */
+.announce-bar {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 9px var(--gutter);
+  position: relative;
+}
+.announce-bar p {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1E1E1E;
+  text-align: center;
+}
+.announce-bar a {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1E1E1E;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.announce-close {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #1E1E1E;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  line-height: 1;
+}
 
-    /* ─── NAV ─────────────────────────────────────────────── */
-    header { position: static; height: var(--nav-h); flex-shrink: 0; }
-    .nav {
-      height: 100%;
-      background: rgba(30,30,30,0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--rule);
-      transition: background var(--t), box-shadow var(--t);
-    }
-    .nav.scrolled {
-      background: rgba(22,20,18,0.97);
-      box-shadow: 0 2px 40px rgba(0,0,0,0.45);
-    }
-    .nav__inner {
-      height: var(--nav-h);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-      flex: 1;
-      justify-content: center;
-    }
-    .nav__links a {
-      font-family: var(--font-disp);
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--sand-dim);
-      transition: color var(--t);
-    }
-    .nav__links a:hover, .nav__links a.active { color: var(--sand); }
-    .nav__actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
-    .nav__login {
-      font-family: var(--font-disp);
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--sand-dim);
-      transition: color var(--t);
-    }
-    .nav__login:hover { color: var(--sand); }
-    .nav__hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .nav__hamburger span {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background: var(--sand);
-      transition: all var(--t);
-    }
-    .nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    .nav__mobile-menu {
-      display: none;
-      position: absolute;
-      top: var(--nav-h);
-      left: 0; right: 0;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--rule);
-      padding: 24px 48px;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .nav__mobile-menu.open { display: flex; }
-    .nav__mobile-menu a {
-      font-family: var(--font-disp);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--sand);
-    }
-    @media (max-width: 900px) {
-      .nav__links, .nav__actions { display: none; }
-      .nav__hamburger { display: flex; }
-      .nav__mobile-menu { padding: 24px 20px; }
-    }
+/* ── NAV ────────────────────────────────────────── */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(30,30,30,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav-logo { display: flex; align-items: baseline; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--sand); }
+.nav-links a.active { color: var(--sand); }
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.nav-login {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--sand-dim);
+}
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.nav-hamburger span { width: 22px; height: 1.5px; background: var(--sand); display: block; }
+.nav-mobile { display: none; }
 
-    /* ─── SECTION 1: OPENING STATEMENT ───────────────────── */
-    .opening {
-      background: var(--bg-deep);
-      padding: 140px 0 100px;
-      text-align: center;
-      border-bottom: 1px solid var(--rule);
-    }
-    .opening__inner { max-width: 860px; margin: 0 auto; padding: 0 48px; }
-    .opening__headline {
-      font-family: var(--font-disp);
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.08;
-      color: var(--sand);
-      margin-bottom: 36px;
-    }
-    .opening__sub {
-      font-family: 'Epilogue', sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--sand-dim);
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    @media (max-width: 768px) {
-      .opening { padding: 100px 0 72px; }
-      .opening__inner { padding: 0 20px; }
-    }
+/* ── HERO ───────────────────────────────────────── */
+.hero {
+  background: var(--bg-hero);
+  padding: 140px 0 100px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.hero h1 {
+  margin-bottom: 32px;
+  line-height: 1.1;
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(232,220,200,0.75);
+  max-width: 52ch;
+  line-height: 1.8;
+}
 
-    /* ─── SECTION 2: MISSION ─────────────────────────────── */
-    .mission { background: var(--bg); }
-    .mission__body {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 80px;
-      align-items: start;
-    }
-    .mission__h2 {
-      font-size: clamp(1.75rem, 3vw, 2.6rem);
-      margin-bottom: 36px;
-      line-height: 1.15;
-    }
-    .mission__h2 em { font-style: normal; color: var(--gold); }
-    .mission__copy { display: flex; flex-direction: column; gap: 20px; }
-    .mission__copy p { font-size: 0.95rem; line-height: 1.82; }
+/* ── MISSION SECTION ────────────────────────────── */
+.mission-body {
+  max-width: 720px;
+}
+.mission-body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand-dim);
+  margin-bottom: 28px;
+}
+.mission-body p:last-child { margin-bottom: 0; }
+.mission-body .manifesto-close {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--sand);
+  line-height: 1.6;
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin-top: 40px;
+  letter-spacing: -0.01em;
+}
 
-    .position-card {
-      background: var(--bg-card);
-      border: 1px solid var(--rule);
-      border-left: 3px solid var(--gold);
-      border-radius: var(--r);
-      padding: 28px 24px;
-      transition: border-color var(--t);
-    }
-    .position-card:hover { border-color: var(--gold); border-left-color: var(--gold-hover); }
-    .position-card p {
-      font-family: var(--font-disp);
-      font-size: 0.88rem;
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: -0.01em;
-      color: var(--sand);
-    }
-    .position-cards { display: flex; flex-direction: column; gap: 16px; }
+/* ── TEAM SECTION ───────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+.team-card:hover { border-color: rgba(178,138,42,0.35); }
+.team-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #1A1816;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.team-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(178,138,42,0.04) 0%, transparent 60%);
+}
+.team-initials {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  border: 1px solid rgba(178,138,42,0.25);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  z-index: 1;
+}
+.team-info {
+  padding: 32px 32px 36px;
+}
+.team-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--sand);
+  margin-bottom: 6px;
+}
+.team-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.team-bio p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--sand-dim);
+  margin-bottom: 14px;
+}
+.team-bio p:last-child { margin-bottom: 0; }
+.team-disclosure {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: rgba(178,138,42,0.07);
+  border: 1px solid rgba(178,138,42,0.2);
+  border-radius: 2px;
+}
+.team-disclosure p {
+  font-size: 0.72rem;
+  line-height: 1.65;
+  color: rgba(156,144,130,0.7);
+}
 
-    @media (max-width: 1024px) {
-      .mission__body { grid-template-columns: 1fr; gap: 48px; }
-    }
+/* ── CLINICAL OVERSIGHT ─────────────────────────── */
+.clinical-section {
+  text-align: center;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.clinical-section .eyebrow { display: block; }
+.clinical-section p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--sand-dim);
+  max-width: 58ch;
+  margin: 0 auto;
+}
 
-    /* ─── SECTION 3: FOUNDING STORY ──────────────────────── */
-    .founding { background: var(--bg-deep); }
-    .founding__body {
-      display: grid;
-      grid-template-columns: 1fr 480px;
-      gap: 80px;
-      align-items: start;
-      margin-top: 56px;
-    }
-    .founding__copy { display: flex; flex-direction: column; gap: 20px; }
-    .founding__copy p { font-size: 0.95rem; line-height: 1.82; }
-    .founding__placeholder {
-      background: var(--bg-card);
-      border: 1px solid var(--gold);
-      border-radius: var(--r);
-      width: 100%;
-      aspect-ratio: 480 / 360;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 12px;
-      position: relative;
-      overflow: hidden;
-    }
-    .founding__placeholder::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(178,138,42,0.06) 0%, transparent 60%);
-    }
-    .founding__placeholder-label {
-      font-family: var(--font-disp);
-      font-size: 0.58rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.7;
-    }
-    .founding__placeholder-text {
-      font-family: var(--font-disp);
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--sand-dim);
-      text-align: center;
-      padding: 0 24px;
-    }
-    .placeholder-note {
-      font-family: var(--font-disp);
-      font-size: 0.6rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.5;
-      margin-bottom: 8px;
-      display: block;
-    }
+/* ── PULL QUOTE ─────────────────────────────────── */
+.pullquote-section {
+  background: var(--bg-hero);
+  padding: 120px 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+.pullquote {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--sand);
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  margin: 0 auto 32px;
+}
+.pullquote-attribution {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 0.82rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
 
-    /* Dave Schenk credential card */
-    .credential-person {
-      background: var(--bg-card);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--gold);
-      border-radius: var(--r);
-      padding: 32px 28px;
-      margin-top: 40px;
-    }
-    .credential-person__overline {
-      font-family: var(--font-disp);
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-    .credential-person__name {
-      font-family: var(--font-disp);
-      font-size: 1.3rem;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: var(--sand);
-      margin-bottom: 4px;
-    }
-    .credential-person__title {
-      font-family: var(--font-disp);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-    .credential-person__bio {
-      font-size: 0.88rem;
-      line-height: 1.72;
-      color: var(--sand-dim);
-    }
+/* ── FINAL CTA ──────────────────────────────────── */
+.final-cta {
+  text-align: center;
+  padding: 120px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.final-cta h2 { margin-bottom: 20px; }
+.final-cta p {
+  max-width: 48ch;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
 
-    @media (max-width: 1100px) {
-      .founding__body { grid-template-columns: 1fr; gap: 48px; }
-      .founding__placeholder { aspect-ratio: 16/9; }
-    }
+/* ── FOOTER ─────────────────────────────────────── */
+.footer {
+  background: var(--bg-hero);
+  border-top: 1px solid var(--rule);
+  padding: 60px 0 40px;
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+.footer-tagline {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  color: var(--sand-dim);
+  margin-top: 10px;
+}
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.footer-col h4 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 16px;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a {
+  font-size: 0.82rem;
+  color: var(--sand-dim);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--sand); }
+.footer-divider { border: none; border-top: 1px solid var(--rule); margin: 48px 0 32px; grid-column: 1 / -1; }
+.footer-legal {
+  font-size: 0.68rem;
+  color: rgba(156,144,130,0.45);
+  line-height: 1.7;
+  grid-column: 1 / -1;
+}
 
-    /* ─── SECTION 4: THE STANDARD ────────────────────────── */
-    .standard { background: var(--bg); }
-    .standard__list { display: flex; flex-direction: column; margin-top: 64px; }
-    .belief-item {
-      position: relative;
-      padding: 56px 0;
-      border-bottom: 1px solid var(--rule);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 48px;
-      align-items: center;
-      transition: background var(--t);
-    }
-    .belief-item:first-child { border-top: 1px solid var(--rule); }
-    .belief-item:hover { background: rgba(178,138,42,0.025); }
-    .belief-item__number {
-      font-family: var(--font-disp);
-      font-size: clamp(3.5rem, 8vw, 6rem);
-      font-weight: 900;
-      color: var(--gold);
-      opacity: 0.08;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      flex-shrink: 0;
-      user-select: none;
-    }
-    .belief-item__content { display: flex; flex-direction: column; gap: 10px; }
-    .belief-item__statement {
-      font-family: var(--font-disp);
-      font-size: clamp(1rem, 1.8vw, 1.4rem);
-      font-weight: 700;
-      color: var(--sand);
-      letter-spacing: -0.02em;
-      line-height: 1.3;
-    }
-    .belief-item__expansion {
-      font-size: 0.9rem;
-      line-height: 1.72;
-      color: var(--sand-dim);
-    }
+/* ── MOBILE STICKY BAR ──────────────────────────── */
+.mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--bg-card);
+  border-top: 1px solid var(--rule);
+  padding: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.mobile-bar-text { display: flex; flex-direction: column; }
+.mobile-bar-price {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--sand);
+}
+.mobile-bar-sub { font-size: 0.7rem; color: var(--sand-dim); }
+.mobile-bar-dismiss {
+  background: none; border: none; color: var(--sand-dim);
+  font-size: 1.2rem; cursor: pointer; padding: 4px; line-height: 1;
+}
 
-    @media (max-width: 768px) {
-      .belief-item { grid-template-columns: 56px 1fr; gap: 24px; padding: 40px 0; }
-    }
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .hero { padding: 100px 0 72px; }
+  .nav-links, .nav-actions { display: none; }
+  .nav-hamburger { display: flex; margin-left: auto; }
+  .nav-mobile.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 200;
+    padding: 80px 32px 40px;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .nav-mobile a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1rem;
+    color: var(--sand);
+    letter-spacing: 0.06em;
+  }
+  .nav-mobile-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: none; border: none;
+    color: var(--sand); font-size: 1.5rem; cursor: pointer;
+  }
+  .team-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .pullquote { font-size: clamp(1rem, 4vw, 1.4rem); }
+  .final-cta-actions { flex-direction: column; align-items: center; }
+  .mobile-bar { display: flex; }
+  body { padding-bottom: 80px; }
+}
 
-    /* ─── SECTION 5: PROVIDERS ───────────────────────────── */
-    .providers { background: var(--bg-deep); }
-    .providers__copy { max-width: 700px; margin-bottom: 56px; }
-    .providers__copy p { font-size: 0.95rem; line-height: 1.82; }
-    .provider-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .provider-card {
-      background: var(--bg-card);
-      border: 1px solid var(--rule);
-      border-radius: var(--r);
-      padding: 36px 28px;
-      transition: border-color var(--t), transform var(--t);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .provider-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-2px);
-    }
-    .provider-card__role {
-      font-family: var(--font-disp);
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-    .provider-card__name {
-      font-family: var(--font-disp);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--sand);
-      letter-spacing: -0.01em;
-    }
-    .provider-card__specialty {
-      font-size: 0.82rem;
-      color: var(--sand-dim);
-    }
-    .provider-card__location {
-      font-family: var(--font-disp);
-      font-size: 0.55rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--sand-dim);
-      margin-top: 8px;
-      opacity: 0.6;
-    }
-    @media (max-width: 900px) {
-      .provider-grid { grid-template-columns: 1fr; }
-    }
+@media (max-width: 480px) {
+  .footer-cols { grid-template-columns: 1fr; }
+  .team-photo { aspect-ratio: 16 / 9; }
+}
 
-    /* ─── FINAL CTA ───────────────────────────────────────── */
-    .final-cta {
-      background: var(--bg-deep);
-      padding: 120px 0;
-      text-align: center;
-      border-top: 1px solid var(--rule);
-    }
-    .final-cta__inner { max-width: 640px; margin: 0 auto; padding: 0 20px; }
-    .final-cta__tagline { margin-bottom: 24px; }
-    .final-cta__display {
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      font-weight: 900;
-      letter-spacing: -0.045em;
-      margin-bottom: 28px;
-    }
-    .final-cta__sub {
-      font-size: 0.95rem;
-      color: var(--sand-dim);
-      max-width: 420px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
-    }
-    .final-cta__actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-
-    /* ─── FOOTER ──────────────────────────────────────────── */
-    .footer {
-      background: var(--bg-deep);
-      padding: 64px 0 40px;
-      border-top: 1px solid var(--rule);
-    }
-    .footer__inner { display: flex; flex-direction: column; gap: 0; }
-    .footer__top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-    .footer__tagline {
-      font-family: var(--font-disp);
-      font-size: 0.55rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-top: 10px !important;
-    }
-    .footer__links { display: flex; flex-wrap: wrap; gap: 8px 28px; }
-    .footer__links a {
-      font-family: var(--font-disp);
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--sand-dim);
-      transition: color var(--t);
-    }
-    .footer__links a:hover { color: var(--sand); }
-    .footer__divider { height: 1px; background: var(--rule); margin-bottom: 32px; }
-    .footer__legal {
-      font-size: 0.7rem;
-      line-height: 1.7;
-      color: var(--sand-dim);
-      opacity: 0.5;
-      max-width: 900px;
-    }
-    @media (max-width: 768px) {
-      .footer__top { flex-direction: column; gap: 28px; }
-    }
-
-    /* ─── SCROLL ANIMATIONS ───────────────────────────────── */
-    .anim-up {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
-    }
-    .anim-up.visible { opacity: 1; transform: translateY(0); }
-    .anim-up:nth-child(1) { transition-delay: 0s; }
-    .anim-up:nth-child(2) { transition-delay: 0.08s; }
-    .anim-up:nth-child(3) { transition-delay: 0.16s; }
-    .anim-up:nth-child(4) { transition-delay: 0.24s; }
   </style>
 </head>
 <body>
 
-  <!-- ─── FIXED TOP STACK ──────────────────────────── -->
-  <div class="top-stack" id="topStack">
-    <div class="announce-bar" id="announceBar">
-      <div class="announce-bar__inner">
-        <span class="announce-bar__text">Protocols from $199/mo · FSA/HSA may be accepted (plan-dependent) · Provider review in 48 hours</span>
-        <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
-      </div>
-      <button class="announce-bar__close" id="announceClose" aria-label="Dismiss announcement">×</button>
+<!-- ── ANNOUNCE BAR ──────────────────────────────────────────────── -->
+<div class="announce-bar" id="announce-bar">
+  <p>PRESCRIPTION LONGEVITY &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; PROVIDER REVIEW IN 48 HOURS</p>
+  <a href="/qualify" style="margin-left:12px;">See if you qualify →</a>
+  <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- ── NAV ───────────────────────────────────────────────────────── -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/#treatments">Treatments</a></li>
+      <li><a href="/how-it-works">How It Works</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/about" class="active">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/account" class="nav-login">Log In</a>
+      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
     </div>
-    <header>
-      <nav class="nav" id="mainNav">
-        <div class="container nav__inner">
-          <a href="/" class="nav__logo" aria-label="AnthologyRX home">
-            <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
-          </a>
-          <div class="nav__links">
-            <a href="/protocols">Protocols</a>
-            <a href="/pages/how-it-works">How It Works</a>
-            <a href="/pages/science">Science</a>
-            <a href="/pages/faq">FAQ</a>
-            <a href="/pages/about">About</a>
-            <a href="/blogs/journal">Journal</a>
-            <a href="/pages/pricing">Pricing</a>
-          </div>
-          <div class="nav__actions">
-            <a href="/account" class="nav__login">Log In</a>
-            <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
-          </div>
-          <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-        <div class="nav__mobile-menu" id="mobileMenu">
-          <a href="/protocols">Protocols</a>
-          <a href="/pages/how-it-works">How It Works</a>
-          <a href="/pages/science">Science</a>
-          <a href="/pages/faq">FAQ</a>
-          <a href="/pages/about">About</a>
-          <a href="/blogs/journal">Journal</a>
-          <a href="/pages/pricing">Pricing</a>
-          <a href="/account">Log In</a>
-          <a href="/qualify" class="btn btn--gold" style="align-self:flex-start;margin-top:8px;">See If You Qualify</a>
-        </div>
-      </nav>
-    </header>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
+
+<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" onclick="document.getElementById('navMobile').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="/#treatments" onclick="document.getElementById('navMobile').classList.remove('open')">Treatments</a>
+  <a href="/how-it-works" onclick="document.getElementById('navMobile').classList.remove('open')">How It Works</a>
+  <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
+  <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
+  <a href="/account" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
+  <a href="/qualify" class="btn btn--gold" style="margin-top:8px;">Start Assessment</a>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Our story">
+  <div class="hero-inner">
+    <div class="eyebrow">Our Story</div>
+    <h1>We didn't build a supplement company.<br>We built a clinical protocol.</h1>
+    <p class="hero-sub">AnthologyRX exists because four people who take their health seriously couldn't find a telehealth company that took them seriously back. So they built one.</p>
   </div>
+</section>
 
-  <main>
 
-    <!-- ─── SECTION 1: OPENING STATEMENT ──────────── -->
-    <section class="opening">
-      <div class="opening__inner">
-        <h1 class="opening__headline anim-up">
-          AnthologyRX exists because the system wasn't built for people like you.
-        </h1>
-        <p class="opening__sub anim-up">
-          High-performing people — athletes, executives, competitors — have always had access to the same clinical tools as everyone else. What they didn't have was a platform built specifically for their biology, their schedule, and their standards.
-        </p>
-      </div>
-    </section>
-
-    <!-- ─── SECTION 2: THE MISSION ────────────────── -->
-    <section class="section-pad mission">
-      <div class="container">
-        <div class="mission__body">
-          <div class="mission__left">
-            <h2 class="mission__h2 anim-up">Performance.<em> Longevity.</em> Legacy.</h2>
-            <div class="mission__copy">
-              <p class="anim-up">Most telehealth platforms were built around convenience. AnthologyRX was built around performance. There's a difference. Convenience means making something easier to access. Performance means making it actually work — for the person who trains six days a week, travels 200 days a year, and has no patience for a system that treats them like an average patient.</p>
-              <p class="anim-up">The protocols we offer aren't new. GLP-1s, TRT, peptides, NAD+ — these have been used by longevity clinics, sports medicine physicians, and high-performance coaches for years. What's new is that you can now access them the same way — physician-prescribed, clinically managed, pharmacy-fulfilled — without driving to a clinic, sitting in a waiting room, or paying concierge medicine rates.</p>
-              <p class="anim-up">We built AnthologyRX around a simple premise: the people who work hardest on their bodies deserve a medical partner that matches that standard.</p>
-            </div>
-          </div>
-          <div class="position-cards">
-            <div class="position-card anim-up">
-              <p>Clinician-prescribed. Not consumer-grade.</p>
-            </div>
-            <div class="position-card anim-up">
-              <p>For people who treat performance as a discipline.</p>
-            </div>
-            <div class="position-card anim-up">
-              <p>The body your discipline earned.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SECTION 3: FOUNDING STORY ─────────────── -->
-    <section class="section-pad founding">
-      <div class="container">
-        <span class="label">The Origin</span>
-        <h2 class="anim-up" style="max-width:560px;margin-bottom:0;">Built by people who needed it.</h2>
-        <div class="founding__body">
-          <div class="founding__copy">
-            <span class="placeholder-note">[ PLACEHOLDER COPY — insert founder story ]</span>
-            <p class="anim-up">AnthologyRX didn't start in a boardroom. It started with a problem that high performers know intimately: the gap between what the medical system offers and what your body actually demands. [PLACEHOLDER COPY — insert founder story]</p>
-            <p class="anim-up">[PLACEHOLDER — Describe the founding moment, the personal experience that made the problem undeniable. What was missing? What was broken about the existing options? Who was in the room when the idea crystallized?]</p>
-            <p class="anim-up">[PLACEHOLDER — Founding team background, professional credentials, what domain expertise they brought together. Clinical, operational, technological. Why this team, why now.]</p>
-            <p class="anim-up">[PLACEHOLDER — What conviction drove the build. What they refused to compromise on: clinical rigor, provider independence, pharmacy standards. The non-negotiables that define AnthologyRX as a platform.]</p>
-
-            <!-- Dave Schenk Credential Card -->
-            <div class="credential-person anim-up">
-              <div class="credential-person__overline">Spokesperson &amp; Partner</div>
-              <div class="credential-person__name">Dave Schenk</div>
-              <div class="credential-person__title">Spokesperson &amp; Partner</div>
-              <p class="credential-person__bio">46-year-old former Division I wrestler, Los Angeles personal trainer and gym owner. 189K Instagram following built on real-world performance — not shortcuts. Dave Schenk is a paid spokesperson and partner of AnthologyRX. His endorsements reflect his personal experience and opinions as a compensated partner.</p>
-            </div>
-          </div>
-
-          <div>
-            <!-- Founder/Team Photo Placeholder -->
-            <div class="founding__placeholder">
-              <span class="founding__placeholder-label">Founder / Team Photo</span>
-              <span class="founding__placeholder-text">480 × 360 · Insert editorial founder or team image</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SECTION 4: THE STANDARD ───────────────── -->
-    <section class="section-pad standard">
-      <div class="container">
-        <span class="label">What We Believe</span>
-        <h2 class="anim-up" style="max-width:520px;">The standard we hold ourselves to.</h2>
-        <div class="standard__list">
-
-          <div class="belief-item anim-up">
-            <div class="belief-item__number" aria-hidden="true">01</div>
-            <div class="belief-item__content">
-              <div class="belief-item__statement">Discipline deserves clinical leverage.</div>
-              <p class="belief-item__expansion">You've put in the work. The clinical tools exist. AnthologyRX closes the gap between the effort you give and the results you've earned.</p>
-            </div>
-          </div>
-
-          <div class="belief-item anim-up">
-            <div class="belief-item__number" aria-hidden="true">02</div>
-            <div class="belief-item__content">
-              <div class="belief-item__statement">Access should not require a concierge membership.</div>
-              <p class="belief-item__expansion">Board-certified physicians and 503B-compounded medications should not be reserved for the ultra-wealthy. We built a platform that delivers that standard without the gatekeeping.</p>
-            </div>
-          </div>
-
-          <div class="belief-item anim-up">
-            <div class="belief-item__number" aria-hidden="true">03</div>
-            <div class="belief-item__content">
-              <div class="belief-item__statement">Your provider should know your goals, not just your chart.</div>
-              <p class="belief-item__expansion">Medicine built around a seven-minute appointment cannot serve a high-performer. Every AnthologyRX provider has the context, time, and tools to actually understand what you're trying to accomplish.</p>
-            </div>
-          </div>
-
-          <div class="belief-item anim-up">
-            <div class="belief-item__number" aria-hidden="true">04</div>
-            <div class="belief-item__content">
-              <div class="belief-item__statement">A protocol should evolve. So should the prescription.</div>
-              <p class="belief-item__expansion">Your body changes. Your goals shift. Your protocol should respond in kind — monitored, adjusted, and recalibrated with clinical precision at every phase.</p>
-            </div>
-          </div>
-
-          <div class="belief-item anim-up">
-            <div class="belief-item__number" aria-hidden="true">05</div>
-            <div class="belief-item__content">
-              <div class="belief-item__statement">Performance is not vanity. It's longevity.</div>
-              <p class="belief-item__expansion">Optimizing your body is not an aesthetic exercise. Muscle preservation, metabolic health, hormonal balance — these are the biomarkers of a longer, sharper, more capable life.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SECTION 5: PROVIDERS ───────────────────── -->
-    <section class="section-pad providers">
-      <div class="container">
-        <span class="label">Our People</span>
-        <h2 class="anim-up" style="margin-bottom:24px;">Board-certified physicians.<br>Built-in accountability.</h2>
-        <div class="providers__copy">
-          <p class="anim-up">Every provider in the AnthologyRX network is independently licensed and board-certified in their specialty. They are not employees — they are clinicians who chose this platform because it lets them practice the way medicine should be practiced: with time, context, and the right tools.</p>
-        </div>
-        <p style="font-size:0.78rem;color:var(--sand-dim);font-style:italic;margin-bottom:24px;">Provider profiles will be published at launch with verified board certifications and state licensing information.</p>
-        <div class="provider-grid">
-          <div class="provider-card anim-up">
-            <div class="provider-card__role">Medical Director</div>
-            <div class="provider-card__name">[Provider Name — To Be Confirmed]</div>
-            <div class="provider-card__specialty">Credentials to be verified and published at launch</div>
-            <div class="provider-card__location">[State]</div>
-          </div>
-          <div class="provider-card anim-up">
-            <div class="provider-card__role">Provider</div>
-            <div class="provider-card__name">[Provider Name — To Be Confirmed]</div>
-            <div class="provider-card__specialty">Credentials to be verified and published at launch</div>
-            <div class="provider-card__location">[State]</div>
-          </div>
-          <div class="provider-card anim-up">
-            <div class="provider-card__role">Provider</div>
-            <div class="provider-card__name">[Provider Name — To Be Confirmed]</div>
-            <div class="provider-card__specialty">Credentials to be verified and published at launch</div>
-            <div class="provider-card__location">[State]</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── FINAL CTA ──────────────────────────────── -->
-    <section class="final-cta">
-      <div class="final-cta__inner">
-        <span class="label final-cta__tagline">For Those Who Never Stop.</span>
-        <h2 class="final-cta__display">The standard you've earned.</h2>
-        <p class="final-cta__sub">Physician-prescribed. Pharmacy-grade. Built for the way you actually live and train.</p>
-        <div class="final-cta__actions">
-          <a href="/qualify" class="btn btn--gold btn--xl">Start Your Assessment</a>
-          <a href="/pages/science" class="text-link text-link--arrow">See the science</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ─── FOOTER ─────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__top">
-        <div>
-          <div><span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span></div>
-          <p class="footer__tagline">Performance · Longevity · Legacy</p>
-        </div>
-        <nav class="footer__links" aria-label="Footer navigation">
-          <a href="/protocols">Protocols</a>
-          <a href="/pages/how-it-works">How It Works</a>
-          <a href="/pages/pricing">Pricing</a>
-          <a href="/pages/science">Science</a>
-          <a href="/pages/about">About</a>
-          <a href="/blogs/journal">Journal</a>
-          <a href="/pages/press">Press</a>
-          <a href="/pages/faq">FAQ</a>
-          <a href="/pages/contact">Contact</a>
-          <a href="/collections/supplements">Supplements</a>
-          <a href="/pages/privacy">Privacy</a>
-          <a href="/pages/terms">Terms</a>
-        </nav>
-      </div>
-      <div class="footer__divider"></div>
-      <p class="footer__legal">AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility and are not manufactured by Novo Nordisk or Eli Lilly. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. GLP-1 agonists may cause side effects including nausea, vomiting, diarrhea, and gastrointestinal discomfort. Rare but serious risks include pancreatitis and, in patients with a history of medullary thyroid carcinoma or MEN2, potential thyroid risk. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.</p>
+<!-- ══════════════════════════════════════════════════
+     MISSION STATEMENT
+══════════════════════════════════════════════════ -->
+<section class="section section--card" id="mission">
+  <div class="wrap">
+    <div class="eyebrow">The Case for Clinical Longevity</div>
+    <h2 style="margin-bottom: 40px; max-width: 18ch;">The case for clinical<br>longevity.</h2>
+    <div class="mission-body">
+      <p>Most people treat decline as inevitable. A slower metabolism, less energy, harder recovery — they call it aging and they accept it. We don't. The human body is not a fixed system trending toward failure. It is a dynamic one, responsive to inputs — and the clinical tools now available to support its function are more precise than anything that existed a decade ago.</p>
+      <p>The treatments AnthologyRX prescribes are not shortcuts. They are the same compounds that board-certified physicians use in clinical practice — prescribed after provider review, compounded by licensed 503B pharmacies, managed by real doctors. What makes AnthologyRX different is that we believe these tools should be accessible to anyone who qualifies, not just those with concierge medicine relationships or the right zip code. The standard of care that used to require a $30,000-a-year membership should be available to anyone with a legitimate clinical need and the discipline to follow a protocol.</p>
+      <p>Using medicine to extend your vitality isn't weakness. It's the same logic as training, nutrition, sleep, and supplementation — just more precise. Athletes track macros. High performers optimize sleep. The next iteration of that discipline is clinical. AnthologyRX exists to destigmatize that choice and make it clinically sound, provider-supervised, and accessible.</p>
+      <p class="manifesto-close">"You can find longevity treatments anywhere. At AnthologyRX, you're buying the decision to aspire to your true potential."</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    // ── BODY PADDING SYNC ─────────────────────────────────
-    const topStack = document.getElementById('topStack');
-    const syncPadding = () => {
-      document.body.style.paddingTop = topStack.offsetHeight + 'px';
-    };
-    new ResizeObserver(syncPadding).observe(topStack);
-    syncPadding();
 
-    // ── NAV SCROLL STATE ──────────────────────────────────
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
+<!-- ══════════════════════════════════════════════════
+     TEAM
+══════════════════════════════════════════════════ -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="eyebrow">The People Behind the Protocols</div>
+    <h2 style="margin-bottom: 12px;">The people behind<br>the protocols.</h2>
+    <p style="max-width: 44ch; font-size: 1rem; margin-bottom: 0;">Four founders with skin in the game — literally.</p>
 
-    // ── ANNOUNCEMENT BAR DISMISS (in-memory only) ─────────
-    document.getElementById('announceClose').addEventListener('click', () => {
-      document.getElementById('announceBar').classList.add('hidden');
-      syncPadding();
-    });
+    <div class="team-grid">
 
-    // ── HAMBURGER ─────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
+      <!-- ── MICHAEL EISMAN ─────────────────────── -->
+      <div class="team-card">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-initials">ME</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Michael Eisman</div>
+          <div class="team-title">Co-Founder &amp; CEO</div>
+          <div class="team-bio">
+            <p>Michael Eisman has built and scaled businesses across some of the most operationally complex industries in modern commerce. At Apple, he internalized what operational excellence looks like at true scale. At MedMen, he helped co-create what the press called "the Apple Store of Weed" — an ambitious national cannabis retail concept that raised $150M and became one of the first recognized consumer brands in a nascent industry. When that chapter closed, he took on the turnaround of a distressed B2B logistics company, eliminated $2M in inherited debt, and sold the business for 8x EBITDA.</p>
+            <p>Most recently, Michael founded Echelon Agency, a talent management firm representing fitness and lifestyle creators in Los Angeles — putting him at the intersection of elite performance culture and the creator economy. That proximity gave him an early read on what would become AnthologyRX: creators and executives around him were quietly relying on clinical longevity treatments to sustain the physical and mental demands of their lives, but had no consumer-grade, clinically credible way to access them. The category was real. The access wasn't.</p>
+            <p>Michael personally relies on several of the protocols AnthologyRX offers. For him, this is not a market opportunity — it is a daily reality that he decided to build the infrastructure around.</p>
+          </div>
+        </div>
+      </div>
 
-    // ── SCROLL ANIMATIONS ─────────────────────────────────
-    const animEls = document.querySelectorAll('.anim-up');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    animEls.forEach(el => observer.observe(el));
-  </script>
+      <!-- ── DANIKA LANE WIGNALL ──────────────── -->
+      <div class="team-card">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-initials">DW</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Danika Lane Wignall</div>
+          <div class="team-title">Co-Founder &amp; President</div>
+          <div class="team-bio">
+            <p>Danika Lane Wignall has spent more than a decade building and leading high-performance B2B sales organizations at the VP level. She is a single mother of two who runs a demanding corporate career without the luxury of slowing down — which means that energy, focus, and physical health are not aspirational priorities. They are operational ones. She relies on several AnthologyRX protocols to sustain the output her life requires, and she has the receipts to prove they work.</p>
+            <p>Danika brings something to AnthologyRX that the category desperately needed: the female perspective. Longevity and metabolic optimization are too often framed as the province of biohacking men in their forties. But NAD+, GLP-1, and PT-141 are equally relevant to a woman managing perimenopause, a demanding career, school pickups, and a fitness practice she refuses to abandon. The market has been underserving this person. Danika is that person, and she is building for her.</p>
+            <p>Her insight was simple: if a working single mother running a VP-level sales team can benefit from these protocols — and does — then the addressable audience for clinical longevity medicine is far wider than the industry has acknowledged. She is here to close that gap.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DR. DYLAN RUSSELL ─────────────────── -->
+      <div class="team-card">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-initials">DR</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Dr. Dylan Russell, MD</div>
+          <div class="team-title">Co-Founder &amp; Chief Medical Officer</div>
+          <div class="team-bio">
+            <p>Dr. Dylan Russell graduated from West Point with a BS in Life Sciences and Chemistry in 2013, then earned his MD from the University of Virginia School of Medicine in 2017. He served as a U.S. Army General Surgeon — trained at Tripler Army Medical Center — before transitioning to advanced civilian surgical training. He is currently a Transplant Surgery Fellow in the Advanced Care for Liver Disease and Transplant Surgery Program at Keck Hospital of USC and the Keck School of Medicine, where he is a published researcher with peer-reviewed work cited over 176 times.</p>
+            <p>A career at the intersection of military surgery and academic transplant medicine gives Dr. Russell a particular vantage point on prevention. He has seen up close what late-stage metabolic disease and physiological decline look like — the liver failure, the cardiovascular deterioration, the outcomes that arrive at the end of decades of unaddressed decline. His conviction that prevention is the only rational strategy is not philosophical. It is clinical.</p>
+            <p>As Chief Medical Officer, Dr. Russell provides medical oversight and protocol review for AnthologyRX. Every compound the company prescribes is vetted through the lens of clinical evidence, provider safety standards, and the same intellectual rigor he applies to his surgical and research work. AnthologyRX protocols are designed to meet the standard a transplant surgeon would accept for his own patients — and himself.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DAVE SCHENK ───────────────────────── -->
+      <div class="team-card">
+        <div class="team-photo" aria-hidden="true">
+          <div class="team-initials">DS</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Dave Schenk</div>
+          <div class="team-title">Co-Founder, Chief Brand Officer &amp; Spokesman</div>
+          <div class="team-bio">
+            <p>Dave Schenk has lived in the gym his entire adult life. He was a Division I wrestler at Cal Poly San Luis Obispo — team captain and conference champion at 197 lbs — and has spent the 20-plus years since building and leading fitness communities. He is ACE and NASM certified, co-founded LIFT Society in Los Angeles (2016–2024), launched Iron Anthology gym in 2024, and has presented at international fitness conferences including ASIAFIT in Shanghai, where he led sessions on cross-training, kettlebell sport, and bodyweight training to audiences of 300 or more.</p>
+            <p>At 46, Dave has earned the right to be honest about what happens to the body over time — even for people who have done everything right. Hormone production changes. Metabolic efficiency shifts. Visceral fat accumulates in places it never used to, despite the same training discipline that defined the previous two decades. He is beginning his own Tesamorelin protocol to address exactly that — not as a shortcut, but as the same precision thinking he has applied to programming, periodization, and recovery his entire career.</p>
+            <p>Dave's philosophy is simple: using the appropriate clinical tools to extend the body's ability to stay in motion is not cheating. It is discipline applied at a higher resolution. He is the face of AnthologyRX because he is its most literal embodiment — a lifelong athlete who has decided that sustaining performance across decades is worth using every evidence-based tool available.</p>
+          </div>
+          <div class="team-disclosure">
+            <p><strong style="color: rgba(232,220,200,0.7); font-weight:600;">FTC DISCLOSURE:</strong> Dave Schenk is a compensated co-founder and paid spokesperson for AnthologyRX. His experience and endorsement reflect his genuine personal use of AnthologyRX protocols. Results are not typical. Individual outcomes vary based on health status, adherence, and other factors. This disclosure is provided in accordance with FTC guidelines on endorsements and testimonials.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CLINICAL OVERSIGHT
+══════════════════════════════════════════════════ -->
+<div class="clinical-section">
+  <div class="wrap--narrow">
+    <div class="eyebrow">Clinical Oversight</div>
+    <p>AnthologyRX protocols are designed under the medical oversight of Dr. Dylan Russell, MD, and reviewed by our licensed provider network before any prescription is issued. No treatment is dispensed without a qualified provider review. All compounds are prepared by licensed 503B accredited compounding pharmacies.</p>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     PULL QUOTE
+══════════════════════════════════════════════════ -->
+<section class="pullquote-section" aria-label="Company philosophy">
+  <div class="wrap">
+    <p class="pullquote">"You can buy longevity treatments anywhere.<br>At AnthologyRX, you're buying the decision to aspire to your true potential."</p>
+    <p class="pullquote-attribution">— Michael Eisman, Co-Founder</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════════ -->
+<section class="final-cta" aria-label="Get started">
+  <div class="wrap">
+    <div class="eyebrow">Ready to start?</div>
+    <h2>Ready to start?</h2>
+    <p>Complete a short health assessment. A licensed provider reviews your intake within 48 hours. If approved, your protocol ships directly to your door.</p>
+    <div class="final-cta-actions">
+      <a href="/qualify" class="btn btn--gold btn--xl">Start Assessment →</a>
+      <a href="/#treatments" class="btn btn--outline btn--lg">See the protocols →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+        <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+      </a>
+      <p class="footer-tagline">LONGEVITY · VITALITY · LEGACY</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="/treatments/glp-1">GLP-1</a></li>
+          <li><a href="/treatments/nad">NAD+</a></li>
+          <li><a href="/treatments/gonadorelin">Gonadorelin</a></li>
+          <li><a href="/treatments/micc">MICC Injections</a></li>
+          <li><a href="/treatments/pt-141">PT-141</a></li>
+          <li><a href="/treatments/tesamorelin">Tesamorelin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/blogs/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/account">Member Login</a></li>
+          <li><a href="/qualify">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-legal">
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503B outsourcing facility. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in eligible states only. Dave Schenk is a compensated co-founder and paid spokesperson for AnthologyRX; results are not typical. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+     MOBILE STICKY BAR
+═══════════════════════════════════════════════════ -->
+<div class="mobile-bar" id="mobilebar">
+  <div class="mobile-bar-text">
+    <span class="mobile-bar-price">AnthologyRX</span>
+    <span class="mobile-bar-sub">Start your assessment today</span>
+  </div>
+  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+  <button class="mobile-bar-dismiss" onclick="document.getElementById('mobilebar').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+// Nav scroll shadow effect
+const navWrap = document.querySelector('.nav-wrap');
+window.addEventListener('scroll', () => {
+  navWrap.style.boxShadow = window.scrollY > 40 ? '0 2px 40px rgba(0,0,0,0.45)' : 'none';
+}, { passive: true });
+</script>
+
 </body>
 </html>
