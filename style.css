@@ -117,6 +117,29 @@ button { cursor: pointer; background: none; border: none; }
 }
 .btn-primary:hover { background: var(--gold-hover); transform: translateY(-1px); }
 
+/* Canonical nav component aliases — matches btn-primary exactly */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn--gold { background: var(--gold); color: var(--bg); }
+.btn--gold:hover { background: var(--gold-hover); transform: translateY(-1px); }
+.btn--outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
