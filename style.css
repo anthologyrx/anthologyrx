@@ -999,6 +999,7 @@ button { cursor: pointer; background: none; border: none; }
   .pricing-grid { grid-template-columns: 1fr; }
   .pricing-card--featured { transform: none; }
   .hiw-steps { flex-direction: column; gap: var(--space-8); }
+  .hiw-step { padding-left: 0; padding-right: 0; }
   .hiw-connector { display: none; }
   .community-inner { grid-template-columns: 1fr; }
   .community-stats { grid-template-columns: repeat(3, 1fr); }
