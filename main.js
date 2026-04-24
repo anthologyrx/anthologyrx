@@ -66,20 +66,37 @@
   /* ── Sticky bottom bar ─────────────────────────────────────────────────── */
   const stickyBar = document.getElementById('sticky-bar');
   if (stickyBar) {
-    const stickyThreshold = window.innerHeight * 1.5;
-    let stickyVisible = false;
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      if (y > stickyThreshold && !stickyVisible) {
-        stickyVisible = true;
-        stickyBar.classList.add('is-visible');
-        stickyBar.setAttribute('aria-hidden', 'false');
-      } else if (y <= stickyThreshold && stickyVisible) {
-        stickyVisible = false;
-        stickyBar.classList.remove('is-visible');
-        stickyBar.setAttribute('aria-hidden', 'true');
-      }
-    }, { passive: true });
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      // Show sticky bar the moment the hero scrolls out of view
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            stickyBar.classList.add('is-visible');
+            stickyBar.setAttribute('aria-hidden', 'false');
+          } else {
+            stickyBar.classList.remove('is-visible');
+            stickyBar.setAttribute('aria-hidden', 'true');
+          }
+        });
+      }, { threshold: 0 });
+      heroObserver.observe(hero);
+    } else {
+      // Fallback: no hero element — show after one viewport height
+      let stickyVisible = false;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > window.innerHeight && !stickyVisible) {
+          stickyVisible = true;
+          stickyBar.classList.add('is-visible');
+          stickyBar.setAttribute('aria-hidden', 'false');
+        } else if (y <= window.innerHeight && stickyVisible) {
+          stickyVisible = false;
+          stickyBar.classList.remove('is-visible');
+          stickyBar.setAttribute('aria-hidden', 'true');
+        }
+      }, { passive: true });
+    }
   }
 
   /* ── FAQ accordion ─────────────────────────────────────────────────────── */
