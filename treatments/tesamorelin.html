@@ -3,156 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Your Assessment | AnthologyRX</title>
-  <meta name="description" content="Start your AnthologyRX health assessment. Answer a few questions about your health history and goals. A licensed provider reviews your intake within 48 hours.">
+  <title>Tesamorelin | Body Composition | AnthologyRX</title>
+  <meta name="description" content="Tesamorelin — advanced body composition support for eligible patients. Provider review required. Prescription if approved.">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css">
   <style>
-    /* Full-page centered layout */
-    body { display: flex; flex-direction: column; min-height: 100vh; }
-    main { flex: 1; }
-
-    .qualify-hero {
+    .treatment-hero {
       background: var(--bg);
-      padding: clamp(5rem, 12vw, 10rem) var(--gutter) var(--space-20);
-      text-align: center;
+      padding: clamp(5rem, 10vw, 8rem) var(--gutter) var(--space-20);
+      border-bottom: 1px solid var(--border);
     }
-    .qualify-hero .inner {
-      max-width: 700px;
+    .treatment-hero .inner {
+      max-width: var(--content);
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: var(--space-16);
+      align-items: start;
     }
-    .qualify-hero__label {
+    .treatment-hero__cat {
       font-family: var(--font-display);
       font-size: var(--text-xs);
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: var(--space-6);
+      margin-bottom: var(--space-4);
     }
-    .qualify-hero__heading {
+    .treatment-hero__heading {
       font-family: var(--font-display);
       font-size: var(--text-2xl);
       font-weight: 700;
       color: var(--text);
       letter-spacing: -0.02em;
-      margin-bottom: var(--space-6);
+      margin-bottom: var(--space-4);
     }
-    .qualify-hero__sub {
+    .treatment-hero__sub {
       font-family: var(--font-body);
       font-size: var(--text-lg);
       font-weight: 300;
       color: var(--text-muted);
-      line-height: 1.65;
-      margin-bottom: var(--space-12);
+      line-height: 1.6;
+      margin-bottom: var(--space-6);
     }
-
-    /* Steps */
-    .qualify-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-6);
-      margin-bottom: var(--space-12);
-      text-align: left;
+    .treatment-hero__mechanism {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding: var(--space-6);
+      border-left: 2px solid var(--gold);
+      background: var(--bg-surface);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
     }
-    .qualify-step {
+    .sidebar-card {
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: var(--space-6);
+      padding: var(--space-8);
+      position: sticky;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    .sidebar-card__price {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .sidebar-card__price-note {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: var(--space-1);
+    }
+    .sidebar-card__divider { height: 1px; background: var(--border); }
+    .sidebar-card__label {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--space-3);
+    }
+    .sidebar-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
       gap: var(--space-3);
     }
-    .qualify-step__num {
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 2vw, 2rem);
-      font-weight: 900;
-      color: var(--border);
-      line-height: 1;
-    }
-    .qualify-step__title {
-      font-family: var(--font-display);
-      font-size: var(--text-sm);
-      font-weight: 700;
-      color: var(--text);
-    }
-    .qualify-step__desc {
-      font-family: var(--font-body);
-      font-size: var(--text-sm);
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* Trust signals */
-    .qualify-trust {
-      display: flex;
-      gap: var(--space-8);
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: var(--space-12);
-    }
-    .qualify-trust__item {
+    .sidebar-card ul li {
       font-family: var(--font-body);
       font-size: var(--text-sm);
       color: var(--text-muted);
       display: flex;
-      align-items: center;
-      gap: var(--space-2);
+      align-items: flex-start;
+      gap: var(--space-3);
+      line-height: 1.5;
     }
-    .qualify-trust__item::before {
+    .sidebar-card ul li::before {
       content: '';
       display: block;
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background: var(--gold);
+      margin-top: 0.45em;
       flex-shrink: 0;
     }
-
-    /* CTA area */
-    .qualify-cta {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-5);
-    }
-    .qualify-cta .btn--gold {
-      font-size: var(--text-lg);
-      padding: var(--space-5) var(--space-12);
-      min-width: 280px;
-    }
-    .qualify-cta__fine {
+    .sidebar-card__compliance {
       font-family: var(--font-body);
       font-size: var(--text-xs);
       color: var(--text-faint);
       line-height: 1.6;
-      max-width: 480px;
-      text-align: center;
     }
-    .qualify-cta__fine a {
-      color: var(--text-muted);
-      text-decoration: underline;
-    }
-
-    /* Compliance */
-    .qualify-compliance {
+    .treatment-cta-section {
       background: var(--bg-surface);
-      padding: var(--space-10) var(--gutter);
-      border-top: 1px solid var(--border);
+      padding: var(--space-20) var(--gutter);
       text-align: center;
+      border-top: 1px solid var(--border);
     }
-    .qualify-compliance .inner { max-width: 700px; margin: 0 auto; }
-    .qualify-compliance p {
+    .treatment-cta-section .inner { max-width: 640px; margin: 0 auto; }
+    .treatment-cta-section h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.02em;
+    }
+    .treatment-cta-section p {
       font-family: var(--font-body);
-      font-size: var(--text-xs);
-      color: var(--text-faint);
-      line-height: 1.7;
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: var(--space-8);
     }
-
-    @media (max-width: 700px) {
-      .qualify-steps { grid-template-columns: 1fr; }
-      .qualify-trust { flex-direction: column; align-items: center; }
+    @media (max-width: 900px) {
+      .treatment-hero .inner { grid-template-columns: 1fr; }
+      .sidebar-card { position: static; }
     }
   </style>
 </head>
@@ -179,51 +172,47 @@
 
 <main>
 
-  <section class="qualify-hero">
+  <section class="treatment-hero">
     <div class="inner">
-      <p class="qualify-hero__label">Assessment</p>
-      <h1 class="qualify-hero__heading">Start your assessment.</h1>
-      <p class="qualify-hero__sub">Answer a few questions about your health history and goals. A licensed provider will review your intake within 48 hours.</p>
-
-      <!-- What to expect -->
-      <div class="qualify-steps">
-        <div class="qualify-step">
-          <div class="qualify-step__num">1</div>
-          <div class="qualify-step__title">Health history</div>
-          <p class="qualify-step__desc">Medical history, current medications, and health goals. Takes about 10 minutes.</p>
-        </div>
-        <div class="qualify-step">
-          <div class="qualify-step__num">2</div>
-          <div class="qualify-step__title">Provider review</div>
-          <p class="qualify-step__desc">A licensed prescriber reviews your intake. No video call required.</p>
-        </div>
-        <div class="qualify-step">
-          <div class="qualify-step__num">3</div>
-          <div class="qualify-step__title">Decision within 48 hours</div>
-          <p class="qualify-step__desc">You&rsquo;ll receive a decision within 48 hours. If approved, your prescription is sent directly to the pharmacy.</p>
+      <div class="treatment-hero__content">
+        <p class="treatment-hero__cat">Body Composition</p>
+        <h1 class="treatment-hero__heading">Tesamorelin</h1>
+        <p class="treatment-hero__sub">Advanced body composition support for eligible patients.</p>
+        <div class="treatment-hero__mechanism">
+          <p>Tesamorelin is a synthetic analogue of growth hormone-releasing hormone (GHRH). It is designed to support visceral fat reduction and body composition when clinically appropriate. Prescribed for eligible patients following full provider review.</p>
         </div>
       </div>
 
-      <!-- Trust signals -->
-      <div class="qualify-trust">
-        <span class="qualify-trust__item">Licensed providers</span>
-        <span class="qualify-trust__item">HIPAA-compliant platform</span>
-        <span class="qualify-trust__item">No clinic visit required</span>
-      </div>
-
-      <!-- CTA -->
-      <div class="qualify-cta">
-        <a href="#" class="btn btn--gold btn--lg">Begin Assessment</a>
-        <p class="qualify-cta__fine">By beginning your assessment, you agree to our <a href="/pages/terms">Terms of Service</a> and <a href="/pages/privacy">Privacy Policy</a>. Assessment fee applies. Refunded if not approved.</p>
+      <div class="sidebar-card">
+        <div>
+          <div class="sidebar-card__price">Pricing disclosed during assessment</div>
+          <div class="sidebar-card__price-note">Eligibility required. Provider evaluation required.</div>
+        </div>
+        <div class="sidebar-card__divider"></div>
+        <div>
+          <div class="sidebar-card__label">What&rsquo;s included</div>
+          <ul>
+            <li>Online health assessment</li>
+            <li>Licensed provider review (within 48 hours)</li>
+            <li>Prescription if approved</li>
+            <li>Compounded by licensed pharmacy</li>
+            <li>Monthly delivery</li>
+            <li>Ongoing dosing guidance</li>
+          </ul>
+        </div>
+        <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+        <p class="sidebar-card__compliance">Individual results vary. Not all applicants will qualify. Tesamorelin is a compounded medication prescribed after full provider review. Eligibility required.</p>
       </div>
     </div>
   </section>
 
-  <div class="qualify-compliance">
+  <section class="treatment-cta-section">
     <div class="inner">
-      <p>AnthologyRX does not guarantee treatment approval. All applicants are reviewed by a licensed provider. Not all applicants will qualify. Results vary.</p>
+      <h2>Ready to begin?</h2>
+      <p>Complete your assessment online. A licensed provider reviews your intake within 48 hours. No clinic visit required.</p>
+      <a href="/qualify" class="btn btn--gold btn--lg">Start Assessment</a>
     </div>
-  </div>
+  </section>
 
 </main>
 

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | AnthologyRX</title>
-  <meta name="description" content="Get in touch with AnthologyRX — patient support, clinical questions, and media inquiries.">
+  <title>Terms of Service | AnthologyRX</title>
+  <meta name="description" content="AnthologyRX Terms of Service.">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../../style.css">
   <style>
     .page-hero {
       background: var(--bg);
@@ -30,76 +30,34 @@
       color: var(--text);
       letter-spacing: -0.02em;
     }
-
-    /* Contact sections */
-    .contact-main {
+    .legal-body {
       background: var(--bg);
       padding: var(--space-20) var(--gutter);
     }
-    .contact-main .inner {
-      max-width: var(--content);
+    .legal-body .inner {
+      max-width: 760px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-8);
     }
-    .contact-card {
+    .legal-body p {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-6);
+    }
+    .legal-body a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .legal-body a:hover { color: var(--gold-hover); }
+    .legal-body__notice {
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: var(--space-8);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-4);
     }
-    .contact-card__cat {
-      font-family: var(--font-display);
-      font-size: var(--text-xs);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-    .contact-card__title {
-      font-family: var(--font-display);
-      font-size: var(--text-lg);
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.01em;
-    }
-    .contact-card__desc {
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-    .contact-card__email {
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color var(--transition);
-    }
-    .contact-card__email:hover { color: var(--gold-hover); }
-
-    /* CTA */
-    .contact-cta {
-      background: var(--bg-surface);
-      padding: var(--space-20) var(--gutter);
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
-    .contact-cta .inner { max-width: 640px; margin: 0 auto; }
-    .contact-cta p {
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      color: var(--text-muted);
-      line-height: 1.65;
-      margin-bottom: var(--space-8);
-    }
-
-    @media (max-width: 800px) {
-      .contact-main .inner { grid-template-columns: 1fr; }
+    .legal-body__notice p {
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -128,41 +86,16 @@
 
   <section class="page-hero">
     <div class="inner">
-      <p class="page-hero__label">Contact</p>
-      <h1 class="page-hero__heading">Get in touch.</h1>
+      <p class="page-hero__label">Legal</p>
+      <h1 class="page-hero__heading">Terms of Service</h1>
     </div>
   </section>
 
-  <section class="contact-main">
+  <section class="legal-body">
     <div class="inner">
-
-      <div class="contact-card">
-        <span class="contact-card__cat">Support</span>
-        <div class="contact-card__title">Patient Support</div>
-        <p class="contact-card__desc">Questions about your account, subscription, or delivery? Reach our patient support team directly.</p>
-        <a href="mailto:support@anthologyrx.com" class="contact-card__email">support@anthologyrx.com</a>
+      <div class="legal-body__notice">
+        <p>Our full Terms of Service will be published at launch. For questions, contact <a href="mailto:support@anthologyrx.com">support@anthologyrx.com</a>.</p>
       </div>
-
-      <div class="contact-card">
-        <span class="contact-card__cat">Clinical</span>
-        <div class="contact-card__title">Clinical Questions</div>
-        <p class="contact-card__desc">For questions about your treatment, dosing, or provider communication, reach out through your patient portal after completing your assessment.</p>
-      </div>
-
-      <div class="contact-card">
-        <span class="contact-card__cat">Media</span>
-        <div class="contact-card__title">Media &amp; Partnerships</div>
-        <p class="contact-card__desc">Press inquiries, partnership opportunities, and media requests.</p>
-        <a href="mailto:press@anthologyrx.com" class="contact-card__email">press@anthologyrx.com</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="contact-cta">
-    <div class="inner">
-      <p>Ready to get started? Complete your health assessment and a licensed provider will review your intake within 48 hours.</p>
-      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
     </div>
   </section>
 
@@ -210,6 +143,6 @@
   </div>
 </footer>
 
-<script src="../main.js" defer></script>
+<script src="../../main.js" defer></script>
 </body>
 </html>

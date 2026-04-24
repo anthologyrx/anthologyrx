@@ -2,33 +2,30 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/protocols",                         "destination": "/protocol-landing/index.html" },
-    { "source": "/pages/pricing",                     "destination": "/pricing-page/index.html" },
-    { "source": "/pages/how-it-works",                "destination": "/how-it-works/index.html" },
-    { "source": "/pages/about",                       "destination": "/about/index.html" },
-    { "source": "/pages/science",                     "destination": "/science/index.html" },
-    { "source": "/pages/faq",                         "destination": "/faq/index.html" },
-    { "source": "/pages/press",                       "destination": "/press/index.html" },
-    { "source": "/pages/contact",                     "destination": "/contact/index.html" },
-    { "source": "/pages/privacy",                     "destination": "/faq/index.html" },
-    { "source": "/pages/terms",                       "destination": "/faq/index.html" },
-    { "source": "/account",                           "destination": "/account/index.html" },
-    { "source": "/qualify",                           "destination": "/qualify/index.html" },
-    { "source": "/cart",                              "destination": "/cart/index.html" },
-    { "source": "/search",                            "destination": "/search/index.html" },
-    { "source": "/collections/supplements",           "destination": "/supplements/index.html" },
-    { "source": "/blogs/journal",                     "destination": "/blog/index.html" },
-    { "source": "/blogs/journal/:slug",               "destination": "/blog/article.html" },
-    { "source": "/products/:slug",                    "destination": "/product-page/index.html" },
-    { "source": "/merch",                             "destination": "/merch/index.html" }
+    { "source": "/treatments",              "destination": "/treatments/index.html" },
+    { "source": "/treatments/glp-1",        "destination": "/treatments/glp-1.html" },
+    { "source": "/treatments/nad",          "destination": "/treatments/nad.html" },
+    { "source": "/treatments/micc",         "destination": "/treatments/micc.html" },
+    { "source": "/treatments/tesamorelin",  "destination": "/treatments/tesamorelin.html" },
+    { "source": "/treatments/pt-141",       "destination": "/treatments/pt-141.html" },
+    { "source": "/pages/pricing",           "destination": "/pricing-page/index.html" },
+    { "source": "/pages/how-it-works",      "destination": "/how-it-works/index.html" },
+    { "source": "/pages/about",             "destination": "/about/index.html" },
+    { "source": "/pages/science",           "destination": "/science/index.html" },
+    { "source": "/pages/faq",               "destination": "/faq/index.html" },
+    { "source": "/pages/press",             "destination": "/press/index.html" },
+    { "source": "/pages/contact",           "destination": "/contact/index.html" },
+    { "source": "/pages/privacy",           "destination": "/pages/privacy/index.html" },
+    { "source": "/pages/terms",             "destination": "/pages/terms/index.html" },
+    { "source": "/qualify",                 "destination": "/qualify/index.html" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options",  "value": "nosniff" },
-        { "key": "X-Frame-Options",         "value": "DENY" },
-        { "key": "X-XSS-Protection",        "value": "1; mode=block" }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
   ]

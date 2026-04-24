@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLP-1 | Fat Loss Protocol | AnthologyRX</title>
+  <meta name="description" content="Semaglutide and tirzepatide prescribed by licensed providers. Compounded by 503B pharmacies. Monthly delivery. Provider-guided GLP-1 fat loss protocol.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .treatment-hero {
+      background: var(--bg);
+      padding: clamp(5rem, 10vw, 8rem) var(--gutter) var(--space-20);
+      border-bottom: 1px solid var(--border);
+    }
+    .treatment-hero .inner {
+      max-width: var(--content);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: var(--space-16);
+      align-items: start;
+    }
+    .treatment-hero__cat {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-4);
+    }
+    .treatment-hero__heading {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-4);
+    }
+    .treatment-hero__sub {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: var(--space-6);
+    }
+    .treatment-hero__mechanism {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding: var(--space-6);
+      border-left: 2px solid var(--gold);
+      background: var(--bg-surface);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    /* Sidebar card */
+    .sidebar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      position: sticky;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    .sidebar-card__price {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .sidebar-card__price-note {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: var(--space-1);
+    }
+    .sidebar-card__divider {
+      height: 1px;
+      background: var(--border);
+    }
+    .sidebar-card__label {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--space-3);
+    }
+    .sidebar-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .sidebar-card ul li {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      line-height: 1.5;
+    }
+    .sidebar-card ul li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 0.45em;
+      flex-shrink: 0;
+    }
+    .sidebar-card__fsa {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--text-faint);
+      line-height: 1.5;
+    }
+    .sidebar-card__compliance {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--text-faint);
+      line-height: 1.6;
+    }
+
+    /* Bottom section */
+    .treatment-cta-section {
+      background: var(--bg-surface);
+      padding: var(--space-20) var(--gutter);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .treatment-cta-section .inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .treatment-cta-section h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.02em;
+    }
+    .treatment-cta-section p {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: var(--space-8);
+    }
+
+    @media (max-width: 900px) {
+      .treatment-hero .inner { grid-template-columns: 1fr; }
+      .sidebar-card { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav__inner">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="/treatments">Treatments</a></li>
+      <li><a href="/pages/how-it-works">How It Works</a></li>
+      <li><a href="/pages/pricing">Pricing</a></li>
+      <li><a href="/pages/about">About</a></li>
+      <li><a href="/pages/faq">FAQ</a></li>
+    </ul>
+    <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <section class="treatment-hero">
+    <div class="inner">
+      <div class="treatment-hero__content">
+        <p class="treatment-hero__cat">Fat Loss</p>
+        <h1 class="treatment-hero__heading">GLP-1 Receptor Agonist Therapy</h1>
+        <p class="treatment-hero__sub">Clinically meaningful fat loss. Provider prescribed. Monthly delivery.</p>
+        <div class="treatment-hero__mechanism">
+          <p>Semaglutide and tirzepatide are GLP-1 receptor agonists that reduce appetite and slow gastric emptying. Clinical trials demonstrate 15&ndash;20%+ body weight reduction in eligible patients.</p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div>
+          <div class="sidebar-card__price">From $199/month</div>
+          <div class="sidebar-card__price-note">Prescription if approved. Eligibility required.</div>
+        </div>
+        <div class="sidebar-card__divider"></div>
+        <div>
+          <div class="sidebar-card__label">What&rsquo;s included</div>
+          <ul>
+            <li>Online health assessment</li>
+            <li>Licensed provider review (within 48 hours)</li>
+            <li>Prescription if approved</li>
+            <li>Compounded by licensed 503B pharmacy</li>
+            <li>Monthly delivery</li>
+            <li>Ongoing dosing guidance</li>
+          </ul>
+        </div>
+        <div class="sidebar-card__fsa">FSA/HSA may be accepted depending on your plan.</div>
+        <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+        <p class="sidebar-card__compliance">Individual results vary. Not all applicants will qualify. GLP-1 compounds prescribed through AnthologyRX are compounded medications, not FDA-approved end products.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="treatment-cta-section">
+    <div class="inner">
+      <h2>Ready to begin?</h2>
+      <p>Complete your assessment online. A licensed provider reviews your intake within 48 hours. No clinic visit required.</p>
+      <a href="/qualify" class="btn btn--gold btn--lg">Start Assessment</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/" class="nav-logo"><span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span></a>
+      <p class="footer__tagline">Provider-guided injectable treatments.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <div class="footer__col">
+        <span class="footer__heading">Treatments</span>
+        <ul role="list">
+          <li><a href="/treatments/glp-1">GLP-1</a></li>
+          <li><a href="/treatments/nad">NAD+</a></li>
+          <li><a href="/treatments/micc">MICC</a></li>
+          <li><a href="/treatments/tesamorelin">Tesamorelin</a></li>
+          <li><a href="/treatments/pt-141">PT-141</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Company</span>
+        <ul role="list">
+          <li><a href="/pages/about">About</a></li>
+          <li><a href="/pages/how-it-works">How It Works</a></li>
+          <li><a href="/pages/pricing">Pricing</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Legal</span>
+        <ul role="list">
+          <li><a href="/pages/privacy">Privacy Policy</a></li>
+          <li><a href="/pages/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__legal">
+    <p>AnthologyRX does not provide emergency medical services. Treatments require completion of an online assessment, provider review, and clinical approval. Results vary. Not all applicants will qualify. These statements have not been evaluated by the Food and Drug Administration. Treatments offered are not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p style="margin-top:0.5rem;">© 2026 AnthologyRX. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../main.js" defer></script>
+</body>
+</html>

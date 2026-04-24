@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatments | AnthologyRX</title>
+  <meta name="description" content="Provider-guided injectable treatments for fat loss, body composition, energy, recovery, and sexual performance. Prescription-only. Clinically reviewed. Delivered monthly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ── Page Hero ── */
+    .page-hero {
+      background: var(--bg);
+      padding: clamp(5rem, 10vw, 8rem) var(--gutter) var(--space-16);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .inner {
+      max-width: var(--content);
+      margin: 0 auto;
+    }
+    .page-hero__label {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-4);
+    }
+    .page-hero__heading {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-4);
+    }
+    .page-hero__sub {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    /* ── Category Sections ── */
+    .category-section {
+      padding: var(--space-16) var(--gutter);
+      border-bottom: 1px solid var(--border);
+    }
+    .category-section:nth-child(even) { background: var(--bg-surface); }
+    .category-section:nth-child(odd) { background: var(--bg); }
+    .category-section .inner {
+      max-width: var(--content);
+      margin: 0 auto;
+    }
+    .category-label {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-10);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Treatment Cards ── */
+    .t-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-6);
+    }
+    .t-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-10);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .t-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .t-card--full { grid-column: span 2; }
+    .t-card__outcome {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .t-card__name {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .t-card--full .t-card__name {
+      font-size: var(--text-2xl);
+    }
+    .t-card__sub {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .t-card__desc {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .t-card__price {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .t-card__actions {
+      display: flex;
+      gap: var(--space-4);
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: var(--space-2);
+    }
+    .t-card__link {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .t-card__link:hover { color: var(--text); }
+
+    /* ── Compliance ── */
+    .compliance-note {
+      background: var(--bg);
+      padding: var(--space-12) var(--gutter);
+      border-top: 1px solid var(--border);
+    }
+    .compliance-note .inner {
+      max-width: var(--content);
+      margin: 0 auto;
+    }
+    .compliance-note p {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--text-faint);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .t-cards { grid-template-columns: 1fr; }
+      .t-card--full { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav__inner">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="/treatments">Treatments</a></li>
+      <li><a href="/pages/how-it-works">How It Works</a></li>
+      <li><a href="/pages/pricing">Pricing</a></li>
+      <li><a href="/pages/about">About</a></li>
+      <li><a href="/pages/faq">FAQ</a></li>
+    </ul>
+    <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="inner">
+      <p class="page-hero__label">Treatments</p>
+      <h1 class="page-hero__heading">Provider-guided injectable treatments.</h1>
+      <p class="page-hero__sub">Prescription-only. Clinically reviewed. Delivered monthly.</p>
+    </div>
+  </section>
+
+  <!-- FAT LOSS -->
+  <section class="category-section">
+    <div class="inner">
+      <div class="category-label">Fat Loss</div>
+      <div class="t-cards">
+        <div class="t-card t-card--full">
+          <span class="t-card__outcome">Clinically meaningful fat loss</span>
+          <h2 class="t-card__name">GLP-1</h2>
+          <p class="t-card__sub">Semaglutide / Tirzepatide</p>
+          <p class="t-card__desc">GLP-1 receptor agonists are the most effective prescription fat loss agents available. Prescribed after provider review. Compounded by licensed 503B pharmacies.</p>
+          <p class="t-card__price">From $199/mo</p>
+          <div class="t-card__actions">
+            <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+            <a href="/treatments/glp-1" class="t-card__link">Learn More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY COMPOSITION -->
+  <section class="category-section">
+    <div class="inner">
+      <div class="category-label">Body Composition</div>
+      <div class="t-cards">
+
+        <div class="t-card">
+          <span class="t-card__outcome">Advanced body composition</span>
+          <h2 class="t-card__name">Tesamorelin</h2>
+          <p class="t-card__desc">Designed to support visceral fat reduction and body composition when clinically appropriate. Prescribed for eligible patients only.</p>
+          <p class="t-card__price">Pricing disclosed during assessment</p>
+          <div class="t-card__actions">
+            <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+            <a href="/treatments/tesamorelin" class="t-card__link">Learn More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <span class="t-card__outcome">Metabolic support</span>
+          <h2 class="t-card__name">MICC</h2>
+          <p class="t-card__desc">Methionine, inositol, choline, cyanocobalamin. A lipotropic injection compound used to support metabolic function and body composition.</p>
+          <p class="t-card__price">From $99/mo</p>
+          <div class="t-card__actions">
+            <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+            <a href="/treatments/micc" class="t-card__link">Learn More &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENERGY & RECOVERY -->
+  <section class="category-section">
+    <div class="inner">
+      <div class="category-label">Energy &amp; Recovery</div>
+      <div class="t-cards">
+        <div class="t-card t-card--full">
+          <span class="t-card__outcome">Cellular energy and recovery</span>
+          <h2 class="t-card__name">NAD+</h2>
+          <p class="t-card__desc">Nicotinamide adenine dinucleotide delivered subcutaneously. Provider-guided dosing for energy, cellular repair, and recovery support.</p>
+          <p class="t-card__price">From $149/mo</p>
+          <div class="t-card__actions">
+            <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+            <a href="/treatments/nad" class="t-card__link">Learn More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEXUAL PERFORMANCE -->
+  <section class="category-section">
+    <div class="inner">
+      <div class="category-label">Sexual Performance</div>
+      <div class="t-cards">
+        <div class="t-card t-card--full">
+          <span class="t-card__outcome">Sexual performance</span>
+          <h2 class="t-card__name">PT-141</h2>
+          <p class="t-card__desc">Bremelanotide acts on melanocortin receptors to address sexual dysfunction in men and women. Prescribed after provider review.</p>
+          <p class="t-card__price">Pricing disclosed during assessment</p>
+          <div class="t-card__actions">
+            <a href="/qualify" class="btn btn--gold btn--sm">Start Assessment</a>
+            <a href="/treatments/pt-141" class="t-card__link">Learn More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE NOTE -->
+  <div class="compliance-note">
+    <div class="inner">
+      <p>All treatments require completion of a health assessment, provider review, and clinical approval. Not all applicants will qualify. Results vary. Treatments are not FDA-approved for all indications listed. Compounded medications are prepared by licensed pharmacies.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/" class="nav-logo"><span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span></a>
+      <p class="footer__tagline">Provider-guided injectable treatments.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <div class="footer__col">
+        <span class="footer__heading">Treatments</span>
+        <ul role="list">
+          <li><a href="/treatments/glp-1">GLP-1</a></li>
+          <li><a href="/treatments/nad">NAD+</a></li>
+          <li><a href="/treatments/micc">MICC</a></li>
+          <li><a href="/treatments/tesamorelin">Tesamorelin</a></li>
+          <li><a href="/treatments/pt-141">PT-141</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Company</span>
+        <ul role="list">
+          <li><a href="/pages/about">About</a></li>
+          <li><a href="/pages/how-it-works">How It Works</a></li>
+          <li><a href="/pages/pricing">Pricing</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Legal</span>
+        <ul role="list">
+          <li><a href="/pages/privacy">Privacy Policy</a></li>
+          <li><a href="/pages/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__legal">
+    <p>AnthologyRX does not provide emergency medical services. Treatments require completion of an online assessment, provider review, and clinical approval. Results vary. Not all applicants will qualify. These statements have not been evaluated by the Food and Drug Administration. Treatments offered are not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p style="margin-top:0.5rem;">© 2026 AnthologyRX. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../main.js" defer></script>
+</body>
+</html>
