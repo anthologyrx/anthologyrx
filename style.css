@@ -411,6 +411,14 @@ button { cursor: pointer; background: none; border: none; }
   flex-wrap: wrap;
   margin-bottom: var(--space-10);
 }
+.hero-ctas .btn-primary,
+.hero-ctas .btn-lg {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 15px 32px;
+}
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
