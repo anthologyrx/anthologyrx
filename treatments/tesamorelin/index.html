@@ -830,7 +830,7 @@ strong { color: var(--sand); font-weight: 600; }
 }
 .stack-step {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 20px;
 }
 .stack-num-col {
@@ -838,6 +838,7 @@ strong { color: var(--sand); font-weight: 600; }
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
+  width: 40px;
 }
 .stack-num {
   width: 40px;
@@ -852,17 +853,19 @@ strong { color: var(--sand); font-weight: 600; }
   font-weight: 700;
   color: var(--gold);
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  background: #181614;
 }
 .stack-connector {
   width: 1px;
-  flex: 1;
-  background: linear-gradient(to bottom, rgba(178,138,42,0.35), transparent);
-  margin: 6px 0;
-  min-height: 32px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(178,138,42,0.5), rgba(178,138,42,0.05));
+  margin-top: 4px;
 }
 .stack-step:last-child .stack-connector { display: none; }
 .stack-step-content {
-  padding-bottom: 36px;
+  padding-bottom: 40px;
   padding-top: 8px;
 }
 .stack-step-title {
