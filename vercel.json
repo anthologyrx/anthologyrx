@@ -27,7 +27,8 @@
     { "source": "/treatments/micc",                   "destination": "/treatments/micc/index.html" },
     { "source": "/treatments/pt-141",                 "destination": "/treatments/pt-141/index.html" },
     { "source": "/treatments/tesamorelin",             "destination": "/treatments/tesamorelin/index.html" },
-    { "source": "/about",                               "destination": "/about/index.html" }
+    { "source": "/about",                               "destination": "/about/index.html" },
+    { "source": "/how-it-works",                         "destination": "/how-it-works/index.html" }
   ],
   "headers": [
     {
