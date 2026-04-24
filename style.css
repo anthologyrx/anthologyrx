@@ -99,25 +99,7 @@ button { cursor: pointer; background: none; border: none; }
 }
 
 /* ─── Buttons ────────────────────────────────────────────────────────────── */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  background: var(--gold);
-  color: var(--bg);
-  font-family: 'Unbounded', sans-serif;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 15px 30px;
-  border-radius: var(--radius-sm);
-  transition: background var(--transition), transform var(--transition);
-  white-space: nowrap;
-}
-.btn-primary:hover { background: var(--gold-hover); transform: translateY(-1px); }
-
-/* Canonical nav component aliases — matches btn-primary exactly */
+/* Single canonical gold button — use class="btn btn--gold" everywhere */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -139,6 +121,10 @@ button { cursor: pointer; background: none; border: none; }
 .btn--gold:hover { background: var(--gold-hover); transform: translateY(-1px); }
 .btn--outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Aliases — legacy class names map to canonical styles */
+.btn-primary { display: inline-flex; align-items: center; gap: var(--space-2); font-family: 'Unbounded', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 15px 30px; border-radius: var(--radius-sm); transition: background var(--transition), transform var(--transition); white-space: nowrap; cursor: pointer; border: none; text-decoration: none; background: var(--gold); color: var(--bg); }
+.btn-primary:hover { background: var(--gold-hover); transform: translateY(-1px); }
 
 .btn-outline {
   display: inline-flex;
@@ -189,24 +175,15 @@ button { cursor: pointer; background: none; border: none; }
 }
 .btn-ghost-sm:hover { color: var(--gold-hover); border-color: var(--gold-hover); }
 
-.btn-gold {
-  display: inline-flex;
-  align-items: center;
-  background: var(--gold);
-  color: var(--bg);
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius-sm);
-  transition: background var(--transition);
-}
-.btn-gold:hover { background: var(--gold-hover); }
+/* btn-gold alias — legacy treatment card class, maps to canonical */
+.btn-gold { display: inline-flex; align-items: center; gap: var(--space-2); font-family: 'Unbounded', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 15px 30px; border-radius: var(--radius-sm); transition: background var(--transition), transform var(--transition); white-space: nowrap; cursor: pointer; border: none; text-decoration: none; background: var(--gold); color: var(--bg); }
+.btn-gold:hover { background: var(--gold-hover); transform: translateY(-1px); }
 
 .btn-lg { padding: 18px 40px; font-size: 0.65rem; }
-.btn-full { width: 100%; justify-content: center; }
+.btn-full, .btn--full { width: 100%; justify-content: center; }
+
+/* Mobile nav — Start Assessment button spacing */
+.nav-mobile .btn--gold { margin-top: 8px; }
 
 /* ─── Nav (canonical — matches all pages) ───────────────────────────────── */
 .nav-wrap {
