@@ -362,7 +362,7 @@ button { cursor: pointer; background: none; border: none; }
   max-width: 14ch;
 }
 .hero-copy-card {
-  background: rgba(30, 28, 26, 0.80);
+  background: rgba(30, 28, 26, 0.55);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 6px;
@@ -377,15 +377,15 @@ button { cursor: pointer; background: none; border: none; }
   color: var(--text-muted);
   max-width: 48ch;
   line-height: 1.75;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
 }
 
 
 .hero-ctas {
   display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
   margin-bottom: var(--space-10);
 }
 .hero-ctas .btn-primary,
