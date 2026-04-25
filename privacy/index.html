@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | AnthologyRX</title>
+  <!-- Open Graph / Social Share -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://anthologyrx.com/privacy" />
+  <meta property="og:title"       content="Privacy Policy | AnthologyRX" />
+  <meta property="og:description" content="AnthologyRX is committed to protecting your personal and health information. Read our full Privacy Policy, including HIPAA rights and California privacy disclosures." />
+  <meta property="og:image"       content="https://anthologyrx.vercel.app/og-image.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Privacy Policy | AnthologyRX" />
+  <meta name="twitter:description" content="AnthologyRX is committed to protecting your personal and health information. Read our full Privacy Policy, including HIPAA rights and California privacy disclosures." />
+  <meta name="twitter:image"       content="https://anthologyrx.vercel.app/og-image.jpg" />
+  <meta name="description" content="AnthologyRX is committed to protecting your personal and health information. Read our full Privacy Policy, including HIPAA rights and California privacy disclosures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+/* ═══════════════════════════════════════════════════
+   ANTHOLOGY RX — PRIVACY PAGE
+   Brand: #1E1E1E bg · #E8DCC8 sand · #B28A2A brass gold
+   Fonts: Unbounded (display) · Epilogue (body)
+═══════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: #1E1E1E;
+  color: #E8DCC8;
+  font-family: 'Epilogue', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+:root {
+  --bg:        #1E1E1E;
+  --bg-card:   #262422;
+  --bg-raised: #2A2724;
+  --bg-hero:   #181614;
+  --rule:      #373430;
+  --sand:      #E8DCC8;
+  --sand-dim:  #9C9082;
+  --gold:      #B28A2A;
+  --gold-h:    #C99B35;
+  --gold-glow: rgba(178,138,42,0.15);
+  --nav-h:     68px;
+  --gutter:    clamp(20px, 5vw, 64px);
+  --max:       1200px;
+  --ease:      cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── CONTAINERS ─────────────────────────────────── */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.wrap--text { max-width: 780px; margin: 0 auto; padding: 0 var(--gutter); }
+.wrap--narrow { max-width: 640px; margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: 100px 0; border-bottom: 1px solid var(--rule); }
+.section--dark { background: var(--bg-hero); }
+.section--card { background: var(--bg-card); }
+
+/* ── TYPE ───────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--sand);
+}
+h1 { font-size: clamp(2rem, 4.5vw, 3.6rem); font-weight: 900; letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); }
+h3 { font-size: clamp(0.95rem, 1.5vw, 1.1rem); }
+p { color: var(--sand-dim); }
+strong { color: var(--sand); font-weight: 600; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+/* ── BUTTONS ────────────────────────────────────── */
+.btn { display:inline-flex; align-items:center; gap:0.375rem; font-family:'Unbounded',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:15px 30px; border-radius:4px; transition:background 0.2s ease, transform 0.2s ease; white-space:nowrap; cursor:pointer; border:none; text-decoration:none; }
+.btn--gold { background: var(--gold); color: #1E1E1E; }
+.btn--gold:hover { background: var(--gold-h); transform: translateY(-1px); }
+.btn--lg { padding: 18px 40px; font-size: 0.65rem; }
+.btn--xl { padding: 22px 52px; font-size: 0.7rem; }
+.btn--full { width: 100%; justify-content: center; }
+.btn--outline { background: transparent; color: var(--sand); border: 1px solid var(--border); }
+.btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+.nav-mobile .btn--gold { margin-top: 8px; width: 100%; justify-content: center; font-size: 0.6rem; letter-spacing: 0.14em; }
+
+.text-link {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color 0.2s;
+}
+.text-link:hover { color: var(--gold); }
+.text-link--arrow::after { content: ' →'; }
+
+/* ── LOGO ───────────────────────────────────────── */
+.logo-main {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-weight: 400;
+  color: #E8DCC8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.logo-rx {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
+  font-weight: 700;
+  color: #B28A2A;
+  letter-spacing: 0.06em;
+  position: relative;
+  top: -0.4em;
+  margin-left: 0.1em;
+}
+
+/* ── ANNOUNCE BAR ───────────────────────────────── */
+.announce-bar {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 9px var(--gutter);
+  position: relative;
+}
+.announce-bar p {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1E1E1E;
+  text-align: center;
+}
+.announce-bar a {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1E1E1E;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.announce-close {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #1E1E1E;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+/* ── NAV ────────────────────────────────────────── */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(30,30,30,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav-logo { display: flex; align-items: baseline; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--sand); }
+.nav-links a.active { color: var(--sand); }
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.nav-login {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--sand-dim);
+}
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.nav-hamburger span { width: 22px; height: 1.5px; background: var(--sand); display: block; }
+.nav-mobile { display: none; }
+
+/* ── HERO ───────────────────────────────────────── */
+.hero {
+  background: var(--bg-hero);
+  padding: 140px 0 100px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.hero h1 {
+  margin-bottom: 32px;
+  line-height: 1.1;
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(232,220,200,0.75);
+  max-width: 52ch;
+  line-height: 1.8;
+}
+
+/* ── PRIVACY CONTENT ────────────────────────────── */
+.privacy-dates {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 72px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.privacy-date-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.privacy-date-label {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.privacy-date-value {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 0.9rem;
+  color: var(--sand-dim);
+}
+
+.privacy-body {
+  padding: 80px 0 120px;
+}
+
+.privacy-section {
+  margin-bottom: 64px;
+}
+.privacy-section:last-child {
+  margin-bottom: 0;
+}
+.privacy-section h2 {
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.privacy-section p {
+  font-size: 0.97rem;
+  line-height: 1.9;
+  color: var(--sand-dim);
+  margin-bottom: 18px;
+}
+.privacy-section p:last-child { margin-bottom: 0; }
+.privacy-section ul {
+  list-style: none;
+  margin: 16px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.privacy-section ul li {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--sand-dim);
+  padding-left: 20px;
+  position: relative;
+}
+.privacy-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.hipaa-box {
+  background: rgba(178,138,42,0.07);
+  border: 1px solid rgba(178,138,42,0.22);
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin: 24px 0;
+}
+.hipaa-box p {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: var(--sand-dim);
+  margin-bottom: 14px;
+}
+.hipaa-box p:last-child { margin-bottom: 0; }
+.hipaa-box strong { color: var(--sand); }
+
+.contact-block {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin-top: 20px;
+}
+.contact-block p {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: var(--sand-dim);
+  margin-bottom: 10px;
+}
+.contact-block p:last-child { margin-bottom: 0; }
+.contact-block a {
+  color: var(--gold);
+  transition: color 0.2s;
+}
+.contact-block a:hover { color: var(--gold-h); }
+
+/* ── MISSION SECTION ────────────────────────────── */
+.mission-body {
+  max-width: 720px;
+}
+.mission-body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand-dim);
+  margin-bottom: 28px;
+}
+.mission-body p:last-child { margin-bottom: 0; }
+.mission-body .manifesto-close {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--sand);
+  line-height: 1.6;
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin-top: 40px;
+  letter-spacing: -0.01em;
+}
+
+/* ── TEAM SECTION ───────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+.team-card:hover { border-color: rgba(178,138,42,0.35); }
+.team-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #1A1816;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.team-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(178,138,42,0.04) 0%, transparent 60%);
+}
+.team-initials {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  border: 1px solid rgba(178,138,42,0.25);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  z-index: 1;
+}
+.team-info {
+  padding: 32px 32px 36px;
+}
+.team-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--sand);
+  margin-bottom: 6px;
+}
+.team-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.team-bio p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--sand-dim);
+  margin-bottom: 14px;
+}
+.team-bio p:last-child { margin-bottom: 0; }
+.team-disclosure {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: rgba(178,138,42,0.07);
+  border: 1px solid rgba(178,138,42,0.2);
+  border-radius: 2px;
+}
+.team-disclosure p {
+  font-size: 0.72rem;
+  line-height: 1.65;
+  color: rgba(156,144,130,0.7);
+}
+
+/* ── CLINICAL OVERSIGHT ─────────────────────────── */
+.clinical-section {
+  text-align: center;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.clinical-section .eyebrow { display: block; }
+.clinical-section p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--sand-dim);
+  max-width: 58ch;
+  margin: 0 auto;
+}
+
+/* ── PULL QUOTE ─────────────────────────────────── */
+.pullquote-section {
+  background: var(--bg-hero);
+  padding: 120px 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+.pullquote {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--sand);
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  margin: 0 auto 32px;
+}
+.pullquote-attribution {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 0.82rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+/* ── FINAL CTA ──────────────────────────────────── */
+.final-cta {
+  text-align: center;
+  padding: 120px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.final-cta h2 { margin-bottom: 20px; }
+.final-cta p {
+  max-width: 48ch;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* ── FOOTER ─────────────────────────────────────── */
+.footer {
+  background: var(--bg-hero);
+  border-top: 1px solid var(--rule);
+  padding: 60px 0 40px;
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+.footer-tagline {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  color: var(--sand-dim);
+  margin-top: 10px;
+}
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.footer-col h4 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 16px;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a {
+  font-size: 0.82rem;
+  color: var(--sand-dim);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--sand); }
+.footer-divider { border: none; border-top: 1px solid var(--rule); margin: 48px 0 32px; grid-column: 1 / -1; }
+.footer-legal {
+  font-size: 0.68rem;
+  color: rgba(156,144,130,0.45);
+  line-height: 1.7;
+  grid-column: 1 / -1;
+}
+
+/* ── MOBILE STICKY BAR ──────────────────────────── */
+.mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--bg-card);
+  border-top: 1px solid var(--rule);
+  padding: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.mobile-bar-text { display: flex; flex-direction: column; }
+.mobile-bar-price {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--sand);
+}
+.mobile-bar-sub { font-size: 0.7rem; color: var(--sand-dim); }
+.mobile-bar-dismiss {
+  background: none; border: none; color: var(--sand-dim);
+  font-size: 1.2rem; cursor: pointer; padding: 4px; line-height: 1;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .hero { padding: 100px 0 72px; }
+  .nav-links, .nav-actions { display: none; }
+  .nav-hamburger { display: flex; margin-left: auto; }
+  .nav-mobile.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 200;
+    padding: 80px 32px 40px;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .nav-mobile a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1rem;
+    color: var(--sand);
+    letter-spacing: 0.06em;
+  }
+  .nav-mobile-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: none; border: none;
+    color: var(--sand); font-size: 1.5rem; cursor: pointer;
+  }
+  .team-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .pullquote { font-size: clamp(1rem, 4vw, 1.4rem); }
+  .final-cta-actions { flex-direction: column; align-items: center; }
+  .mobile-bar { display: flex; }
+  body { padding-bottom: 80px; }
+  .privacy-dates { gap: 20px; }
+  .hipaa-box, .contact-block { padding: 20px 20px; }
+}
+
+@media (max-width: 480px) {
+  .footer-cols { grid-template-columns: 1fr; }
+  .team-photo { aspect-ratio: 16 / 9; }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ── ANNOUNCE BAR ──────────────────────────────────────────────── -->
+<div class="announce-bar" id="announce-bar">
+  <p>PRESCRIPTION LONGEVITY &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; PROVIDER REVIEW IN 48 HOURS</p>
+  <a href="/qualify" style="margin-left:12px;">See if you qualify →</a>
+  <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- ── NAV ───────────────────────────────────────────────────────── -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="/#treatments">Treatments</a></li>
+      <li><a href="/how-it-works">How It Works</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/account" class="nav-login">Log In</a>
+      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
+
+<div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-mobile-close" onclick="document.getElementById('navMobile').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="/#treatments" onclick="document.getElementById('navMobile').classList.remove('open')">Treatments</a>
+  <a href="/how-it-works" onclick="document.getElementById('navMobile').classList.remove('open')">How It Works</a>
+  <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
+  <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
+  <a href="/account" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
+  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Privacy Policy">
+  <div class="hero-inner">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-sub">AnthologyRX is committed to protecting your personal information and health data. This policy explains what we collect, how we use it, and the rights you hold as a patient and consumer.</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     PRIVACY BODY
+══════════════════════════════════════════════════ -->
+<div class="privacy-body">
+  <div class="wrap--text">
+
+    <!-- Effective Dates -->
+    <div class="privacy-dates">
+      <div class="privacy-date-item">
+        <span class="privacy-date-label">Effective Date</span>
+        <span class="privacy-date-value">April 1, 2026</span>
+      </div>
+      <div class="privacy-date-item">
+        <span class="privacy-date-label">Last Updated</span>
+        <span class="privacy-date-value">April 25, 2026</span>
+      </div>
+    </div>
+
+    <!-- ── 1. Information We Collect ────────────────────────────── -->
+    <div class="privacy-section" id="information-we-collect">
+      <h2>1. Information We Collect</h2>
+      <p>When you use AnthologyRX — including our website, intake assessment, patient portal, and any communications with our clinical team — we collect the following categories of information:</p>
+
+      <p><strong>Personal Identifiers</strong></p>
+      <ul>
+        <li>Full legal name, date of birth, and gender identity</li>
+        <li>Email address, phone number, and mailing address</li>
+        <li>Government-issued identification where required for identity verification</li>
+      </ul>
+
+      <p><strong>Protected Health Information (PHI)</strong></p>
+      <ul>
+        <li>Medical history, current diagnoses, and prior treatments</li>
+        <li>Current medications, supplements, and known allergies</li>
+        <li>Lab results, bloodwork, and biometric data you provide or authorize us to receive</li>
+        <li>Health goals, lifestyle information, and intake assessment responses</li>
+        <li>Provider consultation notes and prescription records</li>
+      </ul>
+
+      <p><strong>Payment &amp; Financial Information</strong></p>
+      <ul>
+        <li>Credit and debit card numbers (processed and stored by our PCI-compliant payment processor — AnthologyRX does not store raw card data)</li>
+        <li>Billing address and transaction history</li>
+        <li>FSA/HSA card information where applicable</li>
+      </ul>
+
+      <p><strong>Device &amp; Usage Data</strong></p>
+      <ul>
+        <li>IP address, browser type and version, operating system</li>
+        <li>Pages visited, time spent, referral source, and click behavior</li>
+        <li>Session identifiers and cookies (see Section 6 for details)</li>
+        <li>Approximate geolocation (state-level) derived from IP address, used to verify licensing eligibility</li>
+      </ul>
+
+      <p>We collect information you provide directly, information generated through your use of our platform, and information received from authorized third parties such as licensed laboratories and pharmacy partners.</p>
+    </div>
+
+    <!-- ── 2. How We Use Your Information ───────────────────────── -->
+    <div class="privacy-section" id="how-we-use">
+      <h2>2. How We Use Your Information</h2>
+      <p>AnthologyRX uses the information we collect for the following purposes:</p>
+
+      <ul>
+        <li><strong>To provide telehealth services:</strong> Your intake and health data is used by our licensed provider network to evaluate your eligibility, conduct clinical assessments, and determine whether treatment is appropriate for you.</li>
+        <li><strong>To process and fulfill prescriptions:</strong> Approved prescriptions are transmitted to our licensed 503B compounding pharmacy partner for preparation and dispensing to your address.</li>
+        <li><strong>To communicate about your treatment:</strong> We use your contact information to send order confirmations, shipping notifications, provider messages, refill reminders, and follow-up check-ins related to your protocol.</li>
+        <li><strong>To process payments:</strong> Your financial information is used to charge for services, issue refunds where applicable, and maintain transaction records as required by law.</li>
+        <li><strong>To improve our platform:</strong> Aggregated, de-identified usage data helps us optimize the patient experience, assess clinical workflows, and improve our service offering.</li>
+        <li><strong>To comply with applicable law:</strong> We retain and disclose information as required by HIPAA, state telehealth regulations, pharmacy law, tax law, and any lawful order of a court or regulatory authority.</li>
+        <li><strong>To prevent fraud and ensure safety:</strong> We use account and device data to detect unauthorized access, prevent fraudulent transactions, and protect the integrity of our clinical platform.</li>
+      </ul>
+
+      <p>We do not use your protected health information for marketing purposes without your express written authorization, as required under HIPAA.</p>
+    </div>
+
+    <!-- ── 3. HIPAA Notice ────────────────────────────────────────── -->
+    <div class="privacy-section" id="hipaa">
+      <h2>3. HIPAA Notice</h2>
+      <p>AnthologyRX is a <strong>covered entity</strong> under the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and its implementing regulations, including the HIPAA Privacy Rule (45 C.F.R. Parts 160 and 164). As a covered entity, we are required by law to maintain the privacy of your protected health information (PHI), to provide you with notice of our legal duties and privacy practices, and to abide by the terms of this notice.</p>
+
+      <div class="hipaa-box">
+        <p><strong>Your HIPAA Rights.</strong> As a patient of AnthologyRX, you have the following rights with respect to your protected health information:</p>
+        <p><strong>Right to Access.</strong> You have the right to inspect and obtain a copy of your PHI maintained in our designated record sets, including your intake assessment, provider notes, prescription records, and lab results. We will respond to access requests within 30 days. A reasonable cost-based fee may apply for copies.</p>
+        <p><strong>Right to Amend.</strong> If you believe that PHI we hold about you is inaccurate or incomplete, you may request an amendment. We will review your request and either make the amendment or provide a written denial with the reason for the denial and your right to submit a statement of disagreement.</p>
+        <p><strong>Right to Request Restrictions.</strong> You may request that we restrict how we use or disclose your PHI for treatment, payment, or healthcare operations. We are not required to agree to all restriction requests, but we will consider each request seriously and notify you of our decision.</p>
+        <p><strong>Right to an Accounting of Disclosures.</strong> You have the right to receive a list of disclosures of your PHI that we have made for purposes other than treatment, payment, healthcare operations, and certain other exceptions, for the six years prior to your request.</p>
+        <p><strong>Right to a Paper Copy of This Notice.</strong> You have the right to receive a paper copy of our Notice of Privacy Practices upon request, even if you have received it electronically.</p>
+        <p><strong>Right to File a Complaint.</strong> If you believe your privacy rights have been violated, you may file a complaint with AnthologyRX directly or with the U.S. Department of Health and Human Services, Office for Civil Rights. We will not retaliate against you for filing a complaint.</p>
+      </div>
+
+      <p>To exercise any of your HIPAA rights, or to request a full Notice of Privacy Practices, contact our Privacy Officer at <strong><a href="mailto:privacy@anthologyrx.com" style="color: var(--gold);">privacy@anthologyrx.com</a></strong>. We will acknowledge your request in writing and respond within the timeframes required by applicable law.</p>
+
+      <p>We are required by law to follow the privacy practices described in our Notice of Privacy Practices. We reserve the right to change our practices and to make the new practices effective for all PHI we maintain. We will provide notice of any material changes as described in Section 10 of this policy.</p>
+    </div>
+
+    <!-- ── 4. How We Share Your Information ─────────────────────── -->
+    <div class="privacy-section" id="sharing">
+      <h2>4. How We Share Your Information</h2>
+      <p>AnthologyRX shares your information only as necessary to provide our services and as permitted or required by law. We do not sell your personal information — ever. The following describes who may receive your information and why:</p>
+
+      <p><strong>Licensed Healthcare Providers (Prescribing Physicians)</strong><br>
+      Your health intake, medical history, and assessment responses are shared with licensed independent physicians in our provider network who evaluate your eligibility and issue prescriptions. These providers operate under their own professional and legal obligations, including HIPAA, and are bound by business associate agreements with AnthologyRX.</p>
+
+      <p><strong>Bask Health (Clinical Infrastructure Partner)</strong><br>
+      AnthologyRX uses Bask Health as its clinical infrastructure and technology partner to operate the telehealth intake flow, provider coordination, and prescription management system. Bask Health processes PHI on our behalf as a HIPAA business associate and is contractually required to protect your information using the same standards we apply.</p>
+
+      <p><strong>Licensed 503B Compounding Pharmacy</strong><br>
+      Once a prescription is issued, your name, address, prescription details, and relevant health information are transmitted to our licensed 503B outsourcing facility for the compounding and dispensing of your medication. This disclosure is necessary for treatment and is permitted under HIPAA without additional authorization.</p>
+
+      <p><strong>Payment Processors</strong><br>
+      Your payment information is shared with our PCI DSS-compliant payment processor to facilitate transactions. We do not store raw credit card numbers. Our payment processor is prohibited from using your financial data for any purpose other than processing your transactions.</p>
+
+      <p><strong>Laboratory Partners</strong><br>
+      Where lab work is required or recommended as part of your protocol, we may share necessary identifying information with a CLIA-certified laboratory to facilitate specimen collection or result retrieval, with your consent.</p>
+
+      <p><strong>Legal and Regulatory Authorities</strong><br>
+      We may disclose your information when required by law, such as in response to a court order, subpoena, or lawful request from a government authority, or when necessary to prevent imminent harm or fraud.</p>
+
+      <p><strong>Business Transfers</strong><br>
+      In the event of a merger, acquisition, or sale of all or substantially all of our assets, your information may be transferred to the acquiring entity. We will provide notice of any such transfer and require the successor entity to honor the commitments in this policy.</p>
+
+      <p>We do not sell, rent, or trade your personal information or protected health information to any third party for commercial purposes.</p>
+    </div>
+
+    <!-- ── 5. California Privacy Rights (CCPA) ──────────────────── -->
+    <div class="privacy-section" id="ccpa">
+      <h2>5. California Privacy Rights (CCPA)</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act of 2018, as amended by the California Privacy Rights Act of 2020 (collectively, "CCPA"), grants you specific rights regarding your personal information. This section supplements the rest of this Privacy Policy and applies only to California residents.</p>
+
+      <p><strong>Right to Know.</strong> You have the right to request that we disclose what personal information we have collected about you in the past 12 months, including the categories of personal information, the categories of sources from which it was collected, the business or commercial purpose for collecting it, the categories of third parties with whom it was shared, and the specific pieces of personal information we hold about you. You may submit up to two such requests per 12-month period at no charge.</p>
+
+      <p><strong>Right to Delete.</strong> You have the right to request that we delete personal information we have collected from you, subject to certain exceptions. Exceptions include information we are required to retain under HIPAA, state medical records law, tax law, or other applicable legal obligations, as well as information necessary to complete a transaction, detect security incidents, or comply with a legal obligation.</p>
+
+      <p><strong>Right to Correct.</strong> You have the right to request correction of inaccurate personal information we maintain about you. We will use commercially reasonable efforts to honor correction requests, subject to verification of your identity.</p>
+
+      <p><strong>Right to Opt Out of Sale or Sharing.</strong> AnthologyRX does <strong>not</strong> sell your personal information, nor do we share it for cross-context behavioral advertising purposes. You therefore do not need to opt out of a sale that does not occur. If our practices change, we will update this policy and provide a "Do Not Sell or Share My Personal Information" mechanism at that time.</p>
+
+      <p><strong>Right to Limit Use of Sensitive Personal Information.</strong> We use sensitive personal information — including health data and precise geolocation — only as necessary to provide the telehealth services you have requested. We do not use sensitive personal information for inferring characteristics about you or for secondary commercial purposes.</p>
+
+      <p><strong>Right to Non-Discrimination.</strong> We will not discriminate against you for exercising your CCPA rights. You will not receive a different level of service, higher price, or reduced quality of care as a result of submitting a privacy request.</p>
+
+      <p>To exercise your CCPA rights, contact us at <a href="mailto:privacy@anthologyrx.com" style="color: var(--gold);">privacy@anthologyrx.com</a>. We will verify your identity before processing your request and will respond within 45 days, with an option to extend by an additional 45 days where reasonably necessary.</p>
+
+      <p>Note: Certain information collected and maintained by AnthologyRX in connection with the provision of healthcare services is exempt from CCPA to the extent it is subject to HIPAA. Where HIPAA applies, HIPAA governs and the CCPA exemption applies.</p>
+    </div>
+
+    <!-- ── 6. Cookies & Tracking ─────────────────────────────────── -->
+    <div class="privacy-section" id="cookies">
+      <h2>6. Cookies &amp; Tracking</h2>
+      <p>AnthologyRX uses cookies and similar tracking technologies to operate our website, understand how visitors interact with our content, and maintain session state in our patient portal. We do not use cookies to build advertising profiles or sell your behavioral data to third parties.</p>
+
+      <p><strong>Types of Cookies We Use</strong></p>
+      <ul>
+        <li><strong>Strictly Necessary Cookies:</strong> Required for the website and patient portal to function. These include session authentication tokens, CSRF protection tokens, and load balancing identifiers. These cannot be disabled without impairing core site functionality.</li>
+        <li><strong>Analytics Cookies:</strong> We use analytics tools (such as Google Analytics with IP anonymization enabled) to measure page views, session duration, referral sources, and conversion events. This data is aggregated and used solely to improve our platform. We do not share analytics data with advertisers.</li>
+        <li><strong>Functional Cookies:</strong> These remember your preferences, such as language settings, form auto-fill data, and the state of dismissible UI elements (e.g., the announcement bar). They improve your experience on return visits.</li>
+      </ul>
+
+      <p><strong>Third-Party Tracking</strong><br>
+      We do not permit third-party advertising networks to place tracking cookies on our site without your prior consent. If we ever introduce retargeting or paid social advertising pixels, we will obtain your consent through a cookie consent mechanism before any such tracking is activated.</p>
+
+      <p><strong>How to Opt Out</strong><br>
+      You may control cookie behavior through your browser settings. Most browsers allow you to view, block, or delete cookies. Note that blocking strictly necessary cookies may prevent you from accessing your patient portal. You may also opt out of Google Analytics measurement by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: var(--gold);">Google Analytics Opt-out Browser Add-on</a>. California residents may also exercise rights under the CCPA as described in Section 5.</p>
+    </div>
+
+    <!-- ── 7. Data Security ──────────────────────────────────────── -->
+    <div class="privacy-section" id="data-security">
+      <h2>7. Data Security</h2>
+      <p>AnthologyRX implements technical and organizational safeguards designed to protect your personal information and PHI against unauthorized access, disclosure, alteration, and destruction. Our security program is aligned with HIPAA Security Rule requirements and SOC 2 Type II principles.</p>
+
+      <ul>
+        <li><strong>Encryption in Transit:</strong> All data transmitted between your browser or device and our servers is protected using TLS 1.2 or higher. We enforce HTTPS across all pages and reject insecure connections.</li>
+        <li><strong>Encryption at Rest:</strong> PHI and sensitive personal information stored in our systems is encrypted at rest using AES-256 encryption.</li>
+        <li><strong>Access Controls:</strong> Access to PHI is restricted to personnel and systems with a legitimate need to process it for treatment, payment, or healthcare operations purposes. Role-based access controls, multi-factor authentication, and audit logging are enforced across our clinical infrastructure.</li>
+        <li><strong>Vendor Oversight:</strong> Third-party vendors who process PHI on our behalf, including Bask Health and our pharmacy partner, are required to execute HIPAA Business Associate Agreements and maintain security programs equivalent to or exceeding our own standards.</li>
+        <li><strong>Regular Risk Assessments:</strong> We conduct periodic risk assessments of our administrative, physical, and technical safeguards in accordance with HIPAA Security Rule requirements.</li>
+      </ul>
+
+      <p><strong>Breach Notification.</strong> In the event of a breach of unsecured PHI affecting your information, AnthologyRX will notify you in accordance with the HIPAA Breach Notification Rule (45 C.F.R. Part 164, Subpart D) — generally within 60 days of discovery, and sooner where required by applicable state law. Notification will be provided by first-class mail or email, depending on your contact preferences on file.</p>
+
+      <p>No system is perfectly secure. While we work diligently to protect your information, we cannot guarantee that unauthorized parties will never be able to defeat our security measures. If you have reason to believe your account has been compromised, contact us immediately at <a href="mailto:privacy@anthologyrx.com" style="color: var(--gold);">privacy@anthologyrx.com</a>.</p>
+    </div>
+
+    <!-- ── 8. Data Retention ─────────────────────────────────────── -->
+    <div class="privacy-section" id="data-retention">
+      <h2>8. Data Retention</h2>
+      <p>AnthologyRX retains your information for as long as necessary to fulfill the purposes described in this policy, comply with applicable legal and regulatory obligations, and resolve disputes.</p>
+
+      <p><strong>Medical and Prescription Records.</strong> Medical records — including your intake assessment, provider notes, prescription history, and lab results — are retained for a minimum of <strong>seven (7) years</strong> from the date of the last patient encounter, or longer where required by the laws of your state. Some states impose longer minimum retention periods for adult medical records (for example, California requires retention of patient records for a minimum of 10 years following the last date of service). We apply the longer of the applicable state or federal requirement.</p>
+
+      <p><strong>Financial and Transaction Records.</strong> Payment and transaction records are retained for a minimum of seven years as required by federal and state tax law.</p>
+
+      <p><strong>Account and Profile Data.</strong> If you have not initiated a treatment protocol and wish to have your account data deleted, you may submit a deletion request to <a href="mailto:privacy@anthologyrx.com" style="color: var(--gold);">privacy@anthologyrx.com</a>. We will process your request within 30 days, subject to any applicable legal holds. Accounts associated with active or completed prescriptions are subject to the medical records retention schedule described above and cannot be fully deleted until that period has expired.</p>
+
+      <p><strong>Marketing and Analytics Data.</strong> Non-PHI marketing interaction data (such as email open rates and website session records) is retained for up to 36 months and then purged or anonymized.</p>
+
+      <p>When retention periods expire, we delete or irreversibly de-identify information in accordance with HIPAA's de-identification standards and our internal data lifecycle policy.</p>
+    </div>
+
+    <!-- ── 9. Children's Privacy ─────────────────────────────────── -->
+    <div class="privacy-section" id="childrens-privacy">
+      <h2>9. Children's Privacy</h2>
+      <p>AnthologyRX's telehealth services are intended exclusively for adults who are 18 years of age or older. We do not knowingly provide services to, collect personal information from, or maintain health records for individuals under the age of 18.</p>
+
+      <p>Our intake assessment includes an age verification step, and any submission from a person who indicates they are under 18 is rejected without processing. If you are a parent or guardian and believe that a minor has submitted personal or health information to AnthologyRX, please contact us immediately at <a href="mailto:privacy@anthologyrx.com" style="color: var(--gold);">privacy@anthologyrx.com</a> so that we may locate and delete that information.</p>
+
+      <p>We do not knowingly collect information from children under 13 as defined by the Children's Online Privacy Protection Act (COPPA), and the age restriction described above ensures that children do not access or use our platform.</p>
+    </div>
+
+    <!-- ── 10. Changes to This Policy ───────────────────────────── -->
+    <div class="privacy-section" id="changes">
+      <h2>10. Changes to This Policy</h2>
+      <p>AnthologyRX may update this Privacy Policy from time to time to reflect changes in our practices, services, legal requirements, or technology. We distinguish between material and non-material changes and treat them differently:</p>
+
+      <p><strong>Material Changes.</strong> A material change is any modification that meaningfully affects how we use your PHI or personal information, the rights you hold, or the parties with whom we share your data. For material changes, we will:</p>
+      <ul>
+        <li>Provide at least <strong>30 days' advance notice</strong> by email to the address associated with your account before the change takes effect</li>
+        <li>Post the updated policy on our website with the revised "Last Updated" date prominently displayed</li>
+        <li>Where required by HIPAA, distribute a revised Notice of Privacy Practices to patients</li>
+      </ul>
+
+      <p><strong>Non-Material Changes.</strong> Minor corrections, clarifications, or formatting updates that do not affect the substance of our data practices will be posted on this page without advance notice. The "Last Updated" date will reflect the date of the revision.</p>
+
+      <p>Your continued use of AnthologyRX services after a change becomes effective constitutes your acceptance of the revised policy. If you do not agree to a material change, you may close your account and request deletion of your non-PHI data as described in Section 8.</p>
+    </div>
+
+    <!-- ── 11. Contact ───────────────────────────────────────────── -->
+    <div class="privacy-section" id="contact">
+      <h2>11. Contact</h2>
+      <p>If you have questions, concerns, or requests related to this Privacy Policy, your rights under HIPAA or the CCPA, or our data practices, please contact our Privacy Officer:</p>
+
+      <div class="contact-block">
+        <p><strong>AnthologyRX Privacy Officer</strong></p>
+        <p>Email: <a href="mailto:privacy@anthologyrx.com">privacy@anthologyrx.com</a></p>
+        <p>Mailing Address:<br>
+          AnthologyRX<br>
+          Los Angeles, CA
+        </p>
+        <p>We aim to acknowledge all privacy-related inquiries within 2 business days and to resolve them within the timeframes required by applicable law (30 days for HIPAA requests; 45 days for CCPA requests, with one permitted extension).</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+        <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+      </a>
+      <p class="footer-tagline">LONGEVITY · VITALITY · LEGACY</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="/treatments/glp-1">GLP-1 / Weight Optimization</a></li>
+          <li><a href="/treatments/nad">NAD+ Therapy</a></li>
+          <li><a href="/treatments/gonadorelin">Gonadorelin</a></li>
+          <li><a href="/treatments/micc">MICC Injections</a></li>
+          <li><a href="/treatments/pt-141">PT-141</a></li>
+          <li><a href="/treatments/tesamorelin">Tesamorelin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/science">The Science</a></li>
+          <li><a href="/blog">Journal</a></li>
+          <li><a href="/press">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/account">Member Login</a></li>
+          <li><a href="/qualify">Start Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy#hipaa">HIPAA Notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-legal">
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503B outsourcing facility. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in eligible states only. Dave Schenk is a compensated co-founder and paid spokesperson for AnthologyRX; results are not typical. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+     MOBILE STICKY BAR
+═══════════════════════════════════════════════════ -->
+<div class="mobile-bar" id="mobilebar">
+  <div class="mobile-bar-text">
+    <span class="mobile-bar-price">AnthologyRX</span>
+    <span class="mobile-bar-sub">Start your assessment today</span>
+  </div>
+  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+  <button class="mobile-bar-dismiss" onclick="document.getElementById('mobilebar').style.display='none'" aria-label="Dismiss">&#x2715;</button>
+</div>
+
+<script>
+// Nav scroll shadow effect
+const navWrap = document.querySelector('.nav-wrap');
+window.addEventListener('scroll', () => {
+  navWrap.style.boxShadow = window.scrollY > 40 ? '0 2px 40px rgba(0,0,0,0.45)' : 'none';
+}, { passive: true });
+</script>
+
+</body>
+</html>
