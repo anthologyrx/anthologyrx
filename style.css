@@ -1119,7 +1119,7 @@ button { cursor: pointer; background: none; border: none; }
   color: var(--text-muted);
   letter-spacing: 0.04em;
   transition: color var(--transition);
-  align-self: center;
+  align-self: flex-start;
 }
 .hero-text-link:hover { color: var(--text); }
 .hero-text-link span { transition: transform var(--transition); }
