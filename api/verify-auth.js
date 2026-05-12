@@ -51,7 +51,8 @@ export default async function handler(request) {
   return new Response('OK', {
     status: 200,
     headers: {
-      'Set-Cookie': `anthology_auth=${cookieValue}; Path=/promissorynote; HttpOnly; Secure; SameSite=Lax; Max-Age=28800`,
+      // Session cookie — no Max-Age means it dies when the browser/tab is closed
+      'Set-Cookie': `anthology_auth=${cookieValue}; Path=/promissorynote; HttpOnly; Secure; SameSite=Lax`,
       'Content-Type': 'text/plain',
     },
   });
