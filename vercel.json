@@ -1,11 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": {},
-  "middleware": {
-    "path": "middleware.js"
-  },
   "rewrites": [
+    { "source": "/promissorynote",                      "destination": "/api/auth" },
+    { "source": "/promissorynote/",                     "destination": "/api/auth" },
     { "source": "/protocols",                         "destination": "/protocol-landing/index.html" },
     { "source": "/pages/pricing",                     "destination": "/pricing-page/index.html" },
     { "source": "/pages/how-it-works",                "destination": "/how-it-works/index.html" },

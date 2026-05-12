@@ -1,6 +1,4 @@
-export const config = {
-  matcher: ['/promissorynote', '/promissorynote/'],
-};
+export const config = { runtime: 'edge' };
 
 const CREDENTIALS = {
   'michael@anthologyrx.com': '30eIh5E#p2%G#VFz',
@@ -9,7 +7,7 @@ const CREDENTIALS = {
   'dave@anthologyrx.com':    '5a5deUH3Av7eEpFm',
 };
 
-export default function middleware(request) {
+export default function handler(request) {
   const authHeader = request.headers.get('authorization');
 
   if (authHeader && authHeader.startsWith('Basic ')) {
@@ -20,12 +18,11 @@ export default function middleware(request) {
         const user = decoded.slice(0, colon);
         const pass = decoded.slice(colon + 1);
         if (CREDENTIALS[user] && CREDENTIALS[user] === pass) {
-          return; // valid — let the request through
+          // Serve the actual page content
+          return fetch(new URL('/promissorynote/index.html', request.url));
         }
       }
-    } catch (e) {
-      // malformed header — fall through to 401
-    }
+    } catch (e) {}
   }
 
   return new Response('Authentication Required', {
