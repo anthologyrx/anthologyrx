@@ -4,6 +4,9 @@
   "rewrites": [
     { "source": "/promissorynote",                      "destination": "/api/auth" },
     { "source": "/promissorynote/",                     "destination": "/api/auth" },
+    { "source": "/login",                               "destination": "/api/login" },
+    { "source": "/login/",                              "destination": "/api/login" },
+    { "source": "/api/verify-auth",                     "destination": "/api/verify-auth" },
     { "source": "/protocols",                         "destination": "/protocol-landing/index.html" },
     { "source": "/pages/pricing",                     "destination": "/pricing-page/index.html" },
     { "source": "/pages/how-it-works",                "destination": "/how-it-works/index.html" },
