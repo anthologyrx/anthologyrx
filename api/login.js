@@ -7,6 +7,17 @@ const LOGIN_HTML = `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>AnthologyRX · Founders Portal</title>
+<meta property="og:title" content="AnthologyRX · Founders Portal" />
+<meta property="og:description" content="Restricted access portal for AnthologyRX founders." />
+<meta property="og:image" content="https://anthologyrx.vercel.app/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://anthologyrx.com/promissorynote" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AnthologyRX · Founders Portal" />
+<meta name="twitter:description" content="Restricted access portal for AnthologyRX founders." />
+<meta name="twitter:image" content="https://anthologyrx.vercel.app/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
