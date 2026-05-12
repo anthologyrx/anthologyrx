@@ -1,6 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {},
+  "middleware": {
+    "path": "middleware.js"
+  },
   "rewrites": [
     { "source": "/protocols",                         "destination": "/protocol-landing/index.html" },
     { "source": "/pages/pricing",                     "destination": "/pricing-page/index.html" },

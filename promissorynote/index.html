@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>AnthologyRX · Founder Loan Facility</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --charcoal: #1E1E1E;
+    --bg-card: #262422;
+    --border: #373430;
+    --charcoal-deep: #141414;
+    --sand: #E8DCC8;
+    --brass: #B28A2A;
+    --brass-bright: #D4A847;
+    --bone: #F2EDE4;
+    --steel: #344858;
+    --muted: #9A9080;
+    --muted-dark: #5C544A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--charcoal);
+    color: var(--sand);
+    font-family: 'Epilogue', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* === SECTIONS === */
+  section {
+    min-height: 100vh;
+    padding: 8vh 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid rgba(178, 138, 42, 0.15);
+  }
+
+  /* === COVER / HERO === */
+  .hero {
+    background: var(--charcoal);
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  .brass-rule {
+    width: 80%;
+    max-width: 700px;
+    height: 2px;
+    background: var(--brass);
+    margin: 0 auto;
+  }
+
+  .brass-rule-top { margin-bottom: 8vh; }
+  .brass-rule-bottom { margin-top: 8vh; }
+
+  .wordmark-display {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .wordmark-text {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.08em;
+    line-height: 1;
+  }
+
+  .wordmark-display .anthology {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color: var(--sand);
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .wordmark-display .rx {
+    font-size: clamp(1.25rem, 3.5vw, 2.5rem);
+    color: var(--brass);
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    line-height: 1;
+    /* No vertical-align — flex parent handles top alignment */
+  }
+
+  .wordmark-display .underline {
+    position: absolute;
+    bottom: -0.15em;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--brass);
+  }
+
+  .hero-tagline {
+    margin-top: 3rem;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    font-weight: 600;
+    letter-spacing: 0.6em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 8vh;
+  }
+
+  .doc-title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    letter-spacing: 0.05em;
+    color: var(--sand);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .doc-subtitle {
+    font-family: 'Epilogue', sans-serif;
+    font-style: italic;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  .hero-meta {
+    margin-top: auto;
+    padding-top: 8vh;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .hero-meta .company {
+    color: var(--sand);
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-meta .entity-type {
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    text-transform: uppercase;
+    animation: pulse 2.5s ease-in-out infinite;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .scroll-indicator::after {
+    content: "↓";
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--brass);
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(4px); }
+  }
+
+  /* === INTERIOR SECTIONS (LIGHT) === */
+  .interior {
+    background: var(--bg-card);
+    color: var(--sand);
+  }
+
+  .interior-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-heading {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--sand);
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .section-rule {
+    width: 60px;
+    height: 3px;
+    background: var(--brass);
+    margin: 1.5rem 0 2.5rem 0;
+  }
+
+  .section-rule.full {
+    width: 100%;
+    height: 1px;
+    background: rgba(178, 138, 42, 0.3);
+    margin: 2.5rem 0;
+  }
+
+  .lead {
+    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+    line-height: 1.7;
+    color: var(--sand);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  .body-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--sand-dim, #C8BAA0);
+    margin-bottom: 1.25rem;
+  }
+
+  .body-text strong { color: var(--sand); font-weight: 600; }
+
+  /* === DETAIL GRID === */
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 2.5rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .detail-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) 2.5fr;
+    gap: 2rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+  }
+
+  .detail-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .detail-value {
+    font-size: 1.15rem;
+    color: var(--sand);
+    font-weight: 400;
+  }
+
+  .detail-value.highlight {
+    color: var(--brass);
+    font-weight: 600;
+  }
+
+  /* === TERM CARDS === */
+  .term-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .term-card {
+    background: #1E1E1E;
+    padding: 2rem;
+    border-left: 3px solid var(--brass);
+    border: 1px solid rgba(178, 138, 42, 0.2);
+    border-left: 3px solid var(--brass);
+  }
+
+  .term-card .number {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--brass);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .term-card .label {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--sand);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .term-card .value {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* === REPAYMENT LADDER === */
+  .ladder {
+    margin: 2.5rem 0;
+    position: relative;
+  }
+
+  .ladder-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(178, 138, 42, 0.2);
+    position: relative;
+  }
+
+  .ladder-step:last-child { border-bottom: none; }
+
+  .ladder-threshold {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--brass);
+    line-height: 1;
+  }
+
+  .ladder-threshold .unit {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--muted-dark);
+    letter-spacing: 0.2em;
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+
+  .ladder-body .title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--sand);
+    margin-bottom: 0.5rem;
+  }
+
+  .ladder-body .description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  /* === PROTECTION GRID === */
+  .protection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 2.5rem 0;
+  }
+
+  .protection {
+    background: rgba(178, 138, 42, 0.05);
+    padding: 1.5rem;
+    border-radius: 2px;
+  }
+
+  .protection .icon {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    color: var(--brass);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .protection .title {
+    font-weight: 600;
+    color: var(--sand);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .protection .desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* === CTA / ACTIONS === */
+  .actions {
+    background: var(--charcoal);
+    color: var(--sand);
+    text-align: center;
+    padding: 10vh 6vw;
+  }
+
+  .actions .eyebrow {
+    color: var(--brass);
+    margin-bottom: 1.5rem;
+  }
+
+  .actions h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--sand);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .actions .intro {
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 1.25rem 2.5rem;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--brass);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: 280px;
+  }
+
+  .btn-primary {
+    background: var(--brass);
+    color: var(--charcoal);
+  }
+
+  .btn-primary:hover {
+    background: var(--brass-bright);
+    border-color: var(--brass-bright);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--sand);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(178, 138, 42, 0.1);
+    color: var(--brass-bright);
+    border-color: var(--brass-bright);
+    transform: translateY(-2px);
+  }
+
+  .btn .arrow { font-size: 1.1rem; }
+
+  .footer-note {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(178, 138, 42, 0.2);
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  /* === PROGRESS INDICATOR === */
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(232, 220, 200, 0.05);
+    z-index: 100;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: var(--brass);
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+
+  /* === NAV PILL === */
+  .nav-pill {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(178, 138, 42, 0.3);
+    border-radius: 100px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--sand);
+    text-transform: uppercase;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .nav-pill.visible { opacity: 1; }
+
+  .nav-pill .accent { color: var(--brass); }
+
+  /* === REVEAL ANIMATIONS === */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 640px) {
+    section { padding: 6vh 5vw; }
+    .detail-row { grid-template-columns: 1fr; gap: 0.25rem; padding: 1.1rem 0; }
+    .ladder-step { grid-template-columns: 1fr; gap: 1rem; }
+    .btn { min-width: 100%; }
+    .btn-row { gap: 1rem; }
+    .nav-pill { top: 1rem; right: 1rem; font-size: 0.65rem; padding: 0.5rem 1rem; }
+  }
+
+  /* === PRINT === */
+  @media print {
+    .nav-pill, .progress, .scroll-indicator, .actions { display: none; }
+    section { min-height: auto; page-break-inside: avoid; padding: 1in; }
+    .hero { color: var(--charcoal); background: white; }
+    .hero .anthology, .doc-title { color: var(--charcoal); }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="nav-pill" id="navPill">
+  <span class="accent">●</span> Founder Loan Facility
+</div>
+
+<!-- === HERO / COVER === -->
+<section class="hero" id="hero">
+  <div class="brass-rule brass-rule-top"></div>
+
+  <div class="wordmark-display">
+    <div class="wordmark-text">
+      <span class="anthology">ANTHOLOGY</span><span class="rx">RX</span>
+    </div>
+    <div class="underline"></div>
+  </div>
+
+  <div class="hero-tagline">LONGEVITY · VITALITY · LEGACY</div>
+
+  <div class="doc-title">Master Promissory Note</div>
+  <div class="doc-subtitle">Founder Loan Facility</div>
+
+  <div class="hero-meta">
+    <div class="company">ANTHOLOGYRX LLC</div>
+    <div class="entity-type">A Delaware Limited Liability Company</div>
+    Confidential &nbsp;·&nbsp; Private Placement &nbsp;·&nbsp; 2026
+  </div>
+
+  <div class="brass-rule brass-rule-bottom"></div>
+
+  <div class="scroll-indicator" onclick="document.getElementById('overview').scrollIntoView({behavior: 'smooth'})">
+    Review the terms
+  </div>
+</section>
+
+<!-- === OVERVIEW === -->
+<section class="interior" id="overview">
+  <div class="interior-inner">
+    <div class="reveal eyebrow">Overview</div>
+    <h2 class="reveal section-heading reveal-delay-1">What you're signing.</h2>
+    <div class="section-rule"></div>
+
+    <p class="lead reveal reveal-delay-2">
+      You are extending a loan to AnthologyRX LLC. In exchange, the company commits to repay the principal plus interest under a structured schedule that protects both you and the business. Below is the full picture.
+    </p>
+
+    <p class="body-text reveal reveal-delay-3">
+      This Master Promissory Note governs all loans you make to the company. Your first advance is recorded here. Future advances are added through a one-page Acknowledgment that references the same terms. One document, scaled cleanly across the life of our lending relationship.
+    </p>
+  </div>
+</section>
+
+<!-- === DEAL TERMS === -->
+<section class="interior" id="terms">
+  <div class="interior-inner">
+    <div class="reveal eyebrow">Principal Terms</div>
+    <h2 class="reveal section-heading reveal-delay-1">The deal, at a glance.</h2>
+    <div class="section-rule"></div>
+
+    <div class="detail-grid reveal reveal-delay-2">
+      <div class="detail-row">
+        <div class="detail-label">Principal Amount</div>
+        <div class="detail-value highlight">Per DocuSign envelope</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Effective Date</div>
+        <div class="detail-value">Per DocuSign envelope</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Maker</div>
+        <div class="detail-value">AnthologyRX LLC</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Holder</div>
+        <div class="detail-value">Per DocuSign envelope</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Interest Rate</div>
+        <div class="detail-value highlight">12.00% per annum, compounded annually</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Maturity</div>
+        <div class="detail-value">7th anniversary of Effective Date</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Governing Law</div>
+        <div class="detail-value">State of Delaware</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === HOW INTEREST WORKS === -->
+<section class="interior" id="interest">
+  <div class="interior-inner">
+    <div class="reveal eyebrow">Section 02 · Interest</div>
+    <h2 class="reveal section-heading reveal-delay-1">How your capital earns.</h2>
+    <div class="section-rule"></div>
+
+    <div class="term-cards">
+      <div class="term-card reveal reveal-delay-2">
+        <div class="number">01</div>
+        <div class="label">Fixed Rate</div>
+        <div class="value">12.00% per annum on the outstanding principal balance, calculated on a 365-day year.</div>
+      </div>
+      <div class="term-card reveal reveal-delay-3">
+        <div class="number">02</div>
+        <div class="label">Annual Compounding</div>
+        <div class="value">Each anniversary of the Effective Date, accrued interest is added to principal and begins earning interest itself.</div>
+      </div>
+      <div class="term-card reveal reveal-delay-4">
+        <div class="number">03</div>
+        <div class="label">Tranche-Specific</div>
+        <div class="value">Interest on each advance accrues from its own date, not the original Effective Date. Every dollar starts earning immediately.</div>
+      </div>
+    </div>
+
+    <p class="body-text reveal" style="margin-top: 2rem; font-style: italic; color: var(--muted);">
+      A $10,000 advance at 12% compounded annually grows to approximately $17,623 after 5 years. At maturity (year 7), it reaches approximately $22,107.
+    </p>
+  </div>
+</section>
+
+<!-- === REPAYMENT LADDER === -->
+<section class="interior" id="repayment">
+  <div class="interior-inner">
+    <div class="reveal eyebrow">Section 03 · Repayment</div>
+    <h2 class="reveal section-heading reveal-delay-1">How you get repaid.</h2>
+    <div class="section-rule"></div>
+
+    <p class="lead reveal reveal-delay-2">
+      Repayment scales with the company's financial health. The structure prevents premature cash extraction while ensuring you are paid back as soon as the business genuinely can.
+    </p>
+
+    <div class="ladder">
+      <div class="ladder-step reveal reveal-delay-2">
+        <div class="ladder-threshold">
+          &lt;6
+          <span class="unit">months reserves</span>
+        </div>
+        <div class="ladder-body">
+          <div class="title">Voluntary repayment with unanimous consent</div>
+          <div class="description">If a founder demonstrates financial need, the Members may unanimously approve early repayment of that founder's loan. A guardrail with flexibility — protection from capricious withdrawal, allowance for genuine hardship.</div>
+        </div>
+      </div>
+      <div class="ladder-step reveal reveal-delay-3">
+        <div class="ladder-threshold">
+          6+
+          <span class="unit">months reserves</span>
+        </div>
+        <div class="ladder-body">
+          <div class="title">Mandatory quarterly interest payments begin</div>
+          <div class="description">Once the company sustains six months of operating reserves for two consecutive quarters, accrued interest is paid pro rata to all founder loan holders every quarter.</div>
+        </div>
+      </div>
+      <div class="ladder-step reveal reveal-delay-4">
+        <div class="ladder-threshold">
+          9+
+          <span class="unit">months reserves</span>
+        </div>
+        <div class="ladder-body">
+          <div class="title">Mandatory quarterly principal payments begin</div>
+          <div class="description">Once the company sustains nine months of reserves for two consecutive quarters, principal repayment begins, pro rata across all founder loans. Cash flows back to founders systematically as the business strengthens.</div>
+        </div>
+      </div>
+      <div class="ladder-step reveal">
+        <div class="ladder-threshold">
+          07
+          <span class="unit">year maturity</span>
+        </div>
+        <div class="ladder-body">
+          <div class="title">Backstop: full repayment due</div>
+          <div class="description">Any outstanding principal and accrued interest must be paid in full on the 7th anniversary of the Effective Date, regardless of where reserves stand.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === PROTECTIONS === -->
+<section class="interior" id="protections">
+  <div class="interior-inner">
+    <div class="reveal eyebrow">Sections 04 &amp; 05 · Subordination &amp; Recourse</div>
+    <h2 class="reveal section-heading reveal-delay-1">Where you stand in line.</h2>
+    <div class="section-rule"></div>
+
+    <p class="lead reveal reveal-delay-2">
+      The note's priority and recourse structure exists to protect the company's operational integrity, ensure pro rata treatment among founder lenders, and shield individual founders from personal liability.
+    </p>
+
+    <div class="protection-grid">
+      <div class="protection reveal reveal-delay-2">
+        <div class="icon">→</div>
+        <div class="title">Senior to equity distributions</div>
+        <div class="desc">Founder loans are repaid before any equity distribution to Members (tax distributions excepted).</div>
+      </div>
+      <div class="protection reveal reveal-delay-3">
+        <div class="icon">=</div>
+        <div class="title">Pari passu with peer loans</div>
+        <div class="desc">All founder loans rank equally. Repayment is pro rata. No founder is preferred over another.</div>
+      </div>
+      <div class="protection reveal reveal-delay-3">
+        <div class="icon">↓</div>
+        <div class="title">Subordinated where it matters</div>
+        <div class="desc">Trade payables, employee compensation, taxes, and future institutional financing are paid first. Operations protected.</div>
+      </div>
+      <div class="protection reveal reveal-delay-4">
+        <div class="icon">●</div>
+        <div class="title">No personal recourse</div>
+        <div class="desc">If the company dissolves with insufficient assets, the unpaid balance is uncollectible. No founder is personally liable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === WHAT IT IS NOT === -->
+<section class="interior" id="not">
+  <div class="interior-inner">
+    <div class="reveal eyebrow">For Clarity</div>
+    <h2 class="reveal section-heading reveal-delay-1">What this note is not.</h2>
+    <div class="section-rule"></div>
+
+    <p class="body-text reveal reveal-delay-2">
+      <strong>It is not equity.</strong> Repayment satisfies the obligation in full. There is no conversion right, no participation in upside, no claim on the company's equity value beyond what is owed in principal and interest.
+    </p>
+
+    <p class="body-text reveal reveal-delay-3">
+      <strong>It is not a personal obligation of the founders.</strong> The note is solely an obligation of AnthologyRX LLC. The limited liability of the LLC structure protects every Member and signatory.
+    </p>
+
+    <p class="body-text reveal reveal-delay-4">
+      <strong>It is not callable on demand.</strong> The repayment triggers are objective and tied to operating reserves. Neither party can unilaterally accelerate repayment outside the defined events of default.
+    </p>
+  </div>
+</section>
+
+<!-- === CTA === -->
+<section class="actions" id="sign">
+  <div class="eyebrow">Execution</div>
+  <h2>Ready when you are.</h2>
+  <p class="intro">
+    Proceed to DocuSign to review and execute the note. All fields will be populated for your specific advance — DocuSign will provide a completed copy upon execution.
+  </p>
+
+  <div class="btn-row">
+    <a href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=d21b1760-4dc9-4af4-a651-aeb171201ef5&env=na4&acct=bbcd3270-1be8-4729-aeda-3bf3f416f081&v=2" class="btn btn-primary" id="signBtn" target="_blank" rel="noopener noreferrer">
+      Open DocuSign Envelope
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <div class="footer-note">
+    This presentation is a guided walkthrough of the Master Promissory Note. The DocuSign envelope is the legally binding instrument. Capitalized terms have the meanings given in the executed Note. Reviewed by counsel; consult your tax advisor regarding interest income treatment.
+  </div>
+</section>
+
+<script>
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Progress bar + nav pill
+  const progressBar = document.getElementById('progressBar');
+  const navPill = document.getElementById('navPill');
+  const hero = document.getElementById('hero');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrolled / total * 100) + '%';
+
+    // Show nav pill once user scrolls past hero
+    if (scrolled > window.innerHeight * 0.5) {
+      navPill.classList.add('visible');
+    } else {
+      navPill.classList.remove('visible');
+    }
+  });
+
+  // Smooth scroll for any anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // DocuSign button is wired directly via href — no JS handler needed
+</script>
+
+</body>
+</html>
