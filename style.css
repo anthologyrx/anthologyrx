@@ -572,6 +572,14 @@ button { cursor: pointer; background: none; border: none; }
   margin-top: auto;
 }
 .treatment-price strong { color: var(--text); font-weight: 600; }
+.treatment-stat-disclaimer {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
 .treatment-card-actions {
   display: flex;
   align-items: center;
