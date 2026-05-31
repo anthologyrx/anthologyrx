@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notice of Privacy Practices | AnthologyRX</title>
+  <meta name="description" content="AnthologyRX HIPAA Notice of Privacy Practices — how we collect, use, and protect your health information." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://anthologyrx.com/privacy-practices" />
+  <meta property="og:title"       content="Notice of Privacy Practices | AnthologyRX" />
+  <meta property="og:image"       content="https://anthologyrx.vercel.app/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: #1E1E1E;
+  color: #E8DCC8;
+  font-family: 'Epilogue', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+.nav-wrap {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #1E1E1E;
+  border-bottom: 1px solid #373430;
+  transition: box-shadow 0.3s;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 32px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { display: flex; align-items: baseline; gap: 0; text-decoration: none; }
+.logo-main { font-family: 'Unbounded', sans-serif; font-weight: 400; font-size: 17px; color: #E8DCC8; letter-spacing: 0.08em; }
+.logo-rx   { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 11px; color: #B28A2A; vertical-align: super; margin-left: 0.1em; }
+.nav-back { font-size: 13px; color: #E8DCC8; opacity: 0.55; text-decoration: none; letter-spacing: 0.02em; transition: opacity 0.2s; }
+.nav-back:hover { opacity: 1; }
+
+/* ── LEGAL DOC ── */
+.legal-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 112px 32px 80px;
+}
+.legal-eyebrow {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: #B28A2A;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.legal-title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: #E8DCC8;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.legal-meta {
+  font-size: 0.78rem;
+  color: rgba(232,220,200,0.45);
+  margin-bottom: 48px;
+  border-bottom: 1px solid #373430;
+  padding-bottom: 24px;
+}
+.legal-section {
+  margin-bottom: 40px;
+}
+.legal-section h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: #B28A2A;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.legal-section p {
+  font-size: 0.92rem;
+  color: rgba(232,220,200,0.8);
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+.legal-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 12px;
+}
+.legal-section ul li {
+  font-size: 0.92rem;
+  color: rgba(232,220,200,0.8);
+  line-height: 1.75;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 6px;
+}
+.legal-section ul li::before {
+  content: '—';
+  position: absolute; left: 0;
+  color: #B28A2A;
+  font-size: 0.8rem;
+}
+.legal-highlight {
+  background: #262422;
+  border-left: 3px solid #B28A2A;
+  padding: 16px 20px;
+  border-radius: 2px;
+  margin: 20px 0;
+  font-size: 0.88rem;
+  color: rgba(232,220,200,0.75);
+  line-height: 1.7;
+}
+a { color: #B28A2A; }
+a:hover { opacity: 0.8; }
+
+/* ── FOOTER ── */
+.footer {
+  background: #141312;
+  border-top: 1px solid #373430;
+  padding: 60px 32px 32px;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-brand { margin-bottom: 40px; }
+.footer-tagline { font-size: 0.65rem; letter-spacing: 0.16em; color: rgba(232,220,200,0.35); margin-top: 6px; }
+.footer-cols { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; margin-bottom: 40px; }
+.footer-col h4 { font-family: 'Unbounded', sans-serif; font-size: 0.6rem; letter-spacing: 0.16em; color: #B28A2A; text-transform: uppercase; margin-bottom: 14px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a { font-size: 0.82rem; color: rgba(232,220,200,0.55); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: #E8DCC8; }
+.footer-divider { border: none; border-top: 1px solid #373430; margin-bottom: 24px; }
+.footer-legal { font-size: 0.68rem; color: rgba(232,220,200,0.3); line-height: 1.7; }
+@media (max-width: 768px) {
+  .footer-cols { grid-template-columns: repeat(2,1fr); }
+  .legal-wrap { padding: 96px 20px 60px; }
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <a href="/qualify" class="nav-back">← Back to Assessment</a>
+  </div>
+</nav>
+
+<main>
+  <div class="legal-wrap">
+
+    <p class="legal-eyebrow">HIPAA &mdash; 45 CFR &sect;164.520</p>
+    <h1 class="legal-title">Notice of Privacy Practices</h1>
+    <p class="legal-meta">Effective Date: June 1, 2026 &nbsp;&middot;&nbsp; Last Updated: June 1, 2026 &nbsp;&middot;&nbsp; Privacy Contact: <a href="mailto:michael@anthologyrx.com">michael@anthologyrx.com</a></p>
+
+    <div class="legal-highlight">
+      This notice describes how medical information about you may be used and disclosed and how you can get access to this information. <strong>Please review it carefully.</strong>
+    </div>
+
+    <!-- 1 -->
+    <div class="legal-section">
+      <h2>Who We Are</h2>
+      <p>AnthologyRX is a telehealth platform that connects patients with licensed independent physicians for the evaluation and management of longevity, metabolic, and performance health protocols. We are a covered entity under the Health Insurance Portability and Accountability Act (HIPAA) and are required by law to maintain the privacy of your Protected Health Information (PHI), provide you with this notice of our privacy practices, and abide by the terms of this notice.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="legal-section">
+      <h2>What Information We Collect</h2>
+      <p>When you use AnthologyRX, we may collect the following types of Protected Health Information:</p>
+      <ul>
+        <li>Health history provided through the eligibility assessment (symptoms, medical conditions, current medications, allergies)</li>
+        <li>Biometric information (height, weight, BMI)</li>
+        <li>Demographic information (age, biological sex, state of residence)</li>
+        <li>Provider communications and clinical notes generated during your care</li>
+        <li>Prescription records and pharmacy fulfillment information</li>
+        <li>Lab results, if ordered as part of your protocol</li>
+        <li>Payment information associated with your subscription</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="legal-section">
+      <h2>How We Use Your Information</h2>
+      <p>We use your PHI for three primary purposes permitted under HIPAA without requiring your separate authorization:</p>
+      <p><strong>Treatment.</strong> We share your health information with the licensed physicians in our clinical partner network (Bask Health) who evaluate your assessment and, if appropriate, issue a prescription. We also share necessary information with our licensed 503B compounding pharmacy to fulfill your prescription and with any specialist or provider involved in your care.</p>
+      <p><strong>Payment.</strong> We use your information to process your subscription, verify insurance or FSA/HSA benefit claims where applicable, and manage billing.</p>
+      <p><strong>Healthcare Operations.</strong> We use de-identified or aggregate health information to improve our platform, evaluate clinical protocols, ensure quality of care, and conduct internal compliance audits. We do not sell your PHI.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="legal-section">
+      <h2>Who We Share Your Information With</h2>
+      <p>We share your PHI only with parties who have entered into a HIPAA-compliant Business Associate Agreement (BAA) with AnthologyRX, including:</p>
+      <ul>
+        <li><strong>Bask Health</strong> &mdash; our clinical partner whose licensed provider network evaluates your assessment and issues prescriptions</li>
+        <li><strong>Licensed 503B Compounding Pharmacy</strong> &mdash; to fulfill any prescribed medication</li>
+        <li><strong>Payment Processor</strong> &mdash; limited to billing information necessary to process your subscription</li>
+      </ul>
+      <p>We do not sell, rent, or share your PHI with advertisers, data brokers, or any third party for marketing purposes.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="legal-section">
+      <h2>Your Rights</h2>
+      <p>You have the following rights regarding your Protected Health Information:</p>
+      <ul>
+        <li><strong>Right to Access.</strong> You may request a copy of your health records. We will provide access within 30 days.</li>
+        <li><strong>Right to Amend.</strong> You may request that we correct inaccurate or incomplete information in your records.</li>
+        <li><strong>Right to Restrict.</strong> You may request that we limit how we use or share your PHI, though we are not always required to agree.</li>
+        <li><strong>Right to an Accounting of Disclosures.</strong> You may request a list of instances where we have shared your PHI outside of routine treatment, payment, and operations.</li>
+        <li><strong>Right to a Paper Copy.</strong> You may request a printed copy of this notice at any time, even if you agreed to receive it electronically.</li>
+        <li><strong>Right to Withdraw Consent.</strong> You may withdraw consent to telehealth services at any time by contacting us at <a href="mailto:michael@anthologyrx.com">michael@anthologyrx.com</a>. Withdrawal does not affect information already used or disclosed.</li>
+      </ul>
+      <p>To exercise any of these rights, contact our Privacy Officer at <a href="mailto:michael@anthologyrx.com">michael@anthologyrx.com</a>.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="legal-section">
+      <h2>How We Protect Your Information</h2>
+      <p>AnthologyRX implements administrative, physical, and technical safeguards to protect your PHI from unauthorized access, use, or disclosure. All data in transit is encrypted using TLS. Access to PHI is limited to personnel and partners who require it to deliver your care.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="legal-section">
+      <h2>How to File a Complaint</h2>
+      <p>If you believe your privacy rights have been violated, you may file a complaint with AnthologyRX or directly with the U.S. Department of Health and Human Services, Office for Civil Rights:</p>
+      <ul>
+        <li><strong>AnthologyRX Privacy Officer:</strong> <a href="mailto:michael@anthologyrx.com">michael@anthologyrx.com</a></li>
+        <li><strong>HHS Office for Civil Rights:</strong> <a href="https://www.hhs.gov/ocr/privacy/hipaa/complaints/" target="_blank" rel="noopener">hhs.gov/ocr/privacy/hipaa/complaints</a> &nbsp;&middot;&nbsp; 1-800-368-1019</li>
+      </ul>
+      <p>We will not retaliate against you for filing a complaint.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="legal-section">
+      <h2>Changes to This Notice</h2>
+      <p>AnthologyRX reserves the right to change this notice at any time. Any revised notice will apply to all PHI we maintain. We will post the updated notice on this page with a new effective date. If material changes are made, we will notify you by email at the address associated with your account.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="legal-section">
+      <h2>Contact</h2>
+      <p>Questions about this notice or your privacy rights should be directed to:</p>
+      <p>
+        <strong>AnthologyRX Privacy Officer</strong><br>
+        Email: <a href="mailto:michael@anthologyrx.com">michael@anthologyrx.com</a><br>
+        Website: <a href="https://www.anthologyrx.com">anthologyrx.com</a>
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+        <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+      </a>
+      <p class="footer-tagline">LONGEVITY &middot; VITALITY &middot; LEGACY</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="/treatments/glp-1">GLP-1 / Weight Optimization</a></li>
+          <li><a href="/treatments/nad">NAD+ Therapy</a></li>
+          <li><a href="/treatments/gonadorelin">Gonadorelin</a></li>
+          <li><a href="/treatments/micc">MICC Injections</a></li>
+          <li><a href="/treatments/pt-141">PT-141</a></li>
+          <li><a href="/treatments/tesamorelin">Tesamorelin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/science">The Science</a></li>
+          <li><a href="/blog">Journal</a></li>
+          <li><a href="/press">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/account">Member Login</a></li>
+          <li><a href="/qualify">Start Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy-practices">Notice of Privacy Practices</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-legal">
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503B outsourcing facility. Compounded medications are not FDA-approved drug products. Individual results vary &mdash; no outcome is guaranteed. &copy; 2026 AnthologyRX. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+const navWrap = document.querySelector('.nav-wrap');
+window.addEventListener('scroll', () => {
+  navWrap.style.boxShadow = window.scrollY > 40 ? '0 2px 40px rgba(0,0,0,0.45)' : 'none';
+}, { passive: true });
+</script>
+
+</body>
+</html>
