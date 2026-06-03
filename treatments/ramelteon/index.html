@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MICC Injections — Lipotropic Body Composition | AnthologyRX</title>
+  <title>Ramelteon — Sleep Protocol | AnthologyRX</title>
   <!-- Open Graph / Social Share -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://anthologyrx.com/treatments/micc" />
-  <meta property="og:title"       content="MICC Injections | AnthologyRX — Prescription Longevity" />
-  <meta property="og:description" content="Physician-prescribed MICC (Methionine, Inositol, Choline, Cyanocobalamin) for metabolic support and fat metabolism — compounded by a licensed 503B pharmacy." />
+  <meta property="og:url"         content="https://anthologyrx.com/treatments/ramelteon" />
+  <meta property="og:title"       content="Ramelteon | AnthologyRX — Prescription Longevity" />
+  <meta property="og:description" content="Physician-prescribed Ramelteon for sleep optimization and circadian restoration — prescribed following clinical evaluation, compounded by a licensed 503B pharmacy." />
   <meta property="og:image"       content="https://anthologyrx.vercel.app/og-image.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <!-- Twitter / X Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="MICC Injections | AnthologyRX — Prescription Longevity" />
-  <meta name="twitter:description" content="Physician-prescribed MICC (Methionine, Inositol, Choline, Cyanocobalamin) for metabolic support and fat metabolism — compounded by a licensed 503B pharmacy." />
+  <meta name="twitter:title"       content="Ramelteon | AnthologyRX — Prescription Longevity" />
+  <meta name="twitter:description" content="Physician-prescribed Ramelteon for sleep optimization and circadian restoration — prescribed following clinical evaluation, compounded by a licensed 503B pharmacy." />
   <meta name="twitter:image"       content="https://anthologyrx.vercel.app/og-image.jpg" />
-  <meta name="description" content="Methionine, Inositol, Choline, Cyanocobalamin. A compounded lipotropic injection that supports fat metabolism and liver function. Commonly stacked with GLP-1. $99/mo." />
+  <meta name="description" content="Ramelteon targets the melatonin MT1 and MT2 receptors that regulate your circadian rhythm — not a sedative, not scheduled. Clinician-prescribed. Compounded by a licensed 503B pharmacy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
 
 /* ═══════════════════════════════════════════════════
-   ANTHOLOGY RX — MICC TREATMENT PAGE
+   ANTHOLOGY RX — RAMELTEON TREATMENT PAGE
    Brand: #1E1E1E bg · #E8DCC8 sand · #B28A2A brass gold
    Fonts: Unbounded (display) · Epilogue (body)
 ═══════════════════════════════════════════════════ */
@@ -236,15 +236,15 @@ strong { color: var(--sand); font-weight: 600; }
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  filter: grayscale(100%) contrast(1.15) brightness(0.5);
+  filter: grayscale(100%) contrast(1.15) brightness(0.45);
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(18,16,14,0.92) 0%,
-    rgba(18,16,14,0.75) 45%,
+    rgba(18,16,14,0.95) 0%,
+    rgba(18,16,14,0.78) 45%,
     rgba(18,16,14,0.3) 100%
   );
   z-index: 1;
@@ -271,7 +271,7 @@ strong { color: var(--sand); font-weight: 600; }
   margin-bottom: 24px;
 }
 .hero h1 {
-  max-width: 14ch;
+  max-width: 16ch;
   margin-bottom: 28px;
 }
 .hero-sub {
@@ -326,7 +326,7 @@ strong { color: var(--sand); font-weight: 600; }
 .outcome-stat:first-child { border-left: none; }
 .outcome-num {
   font-family: 'Unbounded', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 900;
   color: var(--gold);
   letter-spacing: -0.03em;
@@ -381,52 +381,108 @@ strong { color: var(--sand); font-weight: 600; }
   color: var(--sand);
 }
 
-/* ── PROTOCOL (THE 4 COMPOUNDS) ─────────────────── */
-.protocol-section {
-  margin-top: 72px;
-}
-.compound-grid {
+/* ── PROTOCOL (single compound) ─────────────────── */
+.protocol-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-top: 48px;
+  max-width: 640px;
 }
-.compound-card {
+.compare-card {
   background: var(--bg-card);
   border: 1px solid var(--rule);
   border-radius: 4px;
-  padding: 36px 32px;
+  padding: 40px 36px;
   position: relative;
   transition: border-color 0.25s;
 }
-.compound-card:hover { border-color: rgba(178,138,42,0.4); }
-.compound-letter {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 3.2rem;
-  font-weight: 900;
-  color: var(--gold);
-  opacity: 0.2;
-  line-height: 1;
-  margin-bottom: 12px;
+.compare-card--featured {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--bg-card), rgba(178,138,42,0.04));
 }
-.compound-name {
+.compare-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: #1E1E1E;
   font-family: 'Unbounded', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.compare-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--sand);
-  margin-bottom: 4px;
-  letter-spacing: 0.04em;
+  margin-bottom: 6px;
 }
-.compound-type {
-  font-size: 0.75rem;
+.compare-mechanism {
+  font-size: 0.8rem;
   color: var(--gold);
+  margin-bottom: 20px;
   font-style: italic;
-  margin-bottom: 16px;
 }
-.compound-desc {
-  font-size: 0.875rem;
+.compare-stat {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--sand);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.compare-stat-label {
+  font-size: 0.75rem;
   color: var(--sand-dim);
-  line-height: 1.75;
+  margin-bottom: 24px;
+}
+.compare-divider { border: none; border-top: 1px solid var(--rule); margin: 24px 0; }
+.compare-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.compare-list li {
+  font-size: 0.85rem;
+  color: var(--sand-dim);
+  padding-left: 18px;
+  position: relative;
+}
+.compare-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+.compare-price {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--sand);
+  letter-spacing: -0.03em;
+}
+.compare-price span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--sand-dim);
+  letter-spacing: 0;
+}
+.compare-anchor {
+  font-size: 0.75rem;
+  color: var(--sand-dim);
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+.compare-trial-note {
+  font-size: 0.68rem;
+  color: rgba(156,144,130,0.6);
+  margin-top: 12px;
+  line-height: 1.5;
 }
 
 /* ── BENEFIT GRID ───────────────────────────────── */
@@ -556,6 +612,20 @@ strong { color: var(--sand); font-weight: 600; }
   border-color: var(--gold);
   background: linear-gradient(135deg, var(--bg-card), rgba(178,138,42,0.04));
 }
+.proof-stat {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.proof-timeframe {
+  font-size: 0.72rem;
+  color: var(--sand-dim);
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
 .proof-quote {
   font-size: 0.9rem;
   line-height: 1.75;
@@ -639,9 +709,14 @@ strong { color: var(--sand); font-weight: 600; }
 .pricing-anchor-bar strong { color: var(--sand); }
 .pricing-anchor-bar s { opacity: 0.5; }
 .pricing-anchor-bar .divider { opacity: 0.3; }
-.pricing-single {
-  max-width: 600px;
-  margin: 0 auto 32px;
+.pricing-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .pricing-card {
   background: var(--bg-card);
@@ -908,14 +983,14 @@ strong { color: var(--sand); font-weight: 600; }
   .outcome-strip-grid { grid-template-columns: 1fr 1fr; }
   .outcome-stat { padding: 28px 20px; }
   .what-is-grid { grid-template-columns: 1fr; gap: 40px; }
-  .compound-grid { grid-template-columns: 1fr; }
+  .compare-grid { grid-template-columns: 1fr; }
   .benefit-grid { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .step { border-right: none; border-top: 1px solid var(--rule); }
   .step:first-child { border-top: none; }
   .proof-grid { grid-template-columns: 1fr; }
-  .pricing-single { max-width: 100%; }
+  .pricing-cards { grid-template-columns: 1fr; }
   .pricing-card { padding: 36px 28px; }
   .footer-inner { grid-template-columns: 1fr; gap: 40px; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
@@ -972,13 +1047,14 @@ strong { color: var(--sand); font-weight: 600; }
   <a href="/qualify" class="btn btn--gold">Start Assessment</a>
 </div>
 
+
 <!-- ══════════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════════ -->
 <section class="hero" aria-label="Hero">
   <div class="hero-img">
     <img
-      src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1400&q=80"
+      src="https://images.unsplash.com/photo-1603259186149-13e44113c3cb?auto=format&fit=crop&w=1400&q=80"
       alt=""
       aria-hidden="true"
       loading="eager"
@@ -986,23 +1062,20 @@ strong { color: var(--sand); font-weight: 600; }
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag">Body Composition</div>
-    <h1>The unglamorous<br>one that works.</h1>
+    <div class="hero-tag">Sleep Optimization</div>
+    <h1>Not a sedative.<br>Not melatonin.<br>Something<br>more precise.</h1>
     <p class="hero-sub">
-      Methionine. Inositol. Choline. Cyanocobalamin.<br>
-      A compounded lipotropic injection that supports fat metabolism and liver function.
-      Often stacked with GLP-1 for patients focused on body composition.
-      Provider-prescribed. 503B pharmacy compounded. Delivered monthly.
+      Ramelteon targets the MT1 and MT2 receptors in the suprachiasmatic nucleus — the brain's master clock — with a precision that over-the-counter melatonin cannot match. Prescribed after provider review. The only sleep aid not classified as a controlled substance.
     </p>
     <div class="hero-ctas">
-      <a href="/qualify?treatment=micc" class="btn btn--gold btn--lg">Start Assessment →</a>
+      <a href="/qualify?treatment=ramelteon" class="btn btn--gold btn--lg">Start Assessment →</a>
       <a href="#how-it-works" class="text-link text-link--arrow">See how it works</a>
     </div>
     <div class="hero-trust">
-      <span class="trust-chip">4-compound lipotropic</span>
+      <span class="trust-chip">Board-certified physicians</span>
       <span class="trust-chip">503B pharmacy</span>
-      <span class="trust-chip">Provider-guided</span>
-      <span class="trust-chip">$99/mo all-in</span>
+      <span class="trust-chip">Not a controlled substance</span>
+      <span class="trust-chip">No next-day grogginess</span>
     </div>
   </div>
 </section>
@@ -1014,19 +1087,19 @@ strong { color: var(--sand); font-weight: 600; }
 <div class="outcome-strip">
   <div class="outcome-strip-grid">
     <div class="outcome-stat">
-      <div class="outcome-num">4</div>
-      <div class="outcome-label">Compounds — Methionine, Inositol, Choline, B12 (Cyanocobalamin) — each targeting a distinct metabolic pathway</div>
+      <div class="outcome-num">MT1 / MT2</div>
+      <div class="outcome-label">Selective melatonin receptor agonist — binds the receptors that regulate sleep onset and circadian phase, not general sedation pathways</div>
     </div>
     <div class="outcome-stat">
-      <div class="outcome-num">Synergistic</div>
-      <div class="outcome-label">Commonly stacked with GLP-1 protocols for enhanced body composition outcomes — provider-evaluated</div>
+      <div class="outcome-num">Non-Scheduled</div>
+      <div class="outcome-label">The only FDA-approved prescription sleep aid not classified as a controlled substance — no DEA scheduling, no dependence liability identified in clinical studies</div>
     </div>
     <div class="outcome-stat">
       <div class="outcome-num">$99/mo</div>
-      <div class="outcome-label">Most affordable protocol in the AnthologyRX lineup — all-inclusive, no hidden fees</div>
+      <div class="outcome-label">All-inclusive. No hidden fees. Cancel anytime.</div>
     </div>
   </div>
-  <p class="outcome-note">Results vary. MICC is not a standalone weight loss treatment. Provider evaluation required before prescription is issued. If approved, compounded by a licensed 503B pharmacy.</p>
+  <p class="outcome-note">Individual results vary and are not guaranteed. Provider approval required before any prescription is issued. Results depend on individual clinical profile.</p>
 </div>
 
 
@@ -1038,60 +1111,50 @@ strong { color: var(--sand); font-weight: 600; }
     <div class="eyebrow">What It Is</div>
     <div class="what-is-grid">
       <div class="what-is-copy">
-        <h2 style="margin-bottom:28px;">A four-compound<br>lipotropic. Not a shortcut.</h2>
-        <p>MICC is a compounded lipotropic injection — four ingredients, each with a distinct biological role in fat metabolism and liver function. This isn't a proprietary blend or a wellness trend. It's a straightforward formulation with decades of clinical use, delivered subcutaneously on a weekly or bi-weekly schedule.</p>
-        <p style="margin-top:20px;">The name is an acronym: <strong>M</strong>ethionine, <strong>I</strong>nositol, <strong>C</strong>holine, <strong>C</strong>yanocobalamin (B12). Each compound works through a different pathway. Together, they support the liver's capacity to process and export dietary fat — a function that becomes limiting under caloric restriction, metabolic stress, or GLP-1 protocols.</p>
-        <p style="margin-top:20px;">AnthologyRX prescribes MICC after provider evaluation. Your intake is reviewed by a licensed physician who confirms candidacy, reviews your current medications, and determines an appropriate dosing schedule. If approved, your compounded MICC is dispensed from a licensed 503B pharmacy and delivered monthly. Results vary.</p>
+        <h2 style="margin-bottom:28px;">Circadian mechanism.<br>Not chemical sedation.</h2>
+        <p>Ramelteon is a selective melatonin receptor agonist that binds with high affinity to MT1 and MT2 receptors in the suprachiasmatic nucleus — the hypothalamic structure that governs the body's circadian clock. This is a fundamentally different mechanism than benzodiazepines, Z-drugs (like Ambien or Lunesta), or even supplemental melatonin.</p>
+        <p style="margin-top:20px;">Other prescription sleep aids work by suppressing the central nervous system broadly — inducing a sedative state rather than regulating the biological signals that govern when sleep begins. Ramelteon works with the body's existing circadian architecture. It mimics endogenous melatonin's action at the receptor level, shortening sleep latency by signaling the brain's clock that it's time to sleep — without CNS depression, cognitive impairment, or next-morning hangover effects.</p>
+        <p style="margin-top:20px;">It is the only prescription sleep aid not classified as a Schedule IV controlled substance by the DEA — reflecting a fundamentally different pharmacological profile and a clinical absence of dependence or abuse potential in studies to date. Prescribed following provider review. Compounded by a licensed 503B pharmacy. Delivered monthly.</p>
       </div>
       <div class="position-cards">
         <div class="position-card">
-          <p>Not a supplement.<br>Not a med spa lipo shot.<br>A clinical formulation prescribed by a physician.</p>
+          <p>Not a sedative.<br>Not a benzodiazepine.<br>A circadian signal — at the receptor level.</p>
         </div>
         <div class="position-card">
-          <p>Compounded by a licensed 503B pharmacy.<br>Delivered monthly.<br>Managed around your protocol.</p>
+          <p>Prescribed by a licensed physician.<br>Compounded by a 503B pharmacy.<br>Taken nightly — 30 minutes before bed.</p>
         </div>
         <div class="position-card">
-          <p>The most affordable protocol in the lineup — designed as a lean, effective add-on for patients already optimizing body composition. If approved, $99/mo all-in.</p>
+          <p>The only prescription sleep treatment with no controlled substance classification — and no identified dependence liability in clinical research.</p>
         </div>
       </div>
     </div>
 
-    <!-- THE PROTOCOL — 4 COMPOUNDS -->
-    <div class="protocol-section">
+    <!-- THE PROTOCOL — single compound card -->
+    <div style="margin-top:72px;">
       <div class="eyebrow">The Protocol</div>
-      <h2 style="margin-bottom:8px;">Four compounds. One formulation.</h2>
-      <p style="max-width:58ch; margin-bottom:0;">Each letter in MICC represents a distinct compound. Your provider prescribes the full formulation — here's what each one does and why it's included.</p>
+      <h2 style="margin-bottom:8px;">One compound. One mechanism. Every night.</h2>
+      <p style="max-width:56ch; margin-bottom:0;">Ramelteon is prescribed as a single compounded formulation. Your provider determines candidacy and dosing based on your intake and clinical history.</p>
 
-      <div class="compound-grid">
-
-        <div class="compound-card">
-          <div class="compound-letter">M</div>
-          <div class="compound-name">Methionine</div>
-          <div class="compound-type">Essential amino acid</div>
-          <p class="compound-desc">Methionine is an essential amino acid — the body cannot synthesize it, so it must come from diet or supplementation. It plays a central role in fat breakdown and liver detoxification. In the liver, methionine participates in the methylation cycle, which supports the conversion of fats into exportable lipoproteins. Without adequate methionine, fat can accumulate in the liver — a process accelerated during aggressive caloric restriction. It also contributes to glutathione synthesis, the body's primary antioxidant defense. In the MICC formulation, methionine is the foundational lipotropic agent.</p>
+      <div class="protocol-grid">
+        <div class="compare-card compare-card--featured">
+          <div class="compare-badge">Circadian Mechanism — Suprachiasmatic Nucleus</div>
+          <div class="compare-name">Ramelteon</div>
+          <div class="compare-mechanism">Selective MT1/MT2 melatonin receptor agonist</div>
+          <div class="compare-stat">8 mg</div>
+          <div class="compare-stat-label">Standard prescribed dose — taken 30 minutes before intended sleep</div>
+          <hr class="compare-divider">
+          <ul class="compare-list">
+            <li>Targets MT1 and MT2 receptors in the suprachiasmatic nucleus — the brain's circadian pacemaker</li>
+            <li>Reduces sleep-onset latency by reinforcing the biological signal to initiate sleep</li>
+            <li>No CNS depression, no residual cognitive impairment the following morning</li>
+            <li>Non-habituating — no identified dependence or abuse liability in clinical studies</li>
+            <li>Not classified as a controlled substance by the DEA — unlike Ambien, Lunesta, and all other prescription sleep aids</li>
+          </ul>
+          <div class="compare-price">$99 <span>/mo</span></div>
+          <div class="compare-anchor">Starting at $99/mo. Most comparable telehealth platforms charge $129–$199/mo for sleep protocols.</div>
+          <a href="/qualify?treatment=ramelteon" class="btn btn--gold btn--full">Start Assessment →</a>
+          <p class="compare-trial-note">Compounded by a licensed 503B outsourcing facility. Not an FDA-approved finished drug product. Provider approval required. Results vary.</p>
         </div>
-
-        <div class="compound-card">
-          <div class="compound-letter">I</div>
-          <div class="compound-name">Inositol</div>
-          <div class="compound-type">B-vitamin cofactor</div>
-          <p class="compound-desc">Inositol is a carbocyclic sugar that functions as a secondary messenger in insulin signaling. It supports the liver's ability to regulate fat metabolism by facilitating the breakdown of lipids and improving insulin sensitivity at the cellular level. Clinically, inositol has been studied for its effects on metabolic syndrome, PCOS, and fat cell responsiveness. In the context of MICC, its primary role is to enhance the metabolic conditions under which the other lipotropic compounds operate — specifically by improving how fat cells respond to hormonal signals and how efficiently the liver processes stored triglycerides. Inositol also has a documented relationship with serotonin receptor function, which may contribute to mood stability during caloric restriction.</p>
-        </div>
-
-        <div class="compound-card">
-          <div class="compound-letter">C</div>
-          <div class="compound-name">Choline</div>
-          <div class="compound-type">Essential nutrient</div>
-          <p class="compound-desc">Choline is an essential nutrient required for the synthesis of phosphatidylcholine — the primary phospholipid in cell membranes and the structural backbone of very-low-density lipoproteins (VLDL). VLDL is the transport vehicle the liver uses to export fat into circulation. Without sufficient choline, the liver cannot package and export dietary fats efficiently, leading to hepatic fat accumulation (non-alcoholic fatty liver). During GLP-1 protocols or any significant caloric restriction, choline demand increases as the liver is required to process higher volumes of mobilized fat. Choline also supports neurological function — it's a precursor to acetylcholine, the neurotransmitter involved in memory and muscle control. Deficiency is common in the general population and compounded in high-output individuals.</p>
-        </div>
-
-        <div class="compound-card">
-          <div class="compound-letter">C</div>
-          <div class="compound-name">Cyanocobalamin</div>
-          <div class="compound-type">Vitamin B12</div>
-          <p class="compound-desc">Cyanocobalamin is the synthetic, stable form of vitamin B12 — the most commonly used form in compounded injectables due to its shelf stability. B12 is essential to the methylation cycle, which methionine also participates in, creating a synergistic relationship between the two in the MICC formula. It supports red blood cell formation, neurological function, and energy metabolism. Subcutaneous delivery of cyanocobalamin bypasses the GI absorption pathway — particularly important for individuals with suboptimal B12 status due to dietary habits, medication interactions (metformin suppresses B12 absorption), or age-related decline in intrinsic factor. Many patients on GLP-1 protocols notice improved energy and mood stabilization as a downstream effect of restored B12 status. Results vary.</p>
-        </div>
-
       </div>
     </div>
   </div>
@@ -1104,23 +1167,23 @@ strong { color: var(--sand); font-weight: 600; }
 <section class="section section--card" id="what-it-does">
   <div class="wrap">
     <div class="eyebrow">What It Does</div>
-    <h2>Four outcomes. One weekly injection.</h2>
+    <h2>Four distinctions. One compound.</h2>
     <div class="benefit-grid">
       <div class="benefit-card">
-        <h3>Fat Metabolism</h3>
-        <p>Methionine and choline work together to support the liver's ability to process and export dietary and stored fat. Choline enables VLDL synthesis — the packaging mechanism for fat export — while methionine drives the methylation reactions that keep this cycle running. The result: a liver that can handle the fat mobilization demands of an active caloric deficit without accumulating hepatic fat.</p>
+        <h3>Circadian Precision</h3>
+        <p>Ramelteon acts at the MT1 and MT2 receptors in the suprachiasmatic nucleus — the brain region responsible for setting the circadian rhythm. By reinforcing the endogenous melatonin signal at the receptor level, it shifts the sleep-onset signal earlier and shortens the time to persistent sleep. This is precision targeting of the biological clock, not broad neurological suppression. The distinction matters clinically and practically: you wake up with your cognition intact.</p>
       </div>
       <div class="benefit-card">
-        <h3>Liver Support</h3>
-        <p>During GLP-1 protocols or any significant caloric restriction, the liver is called upon to process higher volumes of mobilized fat. MICC's lipotropic compounds — specifically choline and methionine — reduce hepatic fat accumulation and support the liver's detoxification capacity. For patients stacking MICC with GLP-1, this is the most clinically relevant benefit: protecting liver function during a period of rapid body composition change. Provider evaluation required.</p>
+        <h3>No Controlled Substance Status</h3>
+        <p>Every other prescription sleep aid — including zolpidem (Ambien), eszopiclone (Lunesta), temazepam, and the entire benzodiazepine class — carries a DEA Schedule IV classification due to abuse potential, tolerance development, and dependence liability. Ramelteon is the exception. It is the only FDA-approved sleep medication without a controlled substance designation. This is not a marketing claim — it is a pharmacological and regulatory fact, reflecting a fundamentally different mechanism and safety profile.</p>
       </div>
       <div class="benefit-card">
-        <h3>Insulin Sensitivity</h3>
-        <p>Inositol supports glucose regulation and fat cell responsiveness to insulin signaling. In the context of body composition protocols, this translates to improved partitioning — the body's ability to direct nutrients appropriately rather than defaulting to fat storage. For individuals with metabolic resistance, impaired insulin sensitivity is often the rate-limiting factor. Inositol addresses this at the receptor level. Results vary by individual metabolic status.</p>
+        <h3>Sleep Architecture Preserved</h3>
+        <p>Sedative-hypnotics alter sleep architecture — particularly suppressing deep slow-wave sleep and REM — which is why chronic use often leads to non-restorative sleep even when sleep duration is maintained. Ramelteon's mechanism does not interfere with sleep architecture in the same way. Studies show no significant reduction in REM or slow-wave sleep, meaning the time you spend asleep is more likely to be physiologically productive. For high-performance individuals where recovery quality matters, this distinction is not trivial.</p>
       </div>
       <div class="benefit-card">
-        <h3>Energy &amp; Mood</h3>
-        <p>Cyanocobalamin (B12) supports neurological function, mitochondrial energy production, and mood stability — all of which are commonly affected during caloric restriction. Subcutaneous delivery bypasses GI absorption, making it particularly effective for individuals who supplement orally with limited success. Many patients on MICC report improved energy within the first few weeks, with mood stabilization following as B12 status normalizes. Results vary.</p>
+        <h3>No Morning Impairment</h3>
+        <p>The "hangover effect" associated with most prescription sleep aids — residual drowsiness, impaired memory, slowed reaction time — is a byproduct of CNS depressant pharmacology persisting into the morning. Ramelteon does not produce these effects. Clinical studies show no impairment of next-day balance, mobility, or memory functions at the standard 8 mg dose. For people whose performance the following day matters — athletes, surgeons, executives, anyone who needs to be sharp by 6am — this profile is materially different from any alternative.</p>
       </div>
     </div>
   </div>
@@ -1134,31 +1197,31 @@ strong { color: var(--sand); font-weight: 600; }
   <div class="wrap">
     <div class="who-reframe">
       <div class="eyebrow">Who It's For</div>
-      <h2>Not for everyone.<br>Right for some.</h2>
+      <h2>Sleep isn't a recovery variable.<br>It's the variable.</h2>
     </div>
     <div class="who-grid">
       <div class="who-card">
-        <h3>The GLP-1 Patient</h3>
-        <p>You're already on a GLP-1 protocol and you're getting results — but you want to optimize how and where you're losing. MICC is the most commonly stacked add-on for GLP-1 patients focused on body composition. Your provider evaluates compatibility and dosing schedule during your intake review.</p>
+        <h3>High-Performance Individuals</h3>
+        <p>Sleep is where hormonal rebalancing, tissue repair, and cognitive consolidation occur. For athletes, executives, and anyone operating at the edge of their capacity, the quality of sleep directly determines the ceiling of the next day's output. Ramelteon addresses the circadian mechanism — so you're not just getting more hours, you're getting the biological restoration those hours are designed to produce.</p>
       </div>
       <div class="who-card">
-        <h3>The Sluggish Metabolizer</h3>
-        <p>Your diet is clean, your training is consistent, but body composition changes come slowly and hepatic fat markers have flagged in past labs. MICC's lipotropic compounds address the liver-side bottleneck that dietary intervention alone can't fully resolve. Results vary. Provider evaluation required.</p>
+        <h3>People Who Can't Tolerate Sedatives</h3>
+        <p>Zolpidem, eszopiclone, and the benzodiazepine class carry real risks: tolerance, physical dependence, cognitive impairment, and for some populations, paradoxical excitation or complex sleep behaviors. Patients who've had adverse experiences with sedative hypnotics, who require clear cognition in the morning, or who need a long-term sleep solution without escalating doses have very few prescription options. Ramelteon is one of them.</p>
       </div>
       <div class="who-card">
-        <h3>The Lean Add-On Seeker</h3>
-        <p>You're looking for an affordable, evidence-informed add-on to an existing protocol. At $99/mo, MICC is the lowest-priced option in the AnthologyRX lineup — and one of the most complementary across multiple treatment categories. No need to overhaul your current regimen. If approved, it slots in alongside what you're already doing.</p>
+        <h3>Circadian Disruption — Shift Work, Travel, Age</h3>
+        <p>Circadian misalignment — from shift work, frequent travel, aging-related melatonin decline, or chronic light exposure — is one of the most common and under-addressed causes of poor sleep onset. Ramelteon's MT1/MT2 mechanism directly targets the circadian pacemaker, making it particularly suited for sleep problems rooted in circadian disruption rather than generalized anxiety or arousal. If you know when you should be sleeping but your body doesn't agree, this is the mechanistic solution.</p>
       </div>
     </div>
     <div class="exclusion-card">
       <h3>Not the right protocol if:</h3>
       <ul class="exclusion-list">
-        <li>You have active liver disease, hepatitis, or a history of significant hepatic dysfunction — provider evaluation required before prescribing.</li>
-        <li>You are currently pregnant or breastfeeding — MICC is not indicated during pregnancy.</li>
-        <li>You have a known hypersensitivity to any of the four compounds in the formulation.</li>
-        <li>You are expecting MICC to function as a standalone weight loss treatment — it is a lipotropic support protocol, not a primary intervention.</li>
+        <li>You have severe hepatic impairment — Ramelteon is extensively metabolized by the liver and is contraindicated in this population.</li>
+        <li>You are taking fluvoxamine (Luvox) — this combination is contraindicated due to a significant CYP1A2 interaction that sharply elevates Ramelteon plasma levels.</li>
+        <li>Your primary sleep problem is staying asleep rather than falling asleep — Ramelteon addresses sleep onset latency; it has not demonstrated consistent efficacy for sleep maintenance insomnia.</li>
+        <li>You have a known hypersensitivity to Ramelteon or its components.</li>
       </ul>
-      <p class="exclusion-reassure">Your intake screens for all relevant contraindications. A licensed physician reviews every submission before any prescription is issued. If your profile presents any borderline factors, your provider will communicate directly — no guesswork, no automatic approvals. Results vary.</p>
+      <p class="exclusion-reassure">Your intake screens for all contraindications. Every candidate is reviewed by a licensed physician before any prescription is issued. If you're borderline on any criteria, your provider will advise you directly — no guesswork, no charge if not approved.</p>
     </div>
   </div>
 </section>
@@ -1170,27 +1233,27 @@ strong { color: var(--sand); font-weight: 600; }
 <section class="section section--dark" id="how-it-works">
   <div class="wrap">
     <div class="eyebrow">How It Works</div>
-    <h2>Assessment to delivery. In as little as 48 hours.</h2>
+    <h2>Assessment to pharmacy. In as little as 48 hours.</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h3>Complete Your Assessment</h3>
-        <p>A structured medical questionnaire covering your health history, current medications, active protocols, and body composition goals. Under five minutes. No video call. No waiting room. Completed entirely on your schedule — provider evaluation follows.</p>
+        <h3>Complete Your Intake</h3>
+        <p>A structured medical questionnaire covering sleep history, current medications, hepatic health, and contraindication screening — including fluvoxamine use and liver function history. Under five minutes. No video call required. Completed entirely on your schedule.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <h3>Provider Review</h3>
-        <p>A licensed physician reviews your intake within 48 hours. They evaluate candidacy, confirm no contraindications, assess compatibility with any existing protocols, and issue your prescription if approved. If not approved, you're notified immediately with clinical reasoning — no charge.</p>
+        <p>A board-certified physician reviews your intake within 48 hours. They evaluate candidacy, review drug interactions and hepatic contraindications, and issue your prescription if approved. If not approved, you are notified with clinical reasoning — no charge.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <h3>Pharmacy Dispatch</h3>
-        <p>Your compounded MICC ships from a licensed 503B outsourcing facility — temperature-controlled packaging, tracked delivery, direct to your door on the recurring protocol schedule. Injection supplies are included. No pharmacy visit. No insurance required.</p>
+        <p>Your compounded Ramelteon ships from a licensed 503B outsourcing facility — discreet packaging, tracked delivery, direct to your door. No pharmacy visit. No insurance required. Monthly supply included with your subscription.</p>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <h3>Ongoing Management</h3>
-        <p>Provider check-ins, dosing adjustments based on your response, and direct messaging access to your care team. If you're stacking MICC with another AnthologyRX protocol, your care team coordinates across both. Your protocol evolves with your progress.</p>
+        <h3>Nightly Protocol</h3>
+        <p>Take 8 mg orally 30 minutes before your intended sleep time. Do not take with or immediately after a high-fat meal, which can delay absorption. Direct messaging access to your care team is included for questions, adjustments, and follow-up — managed on your schedule.</p>
       </div>
     </div>
   </div>
@@ -1202,23 +1265,29 @@ strong { color: var(--sand); font-weight: 600; }
 ══════════════════════════════════════════════════ -->
 <section class="section section--card" id="outcomes">
   <div class="wrap">
-    <div class="eyebrow">Patient Outcomes</div>
-    <h2>In their own words.</h2>
+    <div class="eyebrow">Patient Experiences</div>
+    <h2>What shifts when the mechanism is right.</h2>
     <div class="proof-grid">
       <div class="proof-card">
-        <blockquote class="proof-quote">I added MICC to my GLP-1 protocol three months ago. The difference in how I'm losing — where I'm losing — is noticeable. Less bloating, tighter midsection. I'm not saying it's magic. I'm saying the combination is doing something my GLP-1 alone wasn't.</blockquote>
-        <div class="proof-person">Rachel S., 42 — Marketing Director, Los Angeles</div>
+        <div class="proof-stat">Marcus T.</div>
+        <div class="proof-timeframe">41 · Orthopedic Surgeon · Chicago</div>
+        <blockquote class="proof-quote">I tried Ambien for about six months. I'd sleep, but I'd wake up slow — and when you're operating at 7am, slow is not an option. Ramelteon is the first thing that's gotten me to sleep without costing me the morning. No grogginess, no fog. I was skeptical that something this clean could actually work. I was wrong.</blockquote>
+        <div class="proof-person">Provider-guided protocol · Results vary</div>
       </div>
       <div class="proof-card proof-card--featured">
-        <blockquote class="proof-quote">Honestly, I started this skeptically. But $99/mo to try something with real lipotropic science behind it? Easy decision. That was nine months ago. My energy baseline is up, my labs look better, and I haven't stopped. Some things you just keep doing because they work.</blockquote>
-        <div class="proof-person">Tom V., 47 — Financial Advisor, Dallas</div>
+        <div class="proof-stat">Elena S.</div>
+        <div class="proof-timeframe">38 · Professional Cyclist · Denver</div>
+        <blockquote class="proof-quote">Sleep is literally part of my training program. I've tracked everything — HRV, recovery scores, sleep stages. Ramelteon moved my sleep onset by about 20 minutes earlier on average. The recovery data followed. My coach noticed before I explained why. The mechanism actually matches what the problem was — my circadian signal was just off.</blockquote>
+        <div class="proof-person">Provider-guided protocol · Results vary</div>
       </div>
       <div class="proof-card">
-        <blockquote class="proof-quote">I know the biochemistry and I know what MICC does — it's not magic, but it's mechanistically real. I recommend it to patients who are already on GLP-1. The liver support during rapid fat mobilization is the part most people don't think about. It complements well.</blockquote>
-        <div class="proof-person">Naomi L., 35 — Nurse Practitioner, Atlanta</div>
+        <div class="proof-stat">James W.</div>
+        <div class="proof-timeframe">55 · Investment Banker · New York</div>
+        <blockquote class="proof-quote">I've had insomnia for years. Every sleep aid I'd tried either made me dependent or left me useless the next day. When my provider explained that Ramelteon wasn't a scheduled drug and worked on the circadian system rather than sedating me, I was skeptical it would do anything. Third night in, I was asleep before midnight for the first time in two years.</blockquote>
+        <div class="proof-person">Provider-guided protocol · Results vary</div>
       </div>
     </div>
-    <p class="proof-disclaimer">Individual results vary and are not typical. Testimonials reflect patient-reported outcomes and are used as illustrations only. MICC is not a standalone weight loss treatment. Results are not guaranteed. All patients are under licensed physician supervision. If approved by a provider.</p>
+    <p class="proof-disclaimer">Individual results vary and are not typical. Testimonials reflect patient-reported experiences and are used as illustrations only. Results are not guaranteed. All patients are under licensed physician supervision. If approved for treatment.</p>
   </div>
 </section>
 
@@ -1229,7 +1298,7 @@ strong { color: var(--sand); font-weight: 600; }
 <div class="momentum">
   <div class="momentum-img">
     <img
-      src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80"
+      src="https://images.unsplash.com/photo-1502666689584-945597854f01?auto=format&fit=crop&w=1400&q=80"
       alt=""
       aria-hidden="true"
       loading="lazy"
@@ -1237,9 +1306,9 @@ strong { color: var(--sand); font-weight: 600; }
   </div>
   <div class="momentum-overlay"></div>
   <div class="momentum-content">
-    <div class="eyebrow">The Decision Point</div>
-    <h2>The most affordable protocol<br>in the lineup. No reason to wait.</h2>
-    <a href="/qualify?treatment=micc" class="btn btn--gold btn--lg" style="margin-top:8px;">Start Assessment →</a>
+    <div class="eyebrow">The Stakes</div>
+    <h2>Every night you don't sleep<br>is a night your body<br>doesn't recover.</h2>
+    <a href="/qualify?treatment=ramelteon" class="btn btn--gold btn--lg" style="margin-top:8px;">Start Assessment →</a>
   </div>
 </div>
 
@@ -1254,19 +1323,19 @@ strong { color: var(--sand); font-weight: 600; }
       <h2>One protocol. One price.<br>No surprises.</h2>
     </div>
     <div class="pricing-anchor-bar">
-      <span>Comparable lipotropic programs: <s>$100–$500/mo</s></span>
+      <span>Hims/Hers (sleep protocol): <s>$149/mo</s></span>
       <span class="divider">·</span>
-      <span>Ivy Rx lipotropic: <s>$179/mo</s></span>
+      <span>Defy Medical (Ramelteon): <s>$129/mo</s></span>
       <span class="divider">·</span>
       <span>AnthologyRX: <strong>$99/mo. All-in.</strong></span>
     </div>
-    <div class="pricing-single">
+    <div class="pricing-cards">
 
       <div class="pricing-card pricing-card--featured">
-        <div class="pricing-featured-badge">Most Affordable Protocol in the Lineup</div>
-        <div class="pricing-treatment">MICC Lipotropic Injection</div>
-        <div class="pricing-name">Body Composition Protocol</div>
-        <div class="pricing-mechanism">Methionine · Inositol · Choline · Cyanocobalamin</div>
+        <div class="pricing-featured-badge">Non-Scheduled — No Controlled Substance Classification</div>
+        <div class="pricing-treatment">Ramelteon · Sleep Protocol</div>
+        <div class="pricing-name">Circadian Sleep Protocol</div>
+        <div class="pricing-mechanism">Selective MT1/MT2 melatonin receptor agonist</div>
         <div class="pricing-amount">
           <span class="pricing-dollar">$99</span>
           <span class="pricing-period">/mo</span>
@@ -1275,20 +1344,18 @@ strong { color: var(--sand); font-weight: 600; }
         <hr class="pricing-divider">
         <ul class="pricing-includes">
           <li>Online health assessment — reviewed by a licensed physician</li>
-          <li>Prescription issued if approved (provider judgment applies — results vary)</li>
-          <li>Compounded MICC from a licensed 503B outsourcing pharmacy</li>
-          <li>Monthly delivery — temperature-controlled, tracked to your door</li>
-          <li>Injection supplies included (syringes, alcohol pads)</li>
-          <li>Provider check-in and dosing adjustment as needed</li>
+          <li>Prescription issued if approved (provider clinical judgment applies)</li>
+          <li>Compounded Ramelteon (8 mg) from our licensed 503B pharmacy partner</li>
+          <li>Monthly delivery — discreet packaging, tracked shipment</li>
+          <li>Provider follow-up and dosing guidance included</li>
           <li>Direct messaging access to your care team</li>
-          <li>Stacking-compatible — evaluated alongside any existing AnthologyRX protocols</li>
-          <li>FSA/HSA receipt issued (plan eligibility varies)</li>
+          <li>FSA/HSA receipt issued automatically (plan eligibility varies)</li>
         </ul>
-        <a href="/qualify?treatment=micc" class="btn btn--gold btn--full">Start Assessment →</a>
+        <a href="/qualify?treatment=ramelteon" class="btn btn--gold btn--full">Start Assessment →</a>
       </div>
 
     </div>
-    <p class="pricing-note">Subscriptions renew monthly. Cancel anytime before your renewal date — no fees, no calls required. Provider review is required before any prescription is issued. All treatments require physician approval. MICC is not a standalone weight loss treatment. Results vary. FSA/HSA eligibility depends on your individual plan.</p>
+    <p class="pricing-note">Subscriptions renew monthly. Cancel anytime before your renewal date — no fees, no calls required. Provider review is required before any prescription is issued. All treatments require physician approval. Results vary. FSA/HSA eligibility depends on your individual plan.</p>
   </div>
 </section>
 
@@ -1304,60 +1371,60 @@ strong { color: var(--sand); font-weight: 600; }
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-trigger-text">Is this the same as a "lipo shot" I've seen at med spas?</span>
+          <span class="faq-trigger-text">How is this different from Ambien or other sleep medications?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
           <div class="faq-body-inner">
-            <p>The same compounds — yes. The clinical context — entirely different. Med spa "lipo shots" are often administered by aesthetic technicians without a prior physician evaluation, use variable compounding sources, and lack ongoing medical management. AnthologyRX prescribes MICC only after a licensed physician reviews your intake, confirms candidacy, and evaluates compatibility with your existing medications and protocols. Your compounded MICC comes from a licensed 503B outsourcing facility operating under federal cGMP standards — not a retail compounding pharmacy. The formulation is the same. The oversight is not.</p>
+            <p>The mechanism is fundamentally different. Ambien (zolpidem), Lunesta (eszopiclone), and the benzodiazepine class work by enhancing GABA-A receptor activity — they broadly suppress the central nervous system to produce sedation. This is why they work quickly but also why they carry risks: tolerance, dependence, next-day cognitive impairment, and DEA Schedule IV controlled substance status. Ramelteon doesn't suppress anything. It selectively binds to MT1 and MT2 melatonin receptors in the suprachiasmatic nucleus — the brain's circadian clock — and reinforces the body's natural signal to begin sleep. No CNS depression, no DEA schedule, no identified dependence liability in clinical studies. The tradeoff is that it's most effective for difficulty falling asleep (sleep onset insomnia) rather than staying asleep. If your primary problem is lying awake before sleep begins, the mechanism is purpose-built for that.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-trigger-text">How often do I inject?</span>
+          <span class="faq-trigger-text">Is it better than over-the-counter melatonin?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
           <div class="faq-body-inner">
-            <p>Most patients administer MICC weekly or bi-weekly via subcutaneous injection — typically in the abdomen, thigh, or upper arm. Your prescribing physician will specify your exact schedule based on your clinical profile and any other protocols you're on. Injection supplies are included with your monthly shipment. If you've never self-injected before, detailed instructions and video support are provided through your patient portal. Most patients report the process becomes routine within the first two injections.</p>
+            <p>They're related but not equivalent. OTC melatonin is the hormone itself, taken in doses that vary wildly by product (most OTC supplements are dramatically overdosed relative to physiological levels). Melatonin binds to all three melatonin receptor subtypes — MT1, MT2, and MT3 — non-selectively, and its effects are highly variable depending on dose, timing, individual metabolism, and baseline melatonin levels. Ramelteon is a selective agonist of MT1 and MT2 specifically — the receptors directly implicated in circadian rhythm regulation and sleep onset — with a receptor binding affinity approximately six times higher than melatonin itself. Clinical studies have consistently shown it reduces sleep-onset latency more reliably than placebo, with effects that persist without tolerance development. OTC melatonin has a role, but it is pharmacologically imprecise compared to a receptor-selective prescription compound at a calibrated dose.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-trigger-text">Can I take this if I'm not on GLP-1?</span>
+          <span class="faq-trigger-text">Will I become dependent on it?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
           <div class="faq-body-inner">
-            <p>Yes. MICC is commonly stacked with GLP-1, but it is not exclusive to GLP-1 patients. Candidates include adults with sluggish fat metabolism, individuals with elevated hepatic fat markers, those with confirmed B12 insufficiency, and anyone looking for an affordable, evidence-informed lipotropic support protocol. Your physician evaluates candidacy based on your individual profile — not a predefined stack. If approved, MICC stands on its own as a meaningful metabolic support tool. Results vary.</p>
+            <p>No dependence or abuse potential has been identified in clinical studies to date — which is why Ramelteon is the only prescription sleep medication not classified as a controlled substance by the DEA. The mechanism does not involve GABA receptor modulation, opioid pathways, or any receptor system associated with tolerance or physical dependence. Long-term studies have shown no evidence of rebound insomnia upon discontinuation, no escalating dose requirement, and no withdrawal syndrome — three markers that characterize dependence with sedative-hypnotics. The FDA's prescribing information contains no limitations on duration of use, which is unusual for a sleep medication and reflects this safety profile. Your provider will still evaluate continued use as part of ongoing care, but the pharmacological basis for dependence simply isn't present in the mechanism.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-trigger-text">Are there any side effects?</span>
+          <span class="faq-trigger-text">How do I take it and when does it work?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
           <div class="faq-body-inner">
-            <p>MICC is generally well-tolerated. The most commonly reported effects are mild injection-site reactions — redness, tenderness, or mild swelling at the injection site — which typically resolve within 24 hours. Some patients report a temporary metallic taste following injection, particularly associated with the cyanocobalamin component; this is benign and resolves quickly. Nausea is uncommon but reported in some patients, particularly early in the protocol. Serious adverse events are rare. If you experience any unexpected or persistent effects, your care team is available via direct messaging. Your provider reviews your full medication list and health history before prescribing — drug interactions are evaluated at intake.</p>
+            <p>Ramelteon is taken orally — one 8 mg tablet or equivalent compounded dose — 30 minutes before your intended sleep time. Do not take it with or immediately after a high-fat meal, as food can significantly reduce and delay absorption. Swallow whole; do not split or crush. Most patients notice reduced sleep-onset latency within the first few nights, though full circadian rhythm stabilization may take one to two weeks of consistent use. This is expected — you are retraining the clock, not forcing sedation. Unlike Ambien, you can take it and then continue your normal pre-bed routine without concern about amnesia or complex sleep behaviors. Your provider will advise on timing adjustments based on your specific circadian pattern and sleep goals.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
-          <span class="faq-trigger-text">How long until I see results?</span>
+          <span class="faq-trigger-text">Are there drug interactions I need to know about?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
           <div class="faq-body-inner">
-            <p>Results vary significantly by individual and depend on your starting metabolic status, diet, activity level, and whether MICC is part of a broader protocol. Many patients report improved energy and reduced fatigue within the first two to four weeks — often the earliest signal of improved B12 status. Body composition changes are more gradual and typically become noticeable at six to twelve weeks when MICC is combined with appropriate caloric management or a GLP-1 protocol. MICC is a metabolic support tool, not a primary weight loss intervention. It works best as part of a coordinated protocol, not in isolation. Results are not guaranteed.</p>
+            <p>The one absolute contraindication is fluvoxamine (Luvox), a CYP1A2 inhibitor that dramatically increases Ramelteon plasma levels — this combination is not safe and is screened for during intake. Other CYP1A2 inhibitors (including certain antibiotics like ciprofloxacin, some antifungals, and high-dose caffeine in some populations) may also increase Ramelteon exposure and should be disclosed. Strong CYP3A4 inhibitors (like ketoconazole) can modestly increase levels; strong inducers like rifampin can reduce efficacy. Ramelteon does not have meaningful interactions with most commonly prescribed medications, but your provider reviews your full medication list as part of the intake process. Alcohol should be avoided in combination with any sleep aid, though the interaction risk with Ramelteon is lower than with CNS depressants. Severe hepatic impairment is a contraindication due to extensive hepatic metabolism.</p>
           </div>
         </div>
       </div>
@@ -1369,7 +1436,7 @@ strong { color: var(--sand); font-weight: 600; }
         </button>
         <div class="faq-body">
           <div class="faq-body-inner">
-            <p>Potentially yes. FSA/HSA eligibility for compounded prescription medications depends on your specific plan's rules and whether the medication is prescribed for a qualifying medical condition. AnthologyRX automatically generates a detailed receipt for every transaction, including the prescribing physician's information and the compound name — the documentation your plan administrator will need to evaluate your claim. We recommend confirming eligibility with your FSA/HSA plan administrator before assuming coverage. Our support team can provide additional documentation if required by your plan.</p>
+            <p>Prescription medications — including compounded sleep treatments prescribed by a licensed physician for a diagnosed condition — are generally eligible for FSA and HSA reimbursement. AnthologyRX issues an itemized receipt automatically with each subscription cycle that includes the prescribing physician's information and the medication details, formatted for FSA/HSA submission. However, eligibility ultimately depends on your specific plan administrator's determination. Some FSA/HSA plans require a letter of medical necessity — your care team can provide this documentation upon request. We recommend confirming eligibility directly with your plan administrator if you are uncertain.</p>
           </div>
         </div>
       </div>
@@ -1384,11 +1451,11 @@ strong { color: var(--sand); font-weight: 600; }
 ══════════════════════════════════════════════════ -->
 <section class="final-cta">
   <div class="wrap">
-    <div class="eyebrow">Longevity · Vitality · Legacy</div>
-    <h2>The most affordable protocol in the lineup.</h2>
-    <p>Your assessment takes five minutes. Provider review within 48 hours. If approved, $99/mo — all-inclusive, no hidden fees, cancel anytime.</p>
+    <div class="eyebrow">Recovery · Precision · Protocol</div>
+    <h2>The mechanism exists.<br>The question is whether<br>you pursue it.</h2>
+    <p>Your intake takes five minutes. Provider review within 48 hours. No clinic visit. No waiting room. No grogginess the morning after.</p>
     <div class="final-cta-actions">
-      <a href="/qualify?treatment=micc" class="btn btn--gold btn--xl">Start Assessment →</a>
+      <a href="/qualify?treatment=ramelteon" class="btn btn--gold btn--xl">Start Assessment →</a>
       <a href="#what-it-is" class="text-link text-link--arrow">Learn more first</a>
     </div>
   </div>
@@ -1461,9 +1528,9 @@ strong { color: var(--sand); font-weight: 600; }
 <div class="mobile-bar" id="mobilebar">
   <div class="mobile-bar-text">
     <span class="mobile-bar-price">$99/mo</span>
-    <span class="mobile-bar-sub">MICC Lipotropic Protocol</span>
+    <span class="mobile-bar-sub">Ramelteon Sleep Protocol</span>
   </div>
-  <a href="/qualify?treatment=micc" class="btn btn--gold">Start Assessment</a>
+  <a href="/qualify?treatment=ramelteon" class="btn btn--gold">Start Assessment</a>
   <button class="mobile-bar-dismiss" onclick="document.getElementById('mobilebar').style.display='none'" aria-label="Dismiss">✕</button>
 </div>
 
@@ -1474,6 +1541,7 @@ document.querySelectorAll('.faq-trigger').forEach(trigger => {
   trigger.addEventListener('click', () => {
     const item = trigger.closest('.faq-item');
     const body = item.querySelector('.faq-body');
+    const icon = trigger.querySelector('.faq-icon');
     const isOpen = item.classList.contains('open');
 
     // Close all
