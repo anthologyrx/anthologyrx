@@ -1,5 +1,13 @@
 User-agent: *
+Allow: /
+
+# Founders-only pages
+Disallow: /promissorynote/
 Disallow: /access/
 
-User-agent: *
-Allow: /
+# Design prototypes — not public routes
+Disallow: /pricing-page/
+Disallow: /product-page/
+Disallow: /protocol-landing/
+
+Sitemap: https://anthologyrx.com/sitemap.xml
