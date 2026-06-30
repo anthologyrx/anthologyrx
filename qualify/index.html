@@ -731,7 +731,7 @@
         <h1 class="q-headline">What brings you to AnthologyRX today?</h1>
         <p class="q-sub">Select the option that best describes your primary reason for being here.</p>
         <div class="options-list" data-type="single" data-screen="1">
-          <button class="option-card" data-value="weight-loss">I want to lose weight — I've tried and it won't stick</button>
+          <button class="option-card" data-value="metabolic">I want to optimize my metabolic health and body composition</button>
           <button class="option-card" data-value="energy-clarity">I want more energy, mental clarity, and to feel like myself again</button>
           <button class="option-card" data-value="body-rebuild">I want to rebuild my body — strength, recovery, body composition</button>
           <button class="option-card" data-value="hormones-aging">I want to optimize my hormones and slow the aging process</button>
@@ -893,7 +893,7 @@
         <div class="options-list checkbox-list" data-type="multi" data-screen="10">
           <button class="option-card" data-value="weight-med">
             <span class="checkbox-indicator"><span class="checkbox-check">✓</span></span>
-            Prescription weight management medications
+            Prescription metabolic health protocols
           </button>
           <button class="option-card" data-value="trt">
             <span class="checkbox-indicator"><span class="checkbox-check">✓</span></span>
@@ -1236,7 +1236,7 @@
   function deriveProtocol() {
     const goal = answers[1];
     const sex  = answers[3];
-    if (goal === 'weight-loss') return 'Metabolic Performance Protocol';
+    if (goal === 'metabolic') return 'Metabolic Performance Protocol';
     if (goal === 'energy-clarity') return sex === 'male' ? 'Hormone Optimization' : 'Hormone Optimization';
     if (goal === 'body-rebuild') return 'Body Recomposition';
     if (goal === 'hormones-aging') return 'Longevity & Hormone Optimization';
@@ -1314,6 +1314,7 @@
           <li><a href="/treatments/nad">NAD+ Therapy</a></li>
           <li><a href="/treatments/glutathione">Glutathione</a></li>
           <li><a href="/treatments/lipo-c">Lipo-C</a></li>
+          <li><a href="/treatments/sermorelin">Sermorelin</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1331,7 +1332,7 @@
         <ul>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/account">Member Login</a></li>
+          <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
           <li><a href="/qualify">Start Assessment</a></li>
         </ul>
       </div>
@@ -1347,7 +1348,7 @@
     </div>
     <hr class="footer-divider">
     <p class="footer-legal">
-      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503A &amp; 503B pharmacy. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in eligible states only. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503A &amp; 503B pharmacy. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in all 50 U.S. states; availability of specific medications may vary by state. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
     </p>
   </div>
 </footer>

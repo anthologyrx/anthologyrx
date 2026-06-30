@@ -1,50 +1,16 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/promissorynote",                      "destination": "/api/auth" },
-    { "source": "/promissorynote/",                     "destination": "/api/auth" },
-    { "source": "/login",                               "destination": "/api/login" },
-    { "source": "/login/",                              "destination": "/api/login" },
-    { "source": "/api/verify-auth",                     "destination": "/api/verify-auth" },
-    { "source": "/logout",                              "destination": "/api/logout" },
-    { "source": "/protocols",                         "destination": "/protocol-landing/index.html" },
-    { "source": "/pages/pricing",                     "destination": "/pricing-page/index.html" },
-    { "source": "/pages/how-it-works",                "destination": "/how-it-works/index.html" },
-    { "source": "/pages/about",                       "destination": "/about/index.html" },
-    { "source": "/pages/science",                     "destination": "/science/index.html" },
-    { "source": "/pages/faq",                         "destination": "/faq/index.html" },
-    { "source": "/pages/press",                       "destination": "/press/index.html" },
-    { "source": "/pages/contact",                     "destination": "/contact/index.html" },
-    { "source": "/pages/privacy",                     "destination": "/faq/index.html" },
-    { "source": "/pages/terms",                       "destination": "/faq/index.html" },
-    { "source": "/account",                           "destination": "/account/index.html" },
-    { "source": "/qualify",                           "destination": "/qualify/index.html" },
-    { "source": "/cart",                              "destination": "/cart/index.html" },
-    { "source": "/search",                            "destination": "/search/index.html" },
-    { "source": "/collections/supplements",           "destination": "/supplements/index.html" },
-    { "source": "/blogs/journal",                     "destination": "/blog/index.html" },
-    { "source": "/blogs/journal/:slug",               "destination": "/blog/article.html" },
-    { "source": "/products/:slug",                    "destination": "/product-page/index.html" },
-    { "source": "/merch",                             "destination": "/merch/index.html" },
-    { "source": "/treatments/glp-1",                   "destination": "/treatments/glp-1/index.html" },
-    { "source": "/treatments/nad",                     "destination": "/treatments/nad/index.html" },
-    { "source": "/treatments/gonadorelin",             "destination": "/treatments/gonadorelin/index.html" },
-    { "source": "/treatments/micc",                   "destination": "/treatments/micc/index.html" },
-    { "source": "/treatments/pt-141",                 "destination": "/treatments/pt-141/index.html" },
-    { "source": "/treatments/tesamorelin",             "destination": "/treatments/tesamorelin/index.html" },
-    { "source": "/about",                               "destination": "/about/index.html" },
-    { "source": "/how-it-works",                         "destination": "/how-it-works/index.html" },
-    { "source": "/faq",                                   "destination": "/faq/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options",  "value": "nosniff" },
-        { "key": "X-Frame-Options",         "value": "DENY" },
-        { "key": "X-XSS-Protection",        "value": "1; mode=block" }
-      ]
-    }
+  "redirects": [
+    { "source": "/treatments/glp-1",         "destination": "/",                  "permanent": true },
+    { "source": "/treatments/glp-1/:path*",   "destination": "/",                  "permanent": true },
+    { "source": "/treatments/gonadorelin",    "destination": "/",                  "permanent": true },
+    { "source": "/treatments/gonadorelin/:path*", "destination": "/",              "permanent": true },
+    { "source": "/treatments/pt-141",         "destination": "/",                  "permanent": true },
+    { "source": "/treatments/pt-141/:path*",  "destination": "/",                  "permanent": true },
+    { "source": "/treatments/tesamorelin",    "destination": "/",                  "permanent": true },
+    { "source": "/treatments/tesamorelin/:path*", "destination": "/",              "permanent": true },
+    { "source": "/treatments/ramelteon",      "destination": "/",                  "permanent": true },
+    { "source": "/treatments/ramelteon/:path*", "destination": "/",                "permanent": true },
+    { "source": "/treatments/micc",           "destination": "/treatments/lipo-c", "permanent": true },
+    { "source": "/treatments/micc/:path*",    "destination": "/treatments/lipo-c", "permanent": true }
   ]
 }
