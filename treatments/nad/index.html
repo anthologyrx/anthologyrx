@@ -1016,7 +1016,74 @@ strong { color: var(--sand); font-weight: 600; }
   .who-grid { grid-template-columns: 1fr; }
 }
 
-  </style>
+  
+/* ── TRUST MODULES ───────────────────────────────────────────────────────── */
+.trust-modules { background: var(--bg); padding: var(--space-16) 0; }
+.trust-modules .section-inner { display: flex; flex-direction: column; gap: var(--space-12); }
+
+/* Module A — Clinical Leadership */
+.module-leadership {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+}
+.module-leadership__photo {
+  width: 180px;
+  height: 220px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  font-size: var(--text-xs);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.module-leadership__label { font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-2); }
+.module-leadership__name { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--text); margin: 0 0 var(--space-1); }
+.module-leadership__title { font-size: var(--text-sm); color: var(--gold); margin: 0 0 var(--space-4); letter-spacing: 0.04em; }
+.module-leadership__creds { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+.module-leadership__cred { font-size: var(--text-xs); color: var(--text-muted); background: var(--bg-surface); border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; }
+.module-leadership__bio { font-size: var(--text-base); color: var(--text-muted); line-height: 1.7; }
+.module-leadership__philosophy { margin-top: var(--space-4); font-style: italic; color: var(--text-muted); border-left: 2px solid var(--gold); padding-left: var(--space-4); }
+
+/* Module B — Provider Network */
+.module-provider {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+}
+.module-provider__header { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6); }
+.module-provider__badge { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--gold); background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-2) var(--space-4); }
+.module-provider__name { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: var(--text); }
+.module-provider__sub { font-size: var(--text-sm); color: var(--text-muted); }
+.module-provider__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-6); }
+.module-provider__fact { border-left: 2px solid var(--gold); padding-left: var(--space-4); }
+.module-provider__fact-val { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: var(--text); }
+.module-provider__fact-label { font-size: var(--text-xs); color: var(--text-muted); margin-top: 2px; }
+.module-provider__body { font-size: var(--text-base); color: var(--text-muted); line-height: 1.7; margin-top: var(--space-6); }
+
+/* Module D — Patient Reviews (hidden, empty) */
+.module-reviews { display: none; } /* feature-flag: PATIENT_REVIEWS_ENABLED */
+
+@media (max-width: 900px) {
+  .module-leadership { grid-template-columns: 1fr; }
+  .module-leadership__photo { width: 100%; height: 200px; }
+  .module-provider__facts { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .module-provider__facts { grid-template-columns: 1fr; }
+}
+
+</style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ494PXNBP"></script>
   <script>
@@ -1025,13 +1092,38 @@ strong { color: var(--sand); font-weight: 600; }
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
 <!-- ── ANNOUNCE BAR ──────────────────────────────────────────────── -->
 <div class="announce-bar" id="announce-bar">
   <p>PRESCRIPTION LONGEVITY &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; PROVIDER REVIEW IN 48 HOURS</p>
-  <a href="/qualify" style="margin-left:12px;">See if you qualify →</a>
+  <a href="/#treatments" style="margin-left:12px;">See if you qualify →</a>
   <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">✕</button>
 </div>
 
@@ -1049,7 +1141,7 @@ strong { color: var(--sand); font-weight: 600; }
     </ul>
     <div class="nav-actions">
       <a href="https://portal.anthologyrx.com" class="nav-login">Log In</a>
-      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+      <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -1064,7 +1156,7 @@ strong { color: var(--sand); font-weight: 600; }
   <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
   <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
   <a href="https://portal.anthologyrx.com" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
-  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+  <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
 </div>
 
 <!-- ══════════════════════════════════════════════════
@@ -1115,7 +1207,7 @@ strong { color: var(--sand); font-weight: 600; }
     </div>
     <div class="outcome-stat">
       <div class="outcome-num">$149/mo</div>
-      <div class="outcome-label">All-inclusive — provider review, prescription if approved, 503B pharmacy fulfillment, no hidden fees</div>
+      <div class="outcome-label">All-inclusive — provider review, prescription if approved, 503A and 503B pharmacy fulfillment, no hidden fees. If your provider orders labs, lab costs are billed separately.</div>
     </div>
   </div>
   <p class="outcome-note">Individual results vary and are not guaranteed. Data reflects published research, not AnthologyRX-specific outcomes. All patients require physician evaluation before any prescription is issued.</p>
@@ -1267,7 +1359,7 @@ strong { color: var(--sand); font-weight: 600; }
       <div class="step">
         <div class="step-num">01</div>
         <h3>Complete Your Intake</h3>
-        <p>A structured medical questionnaire covering your health history, current medications, energy and wellness concerns, and contraindication screening. Under five minutes. No video call required. Completed entirely on your schedule.</p>
+        <p>A structured medical questionnaire covering your health history, current medications, energy and wellness concerns, and contraindication screening. About 10 minutes. No video call required. Completed entirely on your schedule.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
@@ -1340,7 +1432,7 @@ strong { color: var(--sand); font-weight: 600; }
           <span class="pricing-dollar">$149</span>
           <span class="pricing-period">/mo</span>
         </div>
-        <div class="pricing-subtext">All-inclusive. No hidden fees. Cancel anytime.</div>
+        <div class="pricing-subtext">All-inclusive. No hidden fees. Cancel anytime. If your provider orders labs, lab costs are billed separately.</div>
         <hr class="pricing-divider">
         <ul class="pricing-includes">
           <li>Online health assessment — reviewed by a licensed, board-certified physician</li>
@@ -1453,7 +1545,7 @@ strong { color: var(--sand); font-weight: 600; }
   <div class="wrap">
     <div class="eyebrow">Longevity · Vitality · Legacy</div>
     <h2>Restore what time has taken.</h2>
-    <p>Your intake takes five minutes. Provider review within 48 hours. No waiting room. No contracts. No guesswork. Prescription issued if approved — compounded and delivered monthly.</p>
+    <p>Your intake takes about 10 minutes. Provider review within 48 hours. No waiting room. No contracts. No guesswork. Prescription issued if approved — compounded and delivered monthly.</p>
     <div class="final-cta-actions">
       <a href="https://join.anthologyrx.com/start-online-visit/wellness-nad" class="btn btn--gold btn--xl">Start Assessment →</a>
       <a href="#what-it-is" class="text-link text-link--arrow">Learn more first</a>
@@ -1465,6 +1557,77 @@ strong { color: var(--sand); font-weight: 600; }
 <!-- ══════════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════════ -->
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       TRUST MODULES (Modules A, B, D)
+       Module C (science citations) lives at /science
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="trust-modules" id="trust">
+    <div class="section-inner">
+      <div class="section-header section-header--center">
+        <span class="section-label">Clinical Foundation</span>
+        <h2 class="section-title">Built on real credentials.</h2>
+      </div>
+<!-- ── MODULE A: Clinical Leadership ────────────────────────────────────── -->
+    <div class="module-leadership">
+      <!-- TODO(Michael): Replace placeholder below with approved headshot of Dr. Dylan Russell -->
+      <div class="module-leadership__photo" aria-label="Dr. Dylan Russell headshot placeholder">
+        <span>Headshot<br>TODO(Michael)</span>
+      </div>
+      <div class="module-leadership__content">
+        <div class="module-leadership__label">Chief Health Officer</div>
+        <h3 class="module-leadership__name">Dr. Dylan Russell, MD</h3>
+        <div class="module-leadership__title">Chief Health Officer · AnthologyRX</div>
+        <div class="module-leadership__creds">
+          <span class="module-leadership__cred">West Point Graduate</span>
+          <span class="module-leadership__cred">UVA School of Medicine</span>
+          <span class="module-leadership__cred">U.S. Army Surgeon</span>
+          <span class="module-leadership__cred">Transplant Fellowship</span>
+          <span class="module-leadership__cred">Board-Certified Physician</span>
+        </div>
+        <!-- TODO(Michael): Replace with Dr. Russell's approved bio copy and clinical philosophy statement -->
+        <p class="module-leadership__bio">TODO(Michael) — Approved bio copy for Dr. Dylan Russell. His credentials span West Point, UVA School of Medicine, service as a U.S. Army surgeon, and a transplant fellowship. Every AnthologyRX protocol is designed under his medical oversight and reviewed by our licensed provider network before a single prescription is issued.</p>
+        <p class="module-leadership__philosophy">TODO(Michael) — One-sentence clinical philosophy statement from Dr. Russell.</p>
+      </div>
+    </div>
+<!-- ── MODULE B: Provider Network ───────────────────────────────────────── -->
+    <div class="module-provider">
+      <div class="module-provider__header">
+        <div class="module-provider__badge">MD</div>
+        <div>
+          <div class="module-provider__name">Arora Health &amp; Aesthetics, LLC</div>
+          <div class="module-provider__sub">Licensed Clinical Provider Network</div>
+        </div>
+      </div>
+      <div class="module-provider__facts">
+        <div class="module-provider__fact">
+          <div class="module-provider__fact-val">50</div>
+          <div class="module-provider__fact-label">U.S. states — licensed to practice telehealth</div>
+        </div>
+        <div class="module-provider__fact">
+          <div class="module-provider__fact-val">Board-Certified</div>
+          <div class="module-provider__fact-label">Physicians only — no NPs, no AI approvals</div>
+        </div>
+        <div class="module-provider__fact">
+          <div class="module-provider__fact-val">Independent</div>
+          <div class="module-provider__fact-label">Clinical judgment is theirs — AnthologyRX does not direct care</div>
+        </div>
+      </div>
+      <p class="module-provider__body">Clinical care at AnthologyRX is delivered by Arora Health &amp; Aesthetics, LLC — a network of board-certified physicians licensed to practice telehealth in all 50 states. Every prescription is the result of a physician&#39;s independent review of your health intake. No protocol ships without a licensed doctor&#39;s sign-off. No automated approvals. No shortcuts. The same rigor that governs in-person care applies here — without the waiting room.</p>
+    </div>
+<!-- ── MODULE D: Patient Reviews ─────────────────────────────────────────
+     FEATURE FLAG: PATIENT_REVIEWS_ENABLED = false
+     This section is intentionally hidden and empty.
+     Only activate once real, consented, FTC-disclosed patient reviews
+     are collected post-launch through a compliant collection flow.
+     NEVER seed with example or placeholder reviews.
+──────────────────────────────────────────────────────────────────────── -->
+    <div class="module-reviews" id="patientReviews" aria-hidden="true">
+      <!-- Patient reviews will render here post-launch -->
+    </div>
+    </div>
+  </section>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1499,7 +1662,7 @@ strong { color: var(--sand); font-weight: 600; }
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
-          <li><a href="/qualify">Start Assessment</a></li>
+          <li><a href="/#treatments">Start Assessment</a></li>
         </ul>
       </div>
       <div class="footer-col">

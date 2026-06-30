@@ -1,16 +1,74 @@
 {
   "redirects": [
-    { "source": "/treatments/glp-1",         "destination": "/",                  "permanent": true },
-    { "source": "/treatments/glp-1/:path*",   "destination": "/",                  "permanent": true },
-    { "source": "/treatments/gonadorelin",    "destination": "/",                  "permanent": true },
-    { "source": "/treatments/gonadorelin/:path*", "destination": "/",              "permanent": true },
-    { "source": "/treatments/pt-141",         "destination": "/",                  "permanent": true },
-    { "source": "/treatments/pt-141/:path*",  "destination": "/",                  "permanent": true },
-    { "source": "/treatments/tesamorelin",    "destination": "/",                  "permanent": true },
-    { "source": "/treatments/tesamorelin/:path*", "destination": "/",              "permanent": true },
-    { "source": "/treatments/ramelteon",      "destination": "/",                  "permanent": true },
-    { "source": "/treatments/ramelteon/:path*", "destination": "/",                "permanent": true },
-    { "source": "/treatments/micc",           "destination": "/treatments/lipo-c", "permanent": true },
-    { "source": "/treatments/micc/:path*",    "destination": "/treatments/lipo-c", "permanent": true }
+    {
+      "source": "/treatments/glp-1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/glp-1/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/gonadorelin",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/gonadorelin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/pt-141",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/pt-141/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/tesamorelin",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/tesamorelin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/ramelteon",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/ramelteon/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/micc",
+      "destination": "/treatments/lipo-c",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/micc/:path*",
+      "destination": "/treatments/lipo-c",
+      "permanent": true
+    },
+    {
+      "source": "/qualify",
+      "destination": "/#treatments",
+      "permanent": true
+    },
+    {
+      "source": "/qualify/",
+      "destination": "/#treatments",
+      "permanent": true
+    }
   ]
 }

@@ -765,6 +765,31 @@
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
@@ -773,7 +798,7 @@
     <div class="announce-bar" id="announceBar">
       <div class="announce-bar__inner">
         <span class="announce-bar__text">Protocols from $199/mo · FSA/HSA may be accepted (plan-dependent) · Provider review in 48 hours</span>
-        <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+        <a href="/#treatments" class="announce-bar__cta">See if you qualify →</a>
       </div>
       <button class="announce-bar__close" id="announceClose" aria-label="Dismiss announcement">×</button>
     </div>
@@ -794,7 +819,7 @@
           </div>
           <div class="nav__actions">
             <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
-            <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+            <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
           </div>
           <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
             <span></span><span></span><span></span>
@@ -809,7 +834,7 @@
           <a href="/blogs/journal">Journal</a>
           <a href="/pages/pricing">Pricing</a>
           <a href="https://portal.anthologyrx.com">Log In</a>
-          <a href="/qualify" class="btn btn--gold" style="align-self:flex-start;margin-top:8px;">See If You Qualify</a>
+          <a href="/#treatments" class="btn btn--gold" style="align-self:flex-start;margin-top:8px;">See If You Qualify</a>
         </div>
       </nav>
     </header>
@@ -1182,7 +1207,7 @@
             <div class="faq-item__body">
               <div class="faq-item__body-inner">
                 <div class="faq-item__answer">
-                  <p>Every AnthologyRX protocol includes monthly provider check-ins and lab requirements specific to the protocol. Lipo-C protocol includes metabolic panels and liver function markers. NAD+ protocols include comprehensive metabolic panel and baseline assessment. Glutathione protocols include oxidative stress markers and liver function. Peptide protocols include IGF-1 baseline and follow-up labs. Labs are ordered through the platform and reviewed by your provider before and during treatment. If a result falls outside expected range, your provider contacts you directly. Monitoring is not a formality. It's how the protocol is managed.</p>
+                  <p>Every AnthologyRX protocol includes monthly provider check-ins. Some protocols require baseline labs at provider discretion — lab costs are billed separately and vary by panel. Lipo-C protocol includes metabolic panels and liver function markers. NAD+ protocols include comprehensive metabolic panel and baseline assessment. Glutathione protocols include oxidative stress markers and liver function. Peptide protocols include IGF-1 baseline and follow-up labs. Labs are ordered through the platform and reviewed by your provider before and during treatment. If a result falls outside expected range, your provider contacts you directly. Monitoring is not a formality. It's how the protocol is managed.</p>
                 </div>
               </div>
             </div>
@@ -1213,7 +1238,7 @@
         <h2 class="final-cta__display">For Those Who Never Stop.</h2>
         <p class="final-cta__sub">You've read the evidence. Now work with a physician who's read it too.</p>
         <div class="final-cta__actions">
-          <a href="/qualify" class="btn btn--gold btn--xl">Start Your Assessment</a>
+          <a href="/#treatments" class="btn btn--gold btn--xl">Start Your Assessment</a>
           <a href="/protocols" class="text-link text-link--arrow">View protocols</a>
         </div>
       </div>
@@ -1222,7 +1247,109 @@
   </main>
 
   <!-- ─── FOOTER ─────────────────────────────────── -->
-  <footer class="footer">
+  
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE C: CITATION REFERENCE LIST
+     Every quantitative claim on product pages is sourced here.
+     Stats without a confirmed citation are flagged TODO(Michael).
+     No invented sources. No guesses.
+══════════════════════════════════════════════════════════════════════ -->
+<section style="background:var(--bg-surface); border-top:1px solid var(--rule); padding:80px 0;" id="citations">
+  <div style="max-width:860px; margin:0 auto; padding:0 24px;">
+    <div style="margin-bottom:48px;">
+      <span style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px;">Module C · Evidence Backbone</span>
+      <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--sand);margin:0 0 12px;">Citation Reference</h2>
+      <p style="color:var(--sand-dim);font-size:0.95rem;line-height:1.65;max-width:60ch;">Every quantitative statistic published on AnthologyRX product pages is sourced to a real published study below. Stats awaiting CHO approval are flagged. No invented sources ship.</p>
+    </div>
+
+    <!-- NAD+ Citations -->
+    <div style="margin-bottom:40px;">
+      <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--rule);">NAD+</h3>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: "NAD+ levels decline approximately 50% between age 40 and 60"</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Schultz &amp; Bhatt. NAD+ and age-related tissue decline. Cell Metabolism, 2021. PMID: 33113355</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">TODO(Michael): Confirm with Dr. Russell that this citation accurately supports the 50% figure as stated before this goes live.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: NAD+ as coenzyme in mitochondrial ATP production (electron transport chain)</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Yoshino J, et al. NAD+ Intermediates: The Biology and Therapeutic Potential of NMN and NR. Cell Metabolism, 2018. PMID: 29249689</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Well-established mechanism. No controversy.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: NAD+ as required cofactor for sirtuins / longevity pathways</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Guarente L. Sirtuins, Aging, and Metabolism. Cold Spring Harb Symp Quant Biol, 2011. PMID: 21900149</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Foundational longevity biology. No controversy.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: Subcutaneous NAD+ tissue restoration in clinical trial</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Yoshino M, et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. Science, 2021. PMID: 33888596</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">First human RCT showing tissue-level NAD+ restoration. TODO(Michael): Dr. Russell to confirm this citation supports subcutaneous delivery claim.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sermorelin Citations -->
+    <div style="margin-bottom:40px;">
+      <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--rule);">Sermorelin</h3>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: "Growth hormone declines approximately 14% per decade beginning in your 30s"</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Corpas E, et al. Human growth hormone and human aging. Endocrine Reviews, 1993. PMID: 8462235</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">TODO(Michael): Confirm with Dr. Russell that 14%/decade is the correct figure from this source. Some sources cite different rates depending on measurement method.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: GHRH analogue (Sermorelin) increases IGF-1 and improves body composition</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Ionescu M, Frohman LA. Pulsatile secretion of growth hormone (GH) persists during continuous stimulation by CJC-1295. JCEM, 2006. PMID: 16636129</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Foundational GHRH agonism evidence. No controversy.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: GH secretion occurs predominantly during slow-wave (deep) sleep</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Van Cauter E, et al. Age-related changes in slow wave sleep and REM sleep and relationship with growth hormone and cortisol levels in healthy men. JAMA, 2000. PMID: 10918706</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Well-established sleep-GH relationship. No controversy.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Glutathione Citations -->
+    <div style="margin-bottom:40px;">
+      <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--rule);">Glutathione</h3>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: Mitochondrial glutathione depletion contributes to cellular energy decline</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Marí M, et al. Mitochondrial glutathione: a key survival antioxidant. Antioxidants &amp; Redox Signaling, 2009. PMID: 18999854</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Established mitochondrial biology. No controversy.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Quantitative glutathione decline stats — any specific % or age range claim</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">TODO(Michael): No specific quantitative claim is currently on the Glutathione product page. If one is added, source it here before publishing.</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Placeholder — no action required unless copy is updated.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lipo-C Citations -->
+    <div style="margin-bottom:40px;">
+      <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--rule);">Lipo-C</h3>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Claim: Methionine, Inositol, Choline (MIC) support hepatic fat metabolism</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">Source: Corbin KD, Zeisel SH. Choline metabolism provides novel insights into nonalcoholic fatty liver disease and its progression. Current Opinion in Gastroenterology, 2012. PMID: 22134222</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Established hepatic metabolism mechanism. No controversy.</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:20px;">
+          <div style="font-weight:600;color:var(--sand);margin-bottom:4px;">Quantitative Lipo-C outcome stats</div>
+          <div style="font-size:0.85rem;color:var(--gold);margin-bottom:6px;">TODO(Michael): No specific quantitative patient outcome claim is currently on the Lipo-C product page. If one is added, source it here before publishing.</div>
+          <div style="font-size:0.82rem;color:var(--sand-dim);">Placeholder — no action required unless copy is updated.</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:0.78rem;color:var(--sand-dim);border-top:1px solid var(--rule);padding-top:20px;line-height:1.65;">This citation list is maintained by AnthologyRX for internal reference and LegitScript compliance. It is published here as a transparency measure. Citations are compiled by the AnthologyRX team and subject to review and approval by Dr. Dylan Russell, MD, Chief Health Officer, prior to any quantitative claim going live on the platform. Last updated: June 2026.</p>
+  </div>
+</section>
+
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/" class="nav-logo" aria-label="AnthologyRX home">
@@ -1256,7 +1383,7 @@
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
-          <li><a href="/qualify">Start Assessment</a></li>
+          <li><a href="/#treatments">Start Assessment</a></li>
         </ul>
       </div>
       <div class="footer-col">

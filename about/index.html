@@ -543,13 +543,38 @@ strong { color: var(--sand); font-weight: 600; }
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
 <!-- ── ANNOUNCE BAR ──────────────────────────────────────────────── -->
 <div class="announce-bar" id="announce-bar">
   <p>PRESCRIPTION LONGEVITY &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; PROVIDER REVIEW IN 48 HOURS</p>
-  <a href="/qualify" style="margin-left:12px;">See if you qualify →</a>
+  <a href="/#treatments" style="margin-left:12px;">See if you qualify →</a>
   <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">✕</button>
 </div>
 
@@ -567,7 +592,7 @@ strong { color: var(--sand); font-weight: 600; }
     </ul>
     <div class="nav-actions">
       <a href="https://portal.anthologyrx.com" class="nav-login">Log In</a>
-      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+      <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -582,7 +607,7 @@ strong { color: var(--sand); font-weight: 600; }
   <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
   <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
   <a href="https://portal.anthologyrx.com" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
-  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+  <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
 </div>
 
 <!-- ══════════════════════════════════════════════════
@@ -728,7 +753,7 @@ strong { color: var(--sand); font-weight: 600; }
     <h2>The first step is straightforward.</h2>
     <p>Complete a brief health assessment. A licensed provider reviews your intake within 48 hours. If approved, your protocol ships directly to your door — no waiting rooms, no gatekeepers.</p>
     <div class="final-cta-actions">
-      <a href="/qualify" class="btn btn--gold btn--xl">Start Assessment →</a>
+      <a href="/#treatments" class="btn btn--gold btn--xl">Start Assessment →</a>
       <a href="/#treatments" class="btn btn--outline btn--lg">See the protocols →</a>
     </div>
   </div>
@@ -772,7 +797,7 @@ strong { color: var(--sand); font-weight: 600; }
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
-          <li><a href="/qualify">Start Assessment</a></li>
+          <li><a href="/#treatments">Start Assessment</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -800,7 +825,7 @@ strong { color: var(--sand); font-weight: 600; }
     <span class="mobile-bar-price">AnthologyRX</span>
     <span class="mobile-bar-sub">Start your assessment today</span>
   </div>
-  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+  <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
   <button class="mobile-bar-dismiss" onclick="document.getElementById('mobilebar').style.display='none'" aria-label="Dismiss">&#x2715;</button>
 </div>
 

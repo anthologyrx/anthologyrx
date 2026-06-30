@@ -1145,6 +1145,31 @@ header {
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
@@ -1158,7 +1183,7 @@ header {
       <span class="announce-bar__text">
         Protocols from $199/mo &nbsp;·&nbsp; FSA/HSA may be accepted (plan-dependent) &nbsp;·&nbsp; Provider review in 48 hours
       </span>
-      <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+      <a href="/#treatments" class="announce-bar__cta">See if you qualify →</a>
     </div>
     <button class="announce-bar__close" id="announceClose" aria-label="Dismiss">×</button>
   </div>
@@ -1190,7 +1215,7 @@ header {
 
       <div class="nav__actions">
         <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
-        <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+        <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
       </div>
 
       <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -1204,7 +1229,7 @@ header {
       <a href="/pages/science">Science</a>
       <a href="/pages/faq">FAQ</a>
       <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
-      <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+      <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
     </div>
   </nav>
 </header>
@@ -1220,7 +1245,7 @@ header {
     <span class="label page-header__label">Our Protocols</span>
     <h1 class="page-header__h1">Find the protocol that fits your goals.</h1>
     <p class="page-header__sub">Every AnthologyRX protocol is physician-prescribed, remotely managed, and built for people who take their performance seriously.</p>
-    <a href="/qualify" class="page-header__cta">Not sure where to start? Take the Match Assessment</a>
+    <a href="/#treatments" class="page-header__cta">Not sure where to start? Take the Match Assessment</a>
   </div>
 </section>
 
@@ -1277,7 +1302,7 @@ header {
         </ul>
 
         <div class="protocol-card__ctas">
-          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="/#treatments" class="protocol-card__cta-primary">See If You Qualify →</a>
           <a href="#" class="protocol-card__cta-secondary">Learn More</a>
         </div>
       </div>
@@ -1313,7 +1338,7 @@ header {
         </ul>
 
         <div class="protocol-card__ctas">
-          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="/#treatments" class="protocol-card__cta-primary">See If You Qualify →</a>
           <a href="#" class="protocol-card__cta-secondary">Learn More</a>
         </div>
       </div>
@@ -1346,7 +1371,7 @@ header {
         </ul>
 
         <div class="protocol-card__ctas">
-          <a href="/qualify" class="protocol-card__cta-secondary" style="opacity:0.5;pointer-events:none;">Notify Me When Available</a>
+          <a href="/#treatments" class="protocol-card__cta-secondary" style="opacity:0.5;pointer-events:none;">Notify Me When Available</a>
         </div>
       </div>
 
@@ -1381,7 +1406,7 @@ header {
         </ul>
 
         <div class="protocol-card__ctas">
-          <a href="/qualify" class="protocol-card__cta-primary">See If You Qualify →</a>
+          <a href="/#treatments" class="protocol-card__cta-primary">See If You Qualify →</a>
           <a href="#" class="protocol-card__cta-secondary">Learn More</a>
         </div>
       </div>
@@ -1687,8 +1712,8 @@ header {
     <div class="match-cta__inner">
       <span class="label" style="margin-bottom: 20px;">Find Your Protocol</span>
       <h2 class="match-cta__h2" id="match-cta-heading">Not sure which protocol is right for you?</h2>
-      <p class="match-cta__sub">The AnthologyRX Match Assessment takes 3 minutes and routes you to the protocol best matched to your goals, symptoms, and health history.</p>
-      <a href="/qualify" class="btn btn--gold btn--lg">Take the Match Assessment →</a>
+      <p class="match-cta__sub">The AnthologyRX intake takes about 10 minutes and connects you to a licensed physician who reviews your health history and goals.</p>
+      <a href="/#treatments" class="btn btn--gold btn--lg">Take the Match Assessment →</a>
       <p class="match-cta__reassurance">Over 9 in 10 people who complete the assessment qualify for at least one protocol.</p>
     </div>
   </div>
@@ -1708,11 +1733,11 @@ header {
         For Those Who Never Stop.
       </h2>
 
-      <p class="final-cta__sub">Your intake takes three minutes. Provider review within 48 hours. No waiting room. No contracts.</p>
+      <p class="final-cta__sub">Your intake takes about 10 minutes. Provider review within 48 hours. No waiting room. No contracts.</p>
 
       <div class="final-cta__actions">
-        <a href="/qualify" class="btn btn--gold btn--xl">See If You Qualify →</a>
-        <a href="/qualify" class="text-link text-link--arrow">Take the Match Assessment</a>
+        <a href="/#treatments" class="btn btn--gold btn--xl">See If You Qualify →</a>
+        <a href="/#treatments" class="text-link text-link--arrow">Take the Match Assessment</a>
       </div>
 
     </div>
@@ -1770,7 +1795,7 @@ header {
     <span class="mobile-bar__price">From $199/mo</span>
     <span class="mobile-bar__sub">All protocols</span>
   </div>
-  <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+  <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
   <button class="mobile-bar__dismiss" id="mobileBarDismiss" aria-label="Dismiss">×</button>
 </div>
 

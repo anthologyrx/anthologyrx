@@ -280,6 +280,31 @@
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
@@ -294,7 +319,7 @@
   <div class="ann" id="ann">
     <div class="ann__inner">
       <span class="ann__text">NAD+ Protocol from $149/mo &nbsp;·&nbsp; FSA/HSA may be accepted &nbsp;·&nbsp; Provider review in 48 hours</span>
-      <a href="/qualify" class="ann__cta">Start your assessment →</a>
+      <a href="/#treatments" class="ann__cta">Start your assessment →</a>
     </div>
     <button class="ann__x" id="annX" aria-label="Dismiss announcement">×</button>
   </div>
@@ -312,7 +337,7 @@
           <li><a href="/about">About</a></li>
         </ul>
         <div class="nav__actions">
-          <a href="/qualify" class="btn btn-gold btn-sm">Start Assessment</a>
+          <a href="/#treatments" class="btn btn-gold btn-sm">Start Assessment</a>
         </div>
         <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMob">
           <span></span><span></span><span></span>
@@ -323,7 +348,7 @@
         <a href="/how-it-works">How It Works</a>
         <a href="/faq">FAQ</a>
         <a href="/about">About</a>
-        <a href="/qualify" class="btn btn-gold">Start Assessment</a>
+        <a href="/#treatments" class="btn btn-gold">Start Assessment</a>
       </div>
     </nav>
   </header>
@@ -525,9 +550,9 @@
 
       <div class="proto-cta" role="complementary" aria-label="Protocol recommendation">
         <p class="proto-cta__title">Based on this article, you may be a candidate for a prescription NAD+ protocol.</p>
-        <p class="proto-cta__sub">Your intake assessment takes three minutes. Provider review within 48 hours.</p>
+        <p class="proto-cta__sub">Your intake takes about 10 minutes. Provider review within 48 hours.</p>
         <p class="proto-cta__sub" style="font-size:0.75rem;opacity:0.8;">Subject to physician review and approval.</p>
-        <a href="/qualify" class="btn btn-gold btn-sm">Start Assessment →</a>
+        <a href="/#treatments" class="btn btn-gold btn-sm">Start Assessment →</a>
       </div>
 
     </aside>

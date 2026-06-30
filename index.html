@@ -35,13 +35,38 @@
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
 <!-- ── ANNOUNCE BAR ──────────────────────────────────────────────── -->
 <div class="announce-bar" id="announce-bar">
   <p>PRESCRIPTION LONGEVITY &nbsp;·&nbsp; LICENSED IN ALL 50 STATES &nbsp;·&nbsp; PROVIDER REVIEW IN 48 HOURS</p>
-  <a href="/qualify" style="margin-left:12px;">See if you qualify →</a>
+  <a href="/#treatments" style="margin-left:12px;">See if you qualify →</a>
   <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">✕</button>
 </div>
 
@@ -59,7 +84,7 @@
     </ul>
     <div class="nav-actions">
       <a href="https://portal.anthologyrx.com" class="nav-login">Log In</a>
-      <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+      <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -74,7 +99,7 @@
   <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">FAQ</a>
   <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">About</a>
   <a href="https://portal.anthologyrx.com" onclick="document.getElementById('navMobile').classList.remove('open'); document.querySelector('.nav-hamburger').classList.remove('is-open');">Log In</a>
-  <a href="/qualify" class="btn btn--gold">Start Assessment</a>
+  <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
 </div>
 
 
@@ -118,7 +143,7 @@
           &mdash; online assessment, real providers, monthly delivery.
         </p>
         <div class="hero-ctas">
-          <a href="/qualify" class="btn btn--gold btn--lg">Start Assessment</a>
+          <a href="/#treatments" class="btn btn--gold btn--lg">Start Assessment</a>
           <a href="#treatments" class="hero-text-link">View Treatments <span aria-hidden="true">→</span></a>
         </div>
 
@@ -275,35 +300,74 @@
     </div>
   </section>
 
-  <!-- ── CREDIBILITY ──────────────────────────────────────────────────────── -->
-  <section class="credibility" id="credibility">
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       TRUST MODULES (Modules A, B, D)
+       Module C (science citations) lives at /science
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="trust-modules" id="trust">
     <div class="section-inner">
       <div class="section-header section-header--center">
-        <span class="section-label">Built On</span>
-        <h2 class="section-title">The infrastructure behind every prescription.</h2>
+        <span class="section-label">Clinical Foundation</span>
+        <h2 class="section-title">Built on real credentials.</h2>
       </div>
-      <div class="credibility-grid">
-        <div class="credibility-card">
-          <div class="credibility-icon">Rx</div>
-          <h3 class="credibility-title">Arora Health &amp; Aesthetics, LLC</h3>
-          <p class="credibility-desc">Board-certified physicians licensed across all 50 U.S. states. Every prescription issued after a complete clinical evaluation. No protocol ships without qualified provider approval.</p>
+<!-- ── MODULE A: Clinical Leadership ────────────────────────────────────── -->
+    <div class="module-leadership">
+      <!-- TODO(Michael): Replace placeholder below with approved headshot of Dr. Dylan Russell -->
+      <div class="module-leadership__photo" aria-label="Dr. Dylan Russell headshot placeholder">
+        <span>Headshot<br>TODO(Michael)</span>
+      </div>
+      <div class="module-leadership__content">
+        <div class="module-leadership__label">Chief Health Officer</div>
+        <h3 class="module-leadership__name">Dr. Dylan Russell, MD</h3>
+        <div class="module-leadership__title">Chief Health Officer · AnthologyRX</div>
+        <div class="module-leadership__creds">
+          <span class="module-leadership__cred">West Point Graduate</span>
+          <span class="module-leadership__cred">UVA School of Medicine</span>
+          <span class="module-leadership__cred">U.S. Army Surgeon</span>
+          <span class="module-leadership__cred">Transplant Fellowship</span>
+          <span class="module-leadership__cred">Board-Certified Physician</span>
         </div>
-        <div class="credibility-card">
-          <div class="credibility-icon">503</div>
-          <h3 class="credibility-title">VialsRx Compounding Pharmacy</h3>
-          <p class="credibility-desc">Licensed 503A and 503A and 503B pharmacy. Medications prepared under cGMP standards and dispensed under a valid prescription. No gray-market sourcing. No exceptions.</p>
-        </div>
-        <div class="credibility-card">
-          <div class="credibility-icon">&#x2665;</div>
-          <h3 class="credibility-title">HIPAA-Compliant Platform</h3>
-          <p class="credibility-desc">All health data encrypted at rest and in transit. Business Associate Agreements in place with every platform and storage partner. Your information is never sold or shared.</p>
-        </div>
-        <div class="credibility-card">
-          <div class="credibility-icon">MD</div>
-          <h3 class="credibility-title">Physician Review Required</h3>
-          <p class="credibility-desc">Every intake is reviewed by a licensed physician before any prescription is issued. Clinical judgment governs every protocol — no automated approvals, no shortcuts.</p>
+        <!-- TODO(Michael): Replace with Dr. Russell's approved bio copy and clinical philosophy statement -->
+        <p class="module-leadership__bio">TODO(Michael) — Approved bio copy for Dr. Dylan Russell. His credentials span West Point, UVA School of Medicine, service as a U.S. Army surgeon, and a transplant fellowship. Every AnthologyRX protocol is designed under his medical oversight and reviewed by our licensed provider network before a single prescription is issued.</p>
+        <p class="module-leadership__philosophy">TODO(Michael) — One-sentence clinical philosophy statement from Dr. Russell.</p>
+      </div>
+    </div>
+<!-- ── MODULE B: Provider Network ───────────────────────────────────────── -->
+    <div class="module-provider">
+      <div class="module-provider__header">
+        <div class="module-provider__badge">MD</div>
+        <div>
+          <div class="module-provider__name">Arora Health &amp; Aesthetics, LLC</div>
+          <div class="module-provider__sub">Licensed Clinical Provider Network</div>
         </div>
       </div>
+      <div class="module-provider__facts">
+        <div class="module-provider__fact">
+          <div class="module-provider__fact-val">50</div>
+          <div class="module-provider__fact-label">U.S. states — licensed to practice telehealth</div>
+        </div>
+        <div class="module-provider__fact">
+          <div class="module-provider__fact-val">Board-Certified</div>
+          <div class="module-provider__fact-label">Physicians only — no NPs, no AI approvals</div>
+        </div>
+        <div class="module-provider__fact">
+          <div class="module-provider__fact-val">Independent</div>
+          <div class="module-provider__fact-label">Clinical judgment is theirs — AnthologyRX does not direct care</div>
+        </div>
+      </div>
+      <p class="module-provider__body">Clinical care at AnthologyRX is delivered by Arora Health &amp; Aesthetics, LLC — a network of board-certified physicians licensed to practice telehealth in all 50 states. Every prescription is the result of a physician&#39;s independent review of your health intake. No protocol ships without a licensed doctor&#39;s sign-off. No automated approvals. No shortcuts. The same rigor that governs in-person care applies here — without the waiting room.</p>
+    </div>
+<!-- ── MODULE D: Patient Reviews ─────────────────────────────────────────
+     FEATURE FLAG: PATIENT_REVIEWS_ENABLED = false
+     This section is intentionally hidden and empty.
+     Only activate once real, consented, FTC-disclosed patient reviews
+     are collected post-launch through a compliant collection flow.
+     NEVER seed with example or placeholder reviews.
+──────────────────────────────────────────────────────────────────────── -->
+    <div class="module-reviews" id="patientReviews" aria-hidden="true">
+      <!-- Patient reviews will render here post-launch -->
+    </div>
     </div>
   </section>
 
@@ -406,7 +470,7 @@
       </blockquote>
       <div class="editorial-rule"></div>
       <p class="editorial-sub">Complete your assessment in under 10 minutes. A licensed provider reviews your intake and responds in as little as 48 hours. No clinic. No waiting room. No guesswork.</p>
-      <a href="/qualify" class="btn btn--gold btn--lg editorial-cta">Start Assessment</a>
+      <a href="/#treatments" class="btn btn--gold btn--lg editorial-cta">Start Assessment</a>
     </div>
   </section>
 
@@ -445,7 +509,7 @@
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
-          <li><a href="/qualify">Start Assessment</a></li>
+          <li><a href="/#treatments">Start Assessment</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -467,7 +531,7 @@
   <!-- ── STICKY BOTTOM BAR ──────────────────────────────────────────────── -->
   <div class="sticky-bar" id="sticky-bar" aria-hidden="true">
     <p class="sticky-bar-copy">Ready to get started?</p>
-    <a href="/qualify" class="btn btn--gold sticky-bar-cta">Start Assessment</a>
+    <a href="/#treatments" class="btn btn--gold sticky-bar-cta">Start Assessment</a>
     <button class="sticky-bar-close" aria-label="Dismiss" onclick="document.getElementById('sticky-bar').classList.add('sticky-bar--dismissed')">✕</button>
   </div>
 
