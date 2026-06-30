@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#B28A2A" />
   <title>The Journal — AnthologyRX</title>
   <meta name="description" content="Clinical research, protocol guidance, and performance intelligence — for people who want to understand the why." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -196,6 +202,14 @@
     .footer__legal{font-size:.7rem;line-height:1.7;color:var(--sand-dim);opacity:.5;max-width:900px}
     @media(max-width:768px){.footer__top{flex-direction:column;gap:28px}}
   </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ494PXNBP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-LJ494PXNBP");
+  </script>
 </head>
 <body>
 
@@ -269,17 +283,17 @@
     <div class="feat-card">
       <div class="feat-card__left">
         <span class="cat-chip">Protocol Science</span>
-        <h2 class="feat-card__title" id="feat-title">The SURMOUNT-1 Trial: What 20.9% Weight Reduction Actually Means</h2>
-        <p class="feat-card__excerpt">A landmark clinical trial redefined what's achievable in metabolic medicine without surgery. Here's what the data actually shows.</p>
+        <h2 class="feat-card__title" id="feat-title">NAD+ and Longevity: What the Science Actually Shows</h2>
+        <p class="feat-card__excerpt">NAD+ is a coenzyme present in every living cell. By midlife, most people have lost half of it. Here is what the peer-reviewed research says about restoring it.</p>
         <div class="feat-card__meta">
-          <span>April 2026</span>
+          <span>June 2026</span>
           <span class="feat-card__meta-sep">·</span>
-          <span>8 min read</span>
+          <span>9 min read</span>
         </div>
-        <a href="/blogs/journal/article-template" class="btn btn-gold">Read Article →</a>
+        <a href="/blog/article" class="btn btn-gold">Read Article →</a>
       </div>
-      <div class="feat-card__img" role="img" aria-label="Article image placeholder">
-        <span>Editorial Image</span>
+      <div class="feat-card__img" role="img" aria-label="Person in focused recovery, representing NAD+ and longevity">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" alt="NAD+ longevity protocol" style="width:100%;height:100%;object-fit:cover;border-radius:4px" loading="lazy" />
       </div>
     </div>
   </div>
