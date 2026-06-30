@@ -6,6 +6,7 @@ Disallow: /promissorynote/
 Disallow: /access/
 
 # Design prototypes — not public routes
+Disallow: /treatments/micc/
 Disallow: /pricing-page/
 Disallow: /product-page/
 Disallow: /protocol-landing/
