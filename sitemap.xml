@@ -4,51 +4,33 @@
   <!-- Homepage -->
   <url>
     <loc>https://anthologyrx.com/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Treatment Pages -->
   <url>
-    <loc>https://anthologyrx.com/treatments/glp-1/</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://anthologyrx.com/treatments/nad/</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://anthologyrx.com/treatments/gonadorelin/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/treatments/micc/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://anthologyrx.com/treatments/pt-141/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://anthologyrx.com/treatments/glutathione/</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://anthologyrx.com/treatments/tesamorelin/</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://anthologyrx.com/treatments/ramelteon/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://anthologyrx.com/treatments/lipo-c/</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -56,31 +38,31 @@
   <!-- Core Site Pages -->
   <url>
     <loc>https://anthologyrx.com/about/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/how-it-works/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/faq/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/science/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/qualify/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -88,7 +70,7 @@
   <!-- Blog -->
   <url>
     <loc>https://anthologyrx.com/blog/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -96,13 +78,13 @@
   <!-- Company / Support Pages -->
   <url>
     <loc>https://anthologyrx.com/press/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/contact/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -110,19 +92,25 @@
   <!-- Legal -->
   <url>
     <loc>https://anthologyrx.com/privacy/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/terms/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/privacy-practices/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://anthologyrx.com/refund-policy/</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -130,31 +118,31 @@
   <!-- Account / Commerce -->
   <url>
     <loc>https://anthologyrx.com/account/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/cart/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/supplements/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/merch/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://anthologyrx.com/search/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
