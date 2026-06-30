@@ -595,42 +595,24 @@
     </div>
     <button class="announce-bar__close" id="barClose" aria-label="Dismiss">×</button>
   </div>
-  <header>
-    <nav class="nav" id="mainNav">
-      <div class="container nav__inner">
-        <a href="/" class="nav__logo" aria-label="AnthologyRX home">
-          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
-        </a>
-        <div class="nav__links">
-          <a href="/protocols">Protocols</a>
-          <a href="/pages/how-it-works">How It Works</a>
-          <a href="/pages/science">Science</a>
-          <a href="/pages/faq">FAQ</a>
-            <a href="/pages/about">About</a>
-            <a href="/blogs/journal">Journal</a>
-            <a href="/pages/pricing">Pricing</a>
-          </div>
-        <div class="nav__actions">
-          <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
-          <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
-        </div>
-        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <div class="nav__mobile-menu" id="mobileMenu">
-        <a href="/protocols">Protocols</a>
-        <a href="/pages/how-it-works">How It Works</a>
-        <a href="/pages/science">Science</a>
-        <a href="/pages/faq">FAQ</a>
-        <a href="/pages/about">About</a>
-          <a href="/blogs/journal">Journal</a>
-          <a href="/pages/pricing">Pricing</a>
-          <a href="https://portal.anthologyrx.com">Log In</a>
-        <a href="/#treatments" class="btn btn--gold" style="text-align:center;">See If You Qualify</a>
-      </div>
-    </nav>
-  </header>
+  <nav class="nav" style="display:flex;align-items:center;gap:40px;max-width:1200px;margin:0 auto;padding:0 32px;height:64px;">
+    <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+      <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+    </a>
+    <ul class="nav-links" role="list" style="display:flex;gap:32px;list-style:none;margin-left:auto;">
+      <li><a href="/#treatments" style="font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:#9C9082;transition:color 0.2s;">Treatments</a></li>
+      <li><a href="/how-it-works" style="font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:#9C9082;transition:color 0.2s;">How It Works</a></li>
+      <li><a href="/faq" style="font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:#9C9082;transition:color 0.2s;">FAQ</a></li>
+      <li><a href="/about" style="font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:#9C9082;transition:color 0.2s;">About</a></li>
+    </ul>
+    <div class="nav-actions" style="display:flex;align-items:center;gap:16px;">
+      <a href="https://portal.anthologyrx.com" style="font-size:0.78rem;letter-spacing:0.06em;color:#9C9082;">Log In</a>
+      <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 </div>
 
 <!-- PAGE HEADER -->
@@ -775,9 +757,7 @@
         <ul>
           <li><a href="/about">About</a></li>
           <li><a href="/how-it-works">How It Works</a></li>
-          <li><a href="/science">The Science</a></li>
           <li><a href="/blog">Journal</a></li>
-          <li><a href="/press">Press</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -786,7 +766,6 @@
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
-          <li><a href="/#treatments">Start Assessment</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -794,6 +773,7 @@
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/hipaa-privacy-policy">HIPAA Privacy Policy</a></li>
           <li><a href="/privacy-practices">Notice of Privacy Practices</a></li>
           <li><a href="/refund-policy">Refund Policy</a></li>
         </ul>
