@@ -797,47 +797,40 @@
   <div class="top-stack" id="topStack">
     <div class="announce-bar" id="announceBar">
       <div class="announce-bar__inner">
-        <span class="announce-bar__text">Protocols from $199/mo · FSA/HSA may be accepted (plan-dependent) · Provider review in 48 hours</span>
+        <span class="announce-bar__text">Prescription longevity protocols · Licensed in all 50 states · Provider review in 48 hours</span>
         <a href="/#treatments" class="announce-bar__cta">See if you qualify →</a>
       </div>
       <button class="announce-bar__close" id="announceClose" aria-label="Dismiss announcement">×</button>
     </div>
     <header>
-      <nav class="nav" id="mainNav">
-        <div class="container nav__inner">
-          <a href="/" class="nav__logo" aria-label="AnthologyRX home">
-            <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
-          </a>
-          <div class="nav__links">
-            <a href="/protocols">Protocols</a>
-            <a href="/pages/how-it-works">How It Works</a>
-            <a href="/pages/science" class="active">Science</a>
-            <a href="/pages/faq">FAQ</a>
-            <a href="/pages/about">About</a>
-            <a href="/blogs/journal">Journal</a>
-            <a href="/pages/pricing">Pricing</a>
-          </div>
-          <div class="nav__actions">
-            <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
-            <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
-          </div>
-          <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
-            <span></span><span></span><span></span>
-          </button>
+      <nav class="nav">
+        <a href="/" class="nav-logo" aria-label="AnthologyRX home">
+          <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="/#treatments">Treatments</a></li>
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="https://portal.anthologyrx.com" class="nav-login">Log In</a>
+          <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
         </div>
-        <div class="nav__mobile-menu" id="mobileMenu">
-          <a href="/protocols">Protocols</a>
-          <a href="/pages/how-it-works">How It Works</a>
-          <a href="/pages/science">Science</a>
-          <a href="/pages/faq">FAQ</a>
-          <a href="/pages/about">About</a>
-          <a href="/blogs/journal">Journal</a>
-          <a href="/pages/pricing">Pricing</a>
-          <a href="https://portal.anthologyrx.com">Log In</a>
-          <a href="/#treatments" class="btn btn--gold" style="align-self:flex-start;margin-top:8px;">See If You Qualify</a>
-        </div>
+        <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </header>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="dialog" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" onclick="document.getElementById('navMobile').classList.remove('open')" aria-label="Close menu">&#x2715;</button>
+    <a href="/#treatments" onclick="document.getElementById('navMobile').classList.remove('open')">Treatments</a>
+    <a href="/how-it-works" onclick="document.getElementById('navMobile').classList.remove('open')">How It Works</a>
+    <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
+    <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
+    <a href="https://portal.anthologyrx.com" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
+    <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
   </div>
 
   <main>
@@ -862,126 +855,6 @@
         </div>
 
         <div class="accordion-list" id="accordionList">
-
-          <!-- ── PEPTIDE PANEL ──────────────────────── -->
-          <div class="accordion-item" id="acc-peptide">
-            <button class="accordion-item__trigger" aria-expanded="false" data-target="acc-peptide">
-              <div class="accordion-item__trigger-left">
-                <span class="accordion-item__name">Peptide Therapy</span>
-                <span class="accordion-item__category">Recovery / Composition</span>
-              </div>
-              <span class="accordion-item__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="accordion-item__body">
-              <div class="accordion-item__body-inner">
-                <div class="accordion-item__content">
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">Mechanism</span>
-                    <div class="sci-section__title">Peptide Signaling Pathways</div>
-                    <p><strong style="color:var(--sand);font-weight:600;">CJC-1295 / Ipamorelin (GHRH agonism):</strong> CJC-1295 is a synthetic analogue of growth hormone-releasing hormone (GHRH), extending GH pulse duration. Ipamorelin selectively stimulates pituitary GH release via the ghrelin receptor without significantly elevating cortisol or prolactin. Used in combination, they produce a robust, pulsatile GH release that closely mirrors physiological secretion — amplifying IGF-1 production, promoting lean tissue synthesis, and accelerating recovery from training stress.</p>
-                    <p style="margin-top:12px;"><strong style="color:var(--sand);font-weight:600;">BPC-157 (tissue repair signaling):</strong> Body Protective Compound-157 is a synthetic pentadecapeptide fragment of a human gastric protein. It upregulates growth hormone receptors at tendon and ligament fibroblasts, promotes angiogenesis at injury sites, and modulates nitric oxide pathways to accelerate musculoskeletal repair.</p>
-                  </div>
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">Clinical Evidence</span>
-                    <div class="sci-section__title">Research Base</div>
-                    <div class="evidence-stat">
-                      <div class="evidence-stat__study">IGF-1 Axis Optimization</div>
-                      <div class="evidence-stat__result">GHRH analogue therapy demonstrated significant IGF-1 elevation and improved body composition in GH-deficient adult populations</div>
-                      <div class="evidence-stat__note">Ionescu &amp; Frohman, JCEM — foundational evidence for GHRH agonism in adults.</div>
-                    </div>
-                    <div class="evidence-stat" style="margin-top:10px;">
-                      <div class="evidence-stat__study">Recovery &amp; Tissue Repair</div>
-                      <div class="evidence-stat__result">BPC-157 demonstrated accelerated tendon-to-bone healing and reduced recovery time in multiple animal model studies</div>
-                      <div class="evidence-stat__note">Human clinical data for BPC-157 remains limited. AnthologyRX providers disclose research-stage status during intake.</div>
-                    </div>
-                  </div>
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">Safety Profile</span>
-                    <div class="sci-section__title">Monitoring &amp; Sourcing</div>
-                    <ul class="safety-list">
-                      <li>Active or prior malignancy: thorough oncology history required before initiating any GH-stimulating peptide</li>
-                      <li>503A / 503B sourcing requirements: all peptides compounded at licensed facilities with appropriate documentation</li>
-                      <li>FDA regulatory note: April 2026 FDA Category 2 update reclassified certain peptides — AnthologyRX protocols are continuously reviewed for compliance with current regulatory status</li>
-                      <li>IGF-1 baseline labs ordered pre-protocol; monitored at defined intervals</li>
-                    </ul>
-                  </div>
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">AnthologyRX Approach</span>
-                    <div class="sci-section__title">Clinical Framework</div>
-                    <p>Peptide protocols at AnthologyRX are prescribed only by physicians who assess the patient's training load, recovery demands, and baseline labs. Dosing is individualized. Regulatory compliance is non-negotiable — as the landscape evolves post-April 2026 FDA guidance, our clinical team actively reviews and adjusts available protocols to stay within current compounding and prescribing standards.</p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── HORMONE OPTIMIZATION PANEL ─────────── -->
-          <div class="accordion-item" id="acc-hormone">
-            <button class="accordion-item__trigger" aria-expanded="false" data-target="acc-hormone">
-              <div class="accordion-item__trigger-left">
-                <span class="accordion-item__name">Hormone Optimization</span>
-                <span class="accordion-item__category">TRT / Endocrine</span>
-              </div>
-              <span class="accordion-item__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="accordion-item__body">
-              <div class="accordion-item__body-inner">
-                <div class="accordion-item__content">
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">Mechanism</span>
-                    <div class="sci-section__title">HPG Axis &amp; Testosterone Physiology</div>
-                    <p>The hypothalamic-pituitary-gonadal (HPG) axis governs testosterone production through a feedback loop: GnRH from the hypothalamus stimulates LH/FSH release from the pituitary, which drives testicular Leydig cell testosterone synthesis. In hypogonadal men, this axis is insufficient — TRT restores circulating testosterone to physiologic range, normalizing SHBG dynamics, muscle protein synthesis, bone mineral density, libido, and cognitive clarity.</p>
-                    <p style="margin-top:12px;">Aromatization management (conversion of testosterone to estradiol via aromatase enzymes) is addressed when clinically indicated, as supraphysiologic estradiol can blunt TRT benefits and cause adverse effects. Female testosterone optimization targets HSDD (hypoactive sexual desire disorder) and mood/energy endpoints at micro-dose ranges distinct from male TRT protocols.</p>
-                  </div>
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">Clinical Evidence</span>
-                    <div class="sci-section__title">Validated Outcomes</div>
-                    <div class="evidence-stat">
-                      <div class="evidence-stat__study">ADAM Questionnaire Validation</div>
-                      <div class="evidence-stat__result">Androgen Deficiency in Aging Males (ADAM) questionnaire — validated screening tool for symptomatic hypogonadism</div>
-                      <div class="evidence-stat__note">Morley et al. — used alongside lab panels for clinical decision-making in AnthologyRX intake.</div>
-                    </div>
-                    <div class="evidence-stat" style="margin-top:10px;">
-                      <div class="evidence-stat__study">Clinical Hypogonadism Treatment</div>
-                      <div class="evidence-stat__result">TRT demonstrated significant improvements in lean body mass, bone density, sexual function, and mood in hypogonadal men</div>
-                      <div class="evidence-stat__note">Testosterone Trials (TTrials) — 7-trial consortium published in NEJM &amp; JAMA 2016.</div>
-                    </div>
-                    <div class="evidence-stat" style="margin-top:10px;">
-                      <div class="evidence-stat__study">Female Testosterone — HSDD</div>
-                      <div class="evidence-stat__result">Low-dose testosterone demonstrated significant improvement in sexual desire and satisfying sexual events vs. placebo</div>
-                      <div class="evidence-stat__note">Davis et al., Lancet — informs the female hormone optimization protocols offered via AnthologyRX.</div>
-                    </div>
-                  </div>
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">Safety Profile</span>
-                    <div class="sci-section__title">Monitoring Protocol</div>
-                    <ul class="safety-list">
-                      <li>PSA monitoring: baseline and periodic follow-up for male patients over 40</li>
-                      <li>Hematocrit: CBC monitored; TRT can elevate red blood cell mass requiring therapeutic phlebotomy if indicated</li>
-                      <li>Sleep apnea screening: TRT may worsen existing OSA; baseline sleep history assessed</li>
-                      <li>Fertility routing: patients desiring future fertility are offered enclomiphene-based protocols rather than exogenous TRT to preserve HPG axis function</li>
-                      <li>Estradiol monitoring: aromatase inhibitor use only when labs confirm excess conversion; not prophylactic</li>
-                    </ul>
-                  </div>
-
-                  <div class="sci-section">
-                    <span class="sci-section__label">AnthologyRX Approach</span>
-                    <div class="sci-section__title">Individualized, Lab-Driven Protocols</div>
-                    <p>Hormone protocols at AnthologyRX begin with comprehensive baseline labs: total and free testosterone, SHBG, LH, FSH, estradiol, PSA (males), CBC, and metabolic panel. Dosing targets physiologic range — not supraphysiologic — with dose adjustments guided by follow-up labs at defined intervals. Providers are briefed on patient training goals, not just diagnostic criteria.</p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- ── NAD+ PANEL ─────────────────────────── -->
           <div class="accordion-item" id="acc-nad">
@@ -1060,7 +933,7 @@
           <div class="pharmacy-col anim-up">
             <div class="pharmacy-col__number">01</div>
             <div class="pharmacy-col__title">What 503B means</div>
-            <p>A 503A and 503B pharmacy is a compounding pharmacy that operates under direct FDA registration and oversight — subject to Current Good Manufacturing Practice (CGMP) standards, facility inspections, and mandatory adverse event reporting. Unlike traditional 503A pharmacies, 503B facilities produce bulk compounded medications that are tested for potency, sterility, and endotoxin levels before dispensing.</p>
+            <p>A 503A and 503B pharmacy is a compounding pharmacy that operates under direct FDA registration and oversight — subject to Current Good Manufacturing Practice (CGMP) standards, facility inspections, and mandatory adverse event reporting. 503B outsourcing facilities produce bulk compounded medications that are tested for potency, sterility, and endotoxin levels before dispensing.</p>
           </div>
           <div class="pharmacy-col anim-up">
             <div class="pharmacy-col__number">02</div>
@@ -1165,7 +1038,7 @@
             <div class="faq-item__body">
               <div class="faq-item__body-inner">
                 <div class="faq-item__answer">
-                  <p>It depends on the compound and its form. NAD+, Glutathione, and Lipo-C are compounded by licensed 503B outsourcing facilities under the FDA's compounding framework, which permits such production when specific conditions are met. These are not FDA-approved end products -- they are compounded formulations using pharmaceutical-grade active ingredients, dispensed under valid physician prescription. Peptides like CJC-1295/Ipamorelin and BPC-157 exist in a more complex regulatory landscape -- their status is subject to ongoing FDA guidance, including the April 2026 Category 2 update. AnthologyRX providers explain the specific regulatory status of each compound during the intake process. We don't obscure nuance.</p>
+                  <p>It depends on the compound and its form. NAD+, Glutathione, Lipo-C, and Sermorelin are compounded by licensed 503A and 503B pharmacies under the FDA's compounding framework, which permits such production when specific conditions are met. These are not FDA-approved end products — they are compounded formulations using pharmaceutical-grade active ingredients, dispensed under valid physician prescription. AnthologyRX providers explain the specific regulatory status of each compound during the intake process. We don't obscure nuance.</p>
                 </div>
               </div>
             </div>
@@ -1239,7 +1112,7 @@
         <p class="final-cta__sub">You've read the evidence. Now work with a physician who's read it too.</p>
         <div class="final-cta__actions">
           <a href="/#treatments" class="btn btn--gold btn--xl">Start Your Assessment</a>
-          <a href="/protocols" class="text-link text-link--arrow">View protocols</a>
+          <a href="/#treatments" class="text-link text-link--arrow">View Treatments</a>
         </div>
       </div>
     </section>
