@@ -159,6 +159,31 @@ a:hover { opacity: 0.8; }
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
@@ -167,7 +192,7 @@ a:hover { opacity: 0.8; }
     <a href="/" class="nav-logo" aria-label="AnthologyRX home">
       <span class="logo-main">ANTHOLOGY</span><span class="logo-rx">RX</span>
     </a>
-    <a href="/qualify" class="nav-back">← Back to Assessment</a>
+    <a href="/#treatments" class="nav-back">← Back to Assessment</a>
   </div>
 </nav>
 
@@ -207,7 +232,7 @@ a:hover { opacity: 0.8; }
     <div class="legal-section">
       <h2>How We Use Your Information</h2>
       <p>We use your PHI for three primary purposes permitted under HIPAA without requiring your separate authorization:</p>
-      <p><strong>Treatment.</strong> We share your health information with the licensed physicians in our clinical partner network (Bask Health) who evaluate your assessment and, if appropriate, issue a prescription. We also share necessary information with our licensed 503B compounding pharmacy to fulfill your prescription and with any specialist or provider involved in your care.</p>
+      <p><strong>Treatment.</strong> We share your health information with the licensed physicians in our clinical partner network (Bask Health) who evaluate your assessment and, if appropriate, issue a prescription. We also share necessary information with our licensed 503A and 503B pharmacy to fulfill your prescription and with any specialist or provider involved in your care.</p>
       <p><strong>Payment.</strong> We use your information to process your subscription, verify insurance or FSA/HSA benefit claims where applicable, and manage billing.</p>
       <p><strong>Healthcare Operations.</strong> We use de-identified or aggregate health information to improve our platform, evaluate clinical protocols, ensure quality of care, and conduct internal compliance audits. We do not sell your PHI.</p>
     </div>
@@ -218,7 +243,7 @@ a:hover { opacity: 0.8; }
       <p>We share your PHI only with parties who have entered into a HIPAA-compliant Business Associate Agreement (BAA) with AnthologyRX, including:</p>
       <ul>
         <li><strong>Bask Health</strong> &mdash; our clinical partner whose licensed provider network evaluates your assessment and issues prescriptions</li>
-        <li><strong>Licensed 503B Compounding Pharmacy</strong> &mdash; to fulfill any prescribed medication</li>
+        <li><strong>Licensed 503A and 503B Pharmacy</strong> &mdash; to fulfill any prescribed medication</li>
         <li><strong>Payment Processor</strong> &mdash; limited to billing information necessary to process your subscription</li>
       </ul>
       <p>We do not sell, rent, or share your PHI with advertisers, data brokers, or any third party for marketing purposes.</p>
@@ -268,6 +293,11 @@ a:hover { opacity: 0.8; }
       <p>Questions about this notice or your privacy rights should be directed to:</p>
       <p>
         <strong>AnthologyRX Privacy Officer</strong><br>
+        AnthologyRX LLC<br>
+          8605 Santa Monica Blvd<br>
+          PMB 127669<br>
+          West Hollywood, CA 90069-4109<br>
+        (323) 250-2408<br>
         Email: <a href="mailto:michael@anthologyrx.com">michael@anthologyrx.com</a><br>
         Website: <a href="https://www.anthologyrx.com">anthologyrx.com</a>
       </p>
@@ -291,6 +321,7 @@ a:hover { opacity: 0.8; }
           <li><a href="/treatments/nad">NAD+ Therapy</a></li>
           <li><a href="/treatments/glutathione">Glutathione</a></li>
           <li><a href="/treatments/lipo-c">Lipo-C</a></li>
+          <li><a href="/treatments/sermorelin">Sermorelin</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -298,9 +329,7 @@ a:hover { opacity: 0.8; }
         <ul>
           <li><a href="/about">About</a></li>
           <li><a href="/how-it-works">How It Works</a></li>
-          <li><a href="/science">The Science</a></li>
           <li><a href="/blog">Journal</a></li>
-          <li><a href="/press">Press</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -308,8 +337,7 @@ a:hover { opacity: 0.8; }
         <ul>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/account">Member Login</a></li>
-          <li><a href="/qualify">Start Assessment</a></li>
+          <li><a href="https://portal.anthologyrx.com">Member Login</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -317,6 +345,7 @@ a:hover { opacity: 0.8; }
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/hipaa-privacy-policy">HIPAA Privacy Policy</a></li>
           <li><a href="/privacy-practices">Notice of Privacy Practices</a></li>
           <li><a href="/refund-policy">Refund Policy</a></li>
         </ul>

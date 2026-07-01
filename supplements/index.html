@@ -930,6 +930,31 @@
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
@@ -938,7 +963,7 @@
     <div class="announce-bar" id="announceBar">
       <div class="announce-bar__inner">
         <span class="announce-bar__text">Protocols from $199/mo · FSA/HSA may be accepted (plan-dependent) · Provider review in 48 hours</span>
-        <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+        <a href="/#treatments" class="announce-bar__cta">See if you qualify →</a>
       </div>
       <button class="announce-bar__close" id="announceClose" aria-label="Dismiss announcement">×</button>
     </div>
@@ -962,8 +987,8 @@
           </div>
             <!-- Actions -->
             <div class="nav__actions">
-              <a href="/account" class="nav__login">Log In</a>
-              <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+              <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
+              <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
             </div>
             <!-- Hamburger -->
             <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
@@ -980,8 +1005,8 @@
           <a href="/pages/about">About</a>
           <a href="/blogs/journal">Journal</a>
           <a href="/pages/pricing">Pricing</a>
-          <a href="/account">Log In</a>
-          <a href="/qualify" class="btn btn--gold" style="width:fit-content">See If You Qualify</a>
+          <a href="https://portal.anthologyrx.com">Log In</a>
+          <a href="/#treatments" class="btn btn--gold" style="width:fit-content">See If You Qualify</a>
         </div>
       </nav>
     </header>
@@ -1222,9 +1247,9 @@
           <div class="protocol-card anim-up">
             <span class="protocol-card__name">NAD+ Protocol</span>
             <h3 class="protocol-card__title">Metabolic Reset &amp; Weight Optimization</h3>
-            <p class="protocol-card__desc">Clinician-prescribed NAD+ for cellular energy restoration and metabolic performance, dispensed by a licensed 503B compounding pharmacy.</p>
+            <p class="protocol-card__desc">Clinician-prescribed NAD+ for cellular energy restoration and metabolic performance, dispensed by a licensed 503A and 503B pharmacy.</p>
             <div class="protocol-card__price">From <strong>$199</strong> / month</div>
-            <a href="/qualify" class="protocol-card__cta">Start your protocol</a>
+            <a href="/#treatments" class="protocol-card__cta">Start your protocol</a>
           </div>
           <div class="protocol-card anim-up">
             <span class="protocol-card__name">Hormone Optimization Protocol</span>
@@ -1232,18 +1257,18 @@
             <p class="protocol-card__desc">Physician-guided hormone optimization designed to restore hormonal balance, energy, and body composition for men and women.</p>
             <p style="font-size:0.72rem;color:#9C9082;font-style:italic;margin-top:8px;">Testosterone replacement therapy requires physician evaluation and prescription. Not available OTC.</p>
             <div class="protocol-card__price">Pricing after <strong>assessment</strong></div>
-            <a href="/qualify" class="protocol-card__cta">See if you qualify</a>
+            <a href="/#treatments" class="protocol-card__cta">See if you qualify</a>
           </div>
           <div class="protocol-card anim-up">
             <span class="protocol-card__name">NAD+ Protocol</span>
             <h3 class="protocol-card__title">Cellular Energy &amp; Longevity</h3>
             <p class="protocol-card__desc">IV and subcutaneous NAD+ therapy to support mitochondrial function, cognitive clarity, and long-term cellular resilience.</p>
             <div class="protocol-card__price">Pricing after <strong>assessment</strong></div>
-            <a href="/qualify" class="protocol-card__cta">See if you qualify</a>
+            <a href="/#treatments" class="protocol-card__cta">See if you qualify</a>
           </div>
         </div>
         <div class="crosssell__cta-wrap">
-          <a href="/qualify" class="btn btn--gold btn--lg">Start Your Protocol →</a>
+          <a href="/#treatments" class="btn btn--gold btn--lg">Start Your Protocol →</a>
         </div>
       </div>
     </section>
@@ -1278,7 +1303,7 @@
         </div>
         <div class="footer__divider"></div>
         <p class="footer__legal">
-          AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary. Side effects vary by compound and are reviewed with your provider during intake. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+          AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503A and 503B pharmacy. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in all 50 U.S. states; availability of specific medications may vary by state. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
         </p>
       </div>
     </div>

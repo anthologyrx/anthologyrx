@@ -19,7 +19,7 @@
 <style>
 /* ============================================================
    ANTHOLOGY RX — PRODUCT PAGE TEMPLATE
-   Reuse: NAD+ / MICC / Glutathione / Lipo-C / Supplements
+   Reuse: NAD+ / Glutathione / Lipo-C / Sermorelin
    Brand: #1E1E1E bg / #E8DCC8 sand / #B28A2A brass gold
    Fonts: Unbounded (display) · Epilogue (body)
 ============================================================ */
@@ -1273,6 +1273,31 @@ header {
     gtag("js", new Date());
     gtag("config", "G-LJ494PXNBP");
   </script>
+  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
+       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
+       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
+       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
+  ─────────────────────────────────────────────────────────────────────── -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER');
+  </script> -->
+  <!-- End Google Analytics 4 -->
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
 </head>
 <body>
 
@@ -1286,7 +1311,7 @@ header {
       <span class="announce-bar__text">
         Protocols from $99/mo &nbsp;·&nbsp; FSA/HSA may be accepted (plan-dependent) &nbsp;·&nbsp; Provider review in 48 hours
       </span>
-      <a href="/qualify" class="announce-bar__cta">See if you qualify →</a>
+      <a href="/#treatments" class="announce-bar__cta">See if you qualify →</a>
     </div>
     <button class="announce-bar__close" id="announceClose" aria-label="Dismiss">×</button>
   </div>
@@ -1315,8 +1340,8 @@ header {
       </ul>
 
         <div class="nav__actions">
-          <a href="/account" class="nav__login">Log In</a>
-          <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+          <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
+          <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
         </div>
 
         <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -1329,8 +1354,8 @@ header {
         <a href="/pages/how-it-works">How It Works</a>
         <a href="/pages/science">Science</a>
         <a href="/pages/faq">FAQ</a>
-        <a href="/account" class="nav__login">Log In</a>
-        <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+        <a href="https://portal.anthologyrx.com" class="nav__login">Log In</a>
+        <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
       </div>
     </nav>
   </header>
@@ -1377,7 +1402,7 @@ header {
 
       <div class="product-hero__trust" role="list" aria-label="Trust indicators">
         <span class="trust-chip" role="listitem">Physicians licensed in your state</span>
-        <span class="trust-chip" role="listitem">503B Pharmacy</span>
+        <span class="trust-chip" role="listitem">503A &amp; 503B Pharmacy</span>
         <span class="trust-chip" role="listitem">FSA/HSA (plan-dependent)</span>
       </div>
 
@@ -1396,8 +1421,8 @@ header {
       </div>
 
       <div class="product-hero__ctas">
-        <a href="/qualify" class="btn btn--gold btn--lg btn--full">See If You Qualify →</a>
-        <a href="/qualify" class="text-link text-link--arrow">Take the Match Assessment</a>
+        <a href="/#treatments" class="btn btn--gold btn--lg btn--full">See If You Qualify →</a>
+        <a href="/#treatments" class="text-link text-link--arrow">Take the Match Assessment</a>
       </div>
 
       <p class="product-hero__no-contract">No contracts · Cancel anytime</p>
@@ -1538,7 +1563,7 @@ header {
         <div class="step__content">
           <h3 class="step__title">Complete Your Assessment</h3>
           <p class="step__desc">
-            Answer a structured medical questionnaire covering health history, current medications, and goals. Takes under three minutes. No video call required.
+            Answer a structured medical questionnaire covering health history, current medications, and goals. Takes about 10 minutes. No video call required.
           </p>
         </div>
       </li>
@@ -1558,7 +1583,7 @@ header {
         <div class="step__content">
           <h3 class="step__title">Pharmacy Dispatch</h3>
           <p class="step__desc">
-            Your medication ships directly from a licensed 503B compounding pharmacy. Temperature-controlled packaging. Delivered to your door on the protocol's schedule.
+            Your medication ships directly from a licensed 503A and 503B pharmacy. Temperature-controlled packaging. Delivered to your door on the protocol's schedule.
           </p>
         </div>
       </li>
@@ -1663,7 +1688,7 @@ header {
           [CLINICAL COPY — REPLACE WITH PROTOCOL-SPECIFIC SCIENCE]<br><br>
           Paragraph 1: Lead with the key clinical mechanism. Bold the most compelling data point. Reference specific studies and outcomes relevant to this protocol.<br><br>
           Paragraph 2: Explain the mechanism of action in accessible but precise terms. How does this compound work at the cellular or hormonal level? What systems does it engage?<br><br>
-          Paragraph 3: Connect the science back to the performance user. How is the AnthologyRX protocol designed specifically for active individuals? What makes the dosing philosophy and titration approach different from generic weight-loss programs?
+          Paragraph 3: Connect the science back to the performance user. How is the AnthologyRX protocol designed specifically for active individuals? What makes the dosing philosophy and titration approach distinct?
         </p>
         <!-- END PLACEHOLDER -->
       </div>
@@ -1684,7 +1709,7 @@ header {
             <rect x="3" y="5" width="22" height="18" rx="2"/>
             <path d="M8 14h12M14 9v10" stroke-linecap="round"/>
           </svg>
-          <h3 class="credential-badge__title">503B Pharmacy</h3>
+          <h3 class="credential-badge__title">503A &amp; 503B Pharmacy</h3>
           <p class="credential-badge__sub">Same standard as major hospital systems</p>
         </div>
 
@@ -1730,7 +1755,7 @@ header {
     <div class="momentum-break__inner">
       <p class="momentum-break__eyebrow label">The Decision Point</p>
       <h2 class="momentum-break__headline">Six months from now,<br>you'll wish you started today.</h2>
-      <a href="/qualify" class="btn btn--gold btn--lg">See If You Qualify →</a>
+      <a href="/#treatments" class="btn btn--gold btn--lg">See If You Qualify →</a>
     </div>
   </div>
 </section>
@@ -1789,12 +1814,12 @@ header {
 
       <div class="pricing__cta-card">
         <h3 class="pricing__cta-headline">
-          Start your protocol<br>in under three minutes.
+          Start your protocol<br>in about 10 minutes.
         </h3>
         <p class="pricing__cta-sub">
           Complete a short medical intake. A board-certified physician reviews your information within 48 hours. If approved, your medication ships directly from our 503B pharmacy.
         </p>
-        <a href="/qualify" class="btn btn--gold btn--lg">See If You Qualify →</a>
+        <a href="/#treatments" class="btn btn--gold btn--lg">See If You Qualify →</a>
         <p class="pricing__no-contract">Billed monthly · Renews automatically until cancelled · Cancel anytime, no fees</p>
       </div>
 
@@ -1958,11 +1983,11 @@ header {
         For Those Who Never Stop.
       </h2>
 
-      <p class="final-cta__sub">Your intake takes three minutes. Provider review within 48 hours. No waiting room. No contracts.</p>
+      <p class="final-cta__sub">Your intake takes about 10 minutes. Provider review within 48 hours. No waiting room. No contracts.</p>
 
       <div class="final-cta__actions">
-        <a href="/qualify" class="btn btn--gold btn--xl">See If You Qualify →</a>
-        <a href="/qualify" class="text-link text-link--arrow">Take the Match Assessment</a>
+        <a href="/#treatments" class="btn btn--gold btn--xl">See If You Qualify →</a>
+        <a href="/#treatments" class="text-link text-link--arrow">Take the Match Assessment</a>
       </div>
 
     </div>
@@ -1998,7 +2023,7 @@ header {
     <div class="footer__divider" role="separator"></div>
 
     <p class="footer__legal">
-      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed physicians who are independent contractors and are subject to individual clinical judgment. Medications are compounded and dispensed by a licensed 503B outsourcing facility. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary. Side effects vary by compound and are reviewed with your provider during intake. AnthologyRX protocols are available in eligible states only; availability varies by jurisdiction. Subscription services are billed monthly and renew automatically until cancelled. Results vary; this site does not constitute medical advice. AnthologyRX does not treat, cure, or prevent any disease. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503A and 503B pharmacy. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in all 50 U.S. states; availability of specific medications may vary by state. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
     </p>
 
   </div>
@@ -2015,7 +2040,7 @@ header {
     <span class="mobile-bar__sub" data-placeholder="true">Longevity Protocol</span>
     <!-- END PLACEHOLDER -->
   </div>
-  <a href="/qualify" class="btn btn--gold">See If You Qualify</a>
+  <a href="/#treatments" class="btn btn--gold">See If You Qualify</a>
   <button class="mobile-bar__dismiss" id="mobileBarDismiss" aria-label="Dismiss">×</button>
 </div>
 
