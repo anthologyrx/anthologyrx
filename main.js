@@ -181,21 +181,20 @@
     requestAnimationFrame(frame);
   }
 
-  const proofNums = [
-    { selector: '.proof-item:nth-child(1) .proof-num', target: 50,  suffix: '' },
-    { selector: '.proof-item:nth-child(2) .proof-num', target: 48,  suffix: 'h' },
-    { selector: '.proof-item:nth-child(3) .proof-num', target: 503, suffix: 'B' },
-    { selector: '.proof-item:nth-child(4) .proof-num', target: 100, suffix: '%' },
-    { selector: '.proof-item:nth-child(5) .proof-num', target: 4.9, suffix: '★' },
-  ];
-
+  // Count-up: only animate purely numeric stats (50, 100) — leave text stats alone
   const proofObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      const match = proofNums.find(p => entry.target.matches(p.selector.split(' ')[0]));
-      if (!match) return;
       const numEl = entry.target.querySelector('.proof-num');
-      if (numEl) countUp(numEl, match.target, match.suffix, 1200);
+      if (numEl) {
+        const raw = numEl.textContent.trim();
+        const numeric = parseFloat(raw);
+        // Only animate if the entire content is a plain integer (no letters/symbols)
+        if (!isNaN(numeric) && String(numeric) === raw) {
+          countUp(numEl, numeric, '', 1200);
+        }
+        // All other stats (48h, 503A/B, MD, 100%, etc.) are left as-is
+      }
       proofObserver.unobserve(entry.target);
     });
   }, { threshold: 0.5 });
