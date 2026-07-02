@@ -228,7 +228,12 @@ strong { color: var(--sand); font-weight: 600; }
   font-style: normal;
 }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
-.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-a { max-height: 800px; }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .faq-a p {
   font-size: 0.95rem;
   line-height: 1.85;
@@ -432,7 +437,7 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
-          <p>AnthologyRX is a telehealth platform that connects you with board-certified physicians for clinically guided longevity and vitality protocols. Every treatment is prescription-based, provider-reviewed, and compounded by a licensed 503A/B pharmacy.</p>
+          <p>AnthologyRX is a telehealth platform that connects you with board-certified physicians for clinically guided longevity and vitality protocols. Every treatment is prescription-based, provider-reviewed, and compounded by a licensed 503A pharmacy.</p>
           <p>This isn't a supplement store — it's a clinically supervised telehealth platform, built for people who take their health seriously.</p>
         </div>
       </div>
@@ -443,7 +448,7 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
-          <p>Complete a short health assessment online. A licensed physician reviews your intake and, if clinically appropriate, issues a prescription. If approved, your treatment ships directly from our 503B pharmacy — typically within 48 business hours of approval, depending on your location and protocol. No waiting rooms. State-specific requirements may apply.</p>
+          <p>Complete a short health assessment online. A licensed physician reviews your intake and, if clinically appropriate, issues a prescription. If approved, your treatment ships directly from our 503A pharmacy — typically within 48 business hours of approval, depending on your location and protocol. No waiting rooms. State-specific requirements may apply.</p>
           <div class="faq-callout"><p><strong>Not everyone is approved.</strong> AnthologyRX does not prescribe to every applicant. A real provider makes an independent clinical judgment. That's not a limitation — that's the point.</p></div>
         </div>
       </div>
@@ -514,8 +519,8 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
-          <p>These are prescription medications compounded by a licensed 503A/B pharmacy operating under FDA-mandated cGMP standards — not over-the-counter supplements or unregulated peptides sourced online. They require a physician evaluation and a valid prescription.</p>
-          <p>Compounded medications are not FDA-approved as finished drug products, but are manufactured under the most stringent regulatory standards available for compounding. The difference is clinical oversight, verified sourcing, and real medical accountability.</p>
+          <p>These are prescription medications compounded by a licensed 503A pharmacy operating under FDA-mandated cGMP standards — not over-the-counter supplements or unregulated peptides sourced online. They require a physician evaluation and a valid prescription.</p>
+          <p>Compounded medications are not FDA-approved as finished drug products. The difference between our protocols and unregulated alternatives is clinical oversight by licensed physicians, verified pharmaceutical-grade sourcing, and real medical accountability.</p>
         </div>
       </div>
 
@@ -525,7 +530,7 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
-          <p>All protocols, if approved for you, are overseen by board-certified physicians and compounded under cGMP standards by a licensed 503A/B pharmacy. That said, every medication carries potential risks and side effects — compounded medications are not FDA-approved as finished products, and individual responses vary.</p>
+          <p>All protocols, if approved for you, are overseen by board-certified physicians and compounded under cGMP standards by a licensed 503A pharmacy. That said, every medication carries potential risks and side effects — compounded medications are not FDA-approved as finished products, and individual responses vary.</p>
           <p>Physician oversight exists precisely to evaluate whether a given protocol is appropriate for your specific health history. Your provider will conduct a thorough clinical review before prescribing anything. You should report any side effects promptly through your patient portal.</p>
         </div>
       </div>
@@ -575,8 +580,8 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
-          <p>Our platform operates within the applicable federal and state legal frameworks for telehealth and compounded medications. Our medications are compounded by a licensed 503A/B pharmacy under FDA oversight and cGMP manufacturing standards.</p>
-          <p>Compounded medications are not FDA-approved as finished drug products — but are legally manufactured under 503B where permitted, and prescribed by licensed physicians following a clinical evaluation. The regulatory landscape for certain compounded medications is subject to ongoing developments. Our compliance team actively monitors these requirements, and we will notify affected patients if a medication's availability changes.</p>
+          <p>Our platform operates within the applicable federal and state legal frameworks for telehealth and compounded medications. Our medications are compounded by a licensed 503A pharmacy under FDA oversight and cGMP manufacturing standards.</p>
+          <p>Compounded medications are not FDA-approved as finished drug products — but are legally manufactured under 503A where permitted, and prescribed by licensed physicians following a clinical evaluation. The regulatory landscape for certain compounded medications is subject to ongoing developments. Our compliance team actively monitors these requirements, and we will notify affected patients if a medication's availability changes.</p>
         </div>
       </div>
 
@@ -777,7 +782,7 @@ strong { color: var(--sand); font-weight: 600; }
     </div>
     <hr class="footer-divider">
     <p class="footer-legal">
-      AnthologyRX is a telehealth platform, not a licensed pharmacy. Prescriptions are issued by licensed independent physicians subject to individual clinical judgment. Medications are compounded by a licensed 503A/B pharmacy. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in all 50 U.S. states; availability of specific medications may vary by state. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
+      AnthologyRX is a technology and care-coordination platform, not a licensed pharmacy or medical provider. Clinical services are provided by independent licensed physicians affiliated with Arora Health &amp; Aesthetics, LLC, subject to their individual clinical judgment. Medications are compounded by VialsRx, a licensed 503A pharmacy. Compounded medications are not FDA-approved drug products and have not been evaluated by the FDA for safety, efficacy, or quality. Individual results vary — no outcome is guaranteed. AnthologyRX does not provide medical advice and does not treat, cure, or prevent any disease. All treatments are subject to provider evaluation and approval. Available in all 50 U.S. states; availability of specific medications may vary by state. FSA/HSA eligibility varies by plan. © 2026 AnthologyRX. All rights reserved.
     </p>
   </div>
 </footer>
@@ -789,14 +794,16 @@ window.addEventListener('scroll', () => {
   navWrap.style.boxShadow = window.scrollY > 40 ? '0 2px 40px rgba(0,0,0,0.45)' : 'none';
 }, { passive: true });
 
-// FAQ accordion
+// FAQ accordion — smooth max-height animation
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
     // close all
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
     // open this one if it was closed
     if (!isOpen) {
       item.classList.add('open');
