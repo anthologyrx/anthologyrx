@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <script src="/favicon.js"></script>
+  <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sermorelin Therapy | Growth Hormone Support | AnthologyRX</title>
   <meta name="description" content="Sermorelin stimulates your pituitary gland to naturally restore growth hormone production — improving sleep depth, recovery, lean tissue support, and metabolic function. Prescribed online. Compounded by a licensed 503B pharmacy." />
@@ -22,33 +23,12 @@
   <style>
 /* ── RESET & BASE ────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: #1E1E1E;
-  color: #E8DCC8;
-  font-family: 'Epilogue', sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 ul { list-style: none; }
 
 /* ── TOKENS ──────────────────────────────────────── */
-:root {
-  --bg:         #1E1E1E;
-  --bg-card:    #262422;
-  --bg-dark:    #181614;
-  --sand:       #E8DCC8;
-  --sand-dim:   #9C9082;
-  --gold:       #B28A2A;
-  --gold-light: #C9A44A;
-  --rule:       #373430;
-  --max:        1200px;
-  --gutter:     clamp(20px, 5vw, 60px);
-  --ease:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+
 
 /* ── LAYOUT ──────────────────────────────────────── */
 .wrap {
@@ -102,20 +82,13 @@ p { color: rgba(232,220,200,0.78); }
   border: none;
   white-space: nowrap;
 }
-.btn--gold {
-  background: var(--gold);
-  color: #1E1E1E;
-}
-.btn--gold:hover { background: var(--gold-light); }
 .btn--gold-outline {
   background: transparent;
   color: var(--gold);
   border: 1px solid var(--gold);
 }
 .btn--gold-outline:hover { background: rgba(178,138,42,0.1); }
-.btn--lg { padding: 18px 36px; font-size: 0.78rem; }
 .btn--xl { padding: 20px 44px; font-size: 0.82rem; }
-.btn--full { width: 100%; margin-top: 28px; }
 .text-link {
   font-family: 'Unbounded', sans-serif;
   font-size: 0.68rem;
@@ -146,17 +119,6 @@ p { color: rgba(232,220,200,0.78); }
   gap: 8px;
 }
 .announce-bar a { color: #1E1E1E; text-decoration: underline; }
-.announce-close {
-  position: absolute;
-  right: 16px;
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: #1E1E1E;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0 4px;
-}
 
 /* ── NAV ─────────────────────────────────────────── */
 .nav-wrap {
@@ -169,41 +131,6 @@ p { color: rgba(232,220,200,0.78); }
   border-bottom: 1px solid var(--rule);
   transition: box-shadow 0.3s;
 }
-.nav {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  height: 64px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.nav-logo {
-  font-family: 'Unbounded', sans-serif;
-  font-weight: 900;
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
-  color: var(--sand);
-  flex-shrink: 0;
-  display: flex;
-  align-items: baseline;
-  gap: 0;
-}
-.logo-main { color: var(--sand); }
-.logo-rx {
-  font-size: 0.55rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.12em;
-  position: relative;
-  top: -0.45em;
-  margin-left: 2px;
-}
-.nav-links {
-  display: flex;
-  gap: 32px;
-  margin-left: auto;
-}
 .nav-links a {
   font-family: 'Unbounded', sans-serif;
   font-size: 0.62rem;
@@ -214,31 +141,6 @@ p { color: rgba(232,220,200,0.78); }
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--sand); }
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-left: 32px;
-}
-.nav-login {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--sand-dim);
-  transition: color 0.2s;
-}
-.nav-login:hover { color: var(--sand); }
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
 .nav-hamburger span {
   display: block;
   width: 22px;
@@ -246,7 +148,6 @@ p { color: rgba(232,220,200,0.78); }
   background: var(--sand);
   border-radius: 2px;
 }
-.nav-mobile { display: none; }
 
 /* ── HERO ────────────────────────────────────────── */
 .hero {
@@ -818,8 +719,6 @@ p { color: rgba(232,220,200,0.78); }
 
 /* ── FAQ ────────────────────────────────────────── */
 .faq-list { margin-top: 48px; }
-.faq-item { border-bottom: 1px solid var(--rule); }
-.faq-item:first-child { border-top: 1px solid var(--rule); }
 .faq-trigger {
   width: 100%;
   display: flex;
@@ -881,23 +780,6 @@ p { color: rgba(232,220,200,0.78); }
   border-top: 1px solid var(--rule);
   padding: 60px 0 40px;
 }
-.footer-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-}
-.footer-brand { }
-.footer-tagline {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 0.52rem;
-  letter-spacing: 0.18em;
-  color: var(--sand-dim);
-  margin-top: 10px;
-}
-.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .footer-col h4 {
   font-family: 'Unbounded', sans-serif;
   font-size: 0.6rem;
@@ -915,12 +797,6 @@ p { color: rgba(232,220,200,0.78); }
 }
 .footer-col a:hover { color: var(--sand); }
 .footer-divider { border: none; border-top: 1px solid var(--rule); margin: 48px 0 32px; grid-column: 1 / -1; }
-.footer-legal {
-  font-size: 0.68rem;
-  color: rgba(156,144,130,0.45);
-  line-height: 1.7;
-  grid-column: 1 / -1;
-}
 
 /* ── MOBILE STICKY BAR ──────────────────────────── */
 .mobile-bar {
@@ -1078,9 +954,7 @@ p { color: rgba(232,220,200,0.78); }
 }
 @media (max-width: 640px) {
   .module-provider__facts { grid-template-columns: 1fr; }
-}
-
-</style>
+}</style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ494PXNBP"></script>
   <script>
@@ -1160,6 +1034,7 @@ p { color: rgba(232,220,200,0.78); }
 <!-- ══════════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════════ -->
+<main id="main">
 <section class="hero" aria-label="Hero">
   <div class="hero-img">
     <img
@@ -1571,28 +1446,6 @@ p { color: rgba(232,220,200,0.78); }
         <span class="section-label">Clinical Foundation</span>
         <h2 class="section-title">Built on real credentials.</h2>
       </div>
-<!-- ── MODULE A: Clinical Leadership ────────────────────────────────────── -->
-    <div class="module-leadership">
-      <!-- TODO(Michael): Replace placeholder below with approved headshot of Dr. Dylan Russell -->
-      <div class="module-leadership__photo" aria-label="Dr. Dylan Russell headshot placeholder">
-        <span>Headshot<br>TODO(Michael)</span>
-      </div>
-      <div class="module-leadership__content">
-        <div class="module-leadership__label">Chief Health Officer</div>
-        <h3 class="module-leadership__name">Dr. Dylan Russell, MD</h3>
-        <div class="module-leadership__title">Chief Health Officer · AnthologyRX</div>
-        <div class="module-leadership__creds">
-          <span class="module-leadership__cred">West Point Graduate</span>
-          <span class="module-leadership__cred">UVA School of Medicine</span>
-          <span class="module-leadership__cred">U.S. Army Surgeon</span>
-          <span class="module-leadership__cred">Transplant Fellowship</span>
-          <span class="module-leadership__cred">Board-Certified Physician</span>
-        </div>
-        <!-- TODO(Michael): Replace with Dr. Russell's approved bio copy and clinical philosophy statement -->
-        <p class="module-leadership__bio">TODO(Michael) — Approved bio copy for Dr. Dylan Russell. His credentials span West Point, UVA School of Medicine, service as a U.S. Army surgeon, and a transplant fellowship. Every AnthologyRX protocol is designed under his medical oversight and reviewed by our licensed provider network before a single prescription is issued.</p>
-        <p class="module-leadership__philosophy">TODO(Michael) — One-sentence clinical philosophy statement from Dr. Russell.</p>
-      </div>
-    </div>
 <!-- ── MODULE B: Provider Network ───────────────────────────────────────── -->
     <div class="module-provider">
       <div class="module-provider__header">
@@ -1631,6 +1484,7 @@ p { color: rgba(232,220,200,0.78); }
     </div>
   </section>
 
+</main>
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">

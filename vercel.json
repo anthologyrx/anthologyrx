@@ -114,6 +114,16 @@
       "source": "/qualify/",
       "destination": "/#treatments",
       "permanent": true
+    },
+    {
+      "source": "/science",
+      "destination": "/how-it-works",
+      "permanent": true
+    },
+    {
+      "source": "/science/:path*",
+      "destination": "/how-it-works",
+      "permanent": true
     }
   ]
 }

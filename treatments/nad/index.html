@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <script src="/favicon.js"></script>
+  <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#B28A2A" />
   <title>NAD+ Cellular Energy Therapy | AnthologyRX</title>
@@ -32,34 +33,11 @@
 ═══════════════════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; scroll-behavior: smooth; }
-body {
-  background: #1E1E1E;
-  color: #E8DCC8;
-  font-family: 'Epilogue', sans-serif;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 
-:root {
-  --bg:        #1E1E1E;
-  --bg-card:   #262422;
-  --bg-raised: #2A2724;
-  --rule:      #373430;
-  --sand:      #E8DCC8;
-  --sand-dim:  #9C9082;
-  --gold:      #B28A2A;
-  --gold-h:    #C99B35;
-  --gold-glow: rgba(178,138,42,0.15);
-  --nav-h:     68px;
-  --gutter:    clamp(20px, 5vw, 64px);
-  --max:       1200px;
-  --ease:      cubic-bezier(0.4,0,0.2,1);
-}
+
 
 /* ── CONTAINERS ─────────────────────────────────── */
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
@@ -96,14 +74,7 @@ strong { color: var(--sand); font-weight: 600; }
 
 /* ── BUTTONS ────────────────────────────────────── */
 .btn { display:inline-flex; align-items:center; gap:0.375rem; font-family:'Unbounded',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:15px 30px; border-radius:4px; transition:background 0.2s ease, transform 0.2s ease; white-space:nowrap; cursor:pointer; border:none; text-decoration:none; }
-.btn--gold { background: var(--gold); color: #1E1E1E; }
-.btn--gold:hover { background: var(--gold-h); transform: translateY(-1px); }
-.btn--lg { padding: 18px 40px; font-size: 0.65rem; }
 .btn--xl { padding: 22px 52px; font-size: 0.7rem; }
-.btn--full { width: 100%; justify-content: center; }
-.btn--outline { background: transparent; color: var(--sand); border: 1px solid var(--border); }
-.btn--outline:hover { border-color: var(--gold); color: var(--gold); }
-.nav-mobile .btn--gold { margin-top: 8px; width: 100%; justify-content: center; font-size: 0.6rem; letter-spacing: 0.14em; }
 
 .text-link {
   font-family: 'Unbounded', sans-serif;
@@ -125,16 +96,6 @@ strong { color: var(--sand); font-weight: 600; }
   color: #E8DCC8;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-.logo-rx {
-  font-family: 'Unbounded', sans-serif;
-  font-size: clamp(0.55rem, 0.45rem + 0.3vw, 0.65rem);
-  font-weight: 700;
-  color: #B28A2A;
-  letter-spacing: 0.06em;
-  position: relative;
-  top: -0.4em;
-  margin-left: 0.1em;
 }
 
 /* ── ANNOUNCE BAR ───────────────────────────────── */
@@ -165,17 +126,6 @@ strong { color: var(--sand); font-weight: 600; }
   text-decoration: underline;
   white-space: nowrap;
 }
-.announce-close {
-  position: absolute;
-  right: 16px;
-  background: none;
-  border: none;
-  color: #1E1E1E;
-  font-size: 1rem;
-  cursor: pointer;
-  opacity: 0.6;
-  line-height: 1;
-}
 
 /* ── NAV ────────────────────────────────────────── */
 .nav-wrap {
@@ -187,18 +137,6 @@ strong { color: var(--sand); font-weight: 600; }
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--rule);
 }
-.nav {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  height: var(--nav-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-.nav-logo { display: flex; align-items: baseline; }
-.nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a {
   font-family: 'Unbounded', sans-serif;
   font-size: 0.6rem;
@@ -209,16 +147,7 @@ strong { color: var(--sand); font-weight: 600; }
   transition: color 0.2s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--sand); }
-.nav-actions { display: flex; align-items: center; gap: 20px; }
-.nav-login {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  color: var(--sand-dim);
-}
-.nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
 .nav-hamburger span { width: 22px; height: 1.5px; background: var(--sand); display: block; }
-.nav-mobile { display: none; }
 
 /* ── HERO ───────────────────────────────────────── */
 .hero {
@@ -817,8 +746,6 @@ strong { color: var(--sand); font-weight: 600; }
 
 /* ── FAQ ────────────────────────────────────────── */
 .faq-list { margin-top: 48px; }
-.faq-item { border-bottom: 1px solid var(--rule); }
-.faq-item:first-child { border-top: 1px solid var(--rule); }
 .faq-trigger {
   width: 100%;
   display: flex;
@@ -880,23 +807,6 @@ strong { color: var(--sand); font-weight: 600; }
   border-top: 1px solid var(--rule);
   padding: 60px 0 40px;
 }
-.footer-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-}
-.footer-brand { }
-.footer-tagline {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 0.52rem;
-  letter-spacing: 0.18em;
-  color: var(--sand-dim);
-  margin-top: 10px;
-}
-.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .footer-col h4 {
   font-family: 'Unbounded', sans-serif;
   font-size: 0.6rem;
@@ -914,12 +824,6 @@ strong { color: var(--sand); font-weight: 600; }
 }
 .footer-col a:hover { color: var(--sand); }
 .footer-divider { border: none; border-top: 1px solid var(--rule); margin: 48px 0 32px; grid-column: 1 / -1; }
-.footer-legal {
-  font-size: 0.68rem;
-  color: rgba(156,144,130,0.45);
-  line-height: 1.7;
-  grid-column: 1 / -1;
-}
 
 /* ── MOBILE STICKY BAR ──────────────────────────── */
 .mobile-bar {
@@ -1077,9 +981,7 @@ strong { color: var(--sand); font-weight: 600; }
 }
 @media (max-width: 640px) {
   .module-provider__facts { grid-template-columns: 1fr; }
-}
-
-</style>
+}</style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ494PXNBP"></script>
   <script>
@@ -1158,6 +1060,7 @@ strong { color: var(--sand); font-weight: 600; }
 <!-- ══════════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════════ -->
+<main id="main">
 <section class="hero" aria-label="Hero">
   <div class="hero-img">
     <img
@@ -1564,28 +1467,6 @@ strong { color: var(--sand); font-weight: 600; }
         <span class="section-label">Clinical Foundation</span>
         <h2 class="section-title">Built on real credentials.</h2>
       </div>
-<!-- ── MODULE A: Clinical Leadership ────────────────────────────────────── -->
-    <div class="module-leadership">
-      <!-- TODO(Michael): Replace placeholder below with approved headshot of Dr. Dylan Russell -->
-      <div class="module-leadership__photo" aria-label="Dr. Dylan Russell headshot placeholder">
-        <span>Headshot<br>TODO(Michael)</span>
-      </div>
-      <div class="module-leadership__content">
-        <div class="module-leadership__label">Chief Health Officer</div>
-        <h3 class="module-leadership__name">Dr. Dylan Russell, MD</h3>
-        <div class="module-leadership__title">Chief Health Officer · AnthologyRX</div>
-        <div class="module-leadership__creds">
-          <span class="module-leadership__cred">West Point Graduate</span>
-          <span class="module-leadership__cred">UVA School of Medicine</span>
-          <span class="module-leadership__cred">U.S. Army Surgeon</span>
-          <span class="module-leadership__cred">Transplant Fellowship</span>
-          <span class="module-leadership__cred">Board-Certified Physician</span>
-        </div>
-        <!-- TODO(Michael): Replace with Dr. Russell's approved bio copy and clinical philosophy statement -->
-        <p class="module-leadership__bio">TODO(Michael) — Approved bio copy for Dr. Dylan Russell. His credentials span West Point, UVA School of Medicine, service as a U.S. Army surgeon, and a transplant fellowship. Every AnthologyRX protocol is designed under his medical oversight and reviewed by our licensed provider network before a single prescription is issued.</p>
-        <p class="module-leadership__philosophy">TODO(Michael) — One-sentence clinical philosophy statement from Dr. Russell.</p>
-      </div>
-    </div>
 <!-- ── MODULE B: Provider Network ───────────────────────────────────────── -->
     <div class="module-provider">
       <div class="module-provider__header">
@@ -1624,6 +1505,7 @@ strong { color: var(--sand); font-weight: 600; }
     </div>
   </section>
 
+</main>
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">

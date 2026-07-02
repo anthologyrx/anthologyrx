@@ -44,6 +44,41 @@
   --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
   --content: 1200px;
   --gutter: clamp(var(--space-6), 5vw, var(--space-16));
+
+  /* ─── Shared aliases (single source of truth) ────────────────────────────
+     Inner pages historically defined their own :root blocks with divergent
+     variable names. These aliases reconcile every name used across the site
+     so a page can drop its local :root and still resolve every var(). */
+
+  /* Color aliases */
+  --sand:        #E8DCC8;                 /* = --text */
+  --sand-dim:    #9C9082;                 /* muted sand (inner-page name) */
+  --gold-h:      #C9A040;                 /* = --gold-hover (inner-page name) */
+  --gold-glow:   rgba(178,138,42,0.15);   /* translucent gold wash */
+  --gold-light:  rgba(178,138,42,0.15);   /* light gold alias */
+  --rule:        #373430;                 /* border rule (inner-page name) */
+
+  /* Background aliases */
+  --bg-card:     #262422;                 /* = --bg-surface (inner-page name) */
+  --bg-hero:     #181614;                 /* deep hero background */
+  --bg-deep:     #181614;                 /* deep background alias */
+  --bg-dark:     #181614;                 /* dark background alias */
+
+  /* Layout aliases */
+  --max:         1200px;                  /* = --content (inner-page name) */
+  --max-w:       1200px;                  /* content max-width alias */
+  --nav-h:       68px;                    /* nav height */
+
+  /* Font aliases */
+  --font-disp:   'Unbounded', sans-serif; /* = --font-display (inner-page name) */
+
+  /* Radius aliases */
+  --radius:      4px;                      /* generic radius (inner-page name) */
+  --r:           3px;                      /* small radius alias */
+
+  /* Timing aliases */
+  --ease:        cubic-bezier(0.4, 0, 0.2, 1);
+  --t:           0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ─── Reset ──────────────────────────────────────────────────────────────── */
@@ -180,6 +215,8 @@ button { cursor: pointer; background: none; border: none; }
 .btn-gold:hover { background: var(--gold-hover); transform: translateY(-1px); }
 
 .btn-lg { padding: 18px 40px; font-size: 0.65rem; }
+/* Double-dash alias for the large button (hero CTA uses .btn--lg) */
+.btn--lg { padding: 18px 40px; font-size: 0.65rem; }
 .btn-full, .btn--full { width: 100%; justify-content: center; }
 
 /* Mobile nav — Start Assessment button spacing */
@@ -317,13 +354,16 @@ button { cursor: pointer; background: none; border: none; }
   transform: scale(1.06); /* slight scale for parallax room */
   transform-origin: center center;
 }
-/* Charcoal-to-transparent gradient on top of image for text readability */
+/* Charcoal-to-transparent gradient on top of image for text readability.
+   Single canonical definition (consolidated — was previously duplicated). */
 .hero-img-overlay {
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     to right,
-    var(--bg) 0%,
-    rgba(30,30,30,0.6) 50%,
-    rgba(30,30,30,0.15) 100%
+    rgba(18,16,14,0.82) 0%,
+    rgba(18,16,14,0.55) 55%,
+    rgba(18,16,14,0.28) 100%
   );
   mix-blend-mode: normal;
 }
@@ -1486,18 +1526,6 @@ button { cursor: pointer; background: none; border: none; }
   object-fit: cover;
   object-position: center top;
   display: block;
-}
-
-
-.hero-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(18,16,14,0.82) 0%,
-    rgba(18,16,14,0.55) 55%,
-    rgba(18,16,14,0.28) 100%
-  );
 }
 
 /* No Ken Burns — images are static */
