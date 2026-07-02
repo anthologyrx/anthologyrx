@@ -1447,23 +1447,29 @@ button { cursor: pointer; background: none; border: none; }
   .announce-bar p { font-size: 10px; letter-spacing: 0.08em; }
   .hero-price-anchor { font-size: var(--text-xs); }
   .hero-ctas { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
-  /* Mobile: protocol grid becomes horizontal scroll */
+  /* Mobile: protocol grid becomes horizontal scroll with card peeking */
   .treatments-carousel-wrap { overflow: hidden; }
   .treatments-grid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: var(--space-4);
+    gap: 12px;
+    /* Padding creates the peek: first/last card reveals ~7% of the adjacent card */
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: var(--space-4);
     scrollbar-width: none;
+    /* Ensure padding doesn't prevent snapping to card edges */
+    scroll-padding-left: 20px;
   }
   .treatments-grid::-webkit-scrollbar { display: none; }
   .treatment-card {
-    flex: 0 0 85vw;
+    /* 84vw leaves ~16vw split between the peek on each side minus gap */
+    flex: 0 0 84vw;
     scroll-snap-align: start;
   }
-  .treatment-card--featured { flex: 0 0 85vw; }
+  .treatment-card--featured { flex: 0 0 84vw; }
   .hiw-step--ongoing { padding-top: 0; }
   /* Editorial: scale quote down, lift z-index so it's clearly above bg image */
   .editorial-quote { font-size: clamp(1.5rem, 7vw, 2.2rem); }
