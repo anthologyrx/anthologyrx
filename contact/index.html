@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="canonical" href="https://www.anthologyrx.com/contact/">
   <script src="/favicon.js"></script>
   <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -556,7 +557,7 @@
     </ul>
     <div class="nav-actions" style="display:flex;align-items:center;gap:16px;">
       <a href="https://portal.anthologyrx.com" style="font-size:0.78rem;letter-spacing:0.06em;color:#9C9082;">Log In</a>
-      <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
+      <a href="https://join.anthologyrx.com/start-online-visit" class="btn btn--gold">Start Assessment</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -666,6 +667,9 @@
         </div>
 
         <p class="form-note">We typically respond within 1 business day. For urgent medical concerns, contact your provider through your patient portal or call 911 in an emergency.</p>
+        <p style="margin-top:1.5rem;font-size:0.8rem;color:#9A9080;line-height:1.6;">
+          Do not include protected health information in this form. For clinical questions or prescription inquiries, message your provider directly through your <a href="https://portal.anthologyrx.com" style="color:#B28A2A;">patient portal</a>.
+        </p>
       </form>
 
       <div class="form-success" id="formSuccess">
@@ -766,21 +770,26 @@
   // ── HAMBURGER ───────────────────────────────────────────
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  }
 
   // ── FORM SUBMIT ─────────────────────────────────────────
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    if (!name || !email || !message) return;
-    // Simulate submission
-    this.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject') ? document.getElementById('subject').value : 'General Inquiry';
+    var message = document.getElementById('message').value;
+
+    var mailtoLink = 'mailto:support@anthologyrx.com'
+      + '?subject=' + encodeURIComponent('[AnthologyRX] ' + subject)
+      + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+
+    window.location.href = mailtoLink;
   });
 
   // ── SCROLL ANIMATIONS ───────────────────────────────────

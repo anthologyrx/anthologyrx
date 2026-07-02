@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="canonical" href="https://www.anthologyrx.com/how-it-works/">
   <script src="/favicon.js"></script>
   <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <link rel="manifest" href="/site.webmanifest" />
@@ -483,7 +484,7 @@ strong { color: var(--sand); font-weight: 600; }
     </ul>
     <div class="nav-actions">
       <a href="https://portal.anthologyrx.com" class="nav-login">Log In</a>
-      <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
+      <a href="https://join.anthologyrx.com/start-online-visit" class="btn btn--gold">Start Assessment</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu" onclick="document.getElementById('navMobile').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -498,7 +499,7 @@ strong { color: var(--sand); font-weight: 600; }
   <a href="/faq" onclick="document.getElementById('navMobile').classList.remove('open')">FAQ</a>
   <a href="/about" onclick="document.getElementById('navMobile').classList.remove('open')">About</a>
   <a href="https://portal.anthologyrx.com" onclick="document.getElementById('navMobile').classList.remove('open')">Log In</a>
-  <a href="/#treatments" class="btn btn--gold">Start Assessment</a>
+  <a href="https://join.anthologyrx.com/start-online-visit" class="btn btn--gold">Start Assessment</a>
 </div>
 
 
@@ -729,7 +730,7 @@ strong { color: var(--sand); font-weight: 600; }
     <h2>Ten minutes between<br>you and a clinical decision.</h2>
     <p>Complete a brief health assessment. A licensed provider reviews your intake within 48 hours. If approved, your protocol ships directly to your door.</p>
     <div class="final-cta-actions">
-      <a href="/#treatments" class="btn btn--gold btn--xl">Start Assessment →</a>
+      <a href="https://join.anthologyrx.com/start-online-visit" class="btn btn--gold btn--xl">Start Assessment →</a>
       <a href="/#treatments" class="btn btn--outline btn--lg">See the protocols →</a>
     </div>
   </div>
@@ -822,5 +823,23 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 </script>
 
+<!-- Sticky CTA -->
+<div id="sticky-cta" style="position:fixed;bottom:2rem;right:2rem;z-index:9999;opacity:0;transform:translateY(20px);transition:opacity 0.3s ease,transform 0.3s ease;pointer-events:none;">
+  <a href="https://join.anthologyrx.com/start-online-visit" class="btn btn--gold" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 1.75rem;font-size:0.8rem;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+    Start Assessment <span>→</span>
+  </a>
+</div>
+<script>
+(function(){
+  var el = document.getElementById('sticky-cta');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 400){
+      el.style.opacity='1';el.style.transform='translateY(0)';el.style.pointerEvents='auto';
+    } else {
+      el.style.opacity='0';el.style.transform='translateY(20px)';el.style.pointerEvents='none';
+    }
+  }, {passive:true});
+})();
+</script>
 </body>
 </html>
