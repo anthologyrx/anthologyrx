@@ -2,201 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WQ7HS2WR');</script>
+  <!-- End Google Tag Manager -->
   <script src="/favicon.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 — Page Not Found | AnthologyRX</title>  <meta name="robots" content="noindex" />
+
+  <!-- UTM pass-through -->
+  <script src="/utm.js" defer></script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ494PXNBP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-LJ494PXNBP");
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #1E1E1E;
-      --surface:   #262422;
-      --border:    #373430;
-      --sand:      #E8DCC8;
-      --sand-dim:  rgba(232,220,200,0.55);
-      --gold:      #B28A2A;
-      --font-disp: 'Unbounded', sans-serif;
-      --font-body: 'Epilogue', sans-serif;
-    }
-
-    html, body {
-      height: 100%;
-      background: var(--bg);
-      color: var(--sand);
-      font-family: var(--font-body);
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 40px 24px;
-      text-align: center;
-    }
-
-    .error-code {
-      font-family: var(--font-disp);
-      font-size: clamp(6rem, 20vw, 12rem);
-      font-weight: 900;
-      line-height: 1;
-      color: transparent;
-      -webkit-text-stroke: 2px var(--gold);
-      letter-spacing: -0.04em;
-      margin-bottom: 8px;
-      user-select: none;
-    }
-
-    .error-label {
-      font-family: var(--font-disp);
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 36px;
-    }
-
-    .error-headline {
-      font-family: var(--font-disp);
-      font-size: clamp(1.4rem, 4vw, 2.2rem);
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--sand);
-      max-width: 540px;
-      margin-bottom: 20px;
-      letter-spacing: -0.03em;
-    }
-
-    .error-body {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--sand-dim);
-      max-width: 420px;
-      margin-bottom: 48px;
-    }
-
-    .error-body strong {
-      color: var(--sand);
-      font-weight: 600;
-    }
-
-    .error-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn-gold {
-      display: inline-block;
-      background: var(--gold);
-      color: #1E1E1E;
-      font-family: var(--font-disp);
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 4px;
-      transition: opacity 0.2s;
-    }
-    .btn-gold:hover { opacity: 0.85; }
-
-    .btn-ghost {
-      display: inline-block;
-      border: 1px solid var(--border);
-      color: var(--sand-dim);
-      font-family: var(--font-disp);
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 4px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--sand); }
-
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: var(--border);
-      margin: 56px auto 24px;
-    }
-
-    .disclaimer {
-      font-size: 0.72rem;
-      color: var(--sand-dim);
-      max-width: 360px;
-      line-height: 1.6;
-      opacity: 0.6;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 20px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
-    }
-
-    .logo {
-      font-family: var(--font-disp);
-      font-weight: 900;
-      font-size: 0.9rem;
-      letter-spacing: -0.02em;
-      color: var(--sand);
-      text-decoration: none;
-    }
-    .logo span { color: var(--gold); font-size: 0.65rem; vertical-align: super; }
-  </style>
-  <!-- ── ANALYTICS ────────────────────────────────────────────────────────
-       TODO(Michael): Replace PLACEHOLDER values with real IDs from Bask/GA4.
-       GA4_MEASUREMENT_ID  = your GA4 property ID (e.g. G-XXXXXXXXXX)
-       GTM_CONTAINER_ID    = your GTM container ID (e.g. GTM-XXXXXXX)
-  ─────────────────────────────────────────────────────────────────────── -->
-  <!-- Google Tag Manager -->
-  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PLACEHOLDER');</script> -->
-  <!-- End Google Tag Manager -->
-
-  <!-- Google Analytics 4 -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-PLACEHOLDER');
-  </script> -->
+    gtag('config', 'G-LJ494PXNBP');
+  </script>
   <!-- End Google Analytics 4 -->
-
-  <!-- UTM pass-through -->
-  <script src="/utm.js" defer></script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ7HS2WR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <nav>
     <a href="/" class="logo">ANTHOLOGY<span>RX</span></a>
