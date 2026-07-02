@@ -368,7 +368,7 @@
       top: 0; left: 0;
       height: 2px;
       width: 0%;
-      background: linear-gradient(90deg, #7A6020, #B28A2A, #C9A040);
+      background: linear-gradient(90deg, #8A6E1A, #C4952A, #D4A843);
       z-index: 9999;
       pointer-events: none;
       transform-origin: left;

@@ -10,9 +10,9 @@
   --text-muted:  #9A8E7A;
   --text-faint:  #5A5248;
 
-  --gold:        #B28A2A;
-  --gold-hover:  #C9A040;
-  --gold-dim:    #7A6020;
+  --gold:        #C4952A;
+  --gold-hover:  #D4A843;
+  --gold-dim:    #8A6E1A;
 
   --bone:        #F2EDE4;
   --copper:      #C4622D;
@@ -53,9 +53,9 @@
   /* Color aliases */
   --sand:        #E8DCC8;                 /* = --text */
   --sand-dim:    #9C9082;                 /* muted sand (inner-page name) */
-  --gold-h:      #C9A040;                 /* = --gold-hover (inner-page name) */
-  --gold-glow:   rgba(178,138,42,0.15);   /* translucent gold wash */
-  --gold-light:  rgba(178,138,42,0.15);   /* light gold alias */
+  --gold-h:      #D4A843;                 /* = --gold-hover (inner-page name) */
+  --gold-glow:   rgba(196,149,42,0.15);   /* translucent gold wash */
+  --gold-light:  rgba(196,149,42,0.15);   /* light gold alias */
   --rule:        #373430;                 /* border rule (inner-page name) */
 
   /* Background aliases */
@@ -1115,7 +1115,7 @@ button { cursor: pointer; background: none; border: none; }
 
 /* ─── Announcement Bar (canonical) ──────────────────────────────────────── */
 .announce-bar {
-  background: #B28A2A;
+  background: #C4952A;
   display: flex;
   align-items: center;
   justify-content: center;

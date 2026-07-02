@@ -12,7 +12,7 @@
   <link rel="canonical" href="https://www.anthologyrx.com/">
   <script src="/favicon.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#B28A2A" />
+  <meta name="theme-color" content="#C4952A" />
   <title>AnthologyRX. Longevity · Vitality · Legacy</title>
   <meta name="description" content="AnthologyRX. Prescription longevity protocols available in all 50 states. NAD+, Glutathione, Lipo-C, and Sermorelin. Provider review in under 48 hours." />
   <!-- Open Graph / Social Share -->
@@ -76,6 +76,66 @@
     gtag('config', 'G-LJ494PXNBP');
   </script>
   <!-- End Google Analytics 4 -->
+
+  <!-- ── WHY SECTION STYLES ──────────────────────────────────────────────── -->
+  <style>
+  #why {
+    background: #181614;
+    width: 100%;
+    padding: 120px 24px;
+    box-sizing: border-box;
+  }
+  .why-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .why-line-1,
+  .why-line-2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(1.6rem, 1rem + 2.5vw, 3rem);
+    line-height: 1.25;
+    max-width: 880px;
+    margin: 0 auto;
+    letter-spacing: -0.02em;
+  }
+  .why-line-1 { color: var(--text-muted, #9A8E7A); }
+  .why-line-2 { color: var(--text, #E8DCC8); margin-top: 1.25rem; }
+  .why-gold { color: var(--gold, #C4952A); }
+  .why-rule {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--border, #333);
+    border: none;
+    margin: 36px auto;
+  }
+  .why-body {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-muted, #9A8E7A);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .why-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .why-animate.is-visible { opacity: 1; transform: translateY(0); }
+  .why-animate:nth-child(1) { transition-delay: 0s; }
+  .why-animate:nth-child(2) { transition-delay: 0.1s; }
+  .why-animate:nth-child(3) { transition-delay: 0.2s; }
+  .why-animate:nth-child(4) { transition-delay: 0.3s; }
+  @media (prefers-reduced-motion: reduce) {
+    .why-animate { opacity: 1; transform: none; transition: none; }
+  }
+  @media (max-width: 768px) {
+    #why { padding: 80px 24px; }
+  }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -201,6 +261,23 @@
       </div>
     </div>
   </div>
+
+
+  <!-- ── WHY ──────────────────────────────────────────────────────────────── -->
+  <section id="why" aria-label="Why Anthology">
+    <div class="why-inner">
+      <p class="why-line-1 why-animate">
+        You can buy longevity and performance treatments anywhere.
+      </p>
+      <p class="why-line-2 why-animate">
+        At Anthology, you're buying the will to aspire to <span class="why-gold">your true potential.</span>
+      </p>
+      <hr class="why-rule why-animate" aria-hidden="true">
+      <p class="why-body why-animate">
+        We built this because the healthcare system wasn't built for the people who want more. More energy. More presence. More years that actually feel like living. Every protocol we offer starts with a licensed physician, uses pharmaceutical-grade compounds, and is designed around one belief: that optimizing your biology is not vanity. It's ambition.
+      </p>
+    </div>
+  </section>
 
   <!-- ── HOW IT WORKS ─────────────────────────────────────────────────────── -->
   <section class="hiw" id="how-it-works">
@@ -488,5 +565,22 @@ if (navWrap) {
   }, { passive: true });
 }
 </script>
+
+  <!-- ── WHY SECTION ANIMATION ───────────────────────────────────────────── -->
+  <script>
+  (function () {
+    var targets = document.querySelectorAll('#why .why-animate');
+    if (!targets.length) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(function (el) { observer.observe(el); });
+  })();
+  </script>
 </body>
 </html>
