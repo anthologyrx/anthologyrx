@@ -136,6 +136,72 @@
     #why { padding: 80px 24px; }
   }
   </style>
+
+  <!-- ── WORLDVIEW SECTION STYLES ─────────────────────────────────────────── -->
+  <style>
+  #worldview {
+    background: #1E1E1E;
+    padding: 100px 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #2A2826;
+  }
+  .worldview-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .worldview-eyebrow {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #C4952A);
+    margin-bottom: 32px;
+  }
+  .worldview-statement {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(1.5rem, 1rem + 2vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #E8DCC8;
+    margin-bottom: 48px;
+  }
+  .worldview-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .worldview-pillar {
+    padding: 32px 28px;
+    background: #262422;
+    border-top: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .worldview-pillar:hover {
+    border-color: var(--gold, #C4952A);
+  }
+  .worldview-pillar-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold, #C4952A);
+    margin-bottom: 12px;
+  }
+  .worldview-pillar-text {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #9A8E7A;
+  }
+  @media (max-width: 768px) {
+    #worldview { padding: 72px 24px; }
+    .worldview-pillars { grid-template-columns: 1fr; gap: 2px; }
+  }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -310,6 +376,32 @@
           <div class="hiw-num">04</div>
           <h3>Ongoing Treatment</h3>
           <p>Monthly check-ins. Lab reviews. Dosage refinement. Your protocol evolves as you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── WORLDVIEW ───────────────────────────────────────────────────────── -->
+  <section id="worldview" aria-label="Brand worldview">
+    <div class="worldview-inner">
+      <div class="worldview-eyebrow">Our Position</div>
+      <p class="worldview-statement">
+        We didn't enter the wellness space.<br>We rejected it.
+      </p>
+
+      <div class="worldview-pillars">
+        <div class="worldview-pillar">
+          <div class="worldview-pillar-label">Clinical</div>
+          <p class="worldview-pillar-text">Every protocol requires a licensed provider. No protocol ships without qualified physician review. That is not a disclaimer. That is the product.</p>
+        </div>
+        <div class="worldview-pillar">
+          <div class="worldview-pillar-label">Precision</div>
+          <p class="worldview-pillar-text">We don't offer stacks, bundles, or optimization packages. We offer four rigorously selected compounds, each chosen because the mechanism is real and the evidence supports it.</p>
+        </div>
+        <div class="worldview-pillar">
+          <div class="worldview-pillar-label">Conviction</div>
+          <p class="worldview-pillar-text">The people who built this are patients first. The protocols on this site are the protocols we use. That alignment is not incidental. It is the only standard we trust.</p>
         </div>
       </div>
     </div>
