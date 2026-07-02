@@ -1452,24 +1452,25 @@ button { cursor: pointer; background: none; border: none; }
   .treatments-grid {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden; /* prevent vertical scroll jank inside the carousel */
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x; /* tell browser: horizontal swipes only */
     gap: 12px;
-    /* Padding creates the peek: first/last card reveals ~7% of the adjacent card */
-    padding-left: 20px;
-    padding-right: 20px;
+    /* 16px padding + 78vw card = ~11% peek on each side — clearly visible */
+    padding-left: 16px;
+    padding-right: 16px;
     padding-bottom: var(--space-4);
     scrollbar-width: none;
-    /* Ensure padding doesn't prevent snapping to card edges */
-    scroll-padding-left: 20px;
+    scroll-padding-left: 16px;
   }
   .treatments-grid::-webkit-scrollbar { display: none; }
   .treatment-card {
-    /* 84vw leaves ~16vw split between the peek on each side minus gap */
-    flex: 0 0 84vw;
+    flex: 0 0 78vw;
     scroll-snap-align: start;
+    overflow: hidden; /* prevent card contents from creating internal scroll */
   }
-  .treatment-card--featured { flex: 0 0 84vw; }
+  .treatment-card--featured { flex: 0 0 78vw; }
   .hiw-step--ongoing { padding-top: 0; }
   /* Editorial: scale quote down, lift z-index so it's clearly above bg image */
   .editorial-quote { font-size: clamp(1.5rem, 7vw, 2.2rem); }
