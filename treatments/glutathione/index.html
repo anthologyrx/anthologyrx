@@ -322,10 +322,12 @@ strong { color: var(--sand); font-weight: 600; }
 <main id="main">
 <section class="hero">
   <div class="hero-img">
+    <picture>
+    <source srcset="/assets/images/c-male-swimmer.webp" type="image/webp" />
     <img
       src="/assets/images/c-male-swimmer.jpg"
-      alt=""
-    />
+      alt="" />
+</picture>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -367,6 +369,7 @@ strong { color: var(--sand); font-weight: 600; }
         <img
           src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1000&q=80"
           alt=""
+          loading="lazy"
         />
       </div>
       <div class="mechanism-copy">

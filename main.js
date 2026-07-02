@@ -47,22 +47,6 @@
     });
   }
 
-  /* ── Active nav link on scroll ─────────────────────────────────────────── */
-  const sections   = document.querySelectorAll('section[id]');
-  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  function setActiveNav() {
-    const scrollMid = window.scrollY + window.innerHeight / 3;
-    let active = null;
-    sections.forEach(sec => { if (sec.offsetTop <= scrollMid) active = sec.id; });
-    navAnchors.forEach(a => {
-      a.classList.toggle('is-active', a.getAttribute('href') === `#${active}`);
-    });
-  }
-
-  window.addEventListener('scroll', setActiveNav, { passive: true });
-  setActiveNav();
-
   /* ── Sticky bottom bar ─────────────────────────────────────────────────── */
   const stickyBar = document.getElementById('sticky-bar');
   if (stickyBar) {
@@ -120,8 +104,14 @@
   const dots = document.querySelectorAll('.dot');
   if (grid && dots.length && window.innerWidth <= 640) {
     grid.addEventListener('scroll', () => {
-      const cardWidth = grid.querySelector('.treatment-card').offsetWidth + 16;
-      const idx = Math.round(grid.scrollLeft / cardWidth);
+      // Map the horizontal scroll position proportionally onto the dot count.
+      // This keeps the active dot in sync with the visible card regardless of
+      // per-card width differences (e.g. the featured card) or gap sizes,
+      // and clamps the index to a valid dot (fixes the previous off-by-one).
+      const maxScroll = grid.scrollWidth - grid.clientWidth;
+      const idx = maxScroll > 0
+        ? Math.round((grid.scrollLeft / maxScroll) * (dots.length - 1))
+        : 0;
       dots.forEach((d, i) => d.classList.toggle('dot--active', i === idx));
     }, { passive: true });
   }
