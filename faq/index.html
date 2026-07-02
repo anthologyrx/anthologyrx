@@ -201,59 +201,112 @@ strong { color: var(--sand); font-weight: 600; }
 
 /* ── FAQ CATEGORY SECTIONS ──────────────────────── */
 .faq-category {
-  padding: 80px 0;
+  padding: 96px 0;
   border-bottom: 1px solid var(--rule);
 }
-.faq-category:nth-child(even) { background: var(--bg-card); }
+/* Remove alternating bg — cleaner, more editorial */
+.faq-category:nth-child(even) { background: transparent; }
 .faq-category-header {
-  margin-bottom: 52px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.faq-category-header .eyebrow {
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 .faq-category-header h2 {
-  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-  margin-top: 8px;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  margin-top: 0;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  flex: 1;
 }
+
+/* ── ACCORDION ITEMS ────────────────────────────── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.faq-item:first-child {
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 28px 0;
+  text-align: left;
+  transition: opacity 0.2s;
+}
+.faq-q:hover { opacity: 0.85; }
 .faq-q-text {
   font-family: 'Unbounded', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: var(--sand);
   line-height: 1.5;
+  flex: 1;
 }
 .faq-icon {
-  font-size: 1.2rem;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(196,149,42,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   color: var(--gold);
   flex-shrink: 0;
-  transition: transform 0.25s var(--ease);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s, border-color 0.2s;
   font-style: normal;
+  line-height: 1;
 }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
-.faq-item.open .faq-a { max-height: 800px; }
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: rgba(196,149,42,0.12);
+  border-color: var(--gold);
+}
+.faq-item.open .faq-a { max-height: 1200px; }
 .faq-a {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-a-inner {
+  padding: 0 0 32px 0;
+  max-width: 680px;
 }
 .faq-a p {
   font-size: 0.95rem;
-  line-height: 1.85;
+  line-height: 1.9;
   color: var(--sand-dim);
-  max-width: 64ch;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .faq-a p:last-child { margin-bottom: 0; }
 .faq-a .faq-callout {
-  margin-top: 16px;
-  padding: 18px 22px;
-  background: rgba(196,149,42,0.07);
-  border: 1px solid rgba(196,149,42,0.2);
-  border-left: 3px solid var(--gold);
-  border-radius: 2px;
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: rgba(196,149,42,0.06);
+  border-left: 2px solid var(--gold);
   max-width: 60ch;
 }
 .faq-a .faq-callout p {
-  font-size: 0.85rem;
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.75;
   color: var(--sand-dim);
   margin-bottom: 0;
 }
@@ -437,8 +490,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>AnthologyRX is a telehealth platform that connects you with board-certified physicians for clinically guided longevity and vitality protocols. Every treatment is prescription-based, provider-reviewed, and compounded by a licensed 503A pharmacy.</p>
           <p>This isn't a supplement store. It's a clinically supervised telehealth platform, built for people who take their health seriously.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -448,8 +503,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Complete a short health assessment online. A licensed physician reviews your intake and, if clinically appropriate, issues a prescription. If approved, your treatment ships directly from our 503A pharmacy. Typically within 48 business hours of approval, depending on your location and protocol. No waiting rooms. State-specific requirements may apply.</p>
           <div class="faq-callout"><p><strong>Not everyone is approved.</strong> AnthologyRX does not prescribe to every applicant. A real provider makes an independent clinical judgment. That's not a limitation. That's the point.</p></div>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -459,7 +516,9 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Adults who want to take a proactive, evidence-informed, clinically guided approach to longevity, metabolic health, hormonal balance, or body composition. If you're ready to invest in your health with the same rigor you bring to everything else. This is for you.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -469,8 +528,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>For most patients, no in-person visit is required. Assessment, physician review, and ongoing treatment management happen online through your patient portal. Requirements vary by state and protocol. Your provider will let you know if additional steps apply to your specific situation.</p>
           <p>You'll always have direct access to your care team through the portal if any questions come up.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -480,8 +541,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>If you're not a candidate for a given protocol, your provider will let you know why and may suggest an alternative treatment path. You won't be charged for protocols you're not approved for.</p>
           <p>In some cases, an alternative protocol may be a better clinical fit. AnthologyRX's value is clinical credibility. That requires making real decisions, not approving everyone.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -507,9 +570,11 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>We currently offer the following prescription-based protocols, each subject to physician evaluation and individual approval: <strong>NAD+</strong>, <strong>Glutathione</strong>, <strong>Lipo-C</strong>, and <strong>Sermorelin</strong>.</p>
           <p>Every protocol requires a valid prescription. Individual results vary, and not all protocols are clinically appropriate for all patients.</p>
           <div class="faq-callout"><p><strong>Regulatory note:</strong> The availability of certain compounded medications is subject to evolving FDA guidance. Our compliance team actively monitors these requirements. If a medication's availability changes, we will notify affected patients directly and promptly.</p></div>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -519,8 +584,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>These are prescription medications compounded by a licensed 503A pharmacy operating under FDA-mandated cGMP standards. Not over-the-counter supplements or unregulated peptides sourced online. They require a physician evaluation and a valid prescription.</p>
           <p>Compounded medications are not FDA-approved as finished drug products. The difference between our protocols and unregulated alternatives is clinical oversight by licensed physicians, verified pharmaceutical-grade sourcing, and real medical accountability.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -530,8 +597,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>All protocols, if approved for you, are overseen by board-certified physicians and compounded under cGMP standards by a licensed 503A pharmacy. That said, every medication carries potential risks and side effects. Compounded medications are not FDA-approved as finished products, and individual responses vary.</p>
           <p>Physician oversight exists precisely to evaluate whether a given protocol is appropriate for your specific health history. Your provider will conduct a thorough clinical review before prescribing anything. You should report any side effects promptly through your patient portal.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -543,8 +612,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Results vary significantly by protocol, individual health status, and consistency of use. There is no universal timeline that applies to all patients. Some individuals report noticing changes within weeks; others may take longer, and some may not achieve the specific outcomes they're seeking.</p>
           <p>Your provider will discuss realistic expectations for your specific protocol during onboarding. This is clinically guided care, not a guaranteed outcome.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -554,7 +625,9 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Yes, and we encourage transparency with your existing care team. AnthologyRX providers are a complement to your primary care, not a replacement. Share your protocol with your doctor. There are no secrets here, and coordinated care leads to better outcomes.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -580,8 +653,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Our platform operates within the applicable federal and state legal frameworks for telehealth and compounded medications. Our medications are compounded by a licensed 503A pharmacy under FDA oversight and cGMP manufacturing standards.</p>
           <p>Compounded medications are not FDA-approved as finished drug products. But are legally manufactured under 503A where permitted, and prescribed by licensed physicians following a clinical evaluation. The regulatory landscape for certain compounded medications is subject to ongoing developments. Our compliance team actively monitors these requirements, and we will notify affected patients if a medication's availability changes.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -591,10 +666,12 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Clinical care is provided by <strong>Arora Health &amp; Aesthetics, LLC</strong>, whose licensed providers serve patients in all 50 U.S. States in accordance with applicable state licensure requirements and telehealth regulations. Every prescription is issued by a licensed medical doctor after a clinical review of your health intake.</p>
           <div class="faq-callout">
             <p><strong>Arora Health &amp; Aesthetics, LLC</strong><br>300 Lenora Street, Seattle, WA 98121<br>For provider-related questions: <a href="mailto:medicalcompliance@arorahealthgroup.com" style="color: var(--gold);">medicalcompliance@arorahealthgroup.com</a><br><a href="https://www.arora-health.com" style="color: var(--gold);">arora-health.com</a></p>
           </div>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -604,11 +681,13 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Prescriptions are fulfilled through <strong>VialsRx</strong>, a licensed compounding pharmacy operating in accordance with applicable state and federal pharmacy regulations.</p>
           <div class="faq-callout">
             <p><strong>VialsRx</strong><br>6220 Westpark Dr, Houston, TX 77057<br>Phone: (713) 497-5590<br><a href="https://vials.ai/" style="color: var(--gold);">vials.ai</a></p>
             <p style="margin-top: 10px;">Services are available in all 50 U.S. States through affiliated medical providers and pharmacy partners operating in accordance with applicable state licensure requirements. Certain medications, formulations, or fulfillment options may vary depending on state-specific pharmacy regulations and dispensing restrictions.</p>
           </div>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -618,8 +697,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Yes. We maintain HIPAA-compliant practices for the protection of your personal health information. All PHI is encrypted at rest and in transit. We operate under Business Associate Agreements with third-party vendors who process your health data.</p>
           <p>We do not use third-party advertising tracking technologies on pages where you enter or access personal health information. For full details, review our Privacy Policy.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -629,8 +710,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Services are available only in jurisdictions where affiliated medical providers are licensed to practice and where pharmacy partners are authorized to dispense medications. Availability may vary by state and is subject to applicable laws, regulations, and licensure requirements.</p>
           <p>At this time, AnthologyRX accepts patients in all 50 U.S. States through affiliated medical providers and pharmacy partners operating in accordance with applicable state licensure requirements. Certain medications, formulations, or fulfillment options may vary depending on state-specific pharmacy regulations and dispensing restrictions. Your provider will confirm availability for your specific state and protocol during intake.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -640,8 +723,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Not at this time. AnthologyRX operates as a direct-pay telehealth model, which allows us to keep the process fast, private, and provider-controlled without the constraints of insurance authorization.</p>
           <p>Some patients may be able to use HSA or FSA funds for qualifying medical expenses. Eligibility depends on your specific plan and the nature of the treatment. We recommend checking with your plan administrator and tax advisor before using these funds for your protocol.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -667,8 +752,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Treatments are billed on a recurring monthly basis. Before confirming your subscription, you will see a full itemized breakdown of all charges. Including any applicable consultation and platform fees. And will be asked to provide express consent to recurring billing.</p>
           <p>Your subscription renews automatically each month until you cancel. See our Billing Terms for complete details.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -678,8 +765,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Yes. There are no long-term contracts. You can cancel your subscription at any time directly from your patient dashboard. If you cancel before the next billing cycle begins, you won't be charged for the following month.</p>
           <p>Cancellation mid-cycle does not result in a prorated refund for the current period, but you will retain access through the end of your current billing cycle. Full cancellation terms are available in your account settings.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -689,7 +778,9 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>Yes. If you need to take a break, you can pause your subscription from your dashboard. Pausing stops the next billing cycle and holds your protocol until you're ready to resume. Your clinical history stays on file. Restarting doesn't require a full intake.</p>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
@@ -699,8 +790,10 @@ strong { color: var(--sand); font-weight: 600; }
           <i class="faq-icon" aria-hidden="true">+</i>
         </button>
         <div class="faq-a" role="region">
+          <div class="faq-a-inner">
           <p>If you experience any side effect or adverse reaction, message your provider directly through your patient portal as soon as possible. They will review your symptoms and advise on next steps. Which may include adjusting your dose, pausing your protocol, or referring you to in-person care. For serious adverse events, your provider may escalate for formal FDA reporting.</p>
           <div class="faq-callout"><p><strong>AnthologyRX is not an emergency medical service.</strong> If you are experiencing a medical emergency, call 911 or go to the nearest emergency room immediately. Do not wait for a portal response in an emergency.</p></div>
+          </div><!-- /faq-a-inner -->
         </div>
       </div>
 
